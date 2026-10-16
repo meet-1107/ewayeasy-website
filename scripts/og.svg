@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+<defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#174F39"/><stop offset="1" stop-color="#071C15"/></linearGradient></defs>
+<rect width="1200" height="630" fill="url(#g)"/>
+<circle cx="1050" cy="90" r="260" fill="#E5A243" opacity=".14"/>
+<g transform="translate(80 90) scale(2.2)"><rect width="48" height="48" rx="12" fill="#2C7A57"/><path d="M15 10h13l7 7v15a2 2 0 0 1-2 2H15a2 2 0 0 1-2-2V12a2 2 0 0 1 2-2Z" fill="#fff"/><path d="M17 18h8M17 22h12M17 26h7" stroke="#174F39" stroke-width="2" stroke-linecap="round"/><path d="M22 38c4-1 4-6 9-6s6-4 9-4" stroke="#E5A243" stroke-width="3.2" stroke-linecap="round" fill="none"/></g>
+<text x="210" y="160" font-family="Arial, sans-serif" font-size="52" font-weight="700" fill="#fff">E-Way <tspan fill="#F0B550">Easy</tspan></text>
+<text x="80" y="320" font-family="Arial, sans-serif" font-size="68" font-weight="800" fill="#fff">Generate E-Way Bills</text>
+<text x="80" y="400" font-family="Arial, sans-serif" font-size="68" font-weight="800" fill="#F0B550">Faster from Your Phone</text>
+<text x="80" y="480" font-family="Arial, sans-serif" font-size="30" fill="#D6EADF">Sales invoice → Review EWB → Generated · Free GST tools &amp; guides</text>
+<rect x="80" y="530" width="140" height="8" rx="4" fill="#E5A243"/>
+</svg>

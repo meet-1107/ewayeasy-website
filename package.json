@@ -1,0 +1,33 @@
+{
+  "name": "eway-easy-website",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "node scripts/serve-out.mjs",
+    "lint": "next lint",
+    "test": "vitest run",
+    "check:links": "node scripts/check-links.mjs",
+    "postbuild": "node scripts/postbuild.mjs",
+    "covers": "node scripts/capture-covers.mjs"
+  },
+  "dependencies": {
+    "gray-matter": "^4.0.3",
+    "marked": "^14.1.4",
+    "next": "^15.5.4",
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.2",
+    "@types/react": "^19.1.12",
+    "@types/react-dom": "^19.1.9",
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.4.49",
+    "tailwindcss": "^3.4.17",
+    "typescript": "^5.6.3",
+    "vercel": "^64.3.1",
+    "vitest": "^2.1.8"
+  }
+}
