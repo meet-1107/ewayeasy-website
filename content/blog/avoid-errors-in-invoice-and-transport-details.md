@@ -146,7 +146,7 @@ Had the PIN been caught only after generation, the firm would have had to cancel
 
 ## Tools that help
 
-The free [invoice generator](/tools/invoice-generator), [GST calculator](/tools/gst-calculator) and [distance calculator](/tools/distance-calculator) help with the checks above. In the E-Way Easy app, the buyer's address, state and PIN fill from the GSTIN, HSN comes from the saved product, and distance is calculated from PIN codes, with a Review EWB step before generation.
+The free [GST tax invoice template](/sales-invoice-templates/gst-tax-invoice), [GST calculator](/tools/gst-calculator) and [distance calculator](/tools/distance-calculator) help with the checks above. In the E-Way Easy app, the buyer's address, state and PIN fill from the GSTIN, HSN comes from the saved product, and distance is calculated from PIN codes, with a Review EWB step before generation.
 
 ## Official sources
 

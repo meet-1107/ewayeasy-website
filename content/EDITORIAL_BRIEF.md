@@ -67,7 +67,7 @@ NOT verified — do not claim: bulk e-way bill generation inside the app, API/GS
 
 ## Internal links you can use
 Guides: /eway-bill-guide, /eway-bill-generation, /documents-required-for-eway-bill, /eway-bill-rules, /eway-bill-validity, /eway-bill-distance-rules, /eway-bill-cancellation, /eway-bill-correction, /bulk-eway-bill-generation, /eway-bill-common-errors, /eway-bill-vs-sales-invoice, /eway-bill-faq
-Tools: /tools/gst-calculator, /tools/gst-inclusive-exclusive-calculator, /tools/eway-bill-eligibility-checker, /tools/distance-calculator, /tools/invoice-generator, /tools/sales-invoice-generator, /tools/hsn-code-lookup, /tools/quantity-and-tax-calculator
+Tools: /tools/gst-calculator, /tools/gst-inclusive-exclusive-calculator, /tools/eway-bill-eligibility-checker, /tools/distance-calculator, /sales-invoice-templates/gst-tax-invoice, /sales-invoice-templates, /tools/hsn-code-lookup, /tools/quantity-and-tax-calculator
 App: /download, /features
 Blog posts: /blog/<slug>
 

@@ -27,7 +27,9 @@ const COLS = [
     title: 'Free tools',
     links: [
       { label: 'GST calculator', href: '/tools/gst-calculator' },
-      { label: 'GST invoice generator', href: '/tools/invoice-generator' },
+      { label: 'Sales invoice templates', href: '/sales-invoice-templates' },
+      { label: 'Purchase order templates', href: '/purchase-order-templates' },
+      { label: 'Commercial invoice templates', href: '/commercial-invoice-templates' },
       { label: 'E-way bill eligibility', href: '/tools/eway-bill-eligibility-checker' },
       { label: 'Validity calculator', href: '/tools/distance-calculator' },
       { label: 'Bulk e-way bill checker', href: '/tools/bulk-eway-bill-data-checker' },

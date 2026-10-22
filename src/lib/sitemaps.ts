@@ -5,12 +5,13 @@ import { getAllGuides, getAllPosts } from './content';
 import { absoluteUrl } from './seo';
 import { AUTHOR, CATEGORIES } from './site';
 import { TOOLS, toolHref } from './tools';
+import { CATEGORY_SLUGS, categoryHref, templateHref, templatesOf, type DocumentKind } from './templates/ids';
 import { pageCount } from '@/components/BlogListing';
 
 export type Entry = { path: string; lastmod?: string; changefreq?: 'weekly' | 'monthly'; priority?: number };
 
 // Routes that never belong in a sitemap (internal render pages, dynamic segments handled elsewhere).
-const EXCLUDE_TOP = new Set(['cover', 'tools', 'blog', 'authors']);
+const EXCLUDE_TOP = new Set(['cover', 'tools', 'blog', 'authors', ...Object.values(CATEGORY_SLUGS)]);
 
 /** Static marketing pages discovered from src/app (every folder with a page.tsx and no dynamic segment). */
 function staticPages(): string[] {
@@ -40,8 +41,14 @@ export const SITEMAPS: Record<string, () => Entry[]> = {
     })),
   tools: () => [
     { path: '/tools', changefreq: 'monthly', priority: 0.8 },
-    ...TOOLS.map((t) => ({ path: toolHref(t.slug), changefreq: 'monthly' as const, priority: 0.7 })),
+    // Tools merged into other sections (href set) are listed under their own sitemap, not here.
+    ...TOOLS.filter((t) => !t.href).map((t) => ({ path: toolHref(t.slug), changefreq: 'monthly' as const, priority: 0.7 })),
   ],
+  templates: () =>
+    (Object.keys(CATEGORY_SLUGS) as DocumentKind[]).flatMap((kind) => [
+      { path: categoryHref(kind), changefreq: 'monthly' as const, priority: 0.8 },
+      ...templatesOf(kind).map((id) => ({ path: templateHref(id), changefreq: 'monthly' as const, priority: 0.7 })),
+    ]),
   guides: () => getAllGuides().map((g) => ({ path: `/${g.slug}`, lastmod: g.updatedAt, changefreq: 'monthly', priority: 0.8 })),
   blog: () => {
     const posts = getAllPosts();

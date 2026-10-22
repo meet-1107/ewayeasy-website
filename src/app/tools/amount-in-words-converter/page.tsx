@@ -77,7 +77,7 @@ export default function Page() {
         <li>Forgetting the paise part, so the words do not match the figure.</li>
       </ul>
       <p>
-        The free <Link href="/tools/invoice-generator">GST Invoice Generator</Link> adds the amount in words to the invoice
+        The free <Link href="/sales-invoice-templates/gst-tax-invoice">GST tax invoice template</Link> adds the amount in words to the invoice
         total for you.
       </p>
     </ToolPageLayout>

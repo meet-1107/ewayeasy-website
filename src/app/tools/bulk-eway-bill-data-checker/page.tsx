@@ -6,7 +6,7 @@ import { pageMeta } from '@/lib/seo';
 export const metadata = pageMeta({
   title: 'Bulk E-Way Bill Data Checker — Find Errors Before Upload',
   description:
-    'Paste or upload your bulk e-way bill sheet and check GSTINs, 180-day document age, duplicates, HSN, PIN, tax split, distance and vehicle numbers before using the official bulk tool.',
+    'Check your bulk e-way bill sheet before upload: GSTINs, 180-day document age, duplicates, HSN, PIN, tax split, distance and vehicle numbers. Free, in-browser.',
   path: '/tools/bulk-eway-bill-data-checker',
 });
 

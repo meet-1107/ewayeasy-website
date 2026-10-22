@@ -13,7 +13,7 @@ import { SITE_URL } from '@/lib/site';
 export const metadata = pageMeta({
   title: 'E-Way Easy: Generate E-Way Bills Faster from Your Phone',
   description:
-    'E-Way Easy simplifies the e-way bill workflow for Indian businesses: invoice-based data entry, buyer GSTIN auto-fill, HSN details and PIN-based distance. Plus free GST calculators and invoice tools.',
+    'Create the sales invoice and e-way bill in one flow on your phone: buyer GSTIN auto-fill, HSN from products, PIN-based distance. ₹5 per e-way bill.',
   path: '/',
 });
 
@@ -58,8 +58,8 @@ const GUIDES = [
 
 const TOOLS = [
   { title: 'GST Calculator', text: 'Add or remove GST, with CGST/SGST or IGST split.', href: '/tools/gst-calculator' },
-  { title: 'Invoice Generator', text: 'Create a GST invoice and print it or save it as a PDF.', href: '/tools/invoice-generator' },
-  { title: 'Sales Invoice Generator', text: 'Invoice series, product catalogue, transport details.', href: '/tools/sales-invoice-generator' },
+  { title: 'Sales Invoice Templates', text: 'GST, simple, service and wholesale invoices. Edit, download PDF, print.', href: '/sales-invoice-templates' },
+  { title: 'Purchase Order & Commercial Invoice', text: 'Editable PO and export invoice templates in A4, Letter and more.', href: '/purchase-order-templates' },
   { title: 'E-Way Bill Eligibility Checker', text: 'Find out whether your movement may need an e-way bill.', href: '/tools/eway-bill-eligibility-checker' },
   { title: 'Validity Calculator', text: 'Validity days and expiry time from distance.', href: '/tools/distance-calculator' },
   { title: 'GSTIN Validator', text: 'Check format and check digit, decode state and PAN.', href: '/tools/gstin-validator' },

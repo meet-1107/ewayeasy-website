@@ -8,7 +8,7 @@ import { PRICING } from '@/lib/pricing';
 export const metadata = pageMeta({
   title: 'Refund Policy: Wallet Credits',
   description:
-    'E-Way Easy refund policy: purchased wallet credits are not refundable. If a payment is made but credits are not added, we add the credits or refund the payment. Failed e-way bill actions are refunded to the wallet automatically.',
+    'Purchased E-Way Easy credits are not refundable. If you paid but credits were not added, we add them or refund you. Failed actions return credits automatically.',
   path: '/refund-policy',
 });
 

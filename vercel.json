@@ -31,5 +31,17 @@
         }
       ]
     }
+  ],
+  "redirects": [
+    {
+      "source": "/tools/invoice-generator",
+      "destination": "/sales-invoice-templates/gst-tax-invoice",
+      "permanent": true
+    },
+    {
+      "source": "/tools/sales-invoice-generator",
+      "destination": "/sales-invoice-templates",
+      "permanent": true
+    }
   ]
 }

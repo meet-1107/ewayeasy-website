@@ -21,6 +21,8 @@ export interface Tool {
   icon: ToolIcon;
   category: ToolCategory;
   keywords: string[];
+  /** Set when the tool lives outside /tools (e.g. merged into the template library). */
+  href?: string;
 }
 
 export const TOOLS: Tool[] = [
@@ -74,19 +76,39 @@ export const TOOLS: Tool[] = [
   },
   {
     slug: 'invoice-generator',
-    name: 'GST Invoice Generator',
-    description: 'Create a GST tax invoice in your browser with automatic CGST/SGST or IGST, and print or save it as PDF.',
+    name: 'GST Tax Invoice Template',
+    description: 'Editable GST tax invoice with GSTIN, HSN, CGST/SGST or IGST, logo and bank details. Download PDF or print.',
+    href: '/sales-invoice-templates/gst-tax-invoice',
     icon: 'invoice',
     category: 'invoicing',
     keywords: ['invoice', 'tax invoice', 'bill', 'pdf', 'gstin', 'print'],
   },
   {
     slug: 'sales-invoice-generator',
-    name: 'Sales Invoice Generator',
-    description: 'Sales invoice with your own number series, saved product list, shipping address, transport details and drafts.',
+    name: 'Sales Invoice Templates',
+    description: 'GST, simple, service and wholesale invoice templates. Edit in your browser, then download PDF or print.',
+    href: '/sales-invoice-templates',
     icon: 'receipt',
     category: 'invoicing',
     keywords: ['sales invoice', 'invoice series', 'product catalogue', 'transport', 'vehicle'],
+  },
+  {
+    slug: 'purchase-order-templates',
+    name: 'Purchase Order Templates',
+    description: 'Standard, manufacturing and international purchase orders. Edit in your browser, then download PDF or print.',
+    href: '/purchase-order-templates',
+    icon: 'quote',
+    category: 'invoicing',
+    keywords: ['purchase order', 'po format', 'po template', 'raw material', 'supplier', 'pdf', 'print'],
+  },
+  {
+    slug: 'commercial-invoice-templates',
+    name: 'Commercial Invoice Templates',
+    description: 'Export and international commercial invoices with HS codes, Incoterms, ports and weights. PDF or print.',
+    href: '/commercial-invoice-templates',
+    icon: 'invoice',
+    category: 'invoicing',
+    keywords: ['commercial invoice', 'export invoice', 'customs', 'incoterms', 'hs code', 'shipping', 'iec'],
   },
   // ---- Wider GST, invoice and e-way bill toolkit ----
   {
@@ -218,7 +240,7 @@ export function getTool(slug: string): Tool {
 }
 
 export function toolHref(slug: string) {
-  return `/tools/${slug}`;
+  return TOOLS.find((t) => t.slug === slug)?.href ?? `/tools/${slug}`;
 }
 
 /** Case-insensitive search across name, description and keywords. */

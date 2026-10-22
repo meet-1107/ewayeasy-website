@@ -5,7 +5,7 @@ import { pageMeta } from '@/lib/seo';
 export const metadata = pageMeta({
   title: 'Quotation Generator with GST — Free, Print or Save as PDF',
   description:
-    'Make a GST quotation with your own number series, validity date, line items, discount, CGST/SGST or IGST, and payment, delivery, warranty and freight terms. Convert it to a sales invoice draft.',
+    'Make a GST quotation with validity date, line items, discount, CGST/SGST or IGST and your terms. Print, save as PDF or turn it into a GST invoice draft.',
   path: '/tools/quotation-generator',
 });
 

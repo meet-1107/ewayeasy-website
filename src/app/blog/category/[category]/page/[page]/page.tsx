@@ -14,7 +14,7 @@ export async function generateMetadata({ params }: { params: Promise<{ category:
   const { category, page } = await params;
   const cat = CATEGORIES.find((x) => x.slug === category);
   if (!cat) return {};
-  return pageMeta({ title: `${cat.name} Articles: Page ${page}`, description: cat.description, path: `/blog/category/${cat.slug}/page/${page}` });
+  return pageMeta({ title: `${cat.name} Articles: Page ${page}`, description: `Page ${page} of ${cat.name} articles. ${cat.description}`, path: `/blog/category/${cat.slug}/page/${page}` });
 }
 export default async function CategoryPaged({ params }: { params: Promise<{ category: string; page: string }> }) {
   const { category, page } = await params;

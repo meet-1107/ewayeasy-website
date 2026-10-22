@@ -1,4 +1,4 @@
-﻿# E-Way Easy: marketing and education website
+# E-Way Easy: marketing and education website
 
 Next.js 15 (App Router) + TypeScript + Tailwind CSS. The whole site is **statically generated** (`output: 'export'`), so it can be hosted on any static host (Vercel, Netlify, Cloudflare Pages, S3/CloudFront, or plain Nginx) with no server, database or API keys.
 
@@ -82,7 +82,7 @@ To move to a headless CMS later (Sanity, Contentful, Decap), replace `getAllPost
 - [ ] `npm test` passes
 - [ ] `npm run build` succeeds and `npm run check:links` reports no broken links
 - [ ] Every item in the placeholder checklist below is filled in
-- [ ] Lighthouse on mobile for `/`, a blog post and `/tools/invoice-generator`
+- [ ] Lighthouse on mobile for `/`, a blog post and `/sales-invoice-templates/gst-tax-invoice`
 - [ ] Rich Results Test on a blog post (BlogPosting, Breadcrumb, FAQ) and on `/features` (SoftwareApplication)
 - [ ] Search Console verified, sitemap submitted
 - [ ] Privacy Policy and Terms reviewed by a legal adviser
@@ -115,3 +115,20 @@ The content was written from the facts in `content/EDITORIAL_BRIEF.md`. Writers 
 - Statement that the portal generally won't accept a second e-way bill for the same document number while the first is active.
 - The 2025 changes in `src/lib/updates.ts`: GST rate rationalisation (effective 22 Sep 2025), 180-day document age limit, 360-day extension cap, MFA rollout, 30-day e-invoice reporting for AATO â‰¥ â‚¹10 crore, E-Way Bill 2.0 portal.
 - Any state-specific intra-state threshold. The site intentionally lists none and tells readers to check their state's notification.
+
+## Document template library
+
+Three categories, nine templates (one page per distinct search intent; "printable", "editable" and "custom-branded" are features of every template, not separate pages):
+
+| Category | Templates |
+|---|---|
+| `/sales-invoice-templates` | `gst-tax-invoice`, `simple-sales-invoice`, `service-invoice`, `wholesale-invoice` |
+| `/purchase-order-templates` | `gst-purchase-order`, `manufacturing-purchase-order`, `international-purchase-order` |
+| `/commercial-invoice-templates` | `export-commercial-invoice`, `courier-commercial-invoice` |
+
+- IDs and URLs: `src/lib/templates/ids.ts`. Page copy and SEO metadata: `src/lib/templates/catalog.ts`. Fields, defaults and sample data per template: `src/lib/templates/presets.ts`. Calculations (exact minor units, India GST / single tax / none / export modes): `src/lib/templates/calc.ts`.
+- Editor, preview and print: `src/components/templates/`. PDF download uses `@react-pdf/renderer`, loaded only when the user clicks Download, with Noto Sans/Serif from `public/fonts` (OFL) so `₹` renders. Paper: A4, A5, Letter, Legal and custom mm, portrait or landscape.
+- Everything runs in the browser. Drafts, logo, product list and number series live in localStorage (`ee-tpl-*`); nothing is uploaded.
+- The old `/tools/invoice-generator` and `/tools/sales-invoice-generator` 301-redirect to the GST invoice template and the sales invoice category (`vercel.json`, `public/_redirects`). Old drafts are imported on first load.
+- Keyword research and page mapping: `docs/seo/template-keyword-research.md` and `template-keyword-map.csv`. Search volumes are not measured; validate them in Keyword Planner / Search Console.
+- `npm run check:seo` checks every exported page for a unique title and description, a single H1 and a canonical URL.

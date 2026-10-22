@@ -123,7 +123,7 @@ Whatever the document, check whether the movement needs an e-way bill using our 
 
 ## Where E-Way Easy helps
 
-The E-Way Easy app is built around the sales invoice: you create the invoice and review the e-way bill details in one flow. For challan-based movements, prepare the challan as per Rule 55 and use the official e-way bill system. Our free [invoice generator](/tools/invoice-generator) is useful for quick one-off invoices.
+The E-Way Easy app is built around the sales invoice: you create the invoice and review the e-way bill details in one flow. For challan-based movements, prepare the challan as per Rule 55 and use the official e-way bill system. Our free [GST tax invoice template](/sales-invoice-templates/gst-tax-invoice) is useful for quick one-off invoices.
 
 ## Official sources
 

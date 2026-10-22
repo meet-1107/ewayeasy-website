@@ -8,7 +8,7 @@ export function generateStaticParams() {
 }
 export async function generateMetadata({ params }: { params: Promise<{ page: string }> }) {
   const { page } = await params;
-  return pageMeta({ title: `Blog: Page ${page}`, description: 'More e-way bill, GST and invoicing articles from E-Way Easy.', path: `/blog/page/${page}` });
+  return pageMeta({ title: `Blog: Page ${page}`, description: `Page ${page} of the E-Way Easy blog: practical, source-checked articles on e-way bills, GST invoicing and compliance for Indian businesses.`, path: `/blog/page/${page}` });
 }
 export default async function BlogPage({ params }: { params: Promise<{ page: string }> }) {
   const n = Number((await params).page);

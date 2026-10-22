@@ -51,10 +51,10 @@ export const NAV = [
 
 export const CATEGORIES = [
   { slug: 'eway-bill', name: 'E-Way Bill', description: 'Generation, validity, distance, Part A/B, cancellation and special cases.' },
-  { slug: 'gst-compliance', name: 'GST Compliance', description: 'CGST, SGST, IGST, HSN codes and GSTIN checks explained simply.' },
+  { slug: 'gst-compliance', name: 'GST Compliance', description: 'CGST, SGST and IGST, HSN codes and GSTIN checks explained simply, with worked examples for Indian businesses.' },
   { slug: 'invoicing', name: 'Invoicing', description: 'Tax invoices, delivery challans and GST calculations on sales invoices.' },
-  { slug: 'business-guides', name: 'Business Guides', description: 'Practical workflows for manufacturers, wholesalers and distributors.' },
-  { slug: 'product-updates', name: 'Product Updates', description: 'What is new in the E-Way Easy app.' },
+  { slug: 'business-guides', name: 'Business Guides', description: 'Practical invoicing and dispatch workflows for Indian manufacturers, wholesalers and distributors, from data prep to tools.' },
+  { slug: 'product-updates', name: 'Product Updates', description: 'What is new in the E-Way Easy app: features, workflow improvements and how to get the most from invoice-to-e-way-bill.' },
 ] as const;
 
 export type CategorySlug = (typeof CATEGORIES)[number]['slug'];

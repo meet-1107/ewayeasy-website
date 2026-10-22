@@ -153,7 +153,7 @@ A cleaner workflow reduces errors but does not replace professional advice on cl
 
 ## Tools that can help
 
-You can draft invoices with our free [invoice generator](/tools/invoice-generator), check tax with the [GST calculator](/tools/gst-calculator), and look up codes with the [HSN code lookup](/tools/hsn-code-lookup). If your team works mainly from phones, the E-Way Easy Android app keeps saved buyers and products, numbers invoices in your own series, and walks through an Invoice → Review EWB → Generated flow. You can [download it here](/download).
+You can draft invoices with our free [GST tax invoice template](/sales-invoice-templates/gst-tax-invoice), check tax with the [GST calculator](/tools/gst-calculator), and look up codes with the [HSN code lookup](/tools/hsn-code-lookup). If your team works mainly from phones, the E-Way Easy Android app keeps saved buyers and products, numbers invoices in your own series, and walks through an Invoice → Review EWB → Generated flow. You can [download it here](/download).
 
 ## Official sources
 

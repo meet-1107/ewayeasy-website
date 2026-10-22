@@ -106,7 +106,7 @@ const FEATURES: Feature[] = [
     title: 'Invoice Number Series',
     where: 'app',
     text: 'Set an invoice pre-series once and the app numbers invoices in your own series automatically, helping avoid gaps and duplicate numbers.',
-    cta: { label: 'Create an invoice online', href: '/tools/invoice-generator' },
+    cta: { label: 'Use the GST invoice template', href: '/sales-invoice-templates/gst-tax-invoice' },
     icon: (
       <g {...S}>
         <rect x="3" y="4" width="18" height="16" rx="2.5" />
@@ -118,7 +118,7 @@ const FEATURES: Feature[] = [
     title: 'Bank Details on Invoices',
     where: 'web',
     text: 'Want bank details printed on your invoice? Add them in our free invoice tools on this website. Bank details selection is not listed as an app feature at this time.',
-    cta: { label: 'Open the free invoice generator', href: '/tools/invoice-generator' },
+    cta: { label: 'Open the free invoice templates', href: '/sales-invoice-templates' },
     icon: (
       <g {...S}>
         <path d="M3 9.5 12 4l9 5.5M4.5 10v8M9 10v8M15 10v8M19.5 10v8M3 20h18" />
@@ -129,7 +129,7 @@ const FEATURES: Feature[] = [
     title: 'Invoice Preview and Printing',
     where: 'app',
     text: 'Preview the sales invoice in the app before saving, so you can catch a wrong quantity, rate or buyer detail before the e-way bill step. Need an invoice to print from your computer? Try the free sales invoice generator on this website.',
-    cta: { label: 'Free sales invoice generator', href: '/tools/sales-invoice-generator' },
+    cta: { label: 'Free sales invoice templates', href: '/sales-invoice-templates' },
     icon: (
       <g {...S}>
         <path d="M2.5 12S6 5.5 12 5.5 21.5 12 21.5 12 18 18.5 12 18.5 2.5 12 2.5 12Z" />

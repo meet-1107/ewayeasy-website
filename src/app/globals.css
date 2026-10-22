@@ -2,6 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Document fonts — the same files the PDF export embeds, so preview, print and PDF wrap text alike.
+   Browsers only download them on pages that render a document. */
+@font-face { font-family: 'Noto Sans'; src: url('/fonts/NotoSans-Regular.ttf') format('truetype'); font-weight: 400; font-display: swap; }
+@font-face { font-family: 'Noto Sans'; src: url('/fonts/NotoSans-Bold.ttf') format('truetype'); font-weight: 700; font-display: swap; }
+@font-face { font-family: 'Noto Serif'; src: url('/fonts/NotoSerif-Regular.ttf') format('truetype'); font-weight: 400; font-display: swap; }
+@font-face { font-family: 'Noto Serif'; src: url('/fonts/NotoSerif-Bold.ttf') format('truetype'); font-weight: 700; font-display: swap; }
+
 :root { color-scheme: light; }
 html { scroll-behavior: smooth; }
 body { @apply bg-cream text-ink antialiased; }

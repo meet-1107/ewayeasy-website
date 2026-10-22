@@ -2,6 +2,8 @@
 import { useEffect, useMemo, useRef, useState } from 'react';
 import Link from 'next/link';
 import { formatINR } from '@/lib/money';
+import { templateHref } from '@/lib/templates/ids';
+import { writeQuotationAsTaxInvoice } from '@/components/templates/storage';
 import { RATE_PRESETS } from '../RatePicker';
 import { safeStorage } from '../ui';
 import { Input, PartyFields, Section, StateSelect, TextArea } from '../invoice/InvoiceEditor';
@@ -180,15 +182,11 @@ export default function QuotationEditor() {
 
   function convertToInvoice() {
     if (!calc.lineInputs.length) return announce('Add at least one complete line item before converting.');
-    const today = todayIso();
-    const ss = safeStorage.get<Series | null>(KEYS.salesSeries, null);
-    const no = ss && typeof ss.prefix === 'string' && Number.isInteger(ss.next) && ss.next > 0 ? seriesNumber(ss) : '';
-    const inv = quotationToInvoice(data, today, no);
-    const existing = safeStorage.get<unknown[]>(KEYS.salesDrafts, []);
-    const list = [{ id: uid('d'), savedAt: new Date().toISOString(), data: inv }, ...(Array.isArray(existing) ? existing : [])].slice(0, 50);
-    if (!safeStorage.set(KEYS.salesDrafts, list)) return announce('Could not save: browser storage is unavailable or full.');
+    // Writes into the GST tax invoice template's draft (ee-tpl-gst-tax-invoice); any invoice already open
+    // there is kept in that template's saved drafts list first.
+    if (!writeQuotationAsTaxInvoice(data)) return announce('Could not save: browser storage is unavailable or full.');
     setConverted(true);
-    announce('Saved as a sales invoice draft. Open the Sales Invoice Generator and pick it from Saved drafts.');
+    announce('Converted. Open the GST tax invoice template to finish the invoice.');
   }
 
   function print() {
@@ -236,7 +234,7 @@ export default function QuotationEditor() {
       {status && <p className="no-print -mt-3 text-sm font-medium text-brand-700" aria-hidden>{status}</p>}
       {converted && (
         <p className="no-print -mt-3 text-sm">
-          <Link href="/tools/sales-invoice-generator" className="font-semibold text-brand-700 underline">Open the Sales Invoice Generator →</Link>
+          <Link href={templateHref('gst-tax-invoice')} className="font-semibold text-brand-700 underline">Open the GST tax invoice template →</Link>
         </p>
       )}
 

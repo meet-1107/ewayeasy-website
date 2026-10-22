@@ -109,7 +109,7 @@ Six months later, the owner reviews: invoice corrections are down, GST data is r
 
 ## Free tools to start with
 
-You can try several tasks without installing anything: the [GST calculator](/tools/gst-calculator), [HSN code lookup](/tools/hsn-code-lookup), [invoice generator](/tools/invoice-generator), [e-way bill eligibility checker](/tools/eway-bill-eligibility-checker) and [distance calculator](/tools/distance-calculator). If your dispatch team works from phones, see how the E-Way Easy app approaches invoice and e-way bill preparation in [how E-Way Easy simplifies the e-way bill workflow](/blog/how-eway-easy-simplifies-eway-bill-workflow).
+You can try several tasks without installing anything: the [GST calculator](/tools/gst-calculator), [HSN code lookup](/tools/hsn-code-lookup), [GST invoice template](/sales-invoice-templates/gst-tax-invoice), [e-way bill eligibility checker](/tools/eway-bill-eligibility-checker) and [distance calculator](/tools/distance-calculator). If your dispatch team works from phones, see how the E-Way Easy app approaches invoice and e-way bill preparation in [how E-Way Easy simplifies the e-way bill workflow](/blog/how-eway-easy-simplifies-eway-bill-workflow).
 
 ## Official sources
 

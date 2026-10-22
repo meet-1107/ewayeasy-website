@@ -129,7 +129,7 @@ If the buyer later returns some pipes, the manufacturer issues a credit note aga
 
 ## Where E-Way Easy fits
 
-In the E-Way Easy app, the sales invoice is created as part of the e-way bill workflow — Invoice → Review EWB → Generated — with an invoice preview before saving. That keeps the two documents consistent. If you only need an invoice, the free [sales invoice generator](/tools/sales-invoice-generator) and [invoice generator](/tools/invoice-generator) are available on this site.
+In the E-Way Easy app, the sales invoice is created as part of the e-way bill workflow — Invoice → Review EWB → Generated — with an invoice preview before saving. That keeps the two documents consistent. If you only need an invoice, the free [sales invoice templates](/sales-invoice-templates) and the [GST tax invoice template](/sales-invoice-templates/gst-tax-invoice) are available on this site.
 
 ## Official sources
 
