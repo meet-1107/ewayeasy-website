@@ -26,7 +26,7 @@ faq:
     a: "The actual place of delivery (ship-to address and PIN) determines the route and distance. The portal offers transaction types for bill-to-ship-to cases; check the user documentation for how to fill them."
   - q: "Do goods sent for an exhibition need an e-way bill even though nothing is sold yet?"
     a: "If the value crosses the applicable threshold, generally yes. Movement for reasons other than supply is still covered by the e-way bill rules."
-related: ["delivery-challan-vs-tax-invoice", "eway-bill-vs-tax-invoice", "who-is-responsible-for-generating-eway-bill"]
+related: ["delivery-challan-vs-tax-invoice", "who-is-responsible-for-generating-eway-bill"]
 ---
 Most e-way bill guidance assumes a simple sale: seller invoices buyer, goods move from seller to buyer. Real business is messier. Goods come back, go out on approval, travel to trade fairs, are billed to one party and delivered to another, or are sold off a van on a route. The e-way bill rules still apply to these movements, but the document, the reason and the person generating can change.
 

@@ -24,7 +24,7 @@ faq:
     a: "Yes, if the movement otherwise requires one. The rules apply to movement of goods, whether by your own vehicle, a hired truck or a transporter."
   - q: "Can I edit an e-way bill after generating it?"
     a: "No. Part A cannot be edited. If it is wrong, cancel within 24 hours and generate a fresh one. Vehicle details in Part B can be updated during validity."
-related: ["how-to-generate-eway-bill-step-by-step", "eway-bill-part-a-and-part-b-explained", "eway-bill-limit-50000-threshold-exceptions"]
+related: ["eway-bill-part-a-and-part-b-explained", "eway-bill-limit-50000-threshold-exceptions"]
 ---
 If you move goods in India under GST, sooner or later a transporter, buyer or checking officer will ask you for an e-way bill. Many small businesses treat it as one more form to fill. It is easier to manage once you understand what the document actually does and which rules drive it.
 
@@ -114,7 +114,7 @@ Validity depends on distance, under Rule 138(10):
 
 The first "day" runs from the time of generation until midnight of the following day. So a bill generated at 4 pm on Monday for a 150 km trip is valid until midnight between Tuesday and Wednesday, not just for 24 hours.
 
-If goods cannot reach on time because of exceptional circumstances, the validity can be extended within 8 hours before or after expiry. Details are in [E-Way Bill Validity Explained](/blog/eway-bill-validity-explained).
+If goods cannot reach on time because of exceptional circumstances, the validity can be extended within 8 hours before or after expiry. Details are in [E-Way Bill Validity Explained](/eway-bill-validity).
 
 ## What can and cannot be changed
 
@@ -130,7 +130,7 @@ The person in charge of the conveyance should carry:
 1. the invoice, bill of supply or delivery challan, and
 2. a copy of the e-way bill (physical or electronic), or just the EBN, or the EWB mapped to an RFID device fixed on the vehicle.
 
-The full list and situations are in [Documents Required for E-Way Bill Generation](/blog/documents-required-for-eway-bill-generation).
+The full list and situations are in [Documents Required for E-Way Bill Generation](/documents-required-for-eway-bill).
 
 ## What happens if you do not have a valid e-way bill?
 

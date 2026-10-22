@@ -42,6 +42,46 @@
       "source": "/tools/sales-invoice-generator",
       "destination": "/sales-invoice-templates",
       "permanent": true
+    },
+    {
+      "source": "/blog/common-eway-bill-errors-and-solutions",
+      "destination": "/eway-bill-common-errors",
+      "permanent": true
+    },
+    {
+      "source": "/blog/documents-required-for-eway-bill-generation",
+      "destination": "/documents-required-for-eway-bill",
+      "permanent": true
+    },
+    {
+      "source": "/blog/eway-bill-rules-india-practical-guide",
+      "destination": "/eway-bill-rules",
+      "permanent": true
+    },
+    {
+      "source": "/blog/eway-bill-validity-explained",
+      "destination": "/eway-bill-validity",
+      "permanent": true
+    },
+    {
+      "source": "/blog/how-to-cancel-an-eway-bill",
+      "destination": "/eway-bill-cancellation",
+      "permanent": true
+    },
+    {
+      "source": "/blog/how-to-generate-bulk-eway-bills",
+      "destination": "/bulk-eway-bill-generation",
+      "permanent": true
+    },
+    {
+      "source": "/blog/how-to-generate-eway-bill-step-by-step",
+      "destination": "/eway-bill-generation",
+      "permanent": true
+    },
+    {
+      "source": "/blog/eway-bill-vs-tax-invoice",
+      "destination": "/eway-bill-vs-sales-invoice",
+      "permanent": true
     }
   ]
 }

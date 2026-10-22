@@ -2,7 +2,7 @@
 title: "E-Way Bill Rules in India (Rule 138 Explained)"
 slug: "eway-bill-rules"
 description: "Rule 138 of the CGST Rules explained in plain language: legal basis, the Rs 50,000 threshold, consignment value, who generates, Part A and Part B, exemptions, validity, cancellation, acceptance, verification and penalties."
-updatedAt: "2026-09-29"
+updatedAt: "2026-10-22"
 verifiedAt: "2026-10-12"
 seoTitle: "E-Way Bill Rules in India: Rule 138 Explained"
 metaDescription: "Rule 138 explained simply: threshold, consignment value, who generates, Part A/B, 50 km exemption, validity, cancellation, Annexure exemptions and penalties."
@@ -29,12 +29,14 @@ faq:
     a: "Goods and the vehicle can be detained or seized and a penalty imposed under Section 129 of the CGST Act. General penalty provisions under Section 122 can also apply."
 related: ["eway-bill-guide", "eway-bill-validity", "eway-bill-distance-rules", "eway-bill-cancellation"]
 updateHistory:
+  - date: "2026-10-22"
+    note: "Merged our separate article on e-way bill rules in practice into this guide"
   - date: "2026-09-29"
     note: "Added the January 2025 changes reported by GSTN and the MFA rollout."
   - date: "2026-09-03"
     note: "First published."
 ---
-Rule 138 of the CGST Rules, 2017 is the core rule behind the e-way bill. It is long and full of cross-references, so this guide breaks it into the questions businesses actually ask. Rule numbers are given so you can read the original text on [CBIC GST](https://cbic-gst.gov.in/), but the wording here is a plain-language summary, not the legal text.
+Rule 138 of the CGST Rules, 2017 is the core rule behind the e-way bill. It is long and full of cross-references, so this guide breaks it into the questions businesses actually ask. Rule numbers are given so you can read the original text on [CBIC GST](https://cbic-gst.gov.in/), but the wording here is a plain-language summary, not the legal text. States have parallel provisions under their SGST Acts, and the rules are amended by notification, so verify the current text before relying on any point.
 
 ## Legal basis
 
@@ -59,7 +61,7 @@ Information in Part A of Form GST EWB-01 must be furnished before goods start mo
 
 ### Consignment value
 
-Consignment value is the value declared in the invoice, bill of supply or delivery challan, **including** CGST, SGST/UTGST, IGST and cess, but **excluding** the value of exempt supplies billed on the same document.
+Consignment value is the value declared in the invoice, bill of supply or delivery challan, **including** CGST, SGST/UTGST, IGST and cess, but **excluding** the value of exempt supplies billed on the same document. In practice, test the threshold on the invoice total with tax, not on the taxable value.
 
 ### State thresholds
 
@@ -70,7 +72,7 @@ Some states have notified a different (higher) limit for intra-state movement or
 - Inter-state movement of goods by a principal to a job worker.
 - Inter-state transport of specified handicraft goods by a person exempt from registration.
 
-A registered person may also generate an e-way bill voluntarily even when the value is below the threshold.
+For these movements, do not run the ₹50,000 test at all — generate the e-way bill anyway. A registered person may also generate an e-way bill voluntarily even when the value is below the threshold.
 
 ## Who generates it
 
@@ -83,6 +85,8 @@ A registered person may also generate an e-way bill voluntarily even when the va
 
 Where goods are handed to a transporter, the consignor or recipient can fill Part A and assign the Transporter ID so that the transporter fills Part B.
 
+In practice, agree in writing — in the purchase order or transport contract — who will generate the e-way bill. Confusion over responsibility is a common reason goods leave without one.
+
 ## Form GST EWB-01: Part A and Part B
 
 - **Part A:** GSTIN of supplier and recipient, place of delivery (PIN), document number and date, value of goods, HSN code, reason for transportation, transport document number.
@@ -94,9 +98,13 @@ The e-way bill is valid for movement only after Part B is filled. For movement b
 
 Part B is not required where goods move within the same state or union territory up to 50 km from the consignor's place of business to the transporter's place for further transport, or from the transporter's place to the consignee's place. Part A is still needed. See [Distance Rules](/eway-bill-distance-rules).
 
+### Part B can be updated, Part A cannot
+
+Part A details cannot be edited once the e-way bill is generated; if they are wrong, cancel within 24 hours and generate a new one. Part B can be updated any number of times within validity — for a breakdown, trans-shipment or change of transporter.
+
 ### Transfer to another vehicle
 
-When goods move from one conveyance to another, Part B must be updated with the new vehicle before the move continues. Multiple consignments in one vehicle can be covered by a **consolidated e-way bill (Form GST EWB-02)** generated by the transporter.
+When goods move from one conveyance to another, Part B must be updated with the new vehicle before the move continues — brief your transporters that the portal update comes *before* goods move in the new vehicle. See [How to Update Vehicle Details](/blog/how-to-update-vehicle-details-in-eway-bill). Multiple consignments in one vehicle can be covered by a **consolidated e-way bill (Form GST EWB-02)** generated by the transporter.
 
 ## Validity (Rule 138(10))
 
@@ -105,12 +113,16 @@ When goods move from one conveyance to another, Part B must be updated with the 
 | Normal cargo | 1 day for every 200 km or part thereof |
 | Over-dimensional cargo | 1 day for every 20 km or part thereof |
 
-The first day ends at midnight of the day following generation. Validity can be extended within 8 hours before or after expiry when goods cannot reach in time due to exceptional circumstances. As reported by GSTN, from 1 January 2025, total extension is capped at 360 days from the original generation date. Details in [E-Way Bill Validity](/eway-bill-validity).
+The first day ends at midnight of the day following generation.
+
+**Example (illustrative):** a Coimbatore pump manufacturer generates an e-way bill at 11:00 am on 3 August for a 520 km trip. 520 ÷ 200 = 2.6, rounded up ("or part thereof") = 3 days. Day 1 ends at midnight of 4 August, day 2 at midnight of 5 August and day 3 at midnight of 6 August, so the bill is valid until 11:59 pm on 6 August.
+
+Validity can be extended by the generator or the transporter in charge within 8 hours before or after expiry, when goods cannot reach in time due to exceptional circumstances such as an accident, natural calamity, law and order problem or trans-shipment delay. The window is strict. As reported by GSTN, from 1 January 2025, total extension is capped at 360 days from the original generation date. Details in [E-Way Bill Validity](/eway-bill-validity).
 
 ## Cancellation and acceptance
 
 - **Cancellation (Rule 138(9)):** within 24 hours of generation, if goods are not transported or not transported as per the details. Not allowed if the bill has been verified in transit. See [Cancellation](/eway-bill-cancellation).
-- **Acceptance (Rule 138(12)):** the recipient can accept or reject within 72 hours of the details being made available, or before delivery if earlier. No action means it is deemed accepted.
+- **Acceptance (Rule 138(12)):** the recipient can accept or reject within 72 hours of the details being made available, or before delivery if earlier. No action means it is deemed accepted. Recipients should therefore check e-way bills generated against their GSTIN and promptly reject any raised by mistake or misuse.
 
 ## Documents to carry (Rule 138A)
 
@@ -135,7 +147,7 @@ An e-way bill is not required in several situations, including:
 - Goods under customs bond or customs supervision in specified movements.
 - Specified movements by defence formations, and empty cargo containers.
 
-The list has many conditions. Read the current text before relying on an exemption.
+The list has many conditions. Read the current text for your specific goods before relying on an exemption — "exempt from GST" is not the same as "exempt from e-way bill" for every item.
 
 ## Blocking of generation (Rule 138E)
 
@@ -158,13 +170,32 @@ Moving goods without a valid e-way bill, or with mismatched details, can lead to
 
 A Surat textile unit sends grey fabric worth ₹38,000 plus GST to a job worker in Maharashtra. The value is below ₹50,000, but because it is inter-state movement from a principal to a job worker, an e-way bill is required irrespective of value. The unit uses a delivery challan with sub-type "Job Work".
 
+## Quick reference
+
+| Situation | What the rules say |
+|---|---|
+| Consignment value above ₹50,000 | E-way bill needed (check your state's intra-state threshold) |
+| Inter-state job work dispatch | Needed regardless of value |
+| Part A wrong | Cancel within 24 hours, generate a new one |
+| Vehicle changed | Update Part B before moving |
+| Running late | Extend within 8 hours before or after expiry |
+| Wrong bill raised against your GSTIN | Recipient rejects within 72 hours |
+
 ## Common mistakes
 
 - Treating the threshold as invoice taxable value only.
+- Splitting an invoice to stay under ₹50,000. The rules look at the movement and the documents; artificial splitting invites scrutiny and penalty.
 - Assuming non-sale movements are outside the rules.
+- Assuming intra-state means no e-way bill — only true if your state's notified threshold or an exemption applies.
 - Relying on a state's intra-state threshold for an inter-state movement.
 - Not updating Part B on change of vehicle.
+- Missing the 8-hour extension window.
+- Not rejecting wrong bills — silence counts as acceptance after 72 hours.
+
+## Limitations
+
+This guide summarises the general rules. Imports, exports, exhibitions, SKD/CKD supplies and e-commerce have their own nuances; see [E-Way Bill Returns and Special Transactions](/blog/eway-bill-returns-and-special-transactions) and [Interstate Movement Requirements](/blog/eway-bill-interstate-movement-requirements). For routine sales, the [E-Way Easy app](/features) keeps invoice and e-way bill details in one flow, which helps with the before-dispatch part; the compliance decisions remain yours.
 
 ## Official sources
 
-Read the CGST Act and Rules on [CBIC GST](https://cbic-gst.gov.in/) and follow advisories on the [e-way bill portal](https://ewaybillgst.gov.in/). For tricky cases, take advice from a qualified tax professional. The free [eligibility checker](/tools/eway-bill-eligibility-checker) gives a quick first answer.
+Read the CGST Act and Rules on [CBIC GST](https://cbic-gst.gov.in/) and [CBIC](https://www.cbic.gov.in/), and follow advisories on the [e-way bill portal](https://ewaybillgst.gov.in/) and its [user documentation](https://docs.ewaybillgst.gov.in/). For tricky cases, take advice from a qualified tax professional. The free [eligibility checker](/tools/eway-bill-eligibility-checker) gives a quick first answer.

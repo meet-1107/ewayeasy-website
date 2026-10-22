@@ -24,7 +24,7 @@ faq:
     a: "It means the registration is not active. Charging tax to, or claiming credit from, such a party needs care. Check the date of cancellation and take advice."
   - q: "Does a valid-looking GSTIN prove the business is genuine?"
     a: "No. The format can be correct while the registration is cancelled or belongs to a different business. Always check the portal record and the legal name."
-related: ["common-eway-bill-errors-and-solutions", "cgst-sgst-igst-explained", "avoid-errors-in-invoice-and-transport-details"]
+related: ["cgst-sgst-igst-explained", "avoid-errors-in-invoice-and-transport-details"]
 ---
 A wrong GSTIN on an invoice causes problems in three places at once. Your buyer may not get input tax credit. Your e-way bill may be rejected or show the wrong party. And your GSTR-1 will carry a record that does not match the buyer's books. A few minutes of checking when you add a new buyer or supplier saves weeks of correction later.
 

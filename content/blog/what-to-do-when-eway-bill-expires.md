@@ -26,7 +26,7 @@ faq:
     a: "The generator, or the transporter to whom the e-way bill is assigned and who is in charge of the goods at that time."
   - q: "Is there a maximum limit on extensions?"
     a: "GSTN reported that from 1 January 2025 an e-way bill can be extended only up to a total of 360 days from its original generation date. Verify the current position on the portal."
-related: ["eway-bill-validity-explained", "how-distance-affects-eway-bill-validity", "how-to-update-vehicle-details-in-eway-bill"]
+related: ["how-distance-affects-eway-bill-validity", "how-to-update-vehicle-details-in-eway-bill"]
 ---
 An e-way bill has a fixed life. Once it expires, goods still on the road are treated as moving without a valid e-way bill, and that can lead to detention, seizure and penalty under Section 129 of the CGST Act. The good news is that the rules give a defined window to extend validity when genuine delays happen. The bad news is that the window is short and easy to miss.
 
@@ -41,7 +41,7 @@ Under Rule 138(10) of the CGST Rules, 2017, validity depends on distance:
 
 The period is counted from the time of generation, and the first "day" ends at midnight of the day following generation. So an e-way bill generated at 11:00 pm on 5 August with 1 day of validity is valid till midnight of 6 August — not just one hour.
 
-The validity end time is printed on the e-way bill itself. Transporters should treat that timestamp as a hard deadline. For details on how distance drives validity, see [e-way bill validity explained](/blog/eway-bill-validity-explained).
+The validity end time is printed on the e-way bill itself. Transporters should treat that timestamp as a hard deadline. For details on how distance drives validity, see [e-way bill validity explained](/eway-bill-validity).
 
 ## The extension window
 

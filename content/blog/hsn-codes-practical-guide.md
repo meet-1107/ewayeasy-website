@@ -26,7 +26,7 @@ faq:
     a: "It depends on your aggregate turnover and the document. Smaller taxpayers report fewer digits than larger ones. Check the current notification on the official portal for the exact cut-off."
   - q: "What is SAC?"
     a: "Services Accounting Code — the equivalent classification for services, used in place of HSN on services invoices."
-related: ["common-eway-bill-errors-and-solutions", "documents-required-for-eway-bill-generation", "prepare-invoice-data-for-bulk-processing"]
+related: ["prepare-invoice-data-for-bulk-processing"]
 ---
 Every product on a GST invoice needs a classification code — the HSN code. It appears on your tax invoice, in your GSTR-1 HSN summary, on e-invoices if you are covered, and in Part A of the e-way bill. Because it links your product to its tax rate, a wrong HSN is not just a typo: it can mean the wrong rate, a mismatch with your buyer's records, or questions during an inspection.
 

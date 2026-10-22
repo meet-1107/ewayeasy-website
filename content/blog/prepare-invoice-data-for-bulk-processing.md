@@ -21,7 +21,7 @@ faq:
     a: "Not as-is. The portal's bulk facility accepts a JSON file prepared using the official Bulk Generation Tools. Your spreadsheet is the source you copy or map into that tool."
   - q: "Why does one bad row matter if the rest are fine?"
     a: "Rows with errors are rejected and need to be fixed and re-uploaded. Catching them before upload saves a second round and avoids delays at dispatch."
-related: ["how-to-generate-bulk-eway-bills", "common-eway-bill-errors-and-solutions", "avoid-errors-in-invoice-and-transport-details"]
+related: ["avoid-errors-in-invoice-and-transport-details"]
 ---
 Bulk processing — uploading many invoices at once instead of entering them one by one — saves real time for businesses with high dispatch volumes. But bulk processing has a catch: it multiplies whatever is in your data. One wrong PIN code typed by hand is one problem. The same wrong PIN pasted into forty rows is forty problems.
 
@@ -36,7 +36,7 @@ The official e-way bill portal offers a bulk generation facility. In general ter
 3. The tool converts the data into a **JSON file**.
 4. You upload the JSON file on the portal, which generates e-way bills for valid rows and reports errors for the rest.
 
-Large taxpayers may instead use API access through a GSP or ERP integration. The exact columns, codes and limits are defined by the official tool and documentation, so always use the current version from the portal. Our guide on [how to generate bulk e-way bills](/blog/how-to-generate-bulk-eway-bills) walks through the portal side.
+Large taxpayers may instead use API access through a GSP or ERP integration. The exact columns, codes and limits are defined by the official tool and documentation, so always use the current version from the portal. Our guide on [how to generate bulk e-way bills](/bulk-eway-bill-generation) walks through the portal side.
 
 Everything below is about making the data you feed into that tool correct.
 

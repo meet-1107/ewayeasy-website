@@ -24,7 +24,7 @@ faq:
     a: "Generally, incidental charges such as packing or freight charged by the supplier in the invoice are included in the value of supply. Check the treatment for your situation."
   - q: "How do I split GST into CGST and SGST?"
     a: "For an intra-state supply, the rate is split equally — for example an 18% rate becomes 9% CGST and 9% SGST. For inter-state supply, the full rate is charged as IGST."
-related: ["cgst-sgst-igst-explained", "eway-bill-vs-tax-invoice", "avoid-errors-in-invoice-and-transport-details"]
+related: ["cgst-sgst-igst-explained", "avoid-errors-in-invoice-and-transport-details"]
 ---
 GST on a single-item bill is easy: price × rate. Real invoices are rarely that simple. There are several products, different tax rates, a trade discount on one line, freight added at the bottom, and the question of whether the buyer is in your state or another. Get any of these wrong and the invoice, the e-way bill and your GST return all carry the error.
 
@@ -95,7 +95,7 @@ Notice that the **total tax is the same** in both cases (₹19,324). Only the sp
 
 ### What the e-way bill picks up
 
-Since the consignment value is ₹1,50,874 (above the general ₹50,000 threshold), an e-way bill is needed. Its Part A will carry the taxable value of ₹1,31,550 and the tax split — CGST/SGST for Case A, IGST for Case B. These must match the invoice exactly. See [common e-way bill errors](/blog/common-eway-bill-errors-and-solutions) for what happens when they do not.
+Since the consignment value is ₹1,50,874 (above the general ₹50,000 threshold), an e-way bill is needed. Its Part A will carry the taxable value of ₹1,31,550 and the tax split — CGST/SGST for Case A, IGST for Case B. These must match the invoice exactly. See [common e-way bill errors](/eway-bill-common-errors) for what happens when they do not.
 
 ## Working backwards from a GST-inclusive price
 

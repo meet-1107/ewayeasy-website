@@ -1,11 +1,11 @@
 ---
 title: "Documents and Data Required for E-Way Bill Generation"
 slug: "documents-required-for-eway-bill"
-description: "The documents and data fields you need to generate an e-way bill, separated into Part A and Part B, with a printable checklist and a worked example."
-updatedAt: "2026-10-10"
+description: "Documents and data you need to generate an e-way bill, split into Part A and Part B, plus what the driver must carry and a printable checklist."
+updatedAt: "2026-10-22"
 verifiedAt: "2026-10-13"
 seoTitle: "Documents Required for E-Way Bill: Full Checklist"
-metaDescription: "Every document and data field needed for an e-way bill: invoice, GSTINs, HSN, value, PIN codes, Transporter ID, vehicle number. Part A vs Part B checklist."
+metaDescription: "Documents and data needed for an e-way bill: invoice or challan, GSTINs, HSN, PINs, Transporter ID, vehicle number, plus what the driver must carry."
 imageAlt: "Checklist clipboard beside a tax invoice, a lorry receipt and a vehicle number plate"
 sources:
   - title: "E-Way Bill System (official portal)"
@@ -27,14 +27,20 @@ faq:
     a: "Yes, where the movement is not a sale or the invoice is not yet issued, such as job work, supply on approval, line sales, SKD/CKD lots or stock transfer without sale."
   - q: "Is the transport document number compulsory?"
     a: "For road, it is optional if the vehicle number is entered. For rail, air and ship, the transport document number and date are needed in Part B."
+  - q: "Does the driver need a printed copy of the e-way bill?"
+    a: "Not necessarily. The rules allow the e-way bill to be carried in physical or electronic form, or just its number, or mapped to an RFID device on the vehicle. The invoice, bill of supply or challan must still accompany the goods."
 related: ["eway-bill-generation", "eway-bill-common-errors", "eway-bill-vs-sales-invoice"]
 updateHistory:
+  - date: "2026-10-22"
+    note: "Merged our separate article on documents required for e-way bill generation into this guide"
   - date: "2026-10-10"
     note: "Added the 180-day base document limit and a printable checklist table."
   - date: "2026-09-10"
     note: "First published."
 ---
-Most e-way bill errors start before you open the portal: a missing PIN code, a wrong HSN, the buyer's old GSTIN, or no vehicle number when the truck is already at the gate. This guide lists exactly what you need, separated into what goes into **Part A** (the initial e-way bill) and what goes into **Part B** (transport details), followed by a checklist you can print and keep at the dispatch desk.
+Most e-way bill errors start before you open the portal: a missing PIN code, a wrong HSN, the buyer's old GSTIN, or no vehicle number when the truck is already at the gate. "Documents required" really means two things: what you need **to generate** the e-way bill, and what the person in charge of the vehicle must **carry** during the movement — the gap between what you typed and what is printed on the paper in the truck is exactly what an officer checks on the road.
+
+This guide lists what you need, separated into what goes into **Part A** (the initial e-way bill) and what goes into **Part B** (transport details), then what must travel with the goods, followed by a checklist you can print and keep at the dispatch desk.
 
 ## A. Documents and supporting information
 
@@ -52,6 +58,8 @@ You do not upload these documents to the portal. You enter data from them, and t
 | **E-invoice (IRN)** | For e-invoice-applicable taxpayers, the IRN can be used to fill Part A |
 
 > **Note:** As reported by GSTN advisories, from 1 January 2025 the base document (invoice or challan) cannot be more than 180 days old on the date you generate the e-way bill.
+
+If you are unsure whether a movement needs an invoice or a challan, read [Delivery Challan vs Tax Invoice](/blog/delivery-challan-vs-tax-invoice).
 
 ## B. Data commonly needed
 
@@ -96,6 +104,23 @@ Part B makes the e-way bill valid for movement. It can be filled at the time of 
 
 Part B is not required when goods move within the same state up to 50 km between the consignor's place and the transporter's place (or from the transporter's place to the consignee). Part A is still required. See [Distance Rules](/eway-bill-distance-rules).
 
+
+## C. Documents to carry with the goods
+
+Under Rule 138A, the person in charge of the conveyance should carry:
+
+1. **The invoice, bill of supply or delivery challan**, as the case may be, and
+2. **A copy of the e-way bill** in physical or electronic form, **or** the e-way bill number, **or** the e-way bill mapped to an RFID device embedded on the conveyance.
+
+Where a consolidated e-way bill (Form GST EWB-02) is generated for multiple consignments in one vehicle, its details should also be available. In practice, transporters also carry the LR or consignment note; it is not a GST document, but its number helps match records.
+
+## D. Situations that need a different base document or entry
+
+- **Unregistered buyer:** enter URP in place of the recipient GSTIN, with the buyer's name, address, state and PIN. Value and tax still come from your invoice.
+- **Job work dispatch:** a delivery challan showing the goods sent, the job worker's details and the purpose. For inter-state movement from a principal to a job worker, an e-way bill is required irrespective of value. See [E-Way Bill Rules for Job Work](/blog/eway-bill-rules-for-job-work).
+- **Branch or stock transfer within the same GSTIN:** a delivery challan; whether an e-way bill is needed depends on the consignment value. Between states, each branch has its own GSTIN and a tax invoice is generally issued.
+- **Goods bought from an unregistered supplier:** the registered recipient can generate the e-way bill as the inward party, using the supplier's bill or a self-prepared document as applicable.
+
 ## Printable checklist
 
 Print this and tick each line before you open the portal or app.
@@ -117,7 +142,7 @@ Print this and tick each line before you open the portal or app.
 | 13 | Vehicle number (road) | B | ☐ |
 | 14 | Transport document number and date (rail/air/ship, or LR) | B | ☐ |
 | 15 | Mobile with OTP access for login | — | ☐ |
-| 16 | Printout or EWB number shared with driver | — | ☐ |
+| 16 | Invoice/challan copy plus EWB number (or printout) handed to driver | — | ☐ |
 
 ## Example (illustrative)
 
@@ -143,6 +168,8 @@ A Morbi tile trader (GSTIN `24ABCDE1234F1Z5`) sends 400 boxes of floor tiles to 
 
 Validity runs from the time Part B is first entered. For 620 km, it is 4 days (601–800 km band).
 
+**Carried by the driver:** a copy of tax invoice MT/26-27/0881 plus the e-way bill number (or a printed or electronic copy of the e-way bill).
+
 ## Common mistakes
 
 - Using the head office PIN as dispatch-from when goods leave from a godown.
@@ -150,11 +177,18 @@ Validity runs from the time Part B is first entered. For 620 km, it is 4 days (6
 - Leaving HSN blank or using a generic code that does not match the invoice.
 - Entering only the taxable value and forgetting GST when checking the ₹50,000 threshold.
 - Assigning a Transporter ID but forgetting to tell the transporter to fill Part B.
+- Typing the invoice number differently from the printed document — prefixes and financial-year format must match exactly.
+- Choosing the wrong document type: a challan movement generated as a tax invoice, or the other way round, creates confusion at checking and in your books.
+- Sending the driver with only the e-way bill. The invoice or challan must also accompany the goods.
+
+## Limitations
+
+The lists above cover standard movements. Imports, exports, SKD/CKD supplies, exhibitions and supplies through e-commerce operators have their own document conventions. When a situation is unusual, check the official user documentation or consult your tax adviser.
 
 ## Where E-Way Easy can help
 
-In the E-Way Easy app, saved buyers and products cut down re-typing: the buyer's address, state and PIN fill from the GSTIN, the HSN fills from the product, and distance is calculated from PIN codes, with manual edits allowed. You still need to check that the details match the goods actually being moved. The free [HSN code lookup](/tools/hsn-code-lookup) and [distance calculator](/tools/distance-calculator) help with individual fields.
+In the E-Way Easy app, saved buyers and products cut down re-typing: the buyer's address, state and PIN fill from the GSTIN, the HSN fills from the product, and distance is calculated from PIN codes, with manual edits allowed. Invoice numbers follow your own series, and the invoice and e-way bill details are reviewed together before saving — a good moment to catch mismatches. You still need to check that the details match the goods actually being moved. The free [HSN code lookup](/tools/hsn-code-lookup) and [distance calculator](/tools/distance-calculator) help with individual fields; check a buyer's GSTIN with our [GSTIN verification checklist](/blog/gstin-verification-what-to-check), and see [how to avoid errors in invoice and transport details](/blog/avoid-errors-in-invoice-and-transport-details).
 
 ## Official sources
 
-Field names and validation rules are defined by the official system. Check the [e-way bill portal](https://ewaybillgst.gov.in/) and its [user documentation](https://docs.ewaybillgst.gov.in/), and read Rule 138 on [CBIC GST](https://cbic-gst.gov.in/) for the legal requirement.
+Field names and validation rules are defined by the official system. Check the [e-way bill portal](https://ewaybillgst.gov.in/) and its [user documentation](https://docs.ewaybillgst.gov.in/), and read Rules 138 and 138A on [CBIC GST](https://cbic-gst.gov.in/) for the legal requirement.

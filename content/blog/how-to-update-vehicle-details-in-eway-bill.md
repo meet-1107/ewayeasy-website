@@ -24,7 +24,7 @@ faq:
     a: "No. Part B updates work only while the e-way bill is valid. If it has expired, you need to look at extension (within the allowed window) rather than a vehicle update."
   - q: "Does updating the vehicle change the validity of the e-way bill?"
     a: "A normal vehicle update does not reset validity. Validity is extended only through the separate extension process."
-related: ["eway-bill-part-a-and-part-b-explained", "eway-bill-validity-explained", "what-to-do-when-eway-bill-expires"]
+related: ["eway-bill-part-a-and-part-b-explained", "what-to-do-when-eway-bill-expires"]
 ---
 An e-way bill is not a document you can freely edit. Once it is generated, the Part A details — GSTINs, invoice number, value, HSN — are locked. The one section that is designed to change during the journey is **Part B**, which holds the vehicle number or transport document details. If your truck breaks down on the highway, or goods are moved from a small tempo to a long-haul trailer at a hub, Part B is what you update.
 

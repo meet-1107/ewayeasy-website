@@ -17,7 +17,7 @@ sources:
     url: "https://ewaybillgst.gov.in/"
   - title: "GST tutorials"
     url: "https://tutorial.gst.gov.in/"
-related: ["eway-bill-vs-tax-invoice", "eway-bill-rules-for-job-work", "eway-bill-returns-and-special-transactions"]
+related: ["eway-bill-rules-for-job-work", "eway-bill-returns-and-special-transactions"]
 ---
 Goods leave your premises for many reasons. Sometimes you are selling them. Sometimes you are sending them to a job worker for processing, to a customer on approval, to your own branch, or out with a sales van that will sell along the route. GST treats these differently, and the document you issue should reflect what is actually happening.
 

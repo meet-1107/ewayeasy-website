@@ -26,7 +26,7 @@ faq:
     a: "Part B is not required where goods move within the same state up to 50 km between the consignor's place and the transporter's place (or from the transporter's place to the consignee). Part A is still required."
   - q: "Do I need an e-way bill to move goods to my own warehouse in the same state?"
     a: "If the value crosses the threshold applicable in your state and no exemption applies, yes. Use a delivery challan as the document."
-related: ["eway-bill-interstate-movement-requirements", "eway-bill-limit-50000-threshold-exceptions", "eway-bill-rules-india-practical-guide"]
+related: ["eway-bill-interstate-movement-requirements", "eway-bill-limit-50000-threshold-exceptions"]
 ---
 Intrastate movement looks simpler than interstate movement: the truck never leaves the state, the distances are shorter and the tax is CGST + SGST. But it is also where most businesses get caught out, because the rules are not identical across India. A practice that works in one state may not be correct in the next one.
 
@@ -109,7 +109,7 @@ A Coimbatore pump manufacturer (GSTIN `33ABCDE1234F1Z5`) has three dispatches on
 4. Generate the e-way bill close to the dispatch time.
 5. Keep a record of e-way bill numbers against invoice numbers.
 
-The free [e-way bill eligibility checker](/tools/eway-bill-eligibility-checker) is a quick first check, and our [practical guide to e-way bill rules](/blog/eway-bill-rules-india-practical-guide) covers the wider framework.
+The free [e-way bill eligibility checker](/tools/eway-bill-eligibility-checker) is a quick first check, and our [practical guide to e-way bill rules](/eway-bill-rules) covers the wider framework.
 
 ## Official sources
 

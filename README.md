@@ -31,7 +31,7 @@ All are `NEXT_PUBLIC_` because the site is static. Nothing secret belongs in thi
 ```
 content/
   EDITORIAL_BRIEF.md    rules + verified facts every writer must follow
-  blog/*.md             30 articles (frontmatter: title, slug, excerpt, category, tags, dates, SEO, sources, faq, related)
+  blog/*.md             22 articles (frontmatter: title, slug, excerpt, category, tags, dates, SEO, sources, faq, related)
   guides/*.md           12 learning-centre pages, served at the site root (/eway-bill-rules, â€¦)
 src/app/                routes (home, features, download, tools/*, blog, authors, updates, legal pages)
 src/components/         Header, Footer, PlayBadge, DownloadCTA, ArticleLayout, BlogCard, AppGraphics, tools/*

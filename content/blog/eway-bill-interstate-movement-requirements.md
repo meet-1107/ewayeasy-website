@@ -26,7 +26,7 @@ faq:
     a: "Yes. The supplier generates the e-way bill and enters URP (unregistered person) in place of the recipient GSTIN, with the correct state and delivery PIN."
   - q: "Does the e-way bill need to be regenerated at the state border?"
     a: "No. One valid e-way bill covers the whole journey. Only Part B needs updating if the vehicle changes."
-related: ["eway-bill-intrastate-movement-considerations", "cgst-sgst-igst-explained", "eway-bill-validity-explained"]
+related: ["eway-bill-intrastate-movement-considerations", "cgst-sgst-igst-explained"]
 ---
 When goods leave your state, the e-way bill becomes non-negotiable in more situations, and the margin for error shrinks. The truck may pass through several states, officers in any of them can verify the consignment, and state-specific relaxations no longer help you. This article sets out what an interstate consignment needs, in the order you would actually prepare it.
 

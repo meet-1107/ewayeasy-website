@@ -24,7 +24,7 @@ faq:
     a: "Part B can be updated any number of times during the validity of the e-way bill, for example on change of vehicle or trans-shipment."
   - q: "Can I edit the invoice value in Part A?"
     a: "No. Part A cannot be edited. Cancel the e-way bill within 24 hours and generate a new one with correct details."
-related: ["how-to-update-vehicle-details-in-eway-bill", "how-to-cancel-an-eway-bill", "who-is-responsible-for-generating-eway-bill"]
+related: ["how-to-update-vehicle-details-in-eway-bill", "who-is-responsible-for-generating-eway-bill"]
 ---
 Form GST EWB-01, the e-way bill form, is split into two parts. The split is not arbitrary: **Part A** describes the consignment — what is moving, from whom, to whom, for how much — and **Part B** describes the conveyance — which vehicle or transport document is carrying it. Different people often know these two sets of facts at different times, which is exactly why the form separates them.
 
@@ -100,7 +100,7 @@ If the truck is changed at Nagpur due to a breakdown, the transporter updates Pa
 | Change transporter | — | Transporter can be changed/reassigned |
 | Trans-shipment | — | Update with new vehicle details |
 
-For the practical steps, read [How to Update Vehicle Details in an E-Way Bill](/blog/how-to-update-vehicle-details-in-eway-bill) and [How to Cancel an E-Way Bill](/blog/how-to-cancel-an-eway-bill).
+For the practical steps, read [How to Update Vehicle Details in an E-Way Bill](/blog/how-to-update-vehicle-details-in-eway-bill) and [How to Cancel an E-Way Bill](/eway-bill-cancellation).
 
 ## Part A, Part B and e-invoicing
 

@@ -24,9 +24,9 @@ faq:
     a: "For movement within the same PIN code, you can enter a distance of up to 100 km."
   - q: "Can I change the distance after generation?"
     a: "Distance is part of the generated bill and cannot be edited. If it is materially wrong, cancel within 24 hours and generate again."
-related: ["eway-bill-validity-explained", "what-to-do-when-eway-bill-expires", "common-eway-bill-errors-and-solutions"]
+related: ["what-to-do-when-eway-bill-expires"]
 ---
-Two numbers decide how long your e-way bill stays valid: the time you generate it and the distance you enter. Time of generation is covered in [E-Way Bill Validity Explained](/blog/eway-bill-validity-explained). This article is about distance — how the portal works it out, how much you can adjust it, and why a careless PIN code can leave your truck with one day less than it needs.
+Two numbers decide how long your e-way bill stays valid: the time you generate it and the distance you enter. Time of generation is covered in [E-Way Bill Validity Explained](/eway-bill-validity). This article is about distance — how the portal works it out, how much you can adjust it, and why a careless PIN code can leave your truck with one day less than it needs.
 
 ## Why distance matters
 

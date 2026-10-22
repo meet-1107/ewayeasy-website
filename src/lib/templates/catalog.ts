@@ -466,7 +466,7 @@ export const TEMPLATE_CONTENT: Record<TemplateId, TemplateContent> = {
     relatedGuides: [
       { title: 'CGST vs SGST vs IGST explained', href: '/blog/cgst-sgst-igst-explained' },
       { title: 'How to calculate GST on a sales invoice', href: '/blog/how-to-calculate-gst-on-sales-invoice' },
-      { title: 'E-way bill vs tax invoice', href: '/blog/eway-bill-vs-tax-invoice' },
+      { title: 'E-way bill vs tax invoice', href: '/eway-bill-vs-sales-invoice' },
       { title: 'HSN codes: a practical guide', href: '/blog/hsn-codes-practical-guide' },
     ],
   },

@@ -21,7 +21,7 @@ faq:
     a: "Either can work. What matters is that one person owns the invoice, a second person checks it before the goods leave, and both work from the same buyer and product masters."
   - q: "Can I use a separate invoice series for each plant or godown?"
     a: "Yes, a supplier can use multiple series as long as each invoice number is unique within the financial year for that GSTIN. Keep the series simple and documented."
-related: ["avoid-errors-in-invoice-and-transport-details", "prepare-invoice-data-for-bulk-processing", "documents-required-for-eway-bill-generation"]
+related: ["avoid-errors-in-invoice-and-transport-details", "prepare-invoice-data-for-bulk-processing"]
 ---
 Most invoice problems in a factory are not tax problems. They are workflow problems: the buyer's address is typed fresh every time, the HSN code is copied from last month's invoice, the invoice number is picked from memory, and the dispatch supervisor learns about the order only when the truck is already at the gate. Each of these small gaps creates rework, and in a manufacturing unit with dozens of dispatches a week the rework adds up quickly.
 
@@ -144,7 +144,7 @@ A simple monthly check is to count invoices above the e-way bill threshold that 
 - **Treating masters as optional.** If staff can still type a buyer's GSTIN freehand, they will.
 - **Sharing one series across locations without control.** This is the main cause of duplicate numbers.
 - **Skipping review on "urgent" dispatches.** Urgent dispatches are exactly where errors happen.
-- **Editing the invoice after the e-way bill is made.** An e-way bill cannot be edited; if Part A is wrong, it must be cancelled within 24 hours and generated again. See [how to cancel an e-way bill](/blog/how-to-cancel-an-eway-bill).
+- **Editing the invoice after the e-way bill is made.** An e-way bill cannot be edited; if Part A is wrong, it must be cancelled within 24 hours and generated again. See [how to cancel an e-way bill](/eway-bill-cancellation).
 - **Generating the e-way bill without the vehicle number.** Without Part B, the e-way bill is generally not valid for movement (except the short-distance case within a state).
 
 ## Limitations

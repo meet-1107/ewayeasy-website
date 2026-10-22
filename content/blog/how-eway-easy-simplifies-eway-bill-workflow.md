@@ -21,7 +21,7 @@ faq:
     a: "E-Way Easy is an Android app."
   - q: "How is the app paid for?"
     a: "The app uses a wallet with pay-per-use credits. Check the current details inside the app."
-related: ["how-to-generate-eway-bill-step-by-step", "avoid-errors-in-invoice-and-transport-details", "digital-tools-for-indian-manufacturers"]
+related: ["avoid-errors-in-invoice-and-transport-details", "digital-tools-for-indian-manufacturers"]
 ---
 Preparing an e-way bill is rarely hard in itself. What slows people down is everything around it: finding the buyer's GSTIN and PIN code, remembering the HSN code, working out the distance, keeping invoice numbers in order, and making sure the invoice and the e-way bill say the same thing. E-Way Easy is an Android app built to take that repetitive work off your hands, so a dispatch can be prepared from a phone in a few minutes.
 
@@ -103,10 +103,10 @@ The whole process takes a few minutes, without re-typing details he has entered 
 
 ## What to keep in mind
 
-- **The rules are still yours to follow.** The app helps you prepare correct data, but you remain responsible for whether an e-way bill is required, the right reason for transport, and the vehicle details. See [e-way bill rules in India: a practical guide](/blog/eway-bill-rules-india-practical-guide).
+- **The rules are still yours to follow.** The app helps you prepare correct data, but you remain responsible for whether an e-way bill is required, the right reason for transport, and the vehicle details. See [e-way bill rules in India: a practical guide](/eway-bill-rules).
 - **Check edits carefully.** HSN and distance can be edited manually. Edit only when you have a genuine reason, such as a route longer than the PIN-to-PIN distance (the portal allows up to 10% more than its own calculation).
 - **Keep your masters clean.** Saved buyers and products save time only if they are accurate. Verify a new buyer's GSTIN once; see [GSTIN verification](/blog/gstin-verification-what-to-check).
-- **One consignment at a time.** The app is designed for preparing invoices and e-way bills individually on a phone. For very high-volume bulk uploads, the official portal's bulk facility is the route; see [how to generate bulk e-way bills](/blog/how-to-generate-bulk-eway-bills).
+- **One consignment at a time.** The app is designed for preparing invoices and e-way bills individually on a phone. For very high-volume bulk uploads, the official portal's bulk facility is the route; see [how to generate bulk e-way bills](/bulk-eway-bill-generation).
 
 ## Common mistakes new users make
 
@@ -117,7 +117,7 @@ The whole process takes a few minutes, without re-typing details he has entered 
 
 ## Get started
 
-E-Way Easy is available for Android. [Download the app](/download) or see the [full feature list](/features). For background on the process itself, read [how to generate an e-way bill step by step](/blog/how-to-generate-eway-bill-step-by-step).
+E-Way Easy is available for Android. [Download the app](/download) or see the [full feature list](/features). For background on the process itself, read [how to generate an e-way bill step by step](/eway-bill-generation).
 
 ## After generation: Part-B, consolidation, cancellation and extension
 

@@ -2,7 +2,7 @@
 title: "Bulk E-Way Bill Generation: Complete Guide"
 slug: "bulk-eway-bill-generation"
 description: "How bulk e-way bill generation works through the official Excel-based Bulk Generation Tool and JSON upload, how to prepare and validate data, handle errors and retry safely without duplicates, and what E-Way Easy does and does not offer."
-updatedAt: "2026-10-14"
+updatedAt: "2026-10-22"
 verifiedAt: "2026-10-14"
 seoTitle: "Bulk E-Way Bill Generation: Complete Guide (2026)"
 metaDescription: "Bulk e-way bill generation explained: official Excel tool and JSON upload, data preparation, GSTIN/HSN checks, duplicate detection, errors and safe retries."
@@ -29,8 +29,12 @@ faq:
     a: "No. E-Way Easy currently offers a single invoice-based workflow on mobile. Bulk generation is not a claimed feature of the app."
   - q: "Is it allowed to use scripts or bots to log in and upload?"
     a: "No. Do not bypass the portal's authentication, OTP or captcha, and do not use unauthorised automation. For system-to-system generation, use an authorised API/GSP integration."
+  - q: "Can e-invoice taxpayers generate e-way bills at volume without a separate upload?"
+    a: "Often, yes. An e-way bill can be generated using the IRN of an e-invoice, with Part A taken from the e-invoice data. When e-invoices are produced in bulk through an ERP, the e-way bills can usually follow in the same process."
 related: ["documents-required-for-eway-bill", "eway-bill-common-errors", "eway-bill-generation", "eway-bill-correction"]
 updateHistory:
+  - date: "2026-10-22"
+    note: "Merged our separate article on generating bulk e-way bills into this guide"
   - date: "2026-10-14"
     note: "Added the three different things section and a safe retry checklist."
   - date: "2026-09-12"
@@ -61,10 +65,23 @@ The official e-way bill system provides a bulk generation facility:
 3. Use the tool to validate the sheet and convert it to a **JSON file**.
 4. Log in to the portal, choose the bulk generation option, and upload the JSON file.
 5. The portal processes each record and shows which e-way bills were generated and which records failed, with reasons.
+6. Download or print the generated e-way bills and share each e-way bill number with the transporter or driver.
+
+The portal also offers bulk options for some other functions, such as updating Part B or generating consolidated e-way bills. Which bulk operations are available at any time is listed in the user documentation.
 
 The tool's exact layout, sheet names and field formats are set by the portal and can change. Always download the latest version from the [official portal](https://ewaybillgst.gov.in/) and follow the [user documentation](https://docs.ewaybillgst.gov.in/). Do not reuse an old copy of the tool indefinitely.
 
-Large taxpayers usually connect their ERP to the e-way bill system via **API**, either directly (where eligible) or through a **GST Suvidha Provider (GSP)**. That is system-to-system integration with its own registration, credentials and security requirements.
+Large taxpayers usually connect their ERP to the e-way bill system via **API**, either directly (where eligible) or through a **GST Suvidha Provider (GSP)**. That is system-to-system integration with its own registration, credentials and security requirements. The ERP sends e-way bill data when the invoice is finalised and receives the e-way bill number back, so there is no manual upload at all. In return it needs:
+
+- API access registration on the e-way bill portal,
+- a compatible ERP or GSP solution,
+- IT effort to map fields and handle errors.
+
+For most small and mid-sized businesses, the portal's bulk tool is the more practical route.
+
+### The e-invoice route
+
+If your business must issue e-invoices, the e-way bill can be generated using the **IRN**. Part A is auto-populated from the e-invoice data, so you mostly add transport details. When your ERP produces e-invoices in bulk, e-way bills can often follow in the same process — another way of getting volume without a separate JSON upload.
 
 ## Who benefits
 
@@ -82,9 +99,22 @@ Large taxpayers usually connect their ERP to the e-way bill system via **API**, 
 | Stable product list with correct HSN | Frequently changing items with unclear HSN |
 | A person dedicated to checking errors | No one available to fix failed records |
 
+**Example (illustrative):** a Nagpur FMCG distributor has 48 invoices to dispatch by 10 am. At around 4 minutes to key in and check each bill, single entry takes over 3 hours. Exporting the invoices from billing software into the bulk tool, validating, converting, uploading and reviewing results might take around 30 minutes. Actual timings depend on your data quality and connection, but the gap widens as volume grows.
+
 ## Preparing structured data
 
 Good bulk generation is 80% data preparation. Every row needs the same fields you would type manually (see [Documents and Data Required](/documents-required-for-eway-bill)).
+
+### Fix your masters first
+
+Most failed rows trace back to the customer and item masters in your billing software, not to the upload itself. Before your first upload:
+
+- **Standardise and verify GSTINs** in the customer master. One wrong character fails the record.
+- **Fix HSN codes** at item master level, at the digit length that applies to your turnover.
+- **Use actual dispatch and delivery PIN codes**, not billing addresses.
+- **Keep date formats consistent** with what the tool expects.
+
+Our article on [preparing invoice data for bulk processing](/blog/prepare-invoice-data-for-bulk-processing) goes into this in more detail.
 
 ### Common fields
 
@@ -160,6 +190,14 @@ The goal is to retry only what failed and never create a second e-way bill for t
 - If a wrong e-way bill was generated, cancel it within 24 hours and generate the correct one — see [Cancellation](/eway-bill-cancellation).
 - Keep the original and corrected files for your records.
 
+## Common mistakes
+
+- **Editing the JSON file by hand.** Fix the sheet and regenerate the JSON with the tool instead.
+- **Re-uploading the whole file after partial errors**, which invites duplicates for records already generated.
+- **Using an old version of the bulk tool** after the portal has changed its format.
+- **Not reconciling.** Match every e-way bill number generated back to your invoice list the same day.
+- **Leaving Part B blank in bulk and forgetting it.** If vehicle details were not in the file, update Part B for each bill before the truck leaves; the e-way bill is not valid for movement without it (except the short-distance case allowed by the rules).
+
 ## Security and privacy
 
 Bulk files contain your buyers' GSTINs, addresses and sales values.
@@ -176,7 +214,7 @@ Do not use scripts, browser bots or third-party tools that log in to the portal 
 
 ## Where E-Way Easy fits
 
-E-Way Easy is a mobile app for creating one invoice and its e-way bill details at a time, with saved buyers and products, automatic HSN and distance, and a review step before completion. It does not claim bulk generation. For high-volume batches, use the official bulk tool or an authorised integration. The free [quantity and tax calculator](/tools/quantity-and-tax-calculator) and [HSN code lookup](/tools/hsn-code-lookup) can help when checking rows in your sheet.
+E-Way Easy is a mobile app for creating one invoice and its e-way bill details at a time, with saved buyers and products, automatic HSN and distance, and a review step before completion. It does not claim bulk generation. For a business raising a handful of invoices a day, that single-invoice flow can be quicker than preparing upload files. For high-volume batches, use the official bulk tool or an authorised integration. The free [quantity and tax calculator](/tools/quantity-and-tax-calculator) and [HSN code lookup](/tools/hsn-code-lookup) can help when checking rows in your sheet.
 
 ## Official sources
 
