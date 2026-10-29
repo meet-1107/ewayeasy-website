@@ -4,7 +4,9 @@ import PlayBadge from '@/components/PlayBadge';
 import BlogCard from '@/components/BlogCard';
 import UpdateCard from '@/components/UpdateCard';
 import JsonLd from '@/components/JsonLd';
-import { HeroVisual, AppShowcase, RouteIllustration } from '@/components/AppGraphics';
+import { AppShowcase, RouteIllustration } from '@/components/AppGraphics';
+import DispatchAnimation from '@/components/DispatchAnimation';
+import ReviewsSection from '@/components/ReviewsSection';
 import { getAllPosts, toSummary } from '@/lib/content';
 import { UPDATES } from '@/lib/updates';
 import { pageMeta } from '@/lib/seo';
@@ -148,7 +150,7 @@ export default function Home() {
               ))}
             </ul>
           </div>
-          <HeroVisual />
+          <DispatchAnimation className="mx-auto w-full max-w-[560px] overflow-hidden rounded-[2rem] shadow-lift" />
         </div>
       </section>
 
@@ -310,6 +312,8 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      <ReviewsSection />
 
       {/* G2. Founder */}
       <section className="section pb-0" aria-labelledby="founder-h">
