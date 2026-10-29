@@ -8,7 +8,7 @@ import { HeroVisual, AppShowcase, RouteIllustration } from '@/components/AppGrap
 import { getAllPosts, toSummary } from '@/lib/content';
 import { UPDATES } from '@/lib/updates';
 import { pageMeta } from '@/lib/seo';
-import { SITE_URL } from '@/lib/site';
+import { FOUNDER, SITE_URL } from '@/lib/site';
 
 export const metadata = pageMeta({
   title: 'E-Way Bill Generator App: Generate E-Way Bills on Mobile',
@@ -112,13 +112,22 @@ export default function Home() {
         <div aria-hidden className="absolute right-0 top-0 h-96 w-96 rounded-full bg-amber-500/20 blur-3xl" />
         <div className="container relative grid items-center gap-12 py-14 md:py-20 lg:grid-cols-[1.05fr_1fr]">
           <div>
-            <p className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-3 py-1 text-xs font-semibold text-amber-300">
-              <span className="h-1.5 w-1.5 rounded-full bg-amber-400" /> Made for Indian manufacturers, wholesalers and traders
-            </p>
+            <div className="flex flex-wrap gap-2">
+              <p className="inline-flex items-center gap-1.5 rounded-full bg-emerald-400/15 px-3 py-1 text-xs font-semibold text-emerald-200 ring-1 ring-emerald-300/30">
+                <svg viewBox="0 0 20 20" className="h-3.5 w-3.5" aria-hidden><path fill="currentColor" d="M10 2 4 4.5v4.8c0 3.9 2.6 7.3 6 8.7 3.4-1.4 6-4.8 6-8.7V4.5L10 2Zm-1 11.4-3-3 1.4-1.4L9 10.6l3.6-3.6L14 8.4l-5 5Z" /></svg>
+                Safe &amp; secure · encrypted API login
+              </p>
+              <p className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-3 py-1 text-xs font-semibold text-amber-300">
+                Made in Gujarat, for India
+              </p>
+            </div>
             <h1 className="mt-5 font-display text-4xl font-extrabold leading-[1.08] md:text-6xl">
               The E-Way Bill Generator <span className="text-amber-400">for Your Phone</span>
             </h1>
-            <p className="mt-5 max-w-xl text-lg leading-8 text-brand-100/90">
+            <p className="mt-4 text-lg font-semibold text-white sm:hidden">
+              Sales invoice + e-way bill in one tap ⚡ Share the PDF on WhatsApp.
+            </p>
+            <p className="mt-5 hidden max-w-xl text-lg leading-8 text-brand-100/90 sm:block">
               Enter the sales invoice once, or import its PDF. Buyer details fill in from the GSTIN, HSN comes from your product list and
               distance is worked out from PIN codes. Review it, tap Generate and move on to the next dispatch, all from your mobile.
             </p>
@@ -298,6 +307,27 @@ export default function Home() {
           </div>
           <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {posts.map((p) => <BlogCard key={p.slug} post={p} />)}
+          </div>
+        </div>
+      </section>
+
+      {/* G2. Founder */}
+      <section className="section pb-0" aria-labelledby="founder-h">
+        <div className="container">
+          <div className="grid items-center gap-8 overflow-hidden rounded-4xl bg-white p-6 shadow-card md:grid-cols-[220px_1fr] md:p-10">
+            <div className="mx-auto w-40 overflow-hidden rounded-3xl md:w-full">
+              <Image src={FOUNDER.photo} alt={`${FOUNDER.name}, founder of E-Way Easy`} width={720} height={960} sizes="(max-width: 768px) 160px, 220px" className="h-auto w-full" />
+            </div>
+            <div className="text-center md:text-left">
+              <p className="eyebrow">Built by one person, for businesses across India</p>
+              <h2 id="founder-h" className="h2 mt-2">From {FOUNDER.village} to your phone</h2>
+              <p className="mt-4 leading-7 text-ink-soft">
+                {FOUNDER.name} grew up in {FOUNDER.village}, a small village near {FOUNDER.near}. After a year at {FOUNDER.previousWork},
+                he spent {FOUNDER.buildMonths} months building E-Way Easy on one laptop, working after office hours until 2 AM, so that
+                traders, manufacturers, wholesalers and transporters can make their invoice and e-way bill in one tap and avoid costly mistakes.
+              </p>
+              <Link href="/about" className="btn-ghost mt-6">Read Meet&rsquo;s story →</Link>
+            </div>
           </div>
         </div>
       </section>

@@ -6,7 +6,7 @@ import Footer from '@/components/Footer';
 import Consent from '@/components/Consent';
 import StickyCTA from '@/components/StickyCTA';
 import JsonLd from '@/components/JsonLd';
-import { GSC_VERIFICATION, SITE, SITE_URL } from '@/lib/site';
+import { FOUNDER, GSC_VERIFICATION, SITE, SITE_URL } from '@/lib/site';
 
 const sans = Inter({ subsets: ['latin'], variable: '--font-sans', display: 'swap' });
 const display = Plus_Jakarta_Sans({ subsets: ['latin'], variable: '--font-display', display: 'swap', weight: ['600', '700', '800'] });
@@ -26,7 +26,10 @@ export const viewport: Viewport = { themeColor: '#174F39', width: 'device-width'
 const orgLd = {
   '@context': 'https://schema.org',
   '@graph': [
-    { '@type': 'Organization', '@id': `${SITE_URL}/#org`, name: SITE.name, url: SITE_URL, logo: `${SITE_URL}/favicon.svg` },
+    {
+      '@type': 'Organization', '@id': `${SITE_URL}/#org`, name: SITE.name, url: SITE_URL, logo: `${SITE_URL}/favicon.svg`,
+      founder: { '@type': 'Person', name: FOUNDER.name, url: `${SITE_URL}/about` },
+    },
     {
       '@type': 'WebSite', '@id': `${SITE_URL}/#website`, name: SITE.name, url: SITE_URL, inLanguage: 'en-IN',
       publisher: { '@id': `${SITE_URL}/#org` },

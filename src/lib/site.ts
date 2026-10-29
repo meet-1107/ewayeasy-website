@@ -25,6 +25,19 @@ export const AUTHOR = {
 };
 
 /** Adds UTM parameters to the Play Store URL so clicks can be attributed by placement. */
+// Founder facts as supplied by the business (October 2026). Keep to these; don't add details that weren't given.
+export const FOUNDER = {
+  name: 'Meet Akabari',
+  role: 'Founder, E-Way Easy',
+  village: 'Nani Bhagedi',
+  near: 'Kalavad',
+  state: 'Gujarat',
+  photo: '/images/team/meet-akabari.jpg',
+  previousWork: 'FactoHR',
+  previousWorkYears: 1,
+  buildMonths: 5,
+};
+
 export function playStoreHref(placement: string): string | null {
   if (!PLAY_STORE_URL) return null;
   try {

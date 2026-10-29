@@ -1,4 +1,4 @@
-﻿import Link from 'next/link';
+import Link from 'next/link';
 import Logo from './Logo';
 import PlayBadge from './PlayBadge';
 import { AUTHOR } from '@/lib/site';
@@ -56,7 +56,7 @@ const COLS = [
   {
     title: 'Company',
     links: [
-      { label: 'About', href: '/about' },
+      { label: 'Our story', href: '/about' },
       { label: `Author: ${AUTHOR.name}`, href: `/authors/${AUTHOR.slug}` },
       { label: 'Contact & support', href: '/contact' },
       { label: 'Refund policy', href: '/refund-policy' },
@@ -95,7 +95,7 @@ export default function Footer() {
             <a className="underline" href="https://ewaybillgst.gov.in/" target="_blank" rel="noopener noreferrer">e-way bill portal</a>.
           </p>
           <div className="mt-4 flex flex-wrap items-center justify-between gap-3">
-            <p>© {new Date().getFullYear()} E-Way Easy. All rights reserved.</p>
+            <p>© {new Date().getFullYear()} E-Way Easy · Built with care in Nani Bhagedi, Gujarat, by <a href="/about" className="underline hover:text-white">Meet Akabari</a>.</p>
             <ul className="flex flex-wrap gap-4">
               <li><Link href="/privacy-policy" className="hover:text-white">Privacy Policy</Link></li>
               <li><Link href="/terms-and-conditions" className="hover:text-white">Terms</Link></li>
