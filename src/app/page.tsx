@@ -7,6 +7,7 @@ import JsonLd from '@/components/JsonLd';
 import { AppShowcase, RouteIllustration } from '@/components/AppGraphics';
 import DispatchAnimation from '@/components/DispatchAnimation';
 import ReviewsSection from '@/components/ReviewsSection';
+import PeopleStrip from '@/components/PeopleStrip';
 import RotatingWords from '@/components/RotatingWords';
 import Reveal from '@/components/Reveal';
 import { getAllPosts, toSummary } from '@/lib/content';
@@ -163,6 +164,10 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      <Reveal>
+        <PeopleStrip />
+      </Reveal>
 
       {/* B. Problem → solution graphics */}
       <Reveal>
