@@ -9,6 +9,9 @@ const COLS = [
     links: [
       { label: 'Features', href: '/features' },
       { label: 'How it works', href: '/how-it-works' },
+      { label: 'Invoice PDF to e-way bill', href: '/invoice-pdf-to-eway-bill' },
+      { label: 'Manage e-way bills', href: '/eway-bill-management-app' },
+      { label: 'API login setup', href: '/eway-bill-api-setup' },
       { label: 'Pricing', href: '/pricing' },
       { label: 'Download app', href: '/download' },
       { label: 'Help centre', href: '/help' },
@@ -20,6 +23,7 @@ const COLS = [
     links: [
       { label: 'Manufacturers', href: '/solutions/manufacturers' },
       { label: 'Wholesalers & distributors', href: '/solutions/wholesalers-distributors' },
+      { label: 'Transporters', href: '/solutions/transporters' },
       { label: 'Accountants', href: '/solutions/accountants' },
     ],
   },
@@ -91,7 +95,7 @@ export default function Footer() {
             <a className="underline" href="https://ewaybillgst.gov.in/" target="_blank" rel="noopener noreferrer">e-way bill portal</a>.
           </p>
           <div className="mt-4 flex flex-wrap items-center justify-between gap-3">
-            <p>Â© {new Date().getFullYear()} E-Way Easy. All rights reserved.</p>
+            <p>© {new Date().getFullYear()} E-Way Easy. All rights reserved.</p>
             <ul className="flex flex-wrap gap-4">
               <li><Link href="/privacy-policy" className="hover:text-white">Privacy Policy</Link></li>
               <li><Link href="/terms-and-conditions" className="hover:text-white">Terms</Link></li>

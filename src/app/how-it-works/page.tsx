@@ -18,8 +18,9 @@ const STEPS: { n: number; screen: ScreenName; title: string; points: string[]; a
   {
     n: 1,
     screen: 'invoice',
-    title: 'Create the sales invoice',
+    title: 'Create or import the sales invoice',
     points: [
+      'Create the invoice in the app, or import an invoice PDF from your billing software and review what the app read from it.',
       'Your seller details are saved once and reused.',
       'Enter the buyer’s GSTIN and the name, address, state and PIN fill in automatically. Leave it empty for an unregistered buyer.',
       'Pick products from your saved list. The HSN code comes with the product and can be edited.',
@@ -43,8 +44,8 @@ const STEPS: { n: number; screen: ScreenName; title: string; points: string[]; a
     screen: 'generated',
     title: 'Generate and use the result',
     points: [
-      'Generate through the app’s supported workflow. The e-way bill number is issued by the official e-way bill system.',
-      'Use the available preview and print options. The sales invoice is saved with the same details.',
+      'Tap Generate. Details are checked before filing, the bill is filed on the official NIC e-way bill system through an authorised GSP, and the e-way bill number comes back to the app.',
+      'Download the e-way bill PDF and share it on WhatsApp or email, or print it. The sales invoice is saved with the same details.',
       'Your dashboard keeps count of invoices and e-way bills for the financial year.',
     ],
     alt: 'Step 3: generated screen with validity, vehicle, print and share options',
@@ -52,9 +53,10 @@ const STEPS: { n: number; screen: ScreenName; title: string; points: string[]; a
 ];
 
 const FAQ = [
-  { q: 'Is E-Way Easy a government app?', a: 'No. E-Way Easy is a private app. E-way bills are issued by the official e-way bill system; the app helps you prepare the invoice and e-way bill details and complete the supported workflow on your phone.' },
+  { q: 'Is E-Way Easy a government app?', a: 'No. E-Way Easy is an independent private app, not affiliated with the Government of India, GSTN or NIC. E-way bills are filed on the official NIC e-way bill system through an authorised GST Suvidha Provider (GSP), using your own e-way bill API login.' },
+  { q: 'What is the one-time setup?', a: 'Sign up with email or Google, add your business GSTIN, and connect your e-way bill system API login once. The app guides you through it, and the login is stored encrypted. After that, you only create or import invoices and generate.' },
   { q: 'Do I need to make the sales invoice separately?', a: 'No. The sales invoice is the first step of the same flow, so the invoice and the e-way bill are built from the same details.' },
-  { q: 'What do I need before I start?', a: 'An Android phone, your business GSTIN, your buyers’ GSTINs (or address details for unregistered buyers), your product list with HSN codes, transport details, and credits in the app wallet.' },
+  { q: 'What do I need before I start?', a: 'An Android phone, your business GSTIN, your e-way bill system API login, your buyers’ GSTINs (or address details for unregistered buyers), your product list with HSN codes, transport details, and credits in the app wallet.' },
   { q: 'Can I generate many e-way bills at once in the app?', a: 'The app works one invoice at a time. For large batches, see our bulk e-way bill guide and the free Bulk E-Way Bill Data Checker, which help you prepare data for the official bulk process.' },
   { q: 'What if something is wrong after generation?', a: 'E-way bill details cannot be edited after generation. If Part A details are wrong, you can cancel the e-way bill from the app within 24 hours and generate it again. If the vehicle changes, update Part-B from the app. The app can also create consolidated e-way bills and extend validity. Each of these actions costs 5 credits.' },
 ];
@@ -79,6 +81,23 @@ export default function HowItWorks() {
       />
 
       <div className="container py-14">
+        <section aria-labelledby="setup" className="card mb-16 p-6 md:p-8">
+          <p className="eyebrow">Before step 1 · one-time setup</p>
+          <h2 id="setup" className="mt-2 font-display text-2xl font-bold text-ink">Set up once, then just generate</h2>
+          <ol className="mt-5 grid gap-4 md:grid-cols-2">
+            <li className="flex gap-3 text-ink-soft">
+              <span className="grid h-7 w-7 shrink-0 place-items-center rounded-full bg-brand-50 text-sm font-bold text-brand-700" aria-hidden>A</span>
+              <span><strong className="text-ink">Sign up and add your GSTIN.</strong> Sign in with email or Google and add your business details.</span>
+            </li>
+            <li className="flex gap-3 text-ink-soft">
+              <span className="grid h-7 w-7 shrink-0 place-items-center rounded-full bg-brand-50 text-sm font-bold text-brand-700" aria-hidden>B</span>
+              <span>
+                <strong className="text-ink">Connect your e-way bill API login.</strong> The app guides you through it once and stores the
+                login encrypted. See <Link className="text-brand-700 underline" href="/eway-bill-api-setup">API login setup</Link>.
+              </span>
+            </li>
+          </ol>
+        </section>
         <ol className="space-y-20">
           {STEPS.map((s, i) => (
             <li key={s.n} id={`step-${s.n}`} className="grid scroll-mt-24 items-center gap-10 md:grid-cols-2">
@@ -116,7 +135,7 @@ export default function HowItWorks() {
           </div>
           <ComplianceNote title="What E-Way Easy is, and what it is not">
             <p>E-Way Easy is a private app, not a government portal, and is not affiliated with GSTN or NIC.</p>
-            <p>E-way bill numbers come from the official e-way bill system. The exact steps can differ by app version.</p>
+            <p>E-way bills are filed on the official NIC e-way bill system through an authorised GSP. The exact steps can differ by app version.</p>
             <p>Each e-way bill action costs 5 credits (₹5), taken only when it succeeds. See <Link className="underline" href="/pricing">pricing</Link> and the <Link className="underline" href="/help">help centre</Link>.</p>
           </ComplianceNote>
         </section>

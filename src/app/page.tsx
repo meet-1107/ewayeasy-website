@@ -11,29 +11,30 @@ import { pageMeta } from '@/lib/seo';
 import { SITE_URL } from '@/lib/site';
 
 export const metadata = pageMeta({
-  title: 'E-Way Easy: Generate E-Way Bills Faster from Your Phone',
+  title: 'E-Way Bill Generator App: Generate E-Way Bills on Mobile',
   description:
-    'Create the sales invoice and e-way bill in one flow on your phone: buyer GSTIN auto-fill, HSN from products, PIN-based distance. ₹5 per e-way bill.',
+    'Generate e-way bills from a GST invoice on your Android phone. Import invoice PDFs, update Part B, extend, cancel or consolidate. No subscription, ₹5 per bill.',
   path: '/',
 });
 
-const HIGHLIGHTS = [
-  'Simplified e-way bill workflow',
-  'Invoice-based data entry',
-  'Product and HSN details',
-  'Distance calculation from PIN codes',
-  'Invoice preview before saving',
-  '₹5 per e-way bill, charged only on success',
+const HIGHLIGHTS: { text: string; href?: string }[] = [
+  { text: 'Create a GST invoice or import its PDF', href: '/invoice-pdf-to-eway-bill' },
+  { text: 'Buyer details from GSTIN, HSN from products' },
+  { text: 'Distance calculated from PIN codes' },
+  { text: 'Part B, extend, cancel, consolidate, share PDF', href: '/eway-bill-management-app' },
+  { text: 'No yearly subscription' },
+  { text: '₹5 per e-way bill, charged only on success' },
 ];
 
-const FEATURES = [
+const FEATURES: { title: string; text: string; icon: string; href?: string }[] = [
   { title: 'Sales invoice, created in the flow', text: 'The sales invoice is prepared as step one of the e-way bill workflow, so you don’t make it twice.', icon: 'doc' },
+  { title: 'Import invoice PDF', text: 'Already billed in other software? Import the PDF; the app reads buyer, GSTIN, items, HSN and totals for you to review.', icon: 'doc', href: '/invoice-pdf-to-eway-bill' },
   { title: 'Buyer GSTIN auto-fill', text: 'Enter the buyer’s GSTIN and the name, address, state and PIN fill in automatically.', icon: 'id' },
   { title: 'HSN from your product list', text: 'Pick a saved product and its HSN code comes with it. You can still edit it manually.', icon: 'tag' },
   { title: 'Distance from PIN codes', text: 'Approximate distance is calculated from dispatch and delivery PIN codes. Edit it if the actual route differs.', icon: 'pin' },
   { title: 'Your own invoice series', text: 'Invoice numbers follow your pre-series automatically, e.g. EE/26-27/0042.', icon: 'hash' },
   { title: 'Saved buyers and products', text: 'Search and pick buyers and products instead of typing them again for every dispatch.', icon: 'box' },
-  { title: 'Part-B, cancel, consolidate, extend', text: 'Change the vehicle, cancel within 24 hours, consolidate consignments or extend validity from the same app.', icon: 'doc' },
+  { title: 'Manage every e-way bill', text: 'Update Part B, extend validity, cancel within 24 hours, consolidate consignments, and share the e-way bill PDF on WhatsApp or email.', icon: 'doc', href: '/eway-bill-management-app' },
   { title: '₹5 per action, pay only on success', text: '1 credit = ₹1 and each e-way bill action is 5 credits. If the portal rejects it, the credits come back automatically.', icon: 'hash' },
 ];
 
@@ -100,7 +101,7 @@ export default function Home() {
           operatingSystem: 'ANDROID',
           applicationCategory: 'BusinessApplication',
           url: `${SITE_URL}/download`,
-          description: 'Android app that simplifies the e-way bill workflow from sales invoice to e-way bill for Indian businesses.',
+          description: 'E-way bill generator app for Android: generate, update, extend, cancel and consolidate e-way bills from a GST invoice or invoice PDF.',
         }}
       />
 
@@ -115,11 +116,11 @@ export default function Home() {
               <span className="h-1.5 w-1.5 rounded-full bg-amber-400" /> Made for Indian manufacturers, wholesalers and traders
             </p>
             <h1 className="mt-5 font-display text-4xl font-extrabold leading-[1.08] md:text-6xl">
-              Generate E-Way Bills <span className="text-amber-400">Faster</span> with E-Way Easy
+              The E-Way Bill Generator <span className="text-amber-400">for Your Phone</span>
             </h1>
             <p className="mt-5 max-w-xl text-lg leading-8 text-brand-100/90">
-              Enter the sales invoice once. Buyer details fill in from the GSTIN, HSN comes from your product list and distance is
-              worked out from PIN codes. Review it and move on to the next dispatch, all from your mobile.
+              Enter the sales invoice once, or import its PDF. Buyer details fill in from the GSTIN, HSN comes from your product list and
+              distance is worked out from PIN codes. Review it, tap Generate and move on to the next dispatch, all from your mobile.
             </p>
             <div className="mt-8 flex flex-wrap items-center gap-4">
               <PlayBadge placement="home-hero" />
@@ -127,9 +128,13 @@ export default function Home() {
             </div>
             <ul className="mt-10 grid gap-x-6 gap-y-3 text-sm text-brand-100/90 sm:grid-cols-2">
               {HIGHLIGHTS.map((h) => (
-                <li key={h} className="flex items-center gap-2.5">
+                <li key={h.text} className="flex items-center gap-2.5">
                   <svg viewBox="0 0 20 20" className="h-5 w-5 shrink-0 text-amber-400" aria-hidden><path d="m5 10.5 3 3 7-7" stroke="currentColor" strokeWidth="2.2" fill="none" strokeLinecap="round" /></svg>
-                  {h}
+                  {h.href ? (
+                    <Link href={h.href} className="underline decoration-white/30 underline-offset-4 hover:text-white hover:decoration-amber-400">{h.text}</Link>
+                  ) : (
+                    h.text
+                  )}
                 </li>
               ))}
             </ul>
@@ -182,10 +187,10 @@ export default function Home() {
           </div>
           <ol className="mt-12 grid gap-5 md:grid-cols-4">
             {[
-              ['Enter the invoice', 'Seller details are saved. Add the buyer by GSTIN and pick products from your list.'],
+              ['Enter or import the invoice', 'Add the buyer by GSTIN and pick products from your list, or import an invoice PDF.'],
               ['Review the details', 'Check GSTINs, HSN, quantities, values, PIN codes, distance and transport details.'],
-              ['Generate', 'Generate the e-way bill through the app’s supported workflow.'],
-              ['View and print', 'See the result and use the available preview and print options.'],
+              ['Generate', 'Tap Generate. The e-way bill number comes back from the official e-way bill system.'],
+              ['Share and manage', 'Share the PDF on WhatsApp or email, or print it. Update Part B, extend or cancel later.'],
             ].map(([t, d], i) => (
               <li key={t} className="relative rounded-3xl border border-brand-900/10 bg-cream p-6">
                 <span className="font-display text-5xl font-extrabold text-brand-100">{String(i + 1).padStart(2, '0')}</span>
@@ -218,6 +223,11 @@ export default function Home() {
                 <Icon name={f.icon} />
                 <h3 className="mt-5 font-display text-lg font-bold">{f.title}</h3>
                 <p className="mt-2 text-sm leading-6 text-ink-soft">{f.text}</p>
+                {f.href && (
+                  <Link href={f.href} className="mt-3 inline-block text-sm font-semibold text-brand-700 hover:text-brand-800">
+                    Learn more →
+                  </Link>
+                )}
               </div>
             ))}
           </div>

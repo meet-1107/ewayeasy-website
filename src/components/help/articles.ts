@@ -15,6 +15,29 @@ export type HelpArticle = {
 
 export const HELP_ARTICLES: HelpArticle[] = [
   {
+    id: 'connect-api-login',
+    category: 'Getting started',
+    q: 'Connecting your e-way bill API login',
+    a: [
+      'E-Way Easy files e-way bills on the official NIC e-way bill system through an authorised GST Suvidha Provider (GSP), using your own e-way bill system API login. You connect it once, and the app guides you through the setup step by step.',
+      'The API login is stored encrypted and used only for the e-way bills you ask the app to generate or manage. If the connection fails, check the steps in the in-app guide and our setup page, then try again.',
+      'Never share your portal password or OTP over phone, WhatsApp or email. No genuine support team will ask for them.',
+    ],
+    links: [{ label: 'E-way bill API login setup', href: '/eway-bill-api-setup' }],
+    keywords: 'api login username password gsp connect setup credentials portal nic',
+  },
+  {
+    id: 'pdf-import-field',
+    category: 'Invoice and buyer details',
+    q: 'Invoice PDF import didn’t read a field correctly',
+    a: [
+      'When you import an invoice PDF, the app reads the buyer, GSTIN, items, HSN codes and totals from it. Invoice layouts vary, so always review the extracted details before generating.',
+      'If a field was read wrongly or left empty, correct it on the review screen. Pay particular attention to the buyer GSTIN, invoice number and date, HSN codes, taxable value and tax, because these go into Part A and cannot be edited after generation.',
+    ],
+    links: [{ label: 'Invoice PDF to e-way bill', href: '/invoice-pdf-to-eway-bill' }],
+    keywords: 'pdf import upload read extract wrong field missing ocr invoice',
+  },
+  {
     id: 'gstin-not-filling',
     category: 'Invoice and buyer details',
     q: 'Buyer GSTIN details are not filling automatically',
@@ -122,6 +145,6 @@ export const HELP_ARTICLES: HelpArticle[] = [
 export const GETTING_STARTED_FAQ = [
   {
     q: 'How do I get started with E-Way Easy?',
-    a: 'Install the app from Google Play, add your business details (your seller details are saved), then create your first invoice. The app takes you through three steps: Invoice, Review EWB and Generated.',
+    a: 'Install the app from Google Play, sign in with email or Google, add your business GSTIN and connect your e-way bill API login once (the app guides you). Then create or import your first invoice. The app takes you through three steps: Invoice, Review EWB and Generated.',
   },
 ];

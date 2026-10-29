@@ -32,7 +32,7 @@ All are `NEXT_PUBLIC_` because the site is static. Nothing secret belongs in thi
 content/
   EDITORIAL_BRIEF.md    rules + verified facts every writer must follow
   blog/*.md             22 articles (frontmatter: title, slug, excerpt, category, tags, dates, SEO, sources, faq, related)
-  guides/*.md           12 learning-centre pages, served at the site root (/eway-bill-rules, â€¦)
+  guides/*.md           12 learning-centre pages, served at the site root (/eway-bill-rules, …)
 src/app/                routes (home, features, download, tools/*, blog, authors, updates, legal pages)
 src/components/         Header, Footer, PlayBadge, DownloadCTA, ArticleLayout, BlogCard, AppGraphics, tools/*
 src/lib/money.ts        paise-integer GST / invoice maths (no floating-point errors)
@@ -46,9 +46,9 @@ vercel.json             same security headers for Vercel
 
 ## Managing content
 
-**New article:** add `content/blog/<slug>.md` using the frontmatter format in `content/EDITORIAL_BRIEF.md`, then rebuild. The article page, category pages, pagination, search index, sitemap, BlogPosting schema, table of contents (from `##`/`###` headings), reading time and related articles are all generated automatically. The author is always Bhavesh Akabari (`src/lib/site.ts â†’ AUTHOR`).
+**New article:** add `content/blog/<slug>.md` using the frontmatter format in `content/EDITORIAL_BRIEF.md`, then rebuild. The article page, category pages, pagination, search index, sitemap, BlogPosting schema, table of contents (from `##`/`###` headings), reading time and related articles are all generated automatically. The author is always Bhavesh Akabari (`src/lib/site.ts → AUTHOR`).
 
-**Cover images (thumbnail style):** every article and guide has a 1280Ã—720 cover in `public/images/covers/<slug>.jpg`. Each one has a headline, a ribbon, the E-Way Easy badge and app or photo artwork, and it doubles as the Open Graph share image. To add or change one:
+**Cover images (thumbnail style):** every article and guide has a 1280×720 cover in `public/images/covers/<slug>.jpg`. Each one has a headline, a ribbon, the E-Way Easy badge and app or photo artwork, and it doubles as the Open Graph share image. To add or change one:
 
 1. Add or edit its entry in `src/lib/covers.ts` (`l1`, `l2`, `tag`, `variant`: `person` | `truck` | `phone` | `phones`).
 2. `KEEP_COVERS=1 npm run build` (on Windows PowerShell: `$env:KEEP_COVERS='1'; npm run build`), then `npm start`.
@@ -74,7 +74,7 @@ To move to a headless CMS later (Sanity, Contentful, Decap), replace `getAllPost
 1. Set the environment variables in your host's dashboard.
 2. Build command `npm run build`, output directory `out`.
 3. **Vercel:** zero config (`vercel.json` adds headers and clean URLs). **Netlify / Cloudflare Pages:** `public/_headers` is copied into `out`. **Nginx:** serve `out/`, add `try_files $uri $uri.html $uri/ =404;` and copy the headers from `public/_headers`.
-4. Enable HTTPS and redirect `http` â†’ `https` and the bare domain â†’ `www` (or the other way round) at the host.
+4. Enable HTTPS and redirect `http` → `https` and the bare domain → `www` (or the other way round) at the host.
 5. Submit `https://<domain>/sitemap.xml` in Google Search Console.
 
 ## Production checklist
@@ -95,7 +95,7 @@ To move to a headless CMS later (Sanity, Contentful, Decap), replace `getAllPost
 | 1 | Production domain | `.env.production` | ✅ `https://ewayeasy.com` |
 | 2 | Google Play listing URL | `.env.production` | ✅ `com.ewayeasy.app` listing, with UTM referrer per placement |
 | 3 | Official Google Play badge artwork | `src/components/PlayBadge.tsx` | Inline look-alike SVG. Replace it with the official badge from play.google.com/intl/en_us/badges and follow Google's badge guidelines |
-| 4 | Final app logo | `src/components/Logo.tsx`, `public/favicon.svg`, `scripts/og.svg` â†’ `public/images/og-default.png` | Designed placeholder mark in brand colours |
+| 4 | Final app logo | `src/components/Logo.tsx`, `public/favicon.svg`, `scripts/og.svg` → `public/images/og-default.png` | Designed placeholder mark in brand colours |
 | 5 | Support email | `.env.production` | ✅ bvbtrade9@gmail.com |
 | 6 | Author bio, photo and credentials for Bhavesh Akabari | `AUTHOR` in `src/lib/site.ts` | Neutral bio with no invented qualifications. Add verified details only |
 | 7 | Company / legal entity name and address for legal pages | `src/app/privacy-policy`, `terms-and-conditions` | Template text; jurisdiction to be confirmed |
@@ -113,7 +113,7 @@ The content was written from the facts in `content/EDITORIAL_BRIEF.md`. Writers 
 - Validity is counted from the time Part B is first entered (the guides use this reading of Rule 138(10)).
 - Number of copies of a delivery challan and tax invoice (delivery-challan article).
 - Statement that the portal generally won't accept a second e-way bill for the same document number while the first is active.
-- The 2025 changes in `src/lib/updates.ts`: GST rate rationalisation (effective 22 Sep 2025), 180-day document age limit, 360-day extension cap, MFA rollout, 30-day e-invoice reporting for AATO â‰¥ â‚¹10 crore, E-Way Bill 2.0 portal.
+- The 2025 changes in `src/lib/updates.ts`: GST rate rationalisation (effective 22 Sep 2025), 180-day document age limit, 360-day extension cap, MFA rollout, 30-day e-invoice reporting for AATO ≥ ₹10 crore, E-Way Bill 2.0 portal.
 - Any state-specific intra-state threshold. The site intentionally lists none and tells readers to check their state's notification.
 
 ## Document template library

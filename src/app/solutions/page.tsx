@@ -7,7 +7,7 @@ import { pageMeta } from '@/lib/seo';
 export const metadata = pageMeta({
   title: 'E-Way Bill Solutions for Manufacturers, Traders & Accountants',
   description:
-    'How E-Way Easy and its free GST tools fit your business: dispatch-heavy manufacturers, wholesalers and distributors, and accountants who prepare GST data for clients.',
+    'How E-Way Easy and its free GST tools fit your business: manufacturers, wholesalers and distributors, transporters, and accountants who prepare GST data for clients.',
   path: '/solutions',
 });
 
@@ -25,6 +25,13 @@ const SOLUTIONS = [
     title: 'Many small dispatches to repeat buyers',
     text: 'Pick saved buyers and products instead of retyping GSTINs, addresses and HSN codes for every order.',
     link: 'E-way bill workflow for wholesalers',
+  },
+  {
+    href: '/solutions/transporters',
+    eyebrow: 'Transporters',
+    title: 'Part B, vehicle changes and consolidated loads',
+    text: 'Update vehicle and transporter details, extend validity and create a consolidated e-way bill for several consignments in one truck.',
+    link: 'E-way bill workflow for transporters',
   },
   {
     href: '/solutions/accountants',
@@ -49,7 +56,7 @@ export default function SolutionsHubPage() {
         <div className="container grid items-start gap-12 lg:grid-cols-[1fr_auto]">
           <div>
             <h2 id="solutions-list" className="h2">Choose your business type</h2>
-            <div className="mt-8 grid gap-5 md:grid-cols-3 lg:grid-cols-1 xl:grid-cols-3">
+            <div className="mt-8 grid gap-5 md:grid-cols-2 lg:grid-cols-1 xl:grid-cols-2">
               {SOLUTIONS.map((s) => (
                 <article key={s.href} className="card group flex h-full flex-col p-6 transition hover:-translate-y-0.5 hover:shadow-lift">
                   <p className="eyebrow">{s.eyebrow}</p>

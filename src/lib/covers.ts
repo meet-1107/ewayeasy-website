@@ -18,7 +18,7 @@ export const COVERS: Record<string, CoverSpec> = {
   // ---- Blog ----
   'what-is-an-eway-bill': { l1: 'E-WAY BILL', l2: 'EXPLAINED', tag: 'BEGINNER GUIDE', variant: 'phone', screen: 'review' },
   'who-is-responsible-for-generating-eway-bill': { l1: 'WHO MUST', l2: 'GENERATE?', tag: 'SELLER OR TRANSPORTER', variant: 'person', screen: 'review', flip: true },
-  'eway-bill-limit-50000-threshold-exceptions': { l1: 'â‚¹50,000', l2: 'LIMIT', tag: '+ EXCEPTIONS', variant: 'phone', screen: 'invoice', ribbon: 'amber' },
+  'eway-bill-limit-50000-threshold-exceptions': { l1: '₹50,000', l2: 'LIMIT', tag: '+ EXCEPTIONS', variant: 'phone', screen: 'invoice', ribbon: 'amber' },
   'how-distance-affects-eway-bill-validity': { l1: 'DISTANCE', l2: '= VALIDITY', tag: 'KM TO DAYS', variant: 'truck', ribbon: 'amber' },
   'eway-bill-part-a-and-part-b-explained': { l1: 'PART A', l2: 'VS PART B', tag: 'EXPLAINED', variant: 'phone', screen: 'review' },
   'how-to-update-vehicle-details-in-eway-bill': { l1: 'VEHICLE', l2: 'CHANGED?', tag: 'UPDATE PART B', variant: 'truck', ribbon: 'amber' },
@@ -51,6 +51,7 @@ export const COVERS: Record<string, CoverSpec> = {
   'eway-bill-common-errors': { l1: 'ERRORS', l2: 'FIXED', tag: 'COMMON PROBLEMS', variant: 'person', screen: 'invoice' },
   'eway-bill-vs-sales-invoice': { l1: 'E-WAY BILL', l2: 'OR INVOICE?', tag: 'SALES INVOICE VS EWB', variant: 'phones' },
   'eway-bill-faq': { l1: '30 FAQs', l2: 'ANSWERED', tag: 'E-WAY BILL Q&A', variant: 'person', screen: 'review', ribbon: 'amber' },
+  'consolidated-eway-bill': { l1: 'CONSOLIDATED', l2: 'E-WAY BILL', tag: 'ONE VEHICLE, MANY BILLS', variant: 'truck' },
 };
 
 export const coverPath = (slug: string) => `/images/covers/${slug}.jpg`;

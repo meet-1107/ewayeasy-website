@@ -1,6 +1,7 @@
 // Pricing configuration for the /pricing page — must match what the app wallet shows.
 // Verified from the app's Wallet screen (October 2026): 1 credit = ₹1, every e-way bill action costs 5 credits,
 // credits are charged only when an action succeeds and are refunded to the wallet automatically if the portal rejects it.
+// Play Store listing (October 2026): no yearly subscription; payments through Razorpay (UPI, cards, net banking).
 // `pricePaise` is in paise (₹50 = 5000) to avoid rounding errors.
 
 export type CreditPack = {
@@ -36,6 +37,8 @@ export const PRICING = {
   notes: [
     'Credits are taken only when the action succeeds. If the government portal rejects it, the credits are refunded to your wallet automatically.',
     'Need a different amount? The wallet also lets you add any other number of credits.',
+    'No yearly subscription: buy credits only when you need them.',
+    'Secure payments by Razorpay (UPI, cards, net banking).',
   ] as string[],
 };
 

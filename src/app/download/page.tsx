@@ -48,12 +48,12 @@ const NEEDS: { title: string; text: string; icon: ReactNode }[] = [
 
 const STEPS: { title: string; text: string }[] = [
   {
-    title: 'Install and add your business',
-    text: 'Install E-Way Easy from Google Play, then save your seller details and GSTIN. Set your invoice pre-series so numbers follow your own series.',
+    title: 'Install and set up once',
+    text: 'Install E-Way Easy from Google Play, sign in with email or Google, and add your GSTIN. Connect your e-way bill API login once with the in-app guide, and set your invoice pre-series.',
   },
   {
-    title: 'Create the invoice',
-    text: 'Tap create invoice. Enter the buyer GSTIN (name, address, state and PIN fill in), then search and add products — the HSN code fills from each product and stays editable.',
+    title: 'Create or import the invoice',
+    text: 'Tap create invoice and enter the buyer GSTIN (name, address, state and PIN fill in), then add products with their HSN codes. Or import an invoice PDF and review what the app read.',
   },
   {
     title: 'Review the e-way bill details',
@@ -61,14 +61,14 @@ const STEPS: { title: string; text: string }[] = [
   },
   {
     title: 'Generate',
-    text: 'Move to generation and follow the in-app instructions. The e-way bill itself comes from the official e-way bill system — keep the number with the invoice for the journey.',
+    text: 'Tap Generate. The e-way bill number comes back from the official e-way bill system; download the PDF and share it with the driver on WhatsApp, or print it.',
   },
 ];
 
 const FAQ: { q: string; a: string }[] = [
   {
     q: 'Is E-Way Easy a government app?',
-    a: 'No. E-Way Easy is an independent app and is not affiliated with GSTN, NIC or any government department. E-way bills are generated through the official e-way bill system, and the official portal remains available to you at all times.',
+    a: 'No. E-Way Easy is an independent app and is not affiliated with the Government of India, GSTN or NIC. E-way bills are filed on the official NIC e-way bill system through an authorised GSP, and the official portal remains available to you at all times.',
   },
   {
     q: 'Is E-Way Easy available on iPhone?',
@@ -76,11 +76,11 @@ const FAQ: { q: string; a: string }[] = [
   },
   {
     q: 'Do I need my e-way bill portal credentials?',
-    a: 'Follow the instructions shown inside the app for connecting to e-way bill generation. Never share your portal username, password or OTP with anyone outside the official or authorised flow — no genuine support team will ask for them over phone, WhatsApp or email.',
+    a: 'Yes, your e-way bill system API login. You connect it once inside the app, with guided steps, and it is stored encrypted and used only for the bills you ask for. E-way bills are filed on the official NIC e-way bill system through an authorised GST Suvidha Provider (GSP). Never share your portal password or OTP over phone, WhatsApp or email; no genuine support team will ask for them.',
   },
   {
     q: 'How much does it cost?',
-    a: 'The app uses pay-as-you-go wallet credits: 1 credit = ₹1, and generating, updating Part-B, consolidating, cancelling or extending an e-way bill costs 5 credits each. Credits are taken only when the action succeeds. Packs start at 50 credits for ₹50; see the pricing page.',
+    a: 'There is no yearly subscription. The app uses pay-as-you-go wallet credits: 1 credit = ₹1, and generating, updating Part-B, consolidating, cancelling or extending an e-way bill costs 5 credits (₹5) each. Credits are taken only when the action succeeds. Packs start at 50 credits for ₹50, paid through Razorpay; see the pricing page.',
   },
   {
     q: 'Can I create bulk e-way bills with the app?',
@@ -268,8 +268,8 @@ export default function DownloadPage() {
             <div className="mt-8">
               <ComplianceNote title="Independent app">
                 <p>
-                  E-Way Easy is not a government portal and is not affiliated with GSTN or NIC. E-way bills are generated
-                  through the official e-way bill system. Features can differ between app versions.
+                  E-Way Easy is not a government portal and is not affiliated with GSTN or NIC. E-way bills are filed on
+                  the official NIC e-way bill system through an authorised GSP. Features can differ between app versions.
                 </p>
               </ComplianceNote>
             </div>

@@ -11,7 +11,7 @@ import { SITE } from '@/lib/site';
 export const metadata = pageMeta({
   title: 'E-Way Easy Features: Invoice to E-Way Bill on Android',
   description:
-    'See what the E-Way Easy Android app does: a 3-step invoice to e-way bill flow, buyer GSTIN auto-fill, HSN from saved products, PIN-code distance and invoice numbering.',
+    'E-Way Easy Android app features: invoice to e-way bill in 3 steps, invoice PDF import, Part B updates, extend, cancel, consolidate and share e-way bill PDFs.',
   path: '/features',
 });
 
@@ -43,13 +43,37 @@ const FEATURES: Feature[] = [
   {
     title: 'E-Way Bill Generation Workflow',
     where: 'app',
-    text: 'A clear three-step flow: 1 Invoice → 2 Review EWB → 3 Generated. You check the e-way bill details on a review screen before moving to generation.',
+    text: 'A clear three-step flow: 1 Invoice → 2 Review EWB → 3 Generated. Details are checked before filing, you review them on screen, and the e-way bill number comes back from the official system.',
     cta: { label: 'How e-way bill generation works', href: '/eway-bill-generation' },
     icon: (
       <g {...S}>
         <path d="M2 7h11v9H2zM13 10h4.5L21 13.5V16h-8" />
         <circle cx="6" cy="18" r="1.8" />
         <circle cx="17" cy="18" r="1.8" />
+      </g>
+    ),
+  },
+  {
+    title: 'Import Invoice PDF',
+    where: 'app',
+    text: 'Already made the invoice in your billing software? Import the PDF and the app reads the buyer, GSTIN, items, HSN codes and totals. You review and correct anything it read wrongly, then generate.',
+    cta: { label: 'Invoice PDF to e-way bill', href: '/invoice-pdf-to-eway-bill' },
+    icon: (
+      <g {...S}>
+        <path d="M6 3h8l4 4v14H6V3Z" />
+        <path d="M14 3v4h4M12 10v7M9 14l3 3 3-3" />
+      </g>
+    ),
+  },
+  {
+    title: 'Manage E-Way Bills',
+    where: 'app',
+    text: 'After generation: update Part B (vehicle number and transporter), extend validity, cancel, or create a consolidated e-way bill for several consignments in one vehicle. Download the e-way bill PDF and share it on WhatsApp, email or print.',
+    cta: { label: 'Manage e-way bills in the app', href: '/eway-bill-management-app' },
+    icon: (
+      <g {...S}>
+        <rect x="4" y="3" width="16" height="18" rx="2.5" />
+        <path d="M8 8h8M8 12h8M8 16h4M15 15.5l1.5 1.5 3-3" />
       </g>
     ),
   },
@@ -63,6 +87,20 @@ const FEATURES: Feature[] = [
         <rect x="3" y="5" width="18" height="14" rx="2.5" />
         <circle cx="9" cy="11" r="2.2" />
         <path d="M5.8 16c.6-1.6 1.8-2.4 3.2-2.4s2.6.8 3.2 2.4M14.5 10h3.5M14.5 13.5h2.5" />
+      </g>
+    ),
+  },
+  {
+    title: 'Bill To / Ship To and Dispatch From',
+    where: 'app',
+    text: 'Goods going to a different address from the billing party, or leaving from a godown rather than your main office? Enter separate Bill To / Ship To and Dispatch From details so the e-way bill reflects the actual movement.',
+    cta: { label: 'Read the generation guide', href: '/eway-bill-generation' },
+    icon: (
+      <g {...S}>
+        <circle cx="5.5" cy="12" r="2.5" />
+        <circle cx="18.5" cy="6" r="2.5" />
+        <circle cx="18.5" cy="18" r="2.5" />
+        <path d="M8 11 16 7M8 13l8 4" />
       </g>
     ),
   },
@@ -103,6 +141,20 @@ const FEATURES: Feature[] = [
     ),
   },
   {
+    title: 'Saved Transporters & Vehicles',
+    where: 'app',
+    text: 'Save the transporters and vehicles you use regularly, along with buyers and products. Pick them when filling Part B instead of retyping a Transporter ID or vehicle number.',
+    cta: { label: 'For transporters', href: '/solutions/transporters' },
+    icon: (
+      <g {...S}>
+        <path d="M2 7h11v9H2zM13 10h4.5L21 13.5V16h-8" />
+        <circle cx="6" cy="18" r="1.8" />
+        <circle cx="17" cy="18" r="1.8" />
+        <path d="M5 11h5" />
+      </g>
+    ),
+  },
+  {
     title: 'Invoice Number Series',
     where: 'app',
     text: 'Set an invoice pre-series once and the app numbers invoices in your own series automatically, helping avoid gaps and duplicate numbers.',
@@ -116,9 +168,9 @@ const FEATURES: Feature[] = [
   },
   {
     title: 'Bank Details on Invoices',
-    where: 'web',
-    text: 'Want bank details printed on your invoice? Add them in our free invoice tools on this website. Bank details selection is not listed as an app feature at this time.',
-    cta: { label: 'Open the free invoice templates', href: '/sales-invoice-templates' },
+    where: 'app',
+    text: 'Add your bank details once and they appear on your GST invoices, along with your business details, HSN codes and tax rates, so buyers know where to pay.',
+    cta: { label: 'See a GST invoice layout', href: '/sales-invoice-templates/gst-tax-invoice' },
     icon: (
       <g {...S}>
         <path d="M3 9.5 12 4l9 5.5M4.5 10v8M9 10v8M15 10v8M19.5 10v8M3 20h18" />
@@ -158,6 +210,18 @@ const FEATURES: Feature[] = [
     icon: (
       <g {...S}>
         <path d="M4 20V11M10 20V5M16 20v-6M21 20H3" />
+      </g>
+    ),
+  },
+  {
+    title: 'Secure Sign-in & API Login',
+    where: 'app',
+    text: 'Sign in with email or Google. Connect your e-way bill system API login once with in-app guidance; it is stored encrypted and used only for the bills you ask for. You can export your data at any time.',
+    cta: { label: 'E-way bill API login setup', href: '/eway-bill-api-setup' },
+    icon: (
+      <g {...S}>
+        <rect x="5" y="10.5" width="14" height="10" rx="2" />
+        <path d="M8 10.5V8a4 4 0 0 1 8 0v2.5M12 14.5v2.5" />
       </g>
     ),
   },
@@ -331,13 +395,14 @@ export default function FeaturesPage() {
           <h2 id="limits" className="sr-only">What the app does not do</h2>
           <ComplianceNote title="Honest limits">
             <p>
-              E-way bills are generated through the official e-way bill system. E-Way Easy helps you prepare the invoice and
-              e-way bill details on your phone — it does not replace the government portal, and it is not affiliated with
-              GSTN or NIC.
+              E-way bills are filed on the official NIC e-way bill system through an authorised GST Suvidha Provider (GSP),
+              using your own e-way bill API login. E-Way Easy is not a government portal and is not affiliated with the
+              Government of India, GSTN or NIC.
             </p>
             <p>
-              Bulk e-way bill generation, e-invoice (IRN) generation and an iPhone app are not app features. Features can
-              differ between app versions, so check the latest version on Google Play.
+              Bulk e-way bill generation, e-invoice (IRN) generation and an iPhone app are not app features. Invoice PDF
+              import needs your review: always check the extracted details before generating. Features can differ between
+              app versions, so check the latest version on Google Play.
             </p>
             <p>
               For the rules themselves, see the <Link href="/eway-bill-rules" className="font-medium text-brand-700 underline underline-offset-2">e-way bill rules</Link> and

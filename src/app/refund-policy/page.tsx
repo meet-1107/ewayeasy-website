@@ -12,7 +12,7 @@ export const metadata = pageMeta({
   path: '/refund-policy',
 });
 
-const LAST_UPDATED = '16 October 2026';
+const LAST_UPDATED = '28 October 2026';
 
 function Contact() {
   return SUPPORT_EMAIL ? (
@@ -101,17 +101,19 @@ export default function RefundPolicyPage() {
               guides.
             </p>
 
-            <h2>4. Purchases made through Google Play</h2>
+            <h2>4. How payments are processed</h2>
             <p>
-              If you paid through Google Play billing, the payment is processed by Google, and some requests may need to be
-              made to Google directly under Google Play&rsquo;s policies. We will help where we can.
+              Payments for wallet credits are made inside the app and processed by Razorpay, using UPI, cards or net banking.
+              There is no yearly subscription; you pay only for the credits you choose to buy. Where a refund is due under
+              section 2, it is made to the original payment method through Razorpay, and the time it takes to reach you
+              depends on your bank or payment method.
             </p>
 
             <h2>5. How to contact us about a payment</h2>
             <p>Email <Contact /> with:</p>
             <ul>
               <li>your business name and the GSTIN shown in the app;</li>
-              <li>the date, amount and payment reference (or Google Play order number);</li>
+              <li>the date, amount and payment reference (Razorpay payment ID or UPI transaction reference);</li>
               <li>a screenshot of the payment confirmation and the wallet screen;</li>
               <li>the invoice number, if your question is about an e-way bill action.</li>
             </ul>

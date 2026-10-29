@@ -26,7 +26,17 @@ From the actual app screens and the official promo creative:
 - Wallet with credits: 1 credit = ₹1; packs of 50 / 100 / 250 / 500 / 1,000 credits or any other amount. Each e-way bill action costs 5 credits: generate new EWB, update Part-B (vehicle), consolidated EWB, cancel EWB, extend validity. Credits are taken only when the action succeeds; if the portal rejects it they are refunded to the wallet automatically.
 - Refund policy: purchased credits are not refundable; if a payment is made but credits are not added, the credits are added or the payment is refunded.
 - Help/support inside the app.
-NOT verified — do not claim: bulk e-way bill generation inside the app, API/GSP status, e-invoice (IRN) generation, multi-user, offline mode, iOS app, any pricing, any user numbers or ratings.
+- From the official Play Store listing (October 2026):
+  - Generate an e-way bill on mobile directly from a GST invoice; Bill To / Ship To and Dispatch From supported; road distance between PIN codes filled automatically; details checked before filing; e-way bill number returned instantly.
+  - Import invoice PDF: the app reads buyer, GSTIN, items, HSN codes and totals from the PDF; the user reviews/corrects, then generates. (Always say the user reviews the extracted data.)
+  - Manage e-way bills: update Part B / vehicle number and transporter, extend validity, cancel, consolidated e-way bill for multiple consignments in one vehicle, download the e-way bill PDF and share it on WhatsApp, email or print.
+  - GST invoices with business details, HSN, tax rates and bank details; saved buyers, products, transporters and vehicles; GSTIN verification fills the buyer's name and address.
+  - Pricing: pay-as-you-go credits, no yearly subscription; payments through Razorpay (UPI, cards, net banking).
+  - Security: sign in with email or Google; the user's e-way bill system API login is stored encrypted and used only for the bills the user asks for; data can be exported at any time.
+  - Setup: 1) sign up and add business GSTIN, 2) connect the e-way bill portal API login (one-time, guided in the app), 3) create or import an invoice, 4) tap Generate.
+  - Filing route: e-way bills are filed on the official NIC e-way bill system (ewaybillgst.gov.in) through an authorised GST Suvidha Provider (GSP), using the user's own portal API credentials. E-Way Easy is independent and not affiliated with the Government of India, GSTN or NIC.
+  - Audience: GST-registered traders, manufacturers, wholesalers, distributors and transporters.
+NOT verified — do not claim: bulk e-way bill generation inside the app, e-invoice (IRN) generation, multi-user/team accounts, offline mode, iOS app, any user numbers or ratings, "cheapest" or any speed guarantee beyond the listing wording, that PDF import works for every invoice format without review.
 
 ## Rules you may state (generally accepted position; still tell readers to verify current law)
 - Legal basis: Section 68 of the CGST Act and Rule 138 of the CGST Rules, 2017 (plus Rules 138A–138E).

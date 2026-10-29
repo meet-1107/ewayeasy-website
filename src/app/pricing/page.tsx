@@ -10,7 +10,7 @@ import { PRICING, formatPaise, pricesArePublished } from '@/lib/pricing';
 export const metadata = pageMeta({
   title: 'Pricing: ₹5 per E-Way Bill, Pay-As-You-Go Credits',
   description:
-    'E-Way Easy pricing: 1 credit = ₹1 and each e-way bill action costs 5 credits. Buy 50 to 1,000 credits in the app. Credits are taken only when the action succeeds.',
+    'E-Way Easy pricing: 1 credit = ₹1, each e-way bill action costs 5 credits, no yearly subscription. Credits are taken only when the action succeeds.',
   path: '/pricing',
 });
 
@@ -25,6 +25,14 @@ const FAQ = [
   {
     q: 'Am I charged if the e-way bill fails?',
     a: 'No. Credits are taken only when the action succeeds. If the government portal rejects it, the credits are refunded to your wallet automatically.',
+  },
+  {
+    q: 'Do I need a subscription?',
+    a: 'No. There is no yearly subscription. You buy credits when you need them, and they are used only for e-way bill actions that succeed.',
+  },
+  {
+    q: 'How do I pay for credits?',
+    a: 'Payments are made inside the app and processed securely by Razorpay, using UPI, cards or net banking.',
   },
   {
     q: 'Do I have to buy a big pack?',
@@ -96,6 +104,11 @@ function Packs() {
           </li>
         )}
       </ul>
+      <ul className="mt-4 flex flex-wrap gap-2 text-sm">
+        {PRICING.notes.slice(2).map((n) => (
+          <li key={n} className="rounded-full bg-brand-50 px-3 py-1.5 font-medium text-brand-800">{n}</li>
+        ))}
+      </ul>
       <p className="mt-4 text-sm text-ink-faint">
         Prices as shown in the app wallet. If the app ever shows a different price, the price in the app applies.
       </p>
@@ -138,7 +151,8 @@ export default function PricingPage() {
             <ol>
               <li>
                 <strong>Add credits from the app.</strong> Open the Wallet in {SITE.name}, pick a pack or enter any other
-                amount, and tap <strong>Add credits</strong>.
+                amount, and tap <strong>Add credits</strong>. Payment is processed by Razorpay (UPI, cards or net
+                banking). There is no yearly subscription.
               </li>
               <li>
                 <strong>Credits are used per e-way bill action.</strong> Generating, updating Part-B, consolidating,
