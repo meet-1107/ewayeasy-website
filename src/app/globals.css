@@ -60,6 +60,12 @@ body { @apply bg-cream text-ink antialiased; }
 .prose-content th { @apply bg-brand-50 px-4 py-3 font-semibold text-ink; }
 .prose-content td { @apply border-t border-brand-900/10 px-4 py-3 align-top; }
 
+/* Gentle floating cards around the homepage animation */
+.ee-float { animation: ee-float 4.5s ease-in-out infinite; }
+.ee-float-2 { animation-delay: -1.5s; }
+.ee-float-3 { animation-delay: -3s; }
+@keyframes ee-float { 0%, 100% { transform: translateY(0) rotate(-1deg); } 50% { transform: translateY(-10px) rotate(1deg); } }
+
 @media print {
   .no-print, header.site-header, footer.site-footer, .sticky-cta { display: none !important; }
   body { background: #fff; }

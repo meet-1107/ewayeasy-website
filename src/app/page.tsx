@@ -7,6 +7,8 @@ import JsonLd from '@/components/JsonLd';
 import { AppShowcase, RouteIllustration } from '@/components/AppGraphics';
 import DispatchAnimation from '@/components/DispatchAnimation';
 import ReviewsSection from '@/components/ReviewsSection';
+import RotatingWords from '@/components/RotatingWords';
+import Reveal from '@/components/Reveal';
 import { getAllPosts, toSummary } from '@/lib/content';
 import { UPDATES } from '@/lib/updates';
 import { pageMeta } from '@/lib/seo';
@@ -126,9 +128,12 @@ export default function Home() {
             <h1 className="mt-5 font-display text-4xl font-extrabold leading-[1.08] md:text-6xl">
               The E-Way Bill Generator <span className="text-amber-400">for Your Phone</span>
             </h1>
-            <p className="mt-4 text-lg font-semibold text-white sm:hidden">
-              Sales invoice + e-way bill in one tap ⚡ Share the PDF on WhatsApp.
-            </p>
+            <RotatingWords
+              className="mt-4 font-display text-xl font-bold leading-[1.25em] text-white md:text-2xl"
+              before="Make your"
+              words={['sales invoice', 'e-way bill', 'Part B update', 'PDF share']}
+              after="in one tap ⚡"
+            />
             <p className="mt-5 hidden max-w-xl text-lg leading-8 text-brand-100/90 sm:block">
               Enter the sales invoice once, or import its PDF. Buyer details fill in from the GSTIN, HSN comes from your product list and
               distance is worked out from PIN codes. Review it, tap Generate and move on to the next dispatch, all from your mobile.
@@ -150,11 +155,17 @@ export default function Home() {
               ))}
             </ul>
           </div>
-          <DispatchAnimation className="mx-auto w-full max-w-[560px] overflow-hidden rounded-[2rem] shadow-lift" />
+          <div className="relative mx-auto w-full max-w-[560px]">
+            <DispatchAnimation className="mx-auto w-full max-w-[560px] overflow-hidden rounded-[2rem] shadow-lift" />
+            <span className="ee-float absolute -left-2 top-6 rounded-2xl bg-white px-3 py-2 text-xs font-bold text-ink shadow-lift sm:-left-6 sm:text-sm">✅ GSTIN details auto-filled</span>
+            <span className="ee-float ee-float-2 absolute -right-2 top-1/3 rounded-2xl bg-white px-3 py-2 text-xs font-bold text-ink shadow-lift sm:-right-6 sm:text-sm">📲 Share on WhatsApp</span>
+            <span className="ee-float ee-float-3 absolute -bottom-3 left-6 rounded-2xl bg-amber-400 px-3 py-2 text-xs font-extrabold text-brand-950 shadow-lift sm:text-sm">₹5 per e-way bill</span>
+          </div>
         </div>
       </section>
 
       {/* B. Problem → solution graphics */}
+      <Reveal>
       <section className="section">
         <div className="container grid items-center gap-12 lg:grid-cols-2">
           <div>
@@ -187,8 +198,10 @@ export default function Home() {
           </div>
         </div>
       </section>
+      </Reveal>
 
       {/* C. How it works */}
+      <Reveal>
       <section className="section bg-white">
         <div className="container">
           <div className="mx-auto max-w-2xl text-center">
@@ -217,8 +230,10 @@ export default function Home() {
           </p>
         </div>
       </section>
+      </Reveal>
 
       {/* D. Features */}
+      <Reveal>
       <section className="section">
         <div className="container">
           <div className="flex flex-wrap items-end justify-between gap-4">
@@ -244,8 +259,10 @@ export default function Home() {
           </div>
         </div>
       </section>
+      </Reveal>
 
       {/* E. Tools */}
+      <Reveal>
       <section className="section bg-brand-950 text-white">
         <div className="container grid gap-12 lg:grid-cols-[1fr_1.4fr]">
           <div>
@@ -266,8 +283,10 @@ export default function Home() {
           </div>
         </div>
       </section>
+      </Reveal>
 
       {/* F. Updates */}
+      <Reveal>
       <section className="section">
         <div className="container">
           <div className="flex flex-wrap items-end justify-between gap-4">
@@ -283,8 +302,10 @@ export default function Home() {
           </div>
         </div>
       </section>
+      </Reveal>
 
       {/* G. Educational resources */}
+      <Reveal>
       <section className="section bg-white">
         <div className="container">
           <div className="max-w-2xl">
@@ -312,10 +333,14 @@ export default function Home() {
           </div>
         </div>
       </section>
+      </Reveal>
 
-      <ReviewsSection />
+      <Reveal>
+        <ReviewsSection />
+      </Reveal>
 
       {/* G2. Founder */}
+      <Reveal>
       <section className="section pb-0" aria-labelledby="founder-h">
         <div className="container">
           <div className="grid items-center gap-8 overflow-hidden rounded-4xl bg-white p-6 shadow-card md:grid-cols-[220px_1fr] md:p-10">
@@ -335,8 +360,10 @@ export default function Home() {
           </div>
         </div>
       </section>
+      </Reveal>
 
       {/* H. Final CTA */}
+      <Reveal>
       <section className="section">
         <div className="container">
           <div className="relative overflow-hidden rounded-4xl bg-gradient-to-br from-brand-700 via-brand-800 to-brand-950 px-6 py-14 text-center text-white shadow-lift md:px-16">
@@ -353,6 +380,7 @@ export default function Home() {
           </div>
         </div>
       </section>
+      </Reveal>
     </>
   );
 }
