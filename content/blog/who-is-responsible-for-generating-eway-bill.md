@@ -5,7 +5,7 @@ excerpt: "Supplier, recipient or transporter? How responsibility for the e-way b
 category: "eway-bill"
 tags: ["e-way bill", "responsibility", "transporter", "supplier"]
 publishedAt: "2026-06-15"
-updatedAt: "2026-08-28"
+updatedAt: "2026-11-02"
 verifiedAt: "2026-10-10"
 seoTitle: "Who Generates an E-Way Bill? Supplier, Buyer or Transporter"
 metaDescription: "Who must generate the e-way bill: registered supplier, recipient or transporter. Roles, unregistered parties, TRANSIN, scenarios and common mistakes."
@@ -26,6 +26,8 @@ faq:
     a: "No. They can enrol on the e-way bill portal and get a Transporter ID (TRANSIN) to be named on e-way bills and to update Part B."
 related: ["what-is-an-eway-bill", "eway-bill-part-a-and-part-b-explained", "how-to-update-vehicle-details-in-eway-bill"]
 ---
+> **Quick answer:** The registered person causing the movement, usually the supplier or the recipient, generates the e-way bill. The transporter can generate it on their behalf, and must do so before the goods move if neither has generated it and the value exceeds the threshold.
+
 "I thought the transporter was doing it." "The buyer said they would generate it." Most cases of goods travelling without an e-way bill start with a sentence like this. The rules allow three different parties to generate an e-way bill, which is flexible but also makes it easy for everyone to assume someone else has done it.
 
 This article sets out who can generate, who must generate, and how to divide the job clearly.

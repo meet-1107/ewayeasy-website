@@ -5,7 +5,7 @@ excerpt: "Not every movement of goods is a sale. Learn when to issue a delivery 
 category: "invoicing"
 tags: ["delivery challan", "tax invoice", "job work", "stock transfer"]
 publishedAt: "2026-07-22"
-updatedAt: "2026-10-05"
+updatedAt: "2026-11-02"
 verifiedAt: "2026-10-10"
 seoTitle: "Delivery Challan vs Tax Invoice Under GST: When to Use"
 metaDescription: "When to issue a delivery challan vs a tax invoice under GST: job work, approval sales, line sales, stock transfers, contents and e-way bill links."
@@ -19,6 +19,8 @@ sources:
     url: "https://tutorial.gst.gov.in/"
 related: ["eway-bill-rules-for-job-work", "eway-bill-returns-and-special-transactions"]
 ---
+> **Quick answer:** Issue a tax invoice when a taxable supply takes place. Issue a delivery challan when goods move without a sale, or the sale is not complete at removal, such as job work, supply on approval or a stock transfer. Where an e-way bill is needed, it is generated against whichever document applies.
+
 Goods leave your premises for many reasons. Sometimes you are selling them. Sometimes you are sending them to a job worker for processing, to a customer on approval, to your own branch, or out with a sales van that will sell along the route. GST treats these differently, and the document you issue should reflect what is actually happening.
 
 The rule of thumb: **a tax invoice is for a supply; a delivery challan is for movement that is not (yet) a supply, or where the invoice cannot be issued at the time of removal.**

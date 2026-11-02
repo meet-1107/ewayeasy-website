@@ -2,10 +2,11 @@
 import PageHeader from '@/components/PageHeader';
 import DownloadCTA from '@/components/DownloadCTA';
 import ComplianceNote from '@/components/ComplianceNote';
+import DataTable from '@/components/DataTable';
 import JsonLd from '@/components/JsonLd';
-import { faqLd, pageMeta } from '@/lib/seo';
+import { faqLd, pageMeta, softwareAppLd } from '@/lib/seo';
 import { SITE, SUPPORT_EMAIL } from '@/lib/site';
-import { PRICING, formatPaise, pricesArePublished } from '@/lib/pricing';
+import { PRICING, formatPaise, pricesArePublished, type CreditPack } from '@/lib/pricing';
 
 export const metadata = pageMeta({
   title: 'Pricing: ₹5 per E-Way Bill, Pay-As-You-Go Credits',
@@ -81,36 +82,55 @@ function ActionCosts() {
   );
 }
 
+const packLabel = (p: CreditPack) => `${p.credits.toLocaleString('en-IN')} credits, ${formatPaise(p.pricePaise)}`;
+
+function Glance() {
+  const packs = [...PRICING.creditPacks].sort((a, b) => a.credits - b.credits);
+  const rows = [
+    { label: 'Cost per e-way bill action', cells: [`₹${perActionRupees} (${perAction} credits)`] },
+    { label: 'Actions covered', cells: [PRICING.actionCosts.map((a) => a.action).join(', ')] },
+    { label: '1 credit', cells: [`₹${PRICING.rupeesPerCredit}`] },
+    { label: 'Smallest pack', cells: [packLabel(packs[0])] },
+    { label: 'Largest listed pack', cells: [packLabel(packs[packs.length - 1])] },
+    ...(PRICING.customAmount
+      ? [{ label: 'Custom amount', cells: ['Yes, add any other number of credits from the wallet'] }]
+      : []),
+    { label: 'Subscription', cells: ['None, no yearly subscription'] },
+    { label: 'Rejected by portal', cells: ['₹0, credits are returned to your wallet automatically'] },
+    { label: 'Payment', cells: ['Razorpay: UPI, cards, net banking'] },
+  ];
+  return (
+    <section aria-labelledby="glance-heading">
+      <h2 id="glance-heading" className="mb-5 font-display text-2xl font-bold text-ink">Pricing at a glance</h2>
+      <DataTable caption="E-Way Easy pricing at a glance" columns={['Item', 'Detail']} rows={rows} width="fit" />
+    </section>
+  );
+}
+
 function Packs() {
+  const rows = PRICING.creditPacks.map((p) => ({
+    label: `${p.credits.toLocaleString('en-IN')} credits`,
+    cells: [formatPaise(p.pricePaise), `${Math.floor(p.credits / perAction)} e-way bills`],
+  }));
+  if (PRICING.customAmount) {
+    rows.push({
+      label: 'Any other amount',
+      cells: [`₹${PRICING.rupeesPerCredit} per credit`, `1 e-way bill for every ${perAction} credits`],
+    });
+  }
   return (
     <section aria-labelledby="packs-heading">
       <p className="eyebrow">Buy credits in the app</p>
-      <h2 id="packs-heading" className="mt-2 font-display text-2xl font-bold text-ink">Credit packs · 1 credit = ₹{PRICING.rupeesPerCredit}</h2>
-      <ul className="mt-5 grid grid-cols-2 gap-3 sm:grid-cols-3">
-        {PRICING.creditPacks.map((p) => (
-          <li key={p.name} className="card p-5 text-center">
-            <p className="font-display text-3xl font-extrabold text-ink">{p.credits.toLocaleString('en-IN')}</p>
-            <p className="text-sm text-ink-faint">credits</p>
-            <p className="mt-2 font-display text-xl font-bold text-brand-700">{formatPaise(p.pricePaise)}</p>
-            {p.note && <p className="mt-1 text-sm text-ink-soft">{p.note}</p>}
-          </li>
-        ))}
-        {PRICING.customAmount && (
-          <li className="card grid place-items-center p-5 text-center">
-            <div>
-              <p className="font-display text-xl font-bold text-ink">Other</p>
-              <p className="mt-1 text-sm text-ink-soft">any number of credits</p>
-            </div>
-          </li>
-        )}
-      </ul>
-      <ul className="mt-4 flex flex-wrap gap-2 text-sm">
-        {PRICING.notes.slice(2).map((n) => (
-          <li key={n} className="rounded-full bg-brand-50 px-3 py-1.5 font-medium text-brand-800">{n}</li>
-        ))}
-      </ul>
+      <h2 id="packs-heading" className="mb-5 mt-2 font-display text-2xl font-bold text-ink">What each pack covers</h2>
+      <DataTable
+        caption={`E-Way Easy credit packs, with the number of e-way bills each covers at ${perAction} credits per bill`}
+        columns={['Credits', 'Price', 'E-way bills covered']}
+        rows={rows}
+        width="fit"
+      />
       <p className="mt-4 text-sm text-ink-faint">
-        Prices as shown in the app wallet. If the app ever shows a different price, the price in the app applies.
+        Each pack covers any mix of e-way bill actions. Prices as shown in the app wallet. If the app ever shows a
+        different price, the price in the app applies.
       </p>
     </section>
   );
@@ -121,7 +141,7 @@ export default function PricingPage() {
 
   return (
     <>
-      <JsonLd data={faqLd(FAQ)} />
+      <JsonLd data={[softwareAppLd(), faqLd(FAQ)]} />
       <PageHeader
         eyebrow="Pricing"
         title={`₹${perActionRupees} per e-way bill. Pay only when it works.`}
@@ -133,6 +153,7 @@ export default function PricingPage() {
         <div className="mx-auto max-w-3xl space-y-12">
           {published && (
             <>
+              <Glance />
               <ActionCosts />
               <Packs />
             </>

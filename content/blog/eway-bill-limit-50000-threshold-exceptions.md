@@ -5,7 +5,7 @@ excerpt: "How the ₹50,000 e-way bill limit is calculated, what counts in consi
 category: "eway-bill"
 tags: ["e-way bill", "threshold", "consignment value", "exemptions"]
 publishedAt: "2026-07-02"
-updatedAt: "2026-09-29"
+updatedAt: "2026-11-02"
 verifiedAt: "2026-10-10"
 seoTitle: "E-Way Bill Limit ₹50,000: Calculation and Exceptions"
 metaDescription: "How to calculate consignment value for the ₹50,000 e-way bill limit, state intra-state thresholds, value-independent cases and Annexure exemptions."
@@ -26,6 +26,8 @@ faq:
     a: "Yes. The portal allows voluntary generation, and some businesses do so for clarity in transit."
 related: ["what-is-an-eway-bill", "eway-bill-intrastate-movement-requirements", "eway-bill-rules-for-job-work"]
 ---
+> **Quick answer:** An e-way bill is generally required when consignment value exceeds ₹50,000. That value includes GST and cess but excludes exempt supplies on the same invoice. Some states have notified different intra-state limits, and some movements need one at any value, such as inter-state goods sent to a job worker.
+
 "Above ₹50,000, you need an e-way bill" is the rule everyone remembers. What gets missed is the detail: which value is compared, whether GST counts, what happens with exempt items on the same invoice, and the cases where the value doesn't matter at all. This article works through each.
 
 ## The rule in one line

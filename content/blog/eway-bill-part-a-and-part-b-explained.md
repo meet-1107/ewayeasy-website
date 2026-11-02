@@ -5,7 +5,7 @@ excerpt: "What goes into Part A and Part B of Form GST EWB-01, who fills each pa
 category: "eway-bill"
 tags: ["e-way bill", "Part A", "Part B", "EWB-01"]
 publishedAt: "2026-09-24"
-updatedAt: "2026-10-12"
+updatedAt: "2026-11-02"
 verifiedAt: "2026-10-12"
 seoTitle: "E-Way Bill Part A and Part B Explained (EWB-01)"
 metaDescription: "Part A and Part B of the e-way bill explained: fields in each part, who fills them, the 50 km Part B exemption, updating vehicles and fixing errors."
@@ -26,6 +26,8 @@ faq:
     a: "No. Part A cannot be edited. Cancel the e-way bill within 24 hours and generate a new one with correct details."
 related: ["how-to-update-vehicle-details-in-eway-bill", "who-is-responsible-for-generating-eway-bill"]
 ---
+> **Quick answer:** Part A of Form GST EWB-01 holds the consignment details: GSTINs, document, value, HSN and places of dispatch and delivery. Part B holds the vehicle number or transport document. Part A cannot be edited, while Part B can be updated any number of times during validity.
+
 Form GST EWB-01, the e-way bill form, is split into two parts. The split is not arbitrary: **Part A** describes the consignment — what is moving, from whom, to whom, for how much — and **Part B** describes the conveyance — which vehicle or transport document is carrying it. Different people often know these two sets of facts at different times, which is exactly why the form separates them.
 
 ## Part A: the consignment

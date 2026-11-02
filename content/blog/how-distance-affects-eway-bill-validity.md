@@ -5,7 +5,7 @@ excerpt: "Distance decides how many days your e-way bill lasts. Learn how the po
 category: "eway-bill"
 tags: ["e-way bill", "distance", "validity", "PIN code"]
 publishedAt: "2026-08-10"
-updatedAt: "2026-10-08"
+updatedAt: "2026-11-02"
 verifiedAt: "2026-10-10"
 seoTitle: "How Distance Affects E-Way Bill Validity (PIN Rules)"
 metaDescription: "How distance sets e-way bill validity: PIN-to-PIN auto distance, 10% extra allowance, 4,000 km cap, same-PIN 100 km rule and worked examples."
@@ -26,6 +26,8 @@ faq:
     a: "Distance is part of the generated bill and cannot be edited. If it is materially wrong, cancel within 24 hours and generate again."
 related: ["what-to-do-when-eway-bill-expires"]
 ---
+> **Quick answer:** Normal cargo gets 1 day of validity for every 200 km or part of it, so crossing a 200 km boundary adds a full day. The portal calculates the PIN-to-PIN distance and accepts up to 10% more, to a maximum of 4,000 km, so a wrong PIN code can cost you a day.
+
 Two numbers decide how long your e-way bill stays valid: the time you generate it and the distance you enter. Time of generation is covered in [E-Way Bill Validity Explained](/eway-bill-validity). This article is about distance — how the portal works it out, how much you can adjust it, and why a careless PIN code can leave your truck with one day less than it needs.
 
 ## Why distance matters

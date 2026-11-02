@@ -5,7 +5,7 @@ excerpt: "Set up a clean invoice spreadsheet, run simple validation checks and r
 category: "business-guides"
 tags: ["bulk processing", "spreadsheet", "data validation", "e-way bill"]
 publishedAt: "2026-07-29"
-updatedAt: "2026-09-18"
+updatedAt: "2026-11-02"
 seoTitle: "Prepare Invoice Data for Bulk Processing: Checklist"
 metaDescription: "How to structure invoice data in a spreadsheet, validate GSTINs, PINs and HSN codes, remove duplicates and prepare files for bulk e-way bill upload."
 imageAlt: "Spreadsheet of invoice rows with highlighted validation errors next to a JSON file icon"
@@ -23,6 +23,8 @@ faq:
     a: "Rows with errors are rejected and need to be fixed and re-uploaded. Catching them before upload saves a second round and avoids delays at dispatch."
 related: ["avoid-errors-in-invoice-and-transport-details"]
 ---
+> **Quick answer:** Keep one row per invoice or challan in a master sheet, with items in a linked sheet, then validate GSTINs, PINs and HSN codes and remove duplicates. Enter the clean data into the official Bulk Generation Tools to create the JSON file, because the portal does not accept your own Excel sheet as it is.
+
 Bulk processing — uploading many invoices at once instead of entering them one by one — saves real time for businesses with high dispatch volumes. But bulk processing has a catch: it multiplies whatever is in your data. One wrong PIN code typed by hand is one problem. The same wrong PIN pasted into forty rows is forty problems.
 
 This guide is about the step before the upload: getting invoice data into a structured, checked, duplicate-free sheet. It applies whether you are preparing a file for bulk e-way bill generation on the official portal, sharing data with your accountant for GST returns, or importing into accounting software.

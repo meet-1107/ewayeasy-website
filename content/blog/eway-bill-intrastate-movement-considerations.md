@@ -5,7 +5,7 @@ excerpt: "Moving goods within your own state? Thresholds and local exemptions ca
 category: "eway-bill"
 tags: ["e-way bill", "intrastate", "state rules", "threshold"]
 publishedAt: "2026-06-03"
-updatedAt: "2026-09-30"
+updatedAt: "2026-11-02"
 verifiedAt: "2026-10-10"
 seoTitle: "Intrastate E-Way Bill Rules: What to Check in Your State"
 metaDescription: "Intrastate e-way bills: why state thresholds may differ, the 50 km Part B relief, stock transfers, CGST + SGST and common mistakes to avoid."
@@ -28,6 +28,8 @@ faq:
     a: "If the value crosses the threshold applicable in your state and no exemption applies, yes. Use a delivery challan as the document."
 related: ["eway-bill-interstate-movement-requirements", "eway-bill-limit-50000-threshold-exceptions"]
 ---
+> **Quick answer:** Movement within a state follows the same e-way bill framework, but the threshold is not always ₹50,000, because some states have notified different limits or exemptions, so check your state's current notification. Part B is not needed for same-state movement up to 50 km to or from a transporter; Part A still is.
+
 Intrastate movement looks simpler than interstate movement: the truck never leaves the state, the distances are shorter and the tax is CGST + SGST. But it is also where most businesses get caught out, because the rules are not identical across India. A practice that works in one state may not be correct in the next one.
 
 This guide explains what is common everywhere, what can differ, and how to check the rule for your own state.

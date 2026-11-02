@@ -1,0 +1,85 @@
+# E-Way Easy
+
+E-Way Easy is an Android app for GST-registered traders, manufacturers, wholesalers, distributors and transporters in India. It creates a GST invoice or imports an invoice PDF, lets the user review the details, and files the e-way bill on the official NIC e-way bill system from a phone. The website also has free GST tools and plain-English e-way bill guides.
+
+## Key facts
+
+- Platform: Android only, currently in testing. There is no iPhone app. No download, user or rating figures are published.
+- Pricing: pay-as-you-go wallet credits. 1 credit = ₹1 (Rs 1). Each e-way bill action costs 5 credits, which is ₹5 (Rs 5). No yearly subscription.
+- Actions that use credits: generate, update Part B (vehicle), consolidated e-way bill, cancel, extend validity.
+- Credit packs: 50 credits (₹50), 100 credits (₹100), 250 credits (₹250), 500 credits (₹500), 1,000 credits (₹1,000), or any other amount.
+- Credits are taken only when an action succeeds. If the portal rejects it, they return to the wallet automatically.
+- Payment: inside the app through Razorpay (UPI, cards, net banking). Purchased credits are not refundable; if a payment goes through but credits are not added, the credits are added or the payment is refunded.
+- Filing route: e-way bills are filed on the official NIC e-way bill system (ewaybillgst.gov.in) through an authorised GST Suvidha Provider (GSP), using the user's own e-way bill API login. That login is stored encrypted and used only for the bills the user asks for.
+- Independence: E-Way Easy is a private product. It is not a government portal and is not affiliated with or endorsed by the Government of India, GSTN or NIC.
+- Founder: Meet Akabari. Guides and blog articles are written by Bhavesh Akabari.
+
+## What the app does
+
+- Generate an e-way bill from a GST invoice created in the app.
+- Import an invoice PDF: the app reads the buyer, GSTIN, items, HSN codes and totals, and the user must review them before generating.
+- Fill buyer details from the GSTIN, HSN codes from saved products, and road distance from PIN codes.
+- Support Bill To / Ship To and Dispatch From details.
+- Update Part B and vehicle number, extend validity, cancel, and create consolidated e-way bills.
+- Download the e-way bill PDF and share it on WhatsApp or email, or print it.
+- Save buyers, products, transporters and vehicles.
+
+## What the app does not do
+
+- No bulk e-way bill generation and no bulk upload of many PDFs at once.
+- No e-invoice (IRN) generation.
+- No multi-user or team accounts.
+- No full accounting.
+- The free website tools help prepare and check data. They do not generate e-way bills.
+
+## Product
+
+- [Home](https://ewayeasy.in/)
+- [Features](https://ewayeasy.in/features)
+- [How it works](https://ewayeasy.in/how-it-works)
+- [Pricing](https://ewayeasy.in/pricing)
+- [Compare: app vs official portal vs billing software](https://ewayeasy.in/compare)
+- [Invoice PDF to e-way bill](https://ewayeasy.in/invoice-pdf-to-eway-bill)
+- [E-way bill management app](https://ewayeasy.in/eway-bill-management-app)
+- [E-way bill API login setup](https://ewayeasy.in/eway-bill-api-setup)
+- [Download](https://ewayeasy.in/download)
+- [Help centre](https://ewayeasy.in/help)
+- [About and founder story](https://ewayeasy.in/about)
+
+## Solutions
+
+- [All solutions](https://ewayeasy.in/solutions)
+- [Manufacturers](https://ewayeasy.in/solutions/manufacturers)
+- [Wholesalers and distributors](https://ewayeasy.in/solutions/wholesalers-distributors)
+- [Transporters](https://ewayeasy.in/solutions/transporters)
+- [Accountants](https://ewayeasy.in/solutions/accountants)
+
+## Free tools
+
+- [All free tools](https://ewayeasy.in/tools)
+- [GST calculator](https://ewayeasy.in/tools/gst-calculator)
+- [E-way bill eligibility checker](https://ewayeasy.in/tools/eway-bill-eligibility-checker)
+- [E-way bill validity and distance calculator](https://ewayeasy.in/tools/distance-calculator)
+- [HSN chapter lookup](https://ewayeasy.in/tools/hsn-code-lookup)
+- [GSTIN validator](https://ewayeasy.in/tools/gstin-validator)
+- [Bulk e-way bill data checker](https://ewayeasy.in/tools/bulk-eway-bill-data-checker)
+- [Invoice vs e-way bill checker](https://ewayeasy.in/tools/invoice-vs-eway-bill-checker)
+- [Sales invoice templates](https://ewayeasy.in/sales-invoice-templates)
+
+## Guides
+
+- [All guides](https://ewayeasy.in/guides)
+- [Blog](https://ewayeasy.in/blog)
+- [E-way bill guide](https://ewayeasy.in/eway-bill-guide)
+- [How to generate an e-way bill](https://ewayeasy.in/eway-bill-generation)
+- [E-way bill rules](https://ewayeasy.in/eway-bill-rules)
+- [Documents required for an e-way bill](https://ewayeasy.in/documents-required-for-eway-bill)
+- [E-way bill validity](https://ewayeasy.in/eway-bill-validity)
+- [E-way bill distance rules](https://ewayeasy.in/eway-bill-distance-rules)
+- [E-way bill cancellation](https://ewayeasy.in/eway-bill-cancellation)
+- [E-way bill correction](https://ewayeasy.in/eway-bill-correction)
+- [Consolidated e-way bill](https://ewayeasy.in/consolidated-eway-bill)
+- [Bulk e-way bill generation on the official portal](https://ewayeasy.in/bulk-eway-bill-generation)
+- [Common e-way bill errors](https://ewayeasy.in/eway-bill-common-errors)
+- [E-way bill vs sales invoice](https://ewayeasy.in/eway-bill-vs-sales-invoice)
+- [E-way bill FAQ](https://ewayeasy.in/eway-bill-faq)

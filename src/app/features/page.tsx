@@ -5,8 +5,7 @@ import DownloadCTA from '@/components/DownloadCTA';
 import ComplianceNote from '@/components/ComplianceNote';
 import JsonLd from '@/components/JsonLd';
 import { Phone, WorkflowGraphic } from '@/components/AppGraphics';
-import { pageMeta, absoluteUrl } from '@/lib/seo';
-import { SITE } from '@/lib/site';
+import { pageMeta, softwareAppLd } from '@/lib/seo';
 
 export const metadata = pageMeta({
   title: 'E-Way Easy Features: Invoice to E-Way Bill on Android',
@@ -273,23 +272,11 @@ function FeatureCard({ f, index }: { f: Feature; index: number }) {
   );
 }
 
-const softwareLd = {
-  '@context': 'https://schema.org',
-  '@type': 'SoftwareApplication',
-  name: SITE.name,
-  operatingSystem: 'ANDROID',
-  applicationCategory: 'BusinessApplication',
-  url: absoluteUrl('/download'),
-  description: SITE.description,
-  image: absoluteUrl('/images/app-dashboard.jpg'),
-  screenshot: [absoluteUrl('/images/app-dashboard.jpg'), absoluteUrl('/images/app-new-invoice.jpg')],
-};
-
 export default function FeaturesPage() {
   const appCount = FEATURES.filter((f) => f.where === 'app').length;
   return (
     <>
-      <JsonLd data={softwareLd} />
+      <JsonLd data={softwareAppLd()} />
       <PageHeader
         eyebrow="Features"
         title="Everything E-Way Easy does — and what it doesn’t"
@@ -403,6 +390,10 @@ export default function FeaturesPage() {
               Bulk e-way bill generation, e-invoice (IRN) generation and an iPhone app are not app features. Invoice PDF
               import needs your review: always check the extracted details before generating. Features can differ between
               app versions, so check the latest version on Google Play.
+            </p>
+            <p>
+              Choosing between the app, the official portal and billing software? See the{' '}
+              <Link href="/compare" className="font-medium text-brand-700 underline underline-offset-2">comparison</Link>.
             </p>
             <p>
               For the rules themselves, see the <Link href="/eway-bill-rules" className="font-medium text-brand-700 underline underline-offset-2">e-way bill rules</Link> and

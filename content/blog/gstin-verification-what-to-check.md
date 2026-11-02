@@ -5,7 +5,7 @@ excerpt: "A 15-character GSTIN tells you a lot — state, PAN, entity and a chec
 category: "gst-compliance"
 tags: ["gstin", "verification", "search taxpayer", "vendor onboarding"]
 publishedAt: "2026-10-07"
-updatedAt: "2026-10-14"
+updatedAt: "2026-11-02"
 verifiedAt: "2026-10-14"
 seoTitle: "GSTIN Verification: Structure & What to Check"
 metaDescription: "How to read a 15-character GSTIN and verify a supplier or buyer on the GST portal: status, legal name, taxpayer type, filing and common mistakes."
@@ -26,6 +26,8 @@ faq:
     a: "No. The format can be correct while the registration is cancelled or belongs to a different business. Always check the portal record and the legal name."
 related: ["cgst-sgst-igst-explained", "avoid-errors-in-invoice-and-transport-details"]
 ---
+> **Quick answer:** Search the GSTIN on the GST portal's Search Taxpayer facility, which needs no login, and check that the status is active and the legal name matches the party. A valid-looking 15-character GSTIN does not prove the registration is active or belongs to that business.
+
 A wrong GSTIN on an invoice causes problems in three places at once. Your buyer may not get input tax credit. Your e-way bill may be rejected or show the wrong party. And your GSTR-1 will carry a record that does not match the buyer's books. A few minutes of checking when you add a new buyer or supplier saves weeks of correction later.
 
 This guide explains how a GSTIN is built, what each part tells you and what to check on the GST portal before you start doing business with someone.

@@ -5,7 +5,7 @@ excerpt: "Goods stuck on the road and the e-way bill about to lapse? Learn the 8
 category: "eway-bill"
 tags: ["e-way bill", "validity", "extension", "transporter"]
 publishedAt: "2026-05-20"
-updatedAt: "2026-09-25"
+updatedAt: "2026-11-02"
 verifiedAt: "2026-10-10"
 seoTitle: "E-Way Bill Expired? How to Extend Validity in Time"
 metaDescription: "What to do when an e-way bill is expiring or has expired: the 8-hour extension window, the 360-day cap, a worked example and common mistakes."
@@ -28,6 +28,8 @@ faq:
     a: "GSTN reported that from 1 January 2025 an e-way bill can be extended only up to a total of 360 days from its original generation date. Verify the current position on the portal."
 related: ["how-distance-affects-eway-bill-validity", "how-to-update-vehicle-details-in-eway-bill"]
 ---
+> **Quick answer:** Extend it within 8 hours before or 8 hours after expiry, if exceptional circumstances stopped the goods reaching in time. The generator or the assigned transporter can do this, up to 360 days in total from generation. Goods moving on an expired bill risk detention, seizure and penalty under Section 129.
+
 An e-way bill has a fixed life. Once it expires, goods still on the road are treated as moving without a valid e-way bill, and that can lead to detention, seizure and penalty under Section 129 of the CGST Act. The good news is that the rules give a defined window to extend validity when genuine delays happen. The bad news is that the window is short and easy to miss.
 
 ## First, know exactly when your e-way bill expires
@@ -39,7 +41,7 @@ Under Rule 138(10) of the CGST Rules, 2017, validity depends on distance:
 | Normal cargo | 1 day for every 200 km or part thereof |
 | Over-dimensional cargo (ODC) | 1 day for every 20 km or part thereof |
 
-The period is counted from the time of generation, and the first "day" ends at midnight of the day following generation. So an e-way bill generated at 11:00 pm on 5 August with 1 day of validity is valid till midnight of 6 August — not just one hour.
+The period is counted from when Part B is first entered (for most bills, that is the moment of generation), and the first "day" ends at midnight of the following day. So an e-way bill with Part B entered at 11:00 pm on 5 August and 1 day of validity is valid till midnight of 6 August — not just one hour. The exact "valid upto" time is printed on the e-way bill, so check it there.
 
 The validity end time is printed on the e-way bill itself. Transporters should treat that timestamp as a hard deadline. For details on how distance drives validity, see [e-way bill validity explained](/eway-bill-validity).
 

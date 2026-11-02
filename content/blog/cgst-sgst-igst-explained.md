@@ -5,7 +5,7 @@ excerpt: "Which GST applies to your sale — CGST plus SGST, or IGST? A plain-En
 category: "gst-compliance"
 tags: ["cgst", "sgst", "igst", "utgst", "place of supply"]
 publishedAt: "2026-09-02"
-updatedAt: "2026-10-09"
+updatedAt: "2026-11-02"
 verifiedAt: "2026-10-10"
 seoTitle: "CGST vs SGST vs IGST: Differences With Examples"
 metaDescription: "Understand CGST, SGST, UTGST and IGST: when each applies, how place of supply decides it, how input credit is used, with worked examples and mistakes."
@@ -26,6 +26,8 @@ faq:
     a: "No. CGST credit cannot be used to pay SGST/UTGST, and SGST/UTGST credit cannot be used to pay CGST. IGST credit can be used for all three in the prescribed order."
 related: ["how-to-calculate-gst-on-sales-invoice", "eway-bill-interstate-movement-requirements", "eway-bill-intrastate-movement-considerations"]
 ---
+> **Quick answer:** Charge CGST plus SGST (or UTGST) on an intra-state supply and IGST on an inter-state supply. The total is the same either way: an 18% rate is 9% CGST + 9% SGST, or 18% IGST. The place of supply decides which applies.
+
 India's GST is a dual tax. The Centre and the States both tax the same transaction, but how that tax is labelled on your invoice depends on one thing: whether the supply is **intra-state** or **inter-state**. Getting the label wrong is not a cosmetic issue — tax paid under the wrong head does not automatically count as tax paid under the right one.
 
 ## The four components

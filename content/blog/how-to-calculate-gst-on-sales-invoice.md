@@ -5,7 +5,7 @@ excerpt: "A worked, line-by-line method for calculating GST on a sales invoice �
 category: "invoicing"
 tags: ["gst calculation", "sales invoice", "cgst", "igst", "discount"]
 publishedAt: "2026-08-12"
-updatedAt: "2026-10-08"
+updatedAt: "2026-11-02"
 verifiedAt: "2026-10-10"
 seoTitle: "How to Calculate GST on a Sales Invoice (Worked Example)"
 metaDescription: "Calculate GST on a multi-line sales invoice step by step: discounts, taxable value, CGST+SGST vs IGST, mixed rates, rounding and common mistakes."
@@ -26,6 +26,8 @@ faq:
     a: "For an intra-state supply, the rate is split equally — for example an 18% rate becomes 9% CGST and 9% SGST. For inter-state supply, the full rate is charged as IGST."
 related: ["cgst-sgst-igst-explained", "avoid-errors-in-invoice-and-transport-details"]
 ---
+> **Quick answer:** For each line, deduct the invoice discount from quantity × rate to get the taxable value, add any incidental charges that form part of it, and apply the GST rate. Within a state, split the rate equally into CGST and SGST; across states, charge IGST. Then total the tax and round once.
+
 GST on a single-item bill is easy: price × rate. Real invoices are rarely that simple. There are several products, different tax rates, a trade discount on one line, freight added at the bottom, and the question of whether the buyer is in your state or another. Get any of these wrong and the invoice, the e-way bill and your GST return all carry the error.
 
 This guide walks through the method line by line, then works a full example both ways — intra-state and inter-state.

@@ -92,7 +92,7 @@ To move to a headless CMS later (Sanity, Contentful, Decap), replace `getAllPost
 
 | # | Item | Where | Current state |
 |---|---|---|---|
-| 1 | Production domain | `.env.production` | ✅ `https://ewayeasy.com` |
+| 1 | Production domain | `.env.production` | ✅ `https://ewayeasy.in` |
 | 2 | Google Play listing URL | `.env.production` | ✅ `com.ewayeasy.app` listing, with UTM referrer per placement |
 | 3 | Official Google Play badge artwork | `src/components/PlayBadge.tsx` | Inline look-alike SVG. Replace it with the official badge from play.google.com/intl/en_us/badges and follow Google's badge guidelines |
 | 4 | Final app logo | `src/components/Logo.tsx`, `public/favicon.svg`, `scripts/og.svg` → `public/images/og-default.png` | Designed placeholder mark in brand colours |

@@ -5,7 +5,7 @@ excerpt: "What HSN codes are, how the digits are structured, how many digits you
 category: "gst-compliance"
 tags: ["hsn code", "classification", "gstr-1", "e-way bill", "invoicing"]
 publishedAt: "2026-09-23"
-updatedAt: "2026-10-12"
+updatedAt: "2026-11-02"
 verifiedAt: "2026-10-12"
 seoTitle: "HSN Codes Under GST: A Practical Guide for Businesses"
 metaDescription: "A practical guide to HSN codes under GST: digit structure, reporting on invoices, GSTR-1 and e-way bills, how to find the right code and common mistakes."
@@ -28,6 +28,8 @@ faq:
     a: "Services Accounting Code — the equivalent classification for services, used in place of HSN on services invoices."
 related: ["prepare-invoice-data-for-bulk-processing"]
 ---
+> **Quick answer:** An HSN code classifies a product and appears on your tax invoice, GSTR-1 and Part A of the e-way bill. How many digits you must report depends on your turnover, so check the current notification. Confirm the GST rate separately, because the code and the rate are not the same thing.
+
 Every product on a GST invoice needs a classification code — the HSN code. It appears on your tax invoice, in your GSTR-1 HSN summary, on e-invoices if you are covered, and in Part A of the e-way bill. Because it links your product to its tax rate, a wrong HSN is not just a typo: it can mean the wrong rate, a mismatch with your buyer's records, or questions during an inspection.
 
 This guide is practical. It explains how HSN codes are built, how many digits to use, how to find the right code and how to keep it consistent across documents.

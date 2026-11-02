@@ -5,7 +5,7 @@ excerpt: "A walkthrough of the E-Way Easy Android app: one-time setup, the 3-ste
 category: "product-updates"
 tags: ["E-Way Easy", "app", "e-way bill workflow", "invoicing"]
 publishedAt: "2026-09-29"
-updatedAt: "2026-10-28"
+updatedAt: "2026-11-02"
 seoTitle: "How E-Way Easy Simplifies Your E-Way Bill Workflow"
 metaDescription: "How the E-Way Easy Android app works: setup, 3-step flow, invoice PDF import, GSTIN autofill, Part B, cancel, extend and ₹5 credits with no subscription."
 imageAlt: "Phone screens showing the E-Way Easy app's Invoice, Review EWB and Generated steps"
@@ -23,6 +23,8 @@ faq:
     a: "There is no yearly subscription. You buy wallet credits in the app (1 credit = ₹1), paid through Razorpay using UPI, cards or net banking, and each e-way bill action costs 5 credits."
 related: ["avoid-errors-in-invoice-and-transport-details", "digital-tools-for-indian-manufacturers"]
 ---
+> **Quick answer:** E-Way Easy is an independent Android app that creates your GST invoice and files the e-way bill on the official NIC system through an authorised GSP, using your own API login. It also updates Part B, extends, cancels and creates consolidated e-way bills, at 5 credits per action with no yearly subscription.
+
 Preparing an e-way bill is rarely hard in itself. What slows people down is everything around it: finding the buyer's GSTIN and PIN code, remembering the HSN code, working out the distance, keeping invoice numbers in order, and making sure the invoice and the e-way bill say the same thing. E-Way Easy is an Android app built to take that repetitive work off your hands, so a dispatch can be prepared from a phone in a few minutes.
 
 This article walks through what the app does today, step by step.

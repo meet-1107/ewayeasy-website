@@ -2,7 +2,7 @@
 title: "How to Generate an E-Way Bill: Complete Process"
 slug: "eway-bill-generation"
 description: "Step-by-step process to generate an e-way bill on the official portal: login, Generate New, transaction type, sub-type, document details, Part A, Part B, submit and print. Also covers SMS, app, API and IRN-based generation."
-updatedAt: "2026-10-28"
+updatedAt: "2026-11-02"
 verifiedAt: "2026-10-11"
 seoTitle: "How to Generate an E-Way Bill: Step-by-Step (2026)"
 metaDescription: "Generate an e-way bill on the official portal step by step: Part A, Part B, transaction types, sub-types and printing. Plus SMS, app, API and IRN routes."
@@ -40,6 +40,8 @@ updateHistory:
   - date: "2026-09-02"
     note: "First published."
 ---
+> **Quick answer:** Log in to the official e-way bill portal, choose Generate New, enter the transaction, document and goods details in Part A, add the vehicle or transport details in Part B, and submit to get a 12-digit e-way bill number. SMS, the official app, bulk upload, authorised API and IRN are other routes.
+
 Generating an e-way bill takes a few minutes once your invoice is ready, but small slips — a wrong PIN code, the wrong sub-type, a missing vehicle number — cause most of the trouble later. Part A cannot be edited after generation, so a wrong GSTIN or invoice number means cancelling and starting again. The way to get it right first time is to have the details ready before you log in and move through the form in order.
 
 This guide walks through the official portal flow field by field, then covers the other generation routes and how the E-Way Easy app workflow fits in. Screen labels can change between portal updates, so treat it as a map and the official user documentation as the final reference.

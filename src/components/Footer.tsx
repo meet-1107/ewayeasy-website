@@ -13,6 +13,7 @@ const COLS = [
       { label: 'Manage e-way bills', href: '/eway-bill-management-app' },
       { label: 'API login setup', href: '/eway-bill-api-setup' },
       { label: 'Pricing', href: '/pricing' },
+      { label: 'Compare', href: '/compare' },
       { label: 'Download app', href: '/download' },
       { label: 'Help centre', href: '/help' },
       { label: 'Latest updates', href: '/updates' },

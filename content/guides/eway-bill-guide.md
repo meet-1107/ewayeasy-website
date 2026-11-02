@@ -2,7 +2,7 @@
 title: "E-Way Bill Guide: Everything Indian Businesses Need to Know"
 slug: "eway-bill-guide"
 description: "A practical overview of the e-way bill system in India: what it is, when it is required, who generates it, how Part A and Part B work, validity, and links to every detailed guide."
-updatedAt: "2026-10-12"
+updatedAt: "2026-11-02"
 verifiedAt: "2026-10-12"
 seoTitle: "E-Way Bill Guide for Indian Businesses (2026)"
 metaDescription: "What an e-way bill is, when it is required, who generates it, Part A vs Part B, validity, cancellation and documents. A practical hub for Indian businesses."
@@ -36,6 +36,8 @@ updateHistory:
   - date: "2026-09-04"
     note: "Added links to the new distance, correction and bulk generation guides."
 ---
+> **Quick answer:** An e-way bill is the electronic record generated on the official system before most taxable goods worth more than ₹50,000 are moved in India. The supplier, recipient or transporter generates it in Form GST EWB-01, and it is valid for movement once Part B is filled, except in the 50 km same-state case.
+
 An e-way bill (EWB) is the electronic record that has to exist before most taxable goods worth more than ₹50,000 are moved by road, rail, air or ship in India. It tells the tax system what is moving, from where, to where, for whom, of what value, and in which vehicle. If you sell, buy or transport goods under GST, you will deal with it almost every week.
 
 This page is the starting point of the E-Way Easy Learning Centre. It covers the essentials in one place, then links to detailed guides on each topic.

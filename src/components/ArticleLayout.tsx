@@ -24,7 +24,7 @@ export default function ArticleLayout({
     <article>
       {doc.faq.length > 0 && <JsonLd data={faqLd(doc.faq)} />}
       <header className="bg-white">
-        <div className="container grid items-center gap-10 py-10 md:py-14 lg:grid-cols-[1.4fr_1fr]">
+        <div className="container grid grid-cols-1 items-center gap-10 py-10 md:py-14 lg:grid-cols-[minmax(0,1.4fr)_minmax(0,1fr)]">
           <div>
             <Breadcrumbs crumbs={crumbs} />
             <div className="mt-6">{eyebrow}</div>
@@ -62,7 +62,7 @@ export default function ArticleLayout({
         </div>
       </header>
 
-      <div className="container grid gap-12 py-12 lg:grid-cols-[1fr_260px]">
+      <div className="container grid grid-cols-1 gap-12 py-12 lg:grid-cols-[minmax(0,1fr)_260px]">
         <div className="min-w-0 max-w-3xl">
           {doc.toc.length > 2 && (
             <details className="mb-8 rounded-2xl border border-brand-900/10 bg-white p-4 lg:hidden">
@@ -96,7 +96,7 @@ export default function ArticleLayout({
                 {doc.sources.map((s) => (
                   <li key={s.url + s.title}>
                     <a href={s.url} target="_blank" rel="noopener noreferrer" className="font-medium text-brand-700 underline underline-offset-2">{s.title}</a>
-                    <span className="ml-2 text-ink-faint">{s.url.replace(/^https?:\/\//, '').replace(/\/$/, '')}</span>
+                    <span className="ml-2 break-all text-ink-faint">{s.url.replace(/^https?:\/\//, '').replace(/\/$/, '')}</span>
                   </li>
                 ))}
               </ul>

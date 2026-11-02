@@ -2,7 +2,7 @@
 title: "Documents and Data Required for E-Way Bill Generation"
 slug: "documents-required-for-eway-bill"
 description: "Documents and data you need to generate an e-way bill, split into Part A and Part B, plus what the driver must carry and a printable checklist."
-updatedAt: "2026-10-22"
+updatedAt: "2026-11-02"
 verifiedAt: "2026-10-13"
 seoTitle: "Documents Required for E-Way Bill: Full Checklist"
 metaDescription: "Documents and data needed for an e-way bill: invoice or challan, GSTINs, HSN, PINs, Transporter ID, vehicle number, plus what the driver must carry."
@@ -38,6 +38,8 @@ updateHistory:
   - date: "2026-09-10"
     note: "First published."
 ---
+> **Quick answer:** To generate an e-way bill you need the invoice, bill of supply or delivery challan, both GSTINs, dispatch and delivery PINs, HSN, value, Transporter ID, and the vehicle number or transport document. Nothing is uploaded: you enter the data, and the document travels with the goods.
+
 Most e-way bill errors start before you open the portal: a missing PIN code, a wrong HSN, the buyer's old GSTIN, or no vehicle number when the truck is already at the gate. "Documents required" really means two things: what you need **to generate** the e-way bill, and what the person in charge of the vehicle must **carry** during the movement — the gap between what you typed and what is printed on the paper in the truck is exactly what an officer checks on the road.
 
 This guide lists what you need, separated into what goes into **Part A** (the initial e-way bill) and what goes into **Part B** (transport details), then what must travel with the goods, followed by a checklist you can print and keep at the dispatch desk.

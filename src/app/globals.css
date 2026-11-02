@@ -39,7 +39,7 @@ body { @apply bg-cream text-ink antialiased; }
 }
 
 /* Long-form article typography */
-.prose-content { @apply text-[17px] leading-8 text-ink-soft; }
+.prose-content { @apply text-[17px] leading-8 text-ink-soft; overflow-wrap: anywhere; }
 .prose-content > * + * { @apply mt-5; }
 .prose-content h2 { @apply mt-12 scroll-mt-24 font-display text-2xl font-bold leading-snug text-ink md:text-[28px]; }
 .prose-content h3 { @apply mt-8 scroll-mt-24 font-display text-xl font-semibold text-ink; }
@@ -52,6 +52,8 @@ body { @apply bg-cream text-ink antialiased; }
 .prose-content blockquote { @apply rounded-2xl border-l-4 border-amber-500 bg-amber-300/15 px-5 py-4 text-ink; }
 .prose-content blockquote p { @apply m-0; }
 .prose-content code { @apply rounded bg-brand-50 px-1.5 py-0.5 text-[0.9em] text-brand-800; }
+.prose-content pre { @apply max-w-full overflow-x-auto rounded-2xl border border-brand-900/10 bg-white p-4 text-sm leading-6; }
+.prose-content pre code { @apply bg-transparent p-0; overflow-wrap: normal; }
 .prose-content hr { @apply my-10 border-brand-900/10; }
 .prose-content .table-wrap { @apply overflow-x-auto rounded-2xl border border-brand-900/10 bg-white; }
 .prose-content table { @apply w-full border-collapse text-left text-[15px] leading-6; }

@@ -5,7 +5,7 @@ excerpt: "How to approach e-way bills for sales returns, supply on approval, exh
 category: "eway-bill"
 tags: ["e-way bill", "sales return", "bill to ship to", "delivery challan", "special cases"]
 publishedAt: "2026-07-10"
-updatedAt: "2026-10-08"
+updatedAt: "2026-11-02"
 verifiedAt: "2026-10-10"
 seoTitle: "E-Way Bill for Returns, Bill-to-Ship-to & Special Cases"
 metaDescription: "General guidance on e-way bills for sales returns, supply on approval, exhibitions, bill-to-ship-to, line sales and SKD/CKD lots, with mistakes to avoid."
@@ -28,6 +28,8 @@ faq:
     a: "If the value crosses the applicable threshold, generally yes. Movement for reasons other than supply is still covered by the e-way bill rules."
 related: ["delivery-challan-vs-tax-invoice", "who-is-responsible-for-generating-eway-bill"]
 ---
+> **Quick answer:** Rule 138 applies to movement of goods, not only sales, so returns, approval supplies, exhibition goods and similar cases can need an e-way bill once the threshold is crossed. Each movement needs its own e-way bill, and where no sale takes place the document is usually a delivery challan.
+
 Most e-way bill guidance assumes a simple sale: seller invoices buyer, goods move from seller to buyer. Real business is messier. Goods come back, go out on approval, travel to trade fairs, are billed to one party and delivered to another, or are sold off a van on a route. The e-way bill rules still apply to these movements, but the document, the reason and the person generating can change.
 
 This article gives general guidance for the most common special cases. Treat it as a starting point, not a legal opinion — the facts of each arrangement matter, and you should verify the current position on the official portal or with your tax adviser.

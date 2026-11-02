@@ -1,25 +1,6 @@
 import Link from 'next/link';
 import type { ReactNode } from 'react';
-import { absoluteUrl } from '@/lib/seo';
-import { SITE } from '@/lib/site';
 import { linkClass } from '@/components/solutions/SolutionBlocks';
-
-/**
- * SoftwareApplication JSON-LD for feature pages. Deliberately has no rating or offer data:
- * neither is verified, and pricing is credit-based rather than a fixed app price.
- */
-export function softwareAppLd(path: string, description: string) {
-  return {
-    '@context': 'https://schema.org',
-    '@type': 'SoftwareApplication',
-    name: SITE.name,
-    operatingSystem: 'ANDROID',
-    applicationCategory: 'BusinessApplication',
-    url: absoluteUrl(path),
-    description,
-    image: absoluteUrl('/images/app-dashboard.jpg'),
-  };
-}
 
 /** Numbered step list used for short in-app flows. */
 export function StepList({ steps }: { steps: { title: string; text: ReactNode }[] }) {

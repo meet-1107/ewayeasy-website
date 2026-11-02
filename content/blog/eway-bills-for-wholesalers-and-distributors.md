@@ -5,7 +5,7 @@ excerpt: "How wholesalers and distributors can handle e-way bills for multi-drop
 category: "eway-bill"
 tags: ["e-way bill", "wholesale", "distribution", "consolidated e-way bill"]
 publishedAt: "2026-04-27"
-updatedAt: "2026-10-02"
+updatedAt: "2026-11-02"
 verifiedAt: "2026-10-10"
 seoTitle: "E-Way Bills for Wholesalers & Distributors: Practical Guide"
 metaDescription: "E-way bill guidance for wholesalers and distributors: multi-drop routes, invoice value, stock transfers, consolidated EWB and vehicle updates."
@@ -26,6 +26,8 @@ faq:
     a: "Movement of goods for reasons other than supply, such as own-use stock transfer, can still need an e-way bill if the value exceeds the threshold. Use a delivery challan as the document."
 related: ["eway-bill-part-a-and-part-b-explained", "how-to-update-vehicle-details-in-eway-bill", "eway-bill-limit-50000-threshold-exceptions"]
 ---
+> **Quick answer:** Each invoice is generally assessed on its own against the ₹50,000 threshold, so generate an e-way bill for every qualifying invoice with the same vehicle in Part B. A consolidated e-way bill (EWB-02) can then group them for the trip. Godown transfers can also need one, against a delivery challan.
+
 Wholesalers and distributors face a different e-way bill problem from manufacturers. A factory usually sends one large consignment to one buyer. A distributor sends one vehicle out with ten or fifteen invoices, some above the threshold and some below, to retailers spread across a route. Add godown transfers, returns from retailers and goods that are billed to one party and delivered to another, and the paperwork gets messy fast.
 
 This guide covers the situations distributors run into most often and how to handle each one cleanly.

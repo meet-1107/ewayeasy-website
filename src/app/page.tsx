@@ -12,8 +12,8 @@ import RotatingWords from '@/components/RotatingWords';
 import Reveal from '@/components/Reveal';
 import { getAllPosts, toSummary } from '@/lib/content';
 import { UPDATES } from '@/lib/updates';
-import { pageMeta } from '@/lib/seo';
-import { FOUNDER, SITE_URL } from '@/lib/site';
+import { pageMeta, softwareAppLd } from '@/lib/seo';
+import { FOUNDER } from '@/lib/site';
 
 export const metadata = pageMeta({
   title: 'E-Way Bill Generator App: Generate E-Way Bills on Mobile',
@@ -98,17 +98,7 @@ export default function Home() {
 
   return (
     <>
-      <JsonLd
-        data={{
-          '@context': 'https://schema.org',
-          '@type': 'SoftwareApplication',
-          name: 'E-Way Easy',
-          operatingSystem: 'ANDROID',
-          applicationCategory: 'BusinessApplication',
-          url: `${SITE_URL}/download`,
-          description: 'E-way bill generator app for Android: generate, update, extend, cancel and consolidate e-way bills from a GST invoice or invoice PDF.',
-        }}
-      />
+      <JsonLd data={softwareAppLd()} />
 
       {/* A. Hero */}
       <section className="relative overflow-hidden bg-brand-900 text-white">

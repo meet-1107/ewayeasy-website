@@ -5,7 +5,7 @@ excerpt: "A plain-English guide to the e-way bill: what it is, when you need one
 category: "eway-bill"
 tags: ["e-way bill", "basics", "GST", "transport"]
 publishedAt: "2026-04-03"
-updatedAt: "2026-09-18"
+updatedAt: "2026-11-02"
 verifiedAt: "2026-10-10"
 seoTitle: "What Is an E-Way Bill? Rules, Parts & Process (2026 Guide)"
 metaDescription: "Understand the e-way bill under GST: when it is required, the ₹50,000 rule, Part A and Part B, validity, who generates it and common mistakes."
@@ -26,6 +26,8 @@ faq:
     a: "No. Part A cannot be edited. If it is wrong, cancel within 24 hours and generate a fresh one. Vehicle details in Part B can be updated during validity."
 related: ["eway-bill-part-a-and-part-b-explained", "eway-bill-limit-50000-threshold-exceptions"]
 ---
+> **Quick answer:** An e-way bill is an electronic document generated on the government's e-way bill system for the movement of goods, recording who sends them, who receives them, what they are, their value and how they travel. It is generally required when consignment value exceeds ₹50,000, under Section 68 of the CGST Act and Rule 138.
+
 If you move goods in India under GST, sooner or later a transporter, buyer or checking officer will ask you for an e-way bill. Many small businesses treat it as one more form to fill. It is easier to manage once you understand what the document actually does and which rules drive it.
 
 This guide explains the e-way bill from the ground up: the law behind it, when it is required, who is responsible, its structure, how long it is valid and the mistakes that most often lead to detention of goods.

@@ -5,7 +5,7 @@ excerpt: "Truck broke down or goods shifted to another vehicle? Here is how Part
 category: "eway-bill"
 tags: ["e-way bill", "part b", "vehicle update", "transporter"]
 publishedAt: "2026-04-08"
-updatedAt: "2026-09-12"
+updatedAt: "2026-11-02"
 verifiedAt: "2026-10-10"
 seoTitle: "How to Update Vehicle Number in an E-Way Bill (Part B)"
 metaDescription: "Step-by-step guide to updating vehicle details in Part B of an e-way bill: when it is needed, who can update it, common mistakes and validity rules."
@@ -26,6 +26,8 @@ faq:
     a: "A normal vehicle update does not reset validity. Validity is extended only through the separate extension process."
 related: ["eway-bill-part-a-and-part-b-explained", "what-to-do-when-eway-bill-expires"]
 ---
+> **Quick answer:** Update the vehicle number in Part B of the e-way bill before the new vehicle moves. Part B can be updated any number of times while the bill is valid. A normal update does not reset validity, and an expired bill cannot be updated.
+
 An e-way bill is not a document you can freely edit. Once it is generated, the Part A details — GSTINs, invoice number, value, HSN — are locked. The one section that is designed to change during the journey is **Part B**, which holds the vehicle number or transport document details. If your truck breaks down on the highway, or goods are moved from a small tempo to a long-haul trailer at a hub, Part B is what you update.
 
 This guide explains when a vehicle update is needed, who is allowed to do it, how the process works on the official portal, and the mistakes that typically get a vehicle stopped at a checkpoint.

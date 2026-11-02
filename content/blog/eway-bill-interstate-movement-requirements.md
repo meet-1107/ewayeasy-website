@@ -5,7 +5,7 @@ excerpt: "What changes when goods cross a state border: the ₹50,000 threshold,
 category: "eway-bill"
 tags: ["e-way bill", "interstate", "IGST", "transport"]
 publishedAt: "2026-05-14"
-updatedAt: "2026-09-26"
+updatedAt: "2026-11-02"
 verifiedAt: "2026-10-10"
 seoTitle: "E-Way Bill for Interstate Movement: Requirements (2026)"
 metaDescription: "Interstate e-way bill rules: threshold, value-independent cases, IGST on the invoice, distance and validity, and what the driver must carry."
@@ -28,6 +28,8 @@ faq:
     a: "No. One valid e-way bill covers the whole journey. Only Part B needs updating if the vehicle changes."
 related: ["eway-bill-intrastate-movement-considerations", "cgst-sgst-igst-explained"]
 ---
+> **Quick answer:** Interstate movement generally needs an e-way bill when consignment value exceeds ₹50,000, and at any value for goods sent to a job worker in another state or specified handicraft goods moved by a person exempt from registration. The invoice must show IGST, and state-specific higher limits do not apply.
+
 When goods leave your state, the e-way bill becomes non-negotiable in more situations, and the margin for error shrinks. The truck may pass through several states, officers in any of them can verify the consignment, and state-specific relaxations no longer help you. This article sets out what an interstate consignment needs, in the order you would actually prepare it.
 
 ## Quick answers

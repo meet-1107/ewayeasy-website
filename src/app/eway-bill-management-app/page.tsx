@@ -6,8 +6,8 @@ import ComplianceNote from '@/components/ComplianceNote';
 import JsonLd from '@/components/JsonLd';
 import { Phone, FloatCard } from '@/components/AppGraphics';
 import { SectionIntro, ReadingList, FaqList, linkClass, type Faq } from '@/components/solutions/SolutionBlocks';
-import { ActionCard, ICON_STROKE as S, softwareAppLd } from '@/components/feature-pages/FeatureBlocks';
-import { pageMeta, faqLd } from '@/lib/seo';
+import { ActionCard, ICON_STROKE as S } from '@/components/feature-pages/FeatureBlocks';
+import { pageMeta, faqLd, softwareAppLd } from '@/lib/seo';
 import { PRICING } from '@/lib/pricing';
 
 const PATH = '/eway-bill-management-app';
@@ -120,7 +120,7 @@ const COUNTERS = [
 export default function EwayBillManagementAppPage() {
   return (
     <>
-      <JsonLd data={[softwareAppLd(PATH, DESCRIPTION), faqLd(FAQ)]} />
+      <JsonLd data={[softwareAppLd(DESCRIPTION), faqLd(FAQ)]} />
       <PageHeader
         eyebrow="App feature · Manage e-way bills"
         title="An e-way bill management app for what happens after generation"

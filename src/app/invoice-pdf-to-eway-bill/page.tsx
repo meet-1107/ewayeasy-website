@@ -6,9 +6,10 @@ import ComplianceNote from '@/components/ComplianceNote';
 import JsonLd from '@/components/JsonLd';
 import { Phone } from '@/components/AppGraphics';
 import { SectionIntro, ProblemGrid, ReadingList, FaqList, linkClass, type Faq } from '@/components/solutions/SolutionBlocks';
-import { StepList, CheckList, softwareAppLd } from '@/components/feature-pages/FeatureBlocks';
+import { StepList, CheckList } from '@/components/feature-pages/FeatureBlocks';
 import PdfExtractGraphic from '@/components/feature-pages/PdfExtractGraphic';
-import { pageMeta, faqLd } from '@/lib/seo';
+import DataTable from '@/components/DataTable';
+import { pageMeta, faqLd, softwareAppLd } from '@/lib/seo';
 import { PRICING } from '@/lib/pricing';
 
 const PATH = '/invoice-pdf-to-eway-bill';
@@ -22,6 +23,19 @@ export const metadata = pageMeta({
 });
 
 const CREDITS = PRICING.creditsPerEwayBill ?? 5;
+
+const SPEC_ROWS = [
+  { label: 'Input', cells: ['Invoice PDF'] },
+  { label: 'Fields read', cells: ['Buyer, GSTIN, items, HSN codes and totals'] },
+  { label: 'User review', cells: ['Required before generating'] },
+  { label: 'Filing route', cells: ['Official NIC e-way bill system, through an authorised GSP, using your own API login'] },
+  { label: 'Platform', cells: ['Android app'] },
+  {
+    label: 'Cost',
+    cells: [`${CREDITS} credits per successful generation; credits for an action the portal rejects are refunded automatically`],
+  },
+  { label: 'Not supported', cells: ['Bulk upload of many PDFs at once'] },
+];
 
 const FAQ: Faq[] = [
   {
@@ -49,7 +63,7 @@ const FAQ: Faq[] = [
 export default function InvoicePdfToEwayBillPage() {
   return (
     <>
-      <JsonLd data={[softwareAppLd(PATH, DESCRIPTION), faqLd(FAQ)]} />
+      <JsonLd data={[softwareAppLd(DESCRIPTION), faqLd(FAQ)]} />
       <PageHeader
         eyebrow="App feature · Import PDF"
         title="Turn an invoice PDF into an e-way bill"
@@ -95,6 +109,15 @@ export default function InvoicePdfToEwayBillPage() {
           />
           <div className="mt-14">
             <PdfExtractGraphic />
+          </div>
+        </div>
+      </section>
+
+      <section className="section pt-0" aria-labelledby="pdf-spec">
+        <div className="container">
+          <SectionIntro id="pdf-spec" eyebrow="At a glance" title="How PDF import works" />
+          <div className="mt-8 max-w-3xl">
+            <DataTable caption="How invoice PDF import works in E-Way Easy" columns={['Item', 'Detail']} rows={SPEC_ROWS} width="fit" />
           </div>
         </div>
       </section>

@@ -5,7 +5,7 @@ excerpt: "The invoice and transport errors that most often cause e-way bill canc
 category: "invoicing"
 tags: ["invoice errors", "transport details", "checklist", "e-way bill"]
 publishedAt: "2026-08-18"
-updatedAt: "2026-10-06"
+updatedAt: "2026-11-02"
 verifiedAt: "2026-10-10"
 seoTitle: "Avoid Invoice & Transport Detail Errors: Dispatch Checklist"
 metaDescription: "Common errors in invoices, e-way bill Part A and vehicle details, how to fix each one, and a printable pre-dispatch checklist for Indian businesses."
@@ -28,6 +28,8 @@ faq:
     a: "The e-way bill can no longer be cancelled on the portal. Correct the invoice position through the proper GST mechanism (such as a credit or debit note where applicable) and take advice on the movement already made."
 related: ["how-to-update-vehicle-details-in-eway-bill"]
 ---
+> **Quick answer:** Check the GSTIN, PIN codes, document number and date, value, HSN and vehicle number before generating, because Part A cannot be edited. Vehicle and transporter details can be updated later, but Part A errors need cancelling within 24 hours and generating again.
+
 Most e-way bill problems start before the e-way bill is generated. A GSTIN typed with one wrong character, a PIN code copied from the billing address instead of the delivery address, a vehicle number with a missing digit — each of these passes straight from the invoice into the e-way bill. Some can be fixed in seconds. Others cannot be fixed at all; the e-way bill has to be cancelled and generated again, and if 24 hours have passed, even that is not possible.
 
 Knowing which errors are fixable and which are not is the first step to avoiding them.

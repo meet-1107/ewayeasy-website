@@ -2,7 +2,7 @@
 title: "E-Way Bill Correction: What Can and Cannot Be Changed"
 slug: "eway-bill-correction"
 description: "An e-way bill cannot be edited, but some details can be updated. This guide shows what you can change (Part B, transporter, validity), what you cannot (Part A), and how to fix each kind of mistake."
-updatedAt: "2026-09-27"
+updatedAt: "2026-11-02"
 verifiedAt: "2026-10-11"
 seoTitle: "E-Way Bill Correction: What You Can and Cannot Change"
 metaDescription: "E-way bills cannot be edited. Update Part B, change transporter or extend validity; for Part A errors, cancel within 24 hours and regenerate. Full fix table."
@@ -32,6 +32,8 @@ updateHistory:
   - date: "2026-09-08"
     note: "First published."
 ---
+> **Quick answer:** You cannot edit an e-way bill after generation. Part B (vehicle or transport document), the transporter and validity can be updated, but if Part A details are wrong, cancel within 24 hours and generate a new e-way bill.
+
 People often search for an "edit e-way bill" button. There is none. The system is designed so that the commercial details in Part A are fixed once the e-way bill is generated. What you can change is the transport side — the vehicle, the transporter and, in limited cases, the validity.
 
 ## The short answer

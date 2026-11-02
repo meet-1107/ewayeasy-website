@@ -72,7 +72,7 @@ const FAQ: { q: string; a: string }[] = [
   },
   {
     q: 'Is E-Way Easy available on iPhone?',
-    a: 'E-Way Easy is currently listed for Android on Google Play. There is no iPhone app listing at this time.',
+    a: 'E-Way Easy is an Android app. There is no iPhone app at this time.',
   },
   {
     q: 'Do I need my e-way bill portal credentials?',
