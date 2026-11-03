@@ -60,6 +60,7 @@ const COLS = [
       { label: 'Our story', href: '/about' },
       { label: `Author: ${AUTHOR.name}`, href: `/authors/${AUTHOR.slug}` },
       { label: 'Contact & support', href: '/contact' },
+      { label: 'Become a partner', href: '/partners' },
       { label: 'Refund policy', href: '/refund-policy' },
     ],
   },

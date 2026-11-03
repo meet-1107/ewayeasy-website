@@ -189,6 +189,10 @@ export default function AccountantsPage() {
               this is not a commitment to build or launch such a plan.
             </p>
             <Link href="/contact" className="btn-primary mt-6">Tell us about your practice</Link>
+            <p className="mt-6 text-sm text-ink-soft">
+              Want to introduce E-Way Easy to the businesses you work with? See the{' '}
+              <Link href="/partners" className={linkClass}>partner program</Link>.
+            </p>
           </div>
         </div>
       </section>

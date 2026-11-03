@@ -10,6 +10,8 @@ import ReviewsSection from '@/components/ReviewsSection';
 import PeopleStrip from '@/components/PeopleStrip';
 import RotatingWords from '@/components/RotatingWords';
 import Reveal from '@/components/Reveal';
+import { HelpersSection, HeroMilestones, PartnerStrip, SizesSection, WalletSection } from '@/components/HomeSections';
+import { Stamp, TruckArtBand } from '@/components/HighwayKit';
 import { getAllPosts, toSummary } from '@/lib/content';
 import { UPDATES } from '@/lib/updates';
 import { pageMeta, softwareAppLd } from '@/lib/seo';
@@ -22,26 +24,7 @@ export const metadata = pageMeta({
   path: '/',
 });
 
-const HIGHLIGHTS: { text: string; href?: string }[] = [
-  { text: 'Create a GST invoice or import its PDF', href: '/invoice-pdf-to-eway-bill' },
-  { text: 'Buyer details from GSTIN, HSN from products' },
-  { text: 'Distance calculated from PIN codes' },
-  { text: 'Part B, extend, cancel, consolidate, share PDF', href: '/eway-bill-management-app' },
-  { text: 'No yearly subscription' },
-  { text: '₹5 per e-way bill, charged only on success' },
-];
 
-const FEATURES: { title: string; text: string; icon: string; href?: string }[] = [
-  { title: 'Sales invoice, created in the flow', text: 'The sales invoice is prepared as step one of the e-way bill workflow, so you don’t make it twice.', icon: 'doc' },
-  { title: 'Import invoice PDF', text: 'Already billed in other software? Import the PDF; the app reads buyer, GSTIN, items, HSN and totals for you to review.', icon: 'doc', href: '/invoice-pdf-to-eway-bill' },
-  { title: 'Buyer GSTIN auto-fill', text: 'Enter the buyer’s GSTIN and the name, address, state and PIN fill in automatically.', icon: 'id' },
-  { title: 'HSN from your product list', text: 'Pick a saved product and its HSN code comes with it. You can still edit it manually.', icon: 'tag' },
-  { title: 'Distance from PIN codes', text: 'Approximate distance is calculated from dispatch and delivery PIN codes. Edit it if the actual route differs.', icon: 'pin' },
-  { title: 'Your own invoice series', text: 'Invoice numbers follow your pre-series automatically, e.g. EE/26-27/0042.', icon: 'hash' },
-  { title: 'Saved buyers and products', text: 'Search and pick buyers and products instead of typing them again for every dispatch.', icon: 'box' },
-  { title: 'Manage every e-way bill', text: 'Update Part B, extend validity, cancel within 24 hours, consolidate consignments, and share the e-way bill PDF on WhatsApp or email.', icon: 'doc', href: '/eway-bill-management-app' },
-  { title: '₹5 per action, pay only on success', text: '1 credit = ₹1 and each e-way bill action is 5 credits. If the portal rejects it, the credits come back automatically.', icon: 'hash' },
-];
 
 const PROBLEMS = [
   'Making the sales invoice separately before the e-way bill',
@@ -74,23 +57,6 @@ const TOOLS = [
   { title: 'Delivery Challan Generator', text: 'Job work and stock transfer challans, print-ready.', href: '/tools/delivery-challan-generator' },
 ];
 
-function Icon({ name }: { name: string }) {
-  const paths: Record<string, string> = {
-    doc: 'M7 3h7l5 5v13H7zM14 3v5h5M10 13h6M10 17h4',
-    id: 'M4 6h16v12H4zM8 10h3M8 14h5M15 10h2v4h-2z',
-    tag: 'M3 12V4h8l9 9-8 8zM7.5 8.5h.01',
-    pin: 'M12 21s-7-6.2-7-11a7 7 0 1 1 14 0c0 4.8-7 11-7 11zM12 12.5a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5z',
-    hash: 'M5 9h14M5 15h14M10 4 8 20M16 4l-2 16',
-    box: 'M3 7.5 12 3l9 4.5v9L12 21l-9-4.5zM3 7.5 12 12l9-4.5M12 12v9',
-  };
-  return (
-    <span className="grid h-12 w-12 place-items-center rounded-2xl bg-brand-50 text-brand-700" aria-hidden>
-      <svg viewBox="0 0 24 24" className="h-6 w-6" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
-        <path d={paths[name]} />
-      </svg>
-    </span>
-  );
-}
 
 export default function Home() {
   const posts = getAllPosts().slice(0, 6).map(toSummary);
@@ -107,17 +73,15 @@ export default function Home() {
         <div aria-hidden className="absolute right-0 top-0 h-96 w-96 rounded-full bg-amber-500/20 blur-3xl" />
         <div className="container relative grid items-center gap-12 py-14 md:py-20 lg:grid-cols-[1.05fr_1fr]">
           <div>
-            <div className="flex flex-wrap gap-2">
+            <div className="flex flex-wrap items-center gap-3">
+              <Stamp tone="green" className="bg-white/95">Made in India, for India</Stamp>
               <p className="inline-flex items-center gap-1.5 rounded-full bg-emerald-400/15 px-3 py-1 text-xs font-semibold text-emerald-200 ring-1 ring-emerald-300/30">
                 <svg viewBox="0 0 20 20" className="h-3.5 w-3.5" aria-hidden><path fill="currentColor" d="M10 2 4 4.5v4.8c0 3.9 2.6 7.3 6 8.7 3.4-1.4 6-4.8 6-8.7V4.5L10 2Zm-1 11.4-3-3 1.4-1.4L9 10.6l3.6-3.6L14 8.4l-5 5Z" /></svg>
                 Safe &amp; secure · encrypted API login
               </p>
-              <p className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-3 py-1 text-xs font-semibold text-amber-300">
-                Made in Gujarat, for India
-              </p>
             </div>
             <h1 className="mt-5 font-display text-4xl font-extrabold leading-[1.08] md:text-6xl">
-              The E-Way Bill Generator <span className="text-amber-400">for Your Phone</span>
+              The E-Way Bill Generator for <span className="text-amber-400">every Indian business</span>
             </h1>
             <RotatingWords
               className="mt-4 font-display text-xl font-bold leading-[1.25em] text-white md:text-2xl"
@@ -125,26 +89,15 @@ export default function Home() {
               words={['sales invoice', 'e-way bill', 'Part B update', 'PDF share']}
               after="in one tap ⚡"
             />
-            <p className="mt-5 hidden max-w-xl text-lg leading-8 text-brand-100/90 sm:block">
-              Enter the sales invoice once, or import its PDF. Buyer details fill in from the GSTIN, HSN comes from your product list and
-              distance is worked out from PIN codes. Review it, tap Generate and move on to the next dispatch, all from your mobile.
+            <p className="mt-5 max-w-xl text-lg leading-8 text-brand-100/90">
+              Small shop, growing factory or large enterprise: create the sales invoice and e-way bill in seconds on your phone,
+              and pay only for what you use.
             </p>
             <div className="mt-8 flex flex-wrap items-center gap-4">
               <PlayBadge placement="home-hero" />
               <Link href="/tools" className="btn-ghost-dark">Explore free tools →</Link>
             </div>
-            <ul className="mt-10 grid gap-x-6 gap-y-3 text-sm text-brand-100/90 sm:grid-cols-2">
-              {HIGHLIGHTS.map((h) => (
-                <li key={h.text} className="flex items-center gap-2.5">
-                  <svg viewBox="0 0 20 20" className="h-5 w-5 shrink-0 text-amber-400" aria-hidden><path d="m5 10.5 3 3 7-7" stroke="currentColor" strokeWidth="2.2" fill="none" strokeLinecap="round" /></svg>
-                  {h.href ? (
-                    <Link href={h.href} className="underline decoration-white/30 underline-offset-4 hover:text-white hover:decoration-amber-400">{h.text}</Link>
-                  ) : (
-                    h.text
-                  )}
-                </li>
-              ))}
-            </ul>
+            <HeroMilestones />
           </div>
           <div className="relative mx-auto w-full max-w-[560px]">
             <DispatchAnimation className="mx-auto w-full max-w-[560px] overflow-hidden rounded-[2rem] shadow-lift" />
@@ -153,10 +106,15 @@ export default function Home() {
             <span className="ee-float ee-float-3 absolute -bottom-3 left-6 rounded-2xl bg-amber-400 px-3 py-2 text-xs font-extrabold text-brand-950 shadow-lift sm:text-sm">₹5 per e-way bill</span>
           </div>
         </div>
+        <TruckArtBand className="absolute inset-x-0 bottom-0" />
       </section>
 
       <Reveal>
         <PeopleStrip />
+      </Reveal>
+
+      <Reveal>
+        <SizesSection />
       </Reveal>
 
       {/* B. Problem → solution graphics */}
@@ -227,33 +185,13 @@ export default function Home() {
       </section>
       </Reveal>
 
-      {/* D. Features */}
+      {/* D. Helpers */}
       <Reveal>
-      <section className="section">
-        <div className="container">
-          <div className="flex flex-wrap items-end justify-between gap-4">
-            <div className="max-w-2xl">
-              <p className="eyebrow">Features</p>
-              <h2 className="h2 mt-3">Less typing, fewer mistakes, faster dispatch</h2>
-            </div>
-            <Link href="/features" className="btn-ghost">See all features</Link>
-          </div>
-          <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-            {FEATURES.map((f) => (
-              <div key={f.title} className="card p-6 transition hover:-translate-y-1 hover:shadow-lift">
-                <Icon name={f.icon} />
-                <h3 className="mt-5 font-display text-lg font-bold">{f.title}</h3>
-                <p className="mt-2 text-sm leading-6 text-ink-soft">{f.text}</p>
-                {f.href && (
-                  <Link href={f.href} className="mt-3 inline-block text-sm font-semibold text-brand-700 hover:text-brand-800">
-                    Learn more →
-                  </Link>
-                )}
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+        <HelpersSection />
+      </Reveal>
+
+      <Reveal>
+        <WalletSection />
       </Reveal>
 
       {/* E. Tools */}
@@ -332,6 +270,10 @@ export default function Home() {
 
       <Reveal>
         <ReviewsSection />
+      </Reveal>
+
+      <Reveal>
+        <PartnerStrip />
       </Reveal>
 
       {/* G2. Founder */}

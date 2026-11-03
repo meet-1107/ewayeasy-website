@@ -62,6 +62,14 @@ body { @apply bg-cream text-ink antialiased; }
 .prose-content th { @apply bg-brand-50 px-4 py-3 font-semibold text-ink; }
 .prose-content td { @apply border-t border-brand-900/10 px-4 py-3 align-top; }
 
+/* Highway kit animations */
+.ee-stamp { animation: ee-stamp .6s cubic-bezier(.2,1.6,.4,1) both; }
+@keyframes ee-stamp { 0% { opacity: 0; transform: scale(1.8) rotate(-6deg); } 100% { opacity: 1; transform: scale(1) rotate(-6deg); } }
+.ee-ledger { animation: ee-ledger 6s ease-in-out infinite both; }
+@keyframes ee-ledger { 0% { opacity: 0; transform: translateX(-12px); } 8%, 85% { opacity: 1; transform: none; } 100% { opacity: 0; } }
+.ee-pulse { animation: ee-pulse 1.4s ease-in-out infinite; }
+@keyframes ee-pulse { 0%, 100% { opacity: .35; transform: scale(.8); } 50% { opacity: 1; transform: scale(1.15); } }
+
 /* Gentle floating cards around the homepage animation */
 .ee-float { animation: ee-float 4.5s ease-in-out infinite; }
 .ee-float-2 { animation-delay: -1.5s; }
