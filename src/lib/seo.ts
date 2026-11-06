@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { SITE, SITE_URL } from './site';
+import { PLAY_STORE_URL, SITE, SITE_URL } from './site';
 import { PRICING, pricesArePublished } from './pricing';
 
 export function absoluteUrl(path = '/') {
@@ -84,6 +84,7 @@ export function softwareAppLd(description = SOFTWARE_APP_DESCRIPTION) {
     operatingSystem: 'Android',
     applicationCategory: 'BusinessApplication',
     url: absoluteUrl('/download'),
+    ...(PLAY_STORE_URL ? { installUrl: PLAY_STORE_URL, downloadUrl: PLAY_STORE_URL } : {}),
     description,
     image: absoluteUrl('/images/app-dashboard.jpg'),
     screenshot: [absoluteUrl('/images/app-dashboard.jpg'), absoluteUrl('/images/app-new-invoice.jpg')],
