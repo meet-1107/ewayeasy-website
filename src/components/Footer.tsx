@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import Logo from './Logo';
 import PlayBadge from './PlayBadge';
-import { AUTHOR } from '@/lib/site';
+import { AUTHOR, SUPPORT_EMAIL } from '@/lib/site';
 
 const COLS = [
   {
@@ -75,6 +75,14 @@ export default function Footer() {
           <p className="mt-4 max-w-xs text-sm leading-6">
             E-Way Easy is an Android app that makes the e-way bill workflow simpler for Indian businesses: invoice, review, generate.
           </p>
+          {SUPPORT_EMAIL && (
+            <p className="mt-4 text-sm">
+              Email:{' '}
+              <a href={`mailto:${SUPPORT_EMAIL}`} className="font-semibold text-white underline decoration-white/30 hover:text-amber-400">
+                {SUPPORT_EMAIL}
+              </a>
+            </p>
+          )}
           <div className="mt-5"><PlayBadge placement="footer" /></div>
         </div>
         {COLS.map((col) => (

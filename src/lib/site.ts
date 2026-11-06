@@ -4,6 +4,8 @@
 export const SITE_URL = (process.env.NEXT_PUBLIC_SITE_URL || 'https://www.example.com').replace(/\/$/, '');
 export const PLAY_STORE_URL = process.env.NEXT_PUBLIC_PLAY_STORE_URL || '';
 export const SUPPORT_EMAIL = process.env.NEXT_PUBLIC_SUPPORT_EMAIL || '';
+// Web3Forms access key (public by design; it only lets the site send mail to the address it was created for).
+export const WEB3FORMS_KEY = process.env.NEXT_PUBLIC_WEB3FORMS_KEY || '';
 export const GA_ID = process.env.NEXT_PUBLIC_GA_ID || '';
 export const CLARITY_ID = process.env.NEXT_PUBLIC_CLARITY_ID || '';
 export const GSC_VERIFICATION = process.env.NEXT_PUBLIC_GSC_VERIFICATION || '';

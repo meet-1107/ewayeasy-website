@@ -96,7 +96,7 @@ To move to a headless CMS later (Sanity, Contentful, Decap), replace `getAllPost
 | 2 | Google Play listing URL | `.env.production` | ✅ `com.ewayeasy.app` listing, with UTM referrer per placement |
 | 3 | Official Google Play badge artwork | `src/components/PlayBadge.tsx` | Inline look-alike SVG. Replace it with the official badge from play.google.com/intl/en_us/badges and follow Google's badge guidelines |
 | 4 | Final app logo | `src/components/Logo.tsx`, `public/favicon.svg`, `scripts/og.svg` → `public/images/og-default.png` | Designed placeholder mark in brand colours |
-| 5 | Support email | `.env.production` | ✅ bvbtrade9@gmail.com |
+| 5 | Support email | `.env.production` | ✅ meet.akabari@ewayeasy.in |
 | 6 | Author bio, photo and credentials for Bhavesh Akabari | `AUTHOR` in `src/lib/site.ts` | Neutral bio with no invented qualifications. Add verified details only |
 | 7 | Company / legal entity name and address for legal pages | `src/app/privacy-policy`, `terms-and-conditions` | Template text; jurisdiction to be confirmed |
 | 8 | App screenshots | `public/images/app-*.jpg` | Taken from real phone screenshots (show status bar and one real company's GSTIN). Swap for clean marketing screenshots |

@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, type FormEvent } from 'react';
+import { WEB3FORMS_KEY } from '@/lib/site';
 
 type Fields = { name: string; email: string; business: string; message: string };
 type Errors = Partial<Record<keyof Fields, string>>;
@@ -23,14 +24,17 @@ export default function ContactForm({ supportEmail }: { supportEmail: string }) 
   const [fields, setFields] = useState<Fields>(EMPTY);
   const [errors, setErrors] = useState<Errors>({});
   const [opened, setOpened] = useState(false);
+  const [status, setStatus] = useState<'idle' | 'sending' | 'sent' | 'failed'>('idle');
+  const [honey, setHoney] = useState('');
   const disabled = !supportEmail;
+  const sendsDirectly = !!WEB3FORMS_KEY;
 
   function update(key: keyof Fields, value: string) {
     setFields((f) => ({ ...f, [key]: value }));
     if (errors[key]) setErrors((e) => ({ ...e, [key]: undefined }));
   }
 
-  function onSubmit(ev: FormEvent<HTMLFormElement>) {
+  async function onSubmit(ev: FormEvent<HTMLFormElement>) {
     ev.preventDefault();
     if (disabled) return;
     const e = validate(fields);
@@ -38,6 +42,34 @@ export default function ContactForm({ supportEmail }: { supportEmail: string }) 
     if (Object.keys(e).length > 0) return;
 
     const subject = `Website enquiry from ${fields.name.trim()}`;
+    if (sendsDirectly) {
+      if (honey) return; // spam bot filled the hidden field
+      setStatus('sending');
+      try {
+        const res = await fetch('https://api.web3forms.com/submit', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+          body: JSON.stringify({
+            access_key: WEB3FORMS_KEY,
+            from_name: 'E-Way Easy website',
+            name: fields.name.trim(),
+            email: fields.email.trim(),
+            business: fields.business.trim() || '-',
+            message: fields.message.trim(),
+            subject,
+            replyto: fields.email.trim(),
+          }),
+        });
+        const data = (await res.json().catch(() => ({}))) as { success?: string | boolean };
+        if (!res.ok || String(data.success) !== 'true') throw new Error('send failed');
+        setStatus('sent');
+        setFields(EMPTY);
+      } catch {
+        setStatus('failed');
+      }
+      return;
+    }
+
     const body = [
       `Name: ${fields.name.trim()}`,
       `Email: ${fields.email.trim()}`,
@@ -61,7 +93,8 @@ export default function ContactForm({ supportEmail }: { supportEmail: string }) 
         </p>
       )}
 
-      <fieldset disabled={disabled} className="grid gap-5 sm:grid-cols-2">
+      <fieldset disabled={disabled || status === 'sending'} className="grid gap-5 sm:grid-cols-2">
+        <input type="text" name="botcheck" tabIndex={-1} autoComplete="off" aria-hidden className="hidden" value={honey} onChange={(e) => setHoney(e.target.value)} />
         <div>
           <label htmlFor="cf-name" className="label">Name</label>
           <input
@@ -120,14 +153,25 @@ export default function ContactForm({ supportEmail }: { supportEmail: string }) 
       </fieldset>
 
       <p id="contact-form-note" className="mt-5 text-sm text-ink-soft">
-        Submitting opens your own email app with this message filled in. Nothing is sent to any server from this page.
+        {sendsDirectly
+          ? <>Your message is emailed straight to our team at {supportEmail}. We reply to the email address you give.</>
+          : <>Submitting opens your own email app with this message filled in. Nothing is sent to any server from this page.</>}{' '}
         Please do not include your GST or e-way bill portal password, OTPs or any other login details.
       </p>
 
       <div className="mt-6 flex flex-wrap items-center gap-4">
-        <button type="submit" className="btn-primary" disabled={disabled}>
-          Open email to send
+        <button type="submit" className="btn-primary" disabled={disabled || status === 'sending'}>
+          {sendsDirectly ? (status === 'sending' ? 'Sending…' : 'Send message') : 'Open email to send'}
         </button>
+        {status === 'sent' && (
+          <p role="status" className="text-sm font-semibold text-brand-700">Thank you! Your message has been sent. We will reply by email.</p>
+        )}
+        {status === 'failed' && (
+          <p role="alert" className="text-sm text-red-600">
+            Sorry, the message could not be sent. Please email us at{' '}
+            <a href={`mailto:${supportEmail}`} className="font-semibold underline">{supportEmail}</a>.
+          </p>
+        )}
         {opened && (
           <p role="status" className="text-sm text-brand-700">
             Your email app should open now. If it did not, write to{' '}
