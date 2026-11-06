@@ -31,7 +31,7 @@ const FEATURES: Feature[] = [
   {
     title: 'Sales Invoice Management',
     where: 'app',
-    text: 'The sales invoice is created as step one of the e-way bill flow, so the same details carry forward instead of being typed twice. Saved seller details, buyers and products keep each invoice quick.',
+    text: 'Make GST invoices free in the app: buyer details fill from the GSTIN, saved products bring their HSN and rate, and CGST/SGST or IGST is worked out for you. The invoice is step one of the e-way bill flow, so the same details carry forward instead of being typed twice.',
     cta: { label: 'E-way bill vs sales invoice', href: '/eway-bill-vs-sales-invoice' },
     icon: (
       <g {...S}>
@@ -180,8 +180,8 @@ const FEATURES: Feature[] = [
   {
     title: 'Invoice Preview and Printing',
     where: 'app',
-    text: 'Preview the sales invoice in the app before saving, so you can catch a wrong quantity, rate or buyer detail before the e-way bill step. Need an invoice to print from your computer? Try the free sales invoice generator on this website.',
-    cta: { label: 'Free sales invoice templates', href: '/sales-invoice-templates' },
+    text: 'Preview the sales invoice in the app before saving, so you can catch a wrong quantity, rate or buyer detail before the e-way bill step. Need an invoice from your computer? Use the free online invoice generator, with or without GST.',
+    cta: { label: 'Free invoice generator', href: '/invoice-generator' },
     icon: (
       <g {...S}>
         <path d="M2.5 12S6 5.5 12 5.5 21.5 12 21.5 12 18 18.5 12 18.5 2.5 12 2.5 12Z" />

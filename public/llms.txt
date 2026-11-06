@@ -1,11 +1,12 @@
 # E-Way Easy
 
-E-Way Easy is an Android app for GST-registered traders, manufacturers, wholesalers, distributors and transporters in India. It creates a GST invoice or imports an invoice PDF, lets the user review the details, and files the e-way bill on the official NIC e-way bill system from a phone. The website also has free GST tools and plain-English e-way bill guides.
+E-Way Easy is an Android app for GST-registered traders, manufacturers, wholesalers, distributors and transporters in India. It creates a GST invoice or imports an invoice PDF, lets the user review the details, and files the e-way bill on the official NIC e-way bill system from a phone. The website also has a free online invoice generator (with or without GST), free Excel invoice formats, free GST tools and plain-English guides on e-way bills and GST invoices.
 
 ## Key facts
 
 - Platform: Android only, available on Google Play (https://play.google.com/store/apps/details?id=com.ewayeasy.app). There is no iPhone app. No download, user or rating figures are published.
 - Pricing: pay-as-you-go wallet credits. 1 credit = ₹1 (Rs 1). Each e-way bill action costs 5 credits, which is ₹5 (Rs 5). No yearly subscription.
+- Making invoices in the app is free. Credits are used only for e-way bill actions.
 - Actions that use credits: generate, update Part B (vehicle), consolidated e-way bill, cancel, extend validity.
 - Credit packs: 50 credits (₹50), 100 credits (₹100), 250 credits (₹250), 500 credits (₹500), 1,000 credits (₹1,000), or any other amount.
 - Credits are taken only when an action succeeds. If the portal rejects it, they return to the wallet automatically.
@@ -23,6 +24,15 @@ E-Way Easy is an Android app for GST-registered traders, manufacturers, wholesal
 - Update Part B and vehicle number, extend validity, cancel, and create consolidated e-way bills.
 - Download the e-way bill PDF and share it on WhatsApp or email, or print it.
 - Save buyers, products, transporters and vehicles.
+
+## Free invoice generator (website)
+
+- URL: https://ewayeasy.in/invoice-generator. Free, no sign-up, no watermark, no invoice limit. Works in any browser.
+- Two modes: With GST (tax invoice with GSTIN, HSN, place of supply, CGST + SGST for same-state sales or IGST for inter-state sales) and Without GST (simple bill for sellers not registered under GST). Link https://ewayeasy.in/invoice-generator#without-gst opens the non-GST bill.
+- Calculates line totals, discounts, tax, round-off and the amount in words (Indian format) automatically. Keeps an invoice number series, saved products and drafts in the browser only. Downloads a PDF or prints (A4, A5, Letter, Legal).
+- Invoice data is processed in the browser and is not uploaded to any server.
+- Buyer auto-fill from GSTIN and road distance from PIN codes are app features, not part of the web generator.
+- Excel formats: https://ewayeasy.in/invoice-format-excel offers a GST invoice format and a bill format without GST (.xlsx) with tax formulas built in.
 
 ## What the app does not do
 
@@ -64,7 +74,11 @@ E-Way Easy is an Android app for GST-registered traders, manufacturers, wholesal
 - [GSTIN validator](https://ewayeasy.in/tools/gstin-validator)
 - [Bulk e-way bill data checker](https://ewayeasy.in/tools/bulk-eway-bill-data-checker)
 - [Invoice vs e-way bill checker](https://ewayeasy.in/tools/invoice-vs-eway-bill-checker)
+- [Free invoice generator (GST and non-GST)](https://ewayeasy.in/invoice-generator)
+- [Invoice format in Excel (GST and non-GST)](https://ewayeasy.in/invoice-format-excel)
 - [Sales invoice templates](https://ewayeasy.in/sales-invoice-templates)
+- [GST tax invoice format](https://ewayeasy.in/sales-invoice-templates/gst-tax-invoice)
+- [Simple bill format without GST](https://ewayeasy.in/sales-invoice-templates/simple-sales-invoice)
 
 ## Guides
 
@@ -83,3 +97,12 @@ E-Way Easy is an Android app for GST-registered traders, manufacturers, wholesal
 - [Common e-way bill errors](https://ewayeasy.in/eway-bill-common-errors)
 - [E-way bill vs sales invoice](https://ewayeasy.in/eway-bill-vs-sales-invoice)
 - [E-way bill FAQ](https://ewayeasy.in/eway-bill-faq)
+
+## GST invoices
+
+- [GST invoice rules: mandatory fields, numbering, copies, time limits (Rule 46)](https://ewayeasy.in/gst-invoice-rules)
+- [Invoice with GST vs without GST: tax invoice vs bill of supply](https://ewayeasy.in/blog/invoice-with-gst-vs-without-gst)
+- [Invoice vs bill vs receipt in India](https://ewayeasy.in/blog/invoice-vs-bill-vs-receipt)
+- [How to make a GST invoice on mobile](https://ewayeasy.in/blog/how-to-make-gst-invoice-on-mobile)
+- [How to calculate GST on a sales invoice](https://ewayeasy.in/blog/how-to-calculate-gst-on-sales-invoice)
+- [CGST vs SGST vs IGST](https://ewayeasy.in/blog/cgst-sgst-igst-explained)

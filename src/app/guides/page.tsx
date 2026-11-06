@@ -15,6 +15,7 @@ export const metadata = pageMeta({
 
 // Topic clusters: e-way bill generation is the core subject; the other two support the same workflow.
 const HSN_SLUG = 'hsn-codes-practical-guide';
+const INVOICE_GUIDES = new Set(['gst-invoice-rules']);
 const inB = (p: Post) => p.category === 'invoicing' || p.category === 'business-guides' || p.slug === HSN_SLUG;
 const inC = (p: Post) => p.category === 'gst-compliance' && p.slug !== HSN_SLUG;
 
@@ -33,7 +34,7 @@ export default function GuidesHub() {
       title: 'E-way bill generation',
       intro: 'How to generate an e-way bill, the documents and data you need, validity and distance, Part A and Part B, cancellation, corrections, errors and bulk preparation.',
       guides: [
-        ...guides.map((g) => ({ href: `/${g.slug}`, title: g.title, meta: `Guide · verified ${formatDate(g.verifiedAt ?? g.updatedAt)}` })),
+        ...guides.filter((g) => !INVOICE_GUIDES.has(g.slug)).map((g) => ({ href: `/${g.slug}`, title: g.title, meta: `Guide · verified ${formatDate(g.verifiedAt ?? g.updatedAt)}` })),
         ...posts.filter((p) => p.category === 'eway-bill').map((p) => ({ href: `/blog/${p.slug}`, title: p.title, meta: `Article · ${formatDate(p.publishedAt)}` })),
       ],
       tools: TOOLS.filter((t) => t.category === 'eway-bill'),
@@ -43,7 +44,12 @@ export default function GuidesHub() {
       eyebrow: 'Supporting workflow',
       title: 'Sales invoices and GST',
       intro: 'Creating GST invoices, numbering and HSN details, GST calculation, preparing invoice data and keeping the invoice consistent with the e-way bill.',
-      guides: posts.filter(inB).map((p) => ({ href: `/blog/${p.slug}`, title: p.title, meta: `Article · ${formatDate(p.publishedAt)}` })),
+      guides: [
+        { href: '/invoice-generator', title: 'Free invoice generator (GST and non-GST)', meta: 'Free tool' },
+        { href: '/invoice-format-excel', title: 'Invoice format in Excel', meta: 'Free download' },
+        ...guides.filter((g) => INVOICE_GUIDES.has(g.slug)).map((g) => ({ href: `/${g.slug}`, title: g.title, meta: `Guide · verified ${formatDate(g.verifiedAt ?? g.updatedAt)}` })),
+        ...posts.filter(inB).map((p) => ({ href: `/blog/${p.slug}`, title: p.title, meta: `Article · ${formatDate(p.publishedAt)}` })),
+      ],
       tools: TOOLS.filter((t) => t.category === 'invoicing' || t.category === 'gst'),
     },
     {

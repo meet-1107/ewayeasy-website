@@ -35,6 +35,15 @@ export default function ToolsPage() {
         crumbs={[{ name: 'Free Tools', href: '/tools' }]}
       />
       <div className="container py-10 md:py-14">
+        <section aria-labelledby="invoice-makers" className="mb-10 rounded-[1.75rem] border-2 border-ink bg-amber-300 p-6 shadow-[6px_6px_0_#16211C] md:p-8">
+          <h2 id="invoice-makers" className="font-display text-2xl font-extrabold text-ink">Make an invoice for free</h2>
+          <p className="mt-1 text-ink">With GST or without GST, online or in Excel. No sign-up.</p>
+          <div className="mt-5 flex flex-wrap gap-3">
+            <Link href="/invoice-generator" className="btn-primary">Free invoice generator</Link>
+            <Link href="/invoice-format-excel" className="btn-ghost">Invoice format in Excel</Link>
+            <Link href="/sales-invoice-templates" className="btn-ghost">All invoice templates</Link>
+          </div>
+        </section>
         <ToolsDirectory />
 
         <section className="mt-14 grid gap-6 md:grid-cols-2">

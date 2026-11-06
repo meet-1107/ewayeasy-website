@@ -31,6 +31,8 @@ const COLS = [
   {
     title: 'Free tools',
     links: [
+      { label: 'Free invoice generator', href: '/invoice-generator' },
+      { label: 'Invoice format in Excel', href: '/invoice-format-excel' },
       { label: 'GST calculator', href: '/tools/gst-calculator' },
       { label: 'Sales invoice templates', href: '/sales-invoice-templates' },
       { label: 'Purchase order templates', href: '/purchase-order-templates' },
@@ -50,6 +52,7 @@ const COLS = [
       { label: 'How to generate', href: '/eway-bill-generation' },
       { label: 'Documents required', href: '/documents-required-for-eway-bill' },
       { label: 'Rules (Rule 138)', href: '/eway-bill-rules' },
+      { label: 'GST invoice rules', href: '/gst-invoice-rules' },
       { label: 'Bulk e-way bills', href: '/bulk-eway-bill-generation' },
       { label: 'Blog', href: '/blog' },
     ],

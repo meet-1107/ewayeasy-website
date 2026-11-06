@@ -174,7 +174,7 @@ export const CATEGORY_CONTENT: Record<DocumentKind, CategoryContent> = {
       },
       {
         q: 'Can I download the sales invoice format in Excel or Word?',
-        a: 'No. The templates download as PDF or print straight from your browser. Instead of an Excel sheet with formulas to maintain, totals and taxes update as you type, there is nothing to install, and nothing you enter is uploaded.',
+        a: 'These templates download as PDF or print from your browser. If you prefer a spreadsheet, download the free GST or non-GST invoice format in Excel from the invoice format in Excel page; it has the tax formulas built in. Word files are not offered.',
       },
       {
         q: 'Does a template make my invoice GST-compliant?',
@@ -185,6 +185,8 @@ export const CATEGORY_CONTENT: Record<DocumentKind, CategoryContent> = {
     relatedGuides: [
       { title: 'E-way bill vs sales invoice', href: '/eway-bill-vs-sales-invoice' },
       { title: 'How to calculate GST on a sales invoice', href: '/blog/how-to-calculate-gst-on-sales-invoice' },
+      { title: 'GST invoice rules (Rule 46)', href: '/gst-invoice-rules' },
+      { title: 'Free invoice generator (with or without GST)', href: '/invoice-generator' },
       { title: 'CGST vs SGST vs IGST explained', href: '/blog/cgst-sgst-igst-explained' },
       { title: 'Documents required for an e-way bill', href: '/documents-required-for-eway-bill' },
     ],
@@ -437,6 +439,8 @@ export const TEMPLATE_CONTENT: Record<TemplateId, TemplateContent> = {
         links: [
           { title: 'Documents required for an e-way bill', href: '/documents-required-for-eway-bill' },
           { title: 'How to calculate GST on a sales invoice', href: '/blog/how-to-calculate-gst-on-sales-invoice' },
+      { title: 'GST invoice rules (Rule 46)', href: '/gst-invoice-rules' },
+      { title: 'Free invoice generator (with or without GST)', href: '/invoice-generator' },
         ],
       },
     ],
@@ -466,6 +470,8 @@ export const TEMPLATE_CONTENT: Record<TemplateId, TemplateContent> = {
     relatedGuides: [
       { title: 'CGST vs SGST vs IGST explained', href: '/blog/cgst-sgst-igst-explained' },
       { title: 'How to calculate GST on a sales invoice', href: '/blog/how-to-calculate-gst-on-sales-invoice' },
+      { title: 'GST invoice rules (Rule 46)', href: '/gst-invoice-rules' },
+      { title: 'Free invoice generator (with or without GST)', href: '/invoice-generator' },
       { title: 'E-way bill vs tax invoice', href: '/eway-bill-vs-sales-invoice' },
       { title: 'HSN codes: a practical guide', href: '/blog/hsn-codes-practical-guide' },
     ],

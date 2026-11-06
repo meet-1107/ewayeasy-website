@@ -47,6 +47,7 @@ const GUIDES = [
 
 const TOOLS = [
   { title: 'GST Calculator', text: 'Add or remove GST, with CGST/SGST or IGST split.', href: '/tools/gst-calculator' },
+  { title: 'Free Invoice Generator', text: 'Make a GST or non-GST invoice online. Taxes and totals auto-calculate; download PDF.', href: '/invoice-generator' },
   { title: 'Sales Invoice Templates', text: 'GST, simple, service and wholesale invoices. Edit, download PDF, print.', href: '/sales-invoice-templates' },
   { title: 'Purchase Order & Commercial Invoice', text: 'Editable PO and export invoice templates in A4, Letter and more.', href: '/purchase-order-templates' },
   { title: 'E-Way Bill Eligibility Checker', text: 'Find out whether your movement may need an e-way bill.', href: '/tools/eway-bill-eligibility-checker' },
