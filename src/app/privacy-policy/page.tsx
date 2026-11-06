@@ -1,6 +1,5 @@
 import Link from 'next/link';
 import PageHeader from '@/components/PageHeader';
-import ComplianceNote from '@/components/ComplianceNote';
 import { pageMeta } from '@/lib/seo';
 import { SITE, SUPPORT_EMAIL } from '@/lib/site';
 
@@ -33,10 +32,7 @@ export default function PrivacyPolicyPage() {
 
       <div className="container py-12 md:py-16">
         <div className="mx-auto max-w-3xl">
-          <ComplianceNote title="Template">
-            <p>Template — to be reviewed by the business&rsquo;s legal adviser before launch.</p>
-          </ComplianceNote>
-          <p className="mt-6 text-sm text-ink-faint">Last updated: {LAST_UPDATED}</p>
+          <p className="text-sm text-ink-faint">Last updated: {LAST_UPDATED}</p>
 
           <div className="prose-content mt-4">
             <p>

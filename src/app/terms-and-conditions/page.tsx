@@ -1,6 +1,5 @@
 import Link from 'next/link';
 import PageHeader from '@/components/PageHeader';
-import ComplianceNote from '@/components/ComplianceNote';
 import { pageMeta } from '@/lib/seo';
 import { SITE, SUPPORT_EMAIL } from '@/lib/site';
 
@@ -25,10 +24,7 @@ export default function TermsPage() {
 
       <div className="container py-12 md:py-16">
         <div className="mx-auto max-w-3xl">
-          <ComplianceNote title="Template">
-            <p>Template — to be reviewed by the business&rsquo;s legal adviser before launch.</p>
-          </ComplianceNote>
-          <p className="mt-6 text-sm text-ink-faint">Last updated: {LAST_UPDATED}</p>
+          <p className="text-sm text-ink-faint">Last updated: {LAST_UPDATED}</p>
 
           <div className="prose-content mt-4">
             <p>
@@ -125,8 +121,8 @@ export default function TermsPage() {
 
             <h2>11. Governing law</h2>
             <p>
-              These terms are governed by the laws of India. Courts in India will have jurisdiction over any dispute,
-              subject to the place of jurisdiction to be confirmed by the business before launch.
+              These terms are governed by the laws of India. Any dispute is subject to the exclusive jurisdiction of the
+              courts at Jamnagar, Gujarat.
             </p>
 
             <h2>12. Contact</h2>
