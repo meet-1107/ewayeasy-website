@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import Link from 'next/link';
 import PageHeader from '@/components/PageHeader';
 import DownloadCTA from '@/components/DownloadCTA';
@@ -5,6 +6,7 @@ import IndustryIcon from '@/components/IndustryIcon';
 import JsonLd from '@/components/JsonLd';
 import { ReadingList, SectionIntro } from '@/components/solutions/SolutionBlocks';
 import { INDUSTRIES } from '@/lib/industries';
+import { EWAY_BILL_PHOTO, INDUSTRY_PHOTOS } from '@/lib/industry-photos';
 import { absoluteUrl, pageMeta } from '@/lib/seo';
 
 const DESCRIPTION =
@@ -36,6 +38,17 @@ export default function IndustriesHub() {
         crumbs={[{ name: 'Industries', href: '/industries' }]}
       />
 
+      <section className="container pt-10" aria-label="Goods on the move">
+        <figure className="relative overflow-hidden rounded-[1.75rem] bg-brand-900 shadow-lift">
+          <Image src={EWAY_BILL_PHOTO.src} alt={EWAY_BILL_PHOTO.alt} width={1200} height={800} priority className="h-56 w-full object-cover sm:h-72 md:h-80" />
+          <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/30 to-transparent" />
+          <figcaption className="absolute inset-y-0 left-0 flex max-w-md flex-col justify-end p-6 text-white md:p-8">
+            <span className="font-display text-2xl font-bold leading-tight md:text-3xl">Every truck needs the right invoice and e-way bill.</span>
+            <span className="mt-2 text-xs text-white/75">Photo: {EWAY_BILL_PHOTO.credit} on Unsplash.</span>
+          </figcaption>
+        </figure>
+      </section>
+
       <section className="section" aria-labelledby="list">
         <div className="container">
           <SectionIntro id="list" eyebrow="Choose your sector" title="Industry guides" />
@@ -44,8 +57,13 @@ export default function IndustriesHub() {
               <li key={i.slug}>
                 <Link
                   href={`/industries/${i.slug}`}
-                  className="group flex h-full flex-col rounded-[1.5rem] border border-brand-900/10 bg-white p-6 shadow-card transition hover:-translate-y-1 hover:shadow-lift"
+                  className="group flex h-full flex-col overflow-hidden rounded-[1.5rem] border border-brand-900/10 bg-white p-6 shadow-card transition hover:-translate-y-1 hover:shadow-lift"
                 >
+                  {INDUSTRY_PHOTOS[i.slug] && (
+                    <span className="relative -mx-6 -mt-6 mb-4 block aspect-[3/2] overflow-hidden rounded-t-[1.5rem]">
+                      <Image src={INDUSTRY_PHOTOS[i.slug].src} alt="" fill sizes="(max-width: 640px) 100vw, 33vw" className="object-cover transition duration-700 group-hover:scale-105" />
+                    </span>
+                  )}
                   <span className="grid h-12 w-12 place-items-center rounded-2xl bg-brand-700 text-white">
                     <IndustryIcon name={i.icon} />
                   </span>
@@ -58,6 +76,9 @@ export default function IndustriesHub() {
               </li>
             ))}
           </ul>
+          <p className="mt-4 text-xs text-ink-faint">
+            Photos: {[...new Set(Object.values(INDUSTRY_PHOTOS).map((p) => p.credit))].join(', ')} on Unsplash. Illustrative, not E-Way Easy customers.
+          </p>
         </div>
       </section>
 

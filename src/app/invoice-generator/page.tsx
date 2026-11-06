@@ -12,6 +12,7 @@ import { CheckList, StepList } from '@/components/feature-pages/FeatureBlocks';
 import GstinAutofillGraphic from '@/components/feature-pages/GstinAutofillGraphic';
 import { FaqList, ReadingList, SectionIntro, linkClass, type Faq } from '@/components/solutions/SolutionBlocks';
 import { absoluteUrl, faqLd, pageMeta } from '@/lib/seo';
+import { INVOICE_PHOTOS } from '@/lib/industry-photos';
 import { PRICING } from '@/lib/pricing';
 
 const PATH = '/invoice-generator';
@@ -175,7 +176,10 @@ export default function InvoiceGeneratorPage() {
               </p>
             </SectionIntro>
             <div className="mt-8 grid gap-5 md:grid-cols-2">
-              <article className="rounded-[1.5rem] border-2 border-brand-700 bg-cream p-6">
+              <article className="overflow-hidden rounded-[1.5rem] border-2 border-brand-700 bg-cream p-6">
+                <div className="relative -mx-6 -mt-6 mb-5 aspect-[16/9]">
+                  <Image src={INVOICE_PHOTOS.withGst.src} alt={INVOICE_PHOTOS.withGst.alt} fill sizes="(max-width: 768px) 100vw, 50vw" className="object-cover" />
+                </div>
                 <p className="text-xs font-extrabold uppercase tracking-[0.16em] text-brand-700">With GST</p>
                 <h3 className="mt-2 font-display text-xl font-bold text-ink">GST tax invoice</h3>
                 <p className="mt-2 leading-7 text-ink-soft">
@@ -186,7 +190,10 @@ export default function InvoiceGeneratorPage() {
                   GST invoice format explained →
                 </Link>
               </article>
-              <article className="rounded-[1.5rem] border-2 border-ink/20 bg-cream p-6">
+              <article className="overflow-hidden rounded-[1.5rem] border-2 border-ink/20 bg-cream p-6">
+                <div className="relative -mx-6 -mt-6 mb-5 aspect-[16/9]">
+                  <Image src={INVOICE_PHOTOS.withoutGst.src} alt={INVOICE_PHOTOS.withoutGst.alt} fill sizes="(max-width: 768px) 100vw, 50vw" className="object-cover" />
+                </div>
                 <p className="text-xs font-extrabold uppercase tracking-[0.16em] text-ink-faint">Without GST</p>
                 <h3 className="mt-2 font-display text-xl font-bold text-ink">Simple bill</h3>
                 <p className="mt-2 leading-7 text-ink-soft">
@@ -198,6 +205,7 @@ export default function InvoiceGeneratorPage() {
                 </Link>
               </article>
             </div>
+            <p className="mt-3 text-xs text-ink-faint">Photos: {INVOICE_PHOTOS.withGst.credit} and {INVOICE_PHOTOS.withoutGst.credit} on Unsplash. Illustrative.</p>
           </div>
         </section>
 

@@ -1,4 +1,5 @@
 import { notFound } from 'next/navigation';
+import Image from 'next/image';
 import Link from 'next/link';
 import PageHeader from '@/components/PageHeader';
 import ComplianceNote from '@/components/ComplianceNote';
@@ -13,6 +14,7 @@ import {
   FaqList, ProblemGrid, ReadingList, SectionIntro, ToolCards, WorkflowMap, linkClass,
 } from '@/components/solutions/SolutionBlocks';
 import { INDUSTRIES, getIndustry } from '@/lib/industries';
+import { INDUSTRY_PHOTOS } from '@/lib/industry-photos';
 import { absoluteUrl, faqLd, pageMeta } from '@/lib/seo';
 
 export const dynamicParams = false;
@@ -34,6 +36,7 @@ export default async function IndustryPage({ params }: { params: Promise<{ slug:
   if (!i) notFound();
   const path = `/industries/${i.slug}`;
   const others = INDUSTRIES.filter((x) => x.slug !== i.slug);
+  const photo = INDUSTRY_PHOTOS[i.slug];
 
   return (
     <>
@@ -67,6 +70,47 @@ export default async function IndustryPage({ params }: { params: Promise<{ slug:
       <section className="container pt-10">
         <div className="mx-auto max-w-3xl rounded-2xl border-l-4 border-amber-500 bg-amber-300/15 px-5 py-4 text-ink">
           <p className="leading-7"><strong>Quick answer:</strong> {i.quickAnswer}</p>
+        </div>
+      </section>
+
+      <section className="section pb-0" aria-labelledby="docs-h">
+        <div className="container grid items-center gap-8 lg:grid-cols-2">
+          {photo && (
+            <figure>
+              <div className="relative aspect-[3/2] overflow-hidden rounded-[1.75rem] bg-brand-900 shadow-lift">
+                <Image src={photo.src} alt={photo.alt} fill sizes="(max-width: 1024px) 100vw, 50vw" className="object-cover" priority />
+                <span className="absolute left-4 top-4 rounded-full bg-amber-400 px-3 py-1 text-xs font-bold text-brand-950">{i.shortName}</span>
+              </div>
+              <figcaption className="mt-2 text-xs text-ink-faint">Photo: {photo.credit} on Unsplash. Illustrative, not an E-Way Easy customer.</figcaption>
+            </figure>
+          )}
+          <div>
+            <p className="eyebrow">Documents for every dispatch</p>
+            <h2 id="docs-h" className="h2 mt-2">Sales invoice and e-way bill for {i.shortName}</h2>
+            <ul className="mt-6 space-y-3">
+              <li className="rounded-2xl border border-brand-900/10 bg-white p-4 shadow-card">
+                <p className="font-display font-bold text-ink">Sales invoice with GST</p>
+                <p className="mt-1 text-[15px] leading-6 text-ink-soft">
+                  GST-registered and selling taxable goods? Issue a tax invoice with GSTIN, HSN and CGST + SGST or IGST.{' '}
+                  <Link href="/invoice-generator" className={linkClass}>Make one free</Link>.
+                </p>
+              </li>
+              <li className="rounded-2xl border border-brand-900/10 bg-white p-4 shadow-card">
+                <p className="font-display font-bold text-ink">Invoice without GST</p>
+                <p className="mt-1 text-[15px] leading-6 text-ink-soft">
+                  Not registered, composition or exempt goods? A bill or bill of supply with no tax charged.{' '}
+                  <Link href="/invoice-generator#without-gst" className={linkClass}>Make a bill without GST</Link>.
+                </p>
+              </li>
+              <li className="rounded-2xl border border-brand-900/10 bg-white p-4 shadow-card">
+                <p className="font-display font-bold text-ink">E-way bill</p>
+                <p className="mt-1 text-[15px] leading-6 text-ink-soft">
+                  Needed when the consignment value is over ₹50,000, and always for inter-state job work.{' '}
+                  <a href="#movements" className={linkClass}>See which {i.shortName.toLowerCase()} movements need one</a>.
+                </p>
+              </li>
+            </ul>
+          </div>
         </div>
       </section>
 

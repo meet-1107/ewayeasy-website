@@ -3,6 +3,7 @@ import path from 'node:path';
 import { describe, expect, it } from 'vitest';
 import { INDUSTRIES } from './industries';
 import { INDUSTRY_NAV } from './site';
+import { INDUSTRY_PHOTOS } from './industry-photos';
 
 const ROOT = path.resolve(__dirname, '..', '..');
 
@@ -20,6 +21,14 @@ describe('industries', () => {
       expect(i.seoTitle.length, i.slug).toBeLessThanOrEqual(60);
       expect(i.metaDescription.length, i.slug).toBeGreaterThanOrEqual(120);
       expect(i.metaDescription.length, i.slug).toBeLessThanOrEqual(165);
+    }
+  });
+
+  it('has a photo for every industry', () => {
+    for (const i of INDUSTRIES) {
+      const p = INDUSTRY_PHOTOS[i.slug];
+      expect(p, i.slug).toBeTruthy();
+      expect(fs.existsSync(path.join(ROOT, 'public', p.src)), p.src).toBe(true);
     }
   });
 
