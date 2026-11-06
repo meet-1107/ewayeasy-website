@@ -2,6 +2,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { REVIEWS } from '@/lib/reviews';
 import { FOUNDER } from '@/lib/site';
+import PlayLink from './PlayLink';
 
 /**
  * Swipe-style customer review cards (photo, name, business, city, quote) — rendered only from real,
@@ -54,7 +55,7 @@ export default function ReviewsSection() {
               </p>
               <div className="mt-5 flex flex-wrap gap-3">
                 <Link href="/contact" className="btn-primary">Share your feedback</Link>
-                <Link href="/download" className="btn-ghost">Rate us on Google Play</Link>
+                <PlayLink placement="reviews_rate" className="btn-ghost">Rate us on Google Play</PlayLink>
               </div>
             </div>
             <div className="rounded-3xl bg-brand-900 p-6 text-white">

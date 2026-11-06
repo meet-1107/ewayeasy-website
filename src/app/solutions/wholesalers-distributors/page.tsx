@@ -8,6 +8,7 @@ import {
   SectionIntro, ProblemGrid, WorkflowMap, ToolCards, ReadingList, FaqList, linkClass, type Faq,
 } from '@/components/solutions/SolutionBlocks';
 import { pageMeta, faqLd } from '@/lib/seo';
+import PlayLink from '@/components/PlayLink';
 
 export const metadata = pageMeta({
   title: 'E-Way Bill App for Wholesalers & Distributors',
@@ -53,7 +54,7 @@ export default function WholesalersPage() {
         ]}
       >
         <div className="flex flex-wrap gap-3">
-          <Link href="/download" className="btn-amber">Get the Android app</Link>
+          <PlayLink placement="solutions_wholesalers" className="btn-amber">Get the Android app</PlayLink>
           <a href="#free-tools" className="btn-ghost-dark">Free tools for traders</a>
         </div>
       </PageHeader>

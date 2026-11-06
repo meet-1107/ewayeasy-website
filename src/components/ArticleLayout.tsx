@@ -8,6 +8,7 @@ import type { Doc } from '@/lib/content';
 import { formatDate } from '@/lib/content';
 import { AUTHOR } from '@/lib/site';
 import { faqLd } from '@/lib/seo';
+import PlayLink from './PlayLink';
 
 export default function ArticleLayout({
   doc, crumbs, category, eyebrow, placement, updateHistory, after,
@@ -144,7 +145,7 @@ export default function ArticleLayout({
             <div className="rounded-2xl bg-brand-900 p-5 text-white">
               <p className="font-display font-bold">E-Way Easy app</p>
               <p className="mt-1 text-sm text-brand-100/80">Sales invoice to e-way bill in one mobile flow.</p>
-              <Link href="/download" className="btn-amber mt-4 w-full py-2.5">Download app</Link>
+              <PlayLink placement="article_sidebar" className="btn-amber mt-4 w-full py-2.5">Download app</PlayLink>
             </div>
           </div>
         </aside>

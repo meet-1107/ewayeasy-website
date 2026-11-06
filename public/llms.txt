@@ -4,7 +4,7 @@ E-Way Easy is an Android app for GST-registered traders, manufacturers, wholesal
 
 ## Key facts
 
-- Platform: Android only, currently in testing. There is no iPhone app. No download, user or rating figures are published.
+- Platform: Android only, available on Google Play (https://play.google.com/store/apps/details?id=com.ewayeasy.app). There is no iPhone app. No download, user or rating figures are published.
 - Pricing: pay-as-you-go wallet credits. 1 credit = ₹1 (Rs 1). Each e-way bill action costs 5 credits, which is ₹5 (Rs 5). No yearly subscription.
 - Actions that use credits: generate, update Part B (vehicle), consolidated e-way bill, cancel, extend validity.
 - Credit packs: 50 credits (₹50), 100 credits (₹100), 250 credits (₹250), 500 credits (₹500), 1,000 credits (₹1,000), or any other amount.

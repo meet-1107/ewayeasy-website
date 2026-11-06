@@ -9,6 +9,7 @@ import {
 } from '@/components/solutions/SolutionBlocks';
 import { pageMeta, faqLd } from '@/lib/seo';
 import { PRICING } from '@/lib/pricing';
+import PlayLink from '@/components/PlayLink';
 
 export const metadata = pageMeta({
   title: 'E-Way Bill App for Transporters: Part B & Consolidated EWB',
@@ -56,7 +57,7 @@ export default function TransportersPage() {
         ]}
       >
         <div className="flex flex-wrap gap-3">
-          <Link href="/download" className="btn-amber">Get the Android app</Link>
+          <PlayLink placement="solutions_transporters" className="btn-amber">Get the Android app</PlayLink>
           <a href="#how-the-app-helps" className="btn-ghost-dark">See how it helps on the road</a>
         </div>
       </PageHeader>

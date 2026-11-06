@@ -17,7 +17,7 @@ export const metadata: Metadata = {
   description: SITE.description,
   applicationName: SITE.name,
   robots: { index: true, follow: true },
-  icons: { icon: [{ url: '/favicon.ico', sizes: '48x48' }, { url: '/favicon.svg', type: 'image/svg+xml' }], apple: '/apple-touch-icon.png' },
+  icons: { icon: [{ url: '/favicon.ico?v=2', sizes: '48x48' }, { url: '/favicon.svg?v=2', type: 'image/svg+xml' }], apple: '/apple-touch-icon.png?v=2' },
   verification: GSC_VERIFICATION ? { google: GSC_VERIFICATION } : undefined,
 };
 

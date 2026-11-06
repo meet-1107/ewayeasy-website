@@ -4,6 +4,7 @@ import { usePathname } from 'next/navigation';
 import { useEffect, useState } from 'react';
 import Logo from './Logo';
 import { NAV } from '@/lib/site';
+import PlayLink from './PlayLink';
 
 export default function Header() {
   const [open, setOpen] = useState(false);
@@ -32,10 +33,10 @@ export default function Header() {
           ))}
         </nav>
         <div className="flex items-center gap-2">
-          <Link href="/download" className="btn-amber whitespace-nowrap px-3.5 py-2.5 sm:px-4">
+          <PlayLink placement="header" className="btn-amber whitespace-nowrap px-3.5 py-2.5 sm:px-4">
             <svg viewBox="0 0 24 24" className="h-4 w-4" aria-hidden><path fill="currentColor" d="M12 3a1 1 0 0 1 1 1v9.6l3.3-3.3a1 1 0 1 1 1.4 1.4l-5 5a1 1 0 0 1-1.4 0l-5-5a1 1 0 0 1 1.4-1.4l3.3 3.3V4a1 1 0 0 1 1-1Zm-8 15a1 1 0 0 1 1 1v1h14v-1a1 1 0 1 1 2 0v2a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1v-2a1 1 0 0 1 1-1Z"/></svg>
             <span>Download<span className="hidden sm:inline"> App</span></span>
-          </Link>
+          </PlayLink>
           <button
             className="rounded-full p-2.5 text-ink hover:bg-brand-50 lg:hidden"
             aria-label={open ? 'Close menu' : 'Open menu'}

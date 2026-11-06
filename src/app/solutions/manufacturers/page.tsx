@@ -8,6 +8,7 @@ import {
   SectionIntro, ProblemGrid, WorkflowMap, ToolCards, ReadingList, FaqList, linkClass, type Faq,
 } from '@/components/solutions/SolutionBlocks';
 import { pageMeta, faqLd } from '@/lib/seo';
+import PlayLink from '@/components/PlayLink';
 
 export const metadata = pageMeta({
   title: 'E-Way Bill App for Manufacturers | Invoice + EWB on Phone',
@@ -53,7 +54,7 @@ export default function ManufacturersPage() {
         ]}
       >
         <div className="flex flex-wrap gap-3">
-          <Link href="/download" className="btn-amber">Get the Android app</Link>
+          <PlayLink placement="solutions_manufacturers" className="btn-amber">Get the Android app</PlayLink>
           <a href="#free-tools" className="btn-ghost-dark">Free tools for factories</a>
         </div>
       </PageHeader>

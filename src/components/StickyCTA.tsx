@@ -1,8 +1,8 @@
 'use client';
-import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useEffect, useState } from 'react';
 import { LogoMark } from './Logo';
+import PlayLink from './PlayLink';
 
 /** Mobile-only download bar shown after scrolling; hidden on tool pages so it never covers forms. */
 export default function StickyCTA() {
@@ -24,7 +24,7 @@ export default function StickyCTA() {
           <p className="truncate text-sm font-semibold">E-Way Easy for Android</p>
           <p className="truncate text-xs text-ink-faint">Invoice to e-way bill, from your phone</p>
         </div>
-        <Link href="/download" className="btn-amber px-4 py-2">Get app</Link>
+        <PlayLink placement="sticky_bar" className="btn-amber px-4 py-2">Get app</PlayLink>
         <button aria-label="Dismiss" className="p-1 text-ink-faint" onClick={() => setDismissed(true)}>✕</button>
       </div>
     </div>

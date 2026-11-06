@@ -6,6 +6,7 @@ import ComplianceNote from '@/components/ComplianceNote';
 import JsonLd from '@/components/JsonLd';
 import { Phone, WorkflowGraphic } from '@/components/AppGraphics';
 import { pageMeta, softwareAppLd } from '@/lib/seo';
+import PlayLink from '@/components/PlayLink';
 
 export const metadata = pageMeta({
   title: 'E-Way Easy Features: Invoice to E-Way Bill on Android',
@@ -284,7 +285,7 @@ export default function FeaturesPage() {
         crumbs={[{ name: 'Features', href: '/features' }]}
       >
         <div className="flex flex-wrap gap-3">
-          <Link href="/download" className="btn-amber">Get the Android app</Link>
+          <PlayLink placement="features_page" className="btn-amber">Get the Android app</PlayLink>
           <a href="#all-features" className="btn-ghost-dark">See all features</a>
         </div>
       </PageHeader>
