@@ -49,7 +49,8 @@ export default function ToolPageLayout({
         />
       </div>
 
-      <div className="container py-8 md:py-12">
+      {/* data-clarity-mask: session recordings never show what visitors type into tools. */}
+      <div className="container py-8 md:py-12" data-clarity-mask="True">
         <ToolUsageTracker slug={slug}>{tool}</ToolUsageTracker>
       </div>
 

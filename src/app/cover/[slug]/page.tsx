@@ -76,7 +76,7 @@ export default async function Cover({ params }: { params: Promise<{ slug: string
       <div className="absolute left-14 top-12 flex items-center gap-3 rounded-2xl bg-white px-4 py-2.5 shadow-lift">
         <LogoMark className="h-11 w-11" />
         <span className="font-display text-[30px] font-extrabold leading-none tracking-tight text-brand-800">
-          E-Way <span className="text-amber-500">Easy</span>
+          E<span className="text-amber-500">-</span>Way Easy
         </span>
       </div>
 

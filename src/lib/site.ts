@@ -5,6 +5,7 @@ export const SITE_URL = (process.env.NEXT_PUBLIC_SITE_URL || 'https://www.exampl
 export const PLAY_STORE_URL = process.env.NEXT_PUBLIC_PLAY_STORE_URL || '';
 export const SUPPORT_EMAIL = process.env.NEXT_PUBLIC_SUPPORT_EMAIL || '';
 export const GA_ID = process.env.NEXT_PUBLIC_GA_ID || '';
+export const CLARITY_ID = process.env.NEXT_PUBLIC_CLARITY_ID || '';
 export const GSC_VERIFICATION = process.env.NEXT_PUBLIC_GSC_VERIFICATION || '';
 
 export const SITE = {

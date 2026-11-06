@@ -347,7 +347,7 @@ export default function TemplateEditor({ templateId }: { templateId: TemplateId 
   );
 
   return (
-    <div className="space-y-5" data-template={templateId}>
+    <div className="space-y-5" data-template={templateId} data-clarity-mask="True">
       {printing && <PrintPortal data={data} />}
 
       <div className="no-print card flex flex-col gap-3 p-4 md:p-5">

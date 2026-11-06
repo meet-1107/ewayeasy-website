@@ -1,6 +1,6 @@
 'use client';
 import { useEffect, useState } from 'react';
-import { GA_ID } from '@/lib/site';
+import { CLARITY_ID, GA_ID } from '@/lib/site';
 
 const KEY = 'ee-consent';
 
@@ -19,20 +19,36 @@ function loadGa() {
   window.gtag('config', GA_ID, { anonymize_ip: true });
 }
 
-/** Analytics loads only after an explicit "Accept". Without a GA ID nothing is shown at all. */
+function loadClarity() {
+  if (!CLARITY_ID || document.getElementById('clarity-script')) return;
+  const w = window as unknown as { clarity?: { (...a: unknown[]): void; q?: unknown[] } };
+  w.clarity = w.clarity || function clarity(...a: unknown[]) { (w.clarity!.q = w.clarity!.q || []).push(a); };
+  const s = document.createElement('script');
+  s.id = 'clarity-script';
+  s.async = true;
+  s.src = `https://www.clarity.ms/tag/${CLARITY_ID}`;
+  document.head.appendChild(s);
+}
+
+function loadAnalytics() {
+  loadGa();
+  loadClarity();
+}
+
+/** Analytics only after an explicit "Accept". Without a GA or Clarity ID nothing is shown at all. */
 export default function Consent() {
   const [show, setShow] = useState(false);
   useEffect(() => {
-    if (!GA_ID) return;
+    if (!GA_ID && !CLARITY_ID) return;
     let v: string | null = null;
     try { v = localStorage.getItem(KEY); } catch {}
-    if (v === 'yes') loadGa();
+    if (v === 'yes') loadAnalytics();
     else if (v !== 'no') setShow(true);
   }, []);
   if (!show) return null;
   const choose = (yes: boolean) => {
     try { localStorage.setItem(KEY, yes ? 'yes' : 'no'); } catch {}
-    if (yes) loadGa();
+    if (yes) loadAnalytics();
     setShow(false);
   };
   return (

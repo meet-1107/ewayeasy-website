@@ -17,7 +17,7 @@ export const metadata: Metadata = {
   description: SITE.description,
   applicationName: SITE.name,
   robots: { index: true, follow: true },
-  icons: { icon: '/favicon.svg' },
+  icons: { icon: [{ url: '/favicon.ico', sizes: '48x48' }, { url: '/favicon.svg', type: 'image/svg+xml' }], apple: '/apple-touch-icon.png' },
   verification: GSC_VERIFICATION ? { google: GSC_VERIFICATION } : undefined,
 };
 
@@ -27,7 +27,7 @@ const orgLd = {
   '@context': 'https://schema.org',
   '@graph': [
     {
-      '@type': 'Organization', '@id': `${SITE_URL}/#org`, name: SITE.name, url: SITE_URL, logo: `${SITE_URL}/favicon.svg`,
+      '@type': 'Organization', '@id': `${SITE_URL}/#org`, name: SITE.name, url: SITE_URL, logo: `${SITE_URL}/icon-512.png`,
       founder: { '@type': 'Person', name: FOUNDER.name, url: `${SITE_URL}/about` },
     },
     {
