@@ -32,7 +32,7 @@ faq:
     a: "Yes. Import PDF reads the buyer, GSTIN, items, HSN codes and totals from an existing invoice PDF. You review and correct the extracted details before generating."
 related: ["how-eway-easy-simplifies-eway-bill-workflow", "invoice-with-gst-vs-without-gst", "gstin-verification-what-to-check"]
 ---
-> **Quick answer:** Install the E-Way Easy Android app, add your business GSTIN once, then create an invoice: enter the buyer's GSTIN to fill their name and address, pick saved products so HSN fills in, and the app works out CGST + SGST or IGST. Preview the invoice, and continue to the e-way bill only if the goods need one. Creating invoices is free; credits are used only for e-way bill actions.
+> **Quick answer:** Install the E-Way Easy Android app, add your business GSTIN once, then create an invoice: enter the buyer's GSTIN to fill their name and address, pick saved products so HSN fills in, and the app works out CGST + SGST or IGST. Preview the invoice, then save, download or share it on WhatsApp or email, and continue to the e-way bill only if the goods need one. Creating invoices is free; credits are used only for e-way bill actions.
 
 Most small traders already run their business from a phone: orders come on WhatsApp, payments on UPI. The invoice is often the one step that still waits for a computer or a printed bill book. This guide shows how to make a GST invoice entirely on an Android phone, using the E-Way Easy app, and what to check before you send it.
 
@@ -86,13 +86,17 @@ Invoice numbers follow your own series, numbered automatically. Set your prefix 
 
 Preview the invoice before saving. This is where you catch the errors that matter: buyer GSTIN, HSN, quantity, rate, tax type and total. Invoices can also carry your bank details for payment.
 
-### Step 7 (if goods are moving): Continue to the e-way bill
+### Step 7: Save, download or share the invoice
+
+Save the invoice, download it as a PDF, or share it with the buyer on WhatsApp or email straight from the app. Making, saving and sharing invoices is free; you do not need to generate an e-way bill to keep or send an invoice.
+
+### Step 8 (if goods are moving): Continue to the e-way bill
 
 If the consignment needs an e-way bill, continue to **Review EWB**. The **road distance between the two PIN codes fills automatically**, and you can edit it. Review the details, generate, and the e-way bill number is returned on the **Generated** screen. Bills are filed on the official e-way bill system through an authorised GSP, using your own portal API login, which you connect once in the app. See [e-way bill generation](/eway-bill-generation) for the rules behind each field.
 
 ## Example (illustrative): an inter-state invoice on a phone
 
-A Rajkot pipe manufacturer (sample GSTIN `24ABCDE1234F1Z5`) sells to a dealer in Indore (sample GSTIN `23FGHIJ6789L1Z2`).
+A Rajkot pipe manufacturer (sample GSTIN `24ABCDE1234F1Z5`) sells to a dealer in Indore (sample GSTIN `23FGHIJ6789L1Z1`).
 
 | Field | What happens in the app |
 |---|---|
@@ -114,7 +118,7 @@ If your invoice was made in accounting software or by a colleague, use **Import 
 
 | Action | Cost |
 |---|---|
-| Creating invoices | Free |
+| Creating, saving, downloading and sharing invoices | Free |
 | Generate an e-way bill | 5 credits |
 | Update Part-B (vehicle), cancel, extend validity, consolidated EWB | 5 credits each |
 | Portal rejects the request | Credits refunded to wallet automatically |

@@ -6,7 +6,7 @@ E-Way Easy is an Android app for GST-registered traders, manufacturers, wholesal
 
 - Platform: Android only, available on Google Play (https://play.google.com/store/apps/details?id=com.ewayeasy.app). There is no iPhone app. No download, user or rating figures are published.
 - Pricing: pay-as-you-go wallet credits. 1 credit = ₹1 (Rs 1). Each e-way bill action costs 5 credits, which is ₹5 (Rs 5). No yearly subscription.
-- Making invoices in the app is free. Credits are used only for e-way bill actions.
+- Making, saving, downloading and sharing invoices in the app is free, with or without an e-way bill. Credits are used only for e-way bill actions.
 - Actions that use credits: generate, update Part B (vehicle), consolidated e-way bill, cancel, extend validity.
 - Credit packs: 50 credits (₹50), 100 credits (₹100), 250 credits (₹250), 500 credits (₹500), 1,000 credits (₹1,000), or any other amount.
 - Credits are taken only when an action succeeds. If the portal rejects it, they return to the wallet automatically.
@@ -63,6 +63,18 @@ E-Way Easy is an Android app for GST-registered traders, manufacturers, wholesal
 - [Wholesalers and distributors](https://ewayeasy.in/solutions/wholesalers-distributors)
 - [Transporters](https://ewayeasy.in/solutions/transporters)
 - [Accountants](https://ewayeasy.in/solutions/accountants)
+
+## Industries
+
+Sector guides with the goods movements, e-way bill rules and a dispatch checklist for each industry. They state plainly that the app does not do bulk generation and point high-volume shippers to the official portal bulk upload or API route.
+
+- [All industries](https://ewayeasy.in/industries)
+- [FMCG and packaged foods](https://ewayeasy.in/industries/fmcg)
+- [Textile and apparel (job work)](https://ewayeasy.in/industries/textile-apparel)
+- [Pharma and healthcare](https://ewayeasy.in/industries/pharma)
+- [Automotive components](https://ewayeasy.in/industries/automotive-components)
+- [Machinery and engineering](https://ewayeasy.in/industries/machinery-engineering)
+- [E-commerce and D2C](https://ewayeasy.in/industries/ecommerce-d2c)
 
 ## Free tools
 

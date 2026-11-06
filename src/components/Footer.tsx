@@ -20,12 +20,19 @@ const COLS = [
     ],
   },
   {
-    title: 'Solutions',
+    title: 'Solutions & industries',
     links: [
       { label: 'Manufacturers', href: '/solutions/manufacturers' },
       { label: 'Wholesalers & distributors', href: '/solutions/wholesalers-distributors' },
       { label: 'Transporters', href: '/solutions/transporters' },
       { label: 'Accountants', href: '/solutions/accountants' },
+      { label: 'All industries', href: '/industries' },
+      { label: 'FMCG & foods', href: '/industries/fmcg' },
+      { label: 'Textile & apparel', href: '/industries/textile-apparel' },
+      { label: 'Pharma', href: '/industries/pharma' },
+      { label: 'Auto components', href: '/industries/automotive-components' },
+      { label: 'Machinery', href: '/industries/machinery-engineering' },
+      { label: 'E-commerce & D2C', href: '/industries/ecommerce-d2c' },
     ],
   },
   {
@@ -117,6 +124,15 @@ export default function Footer() {
             </ul>
           </div>
         </div>
+      </div>
+      {/* Big brand wordmark, cropped so only the top ~80% shows. Decorative. */}
+      <div aria-hidden className="pointer-events-none select-none overflow-hidden" style={{ height: '10.8vw' }}>
+        <p
+          className="whitespace-nowrap text-center font-display font-extrabold leading-none tracking-[-0.045em] text-[#EEF3EF]"
+          style={{ fontSize: '13.5vw', transform: 'translateY(-0.04em)' }}
+        >
+          E<span className="text-amber-400">-</span>Way Easy
+        </p>
       </div>
     </footer>
   );

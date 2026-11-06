@@ -21,7 +21,7 @@ From the actual app screens and the official promo creative:
 - Saved Buyers list and Products list; product selection with search; HSN code fills from the product (manual edit possible).
 - Distance calculated automatically from PIN codes (manual edit possible).
 - Invoice number pre-series / auto numbering in your own series.
-- Sales invoice is created as part of the e-way bill workflow (invoice preview before saving).
+- Sales invoice is created as part of the e-way bill workflow (invoice preview before saving). Invoices can also be saved, downloaded and shared on their own, without generating an e-way bill; creating invoices is free (confirmed by the founder, Nov 2026).
 - Import PDF option on the dashboard.
 - Wallet with credits: 1 credit = ₹1; packs of 50 / 100 / 250 / 500 / 1,000 credits or any other amount. Each e-way bill action costs 5 credits: generate new EWB, update Part-B (vehicle), consolidated EWB, cancel EWB, extend validity. Credits are taken only when the action succeeds; if the portal rejects it they are refunded to the wallet automatically.
 - Refund policy: purchased credits are not refundable; if a payment is made but credits are not added, the credits are added or the payment is refunded.

@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useEffect, useRef, useState } from 'react';
 import Logo from './Logo';
-import { NAV } from '@/lib/site';
+import { INDUSTRY_NAV, NAV } from '@/lib/site';
 import PlayLink from './PlayLink';
 
 export default function Header() {
@@ -22,17 +22,35 @@ export default function Header() {
       <div className="container flex h-16 items-center justify-between gap-4">
         <Link href="/" aria-label="E-Way Easy home"><Logo /></Link>
         <nav aria-label="Main" className="hidden items-center gap-1 lg:flex">
-          {NAV.map((n) => (
-            <Link
-              key={n.href}
-              href={n.href}
-              className={`rounded-full px-3 py-2 text-sm font-medium transition hover:bg-brand-50 hover:text-brand-700 ${
-                active(n.href) ? 'bg-brand-50 text-brand-700' : 'text-ink-soft'
-              }`}
-            >
-              {n.label}
-            </Link>
-          ))}
+          {NAV.map((n) => {
+            const cls = `rounded-full px-3 py-2 text-sm font-medium transition hover:bg-brand-50 hover:text-brand-700 ${
+              active(n.href) ? 'bg-brand-50 text-brand-700' : 'text-ink-soft'
+            }`;
+            if (n.href !== '/industries') return <Link key={n.href} href={n.href} className={cls}>{n.label}</Link>;
+            // Industries: hover or keyboard focus opens the dropdown; the label itself goes to the hub.
+            return (
+              <div key={n.href} className="group/ind relative">
+                <Link href={n.href} className={`${cls} inline-flex items-center gap-1`} aria-haspopup="true">
+                  {n.label}
+                  <svg viewBox="0 0 20 20" className="h-3.5 w-3.5 transition group-hover/ind:rotate-180" aria-hidden><path fill="currentColor" d="M5.3 7.3a1 1 0 0 1 1.4 0L10 10.6l3.3-3.3a1 1 0 1 1 1.4 1.4l-4 4a1 1 0 0 1-1.4 0l-4-4a1 1 0 0 1 0-1.4Z" /></svg>
+                </Link>
+                <div className="invisible absolute left-1/2 top-full z-50 w-72 -translate-x-1/2 pt-2 opacity-0 transition group-focus-within/ind:visible group-focus-within/ind:opacity-100 group-hover/ind:visible group-hover/ind:opacity-100">
+                  <ul className="rounded-2xl border border-brand-900/10 bg-white p-2 shadow-lift">
+                    {INDUSTRY_NAV.map((x) => (
+                      <li key={x.href}>
+                        <Link href={x.href} className={`block rounded-xl px-3 py-2.5 text-sm font-medium hover:bg-brand-50 hover:text-brand-700 ${pathname === x.href ? 'bg-brand-50 text-brand-700' : 'text-ink'}`}>
+                          {x.label}
+                        </Link>
+                      </li>
+                    ))}
+                    <li className="mt-1 border-t border-brand-900/10 pt-1">
+                      <Link href="/industries" className="block rounded-xl px-3 py-2.5 text-sm font-semibold text-brand-700 hover:bg-brand-50">All industries →</Link>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            );
+          })}
         </nav>
         <div className="flex items-center gap-2">
           <PlayLink placement="header" className="btn-amber whitespace-nowrap px-3.5 py-2.5 sm:px-4">
@@ -57,6 +75,17 @@ export default function Header() {
                     <Link href={n.href} onClick={close} className={`block rounded-xl px-3 py-3 font-medium ${active(n.href) && n.href !== '/' ? 'bg-brand-50 text-brand-700' : 'text-ink'}`}>
                       {n.label}
                     </Link>
+                    {n.href === '/industries' && (
+                      <ul className="mb-1 ml-3 grid grid-cols-2 gap-1 border-l-2 border-amber-400 pl-3">
+                        {INDUSTRY_NAV.map((x) => (
+                          <li key={x.href}>
+                            <Link href={x.href} onClick={close} className={`block rounded-lg px-2 py-2 text-sm ${pathname === x.href ? 'bg-brand-50 font-semibold text-brand-700' : 'text-ink-soft'}`}>
+                              {x.label}
+                            </Link>
+                          </li>
+                        ))}
+                      </ul>
+                    )}
                   </li>
                 ))}
               </ul>

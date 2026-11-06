@@ -59,10 +59,21 @@ export function playStoreHref(placement: string): string | null {
 // Compact primary navigation; secondary pages live in the footer.
 export const NAV = [
   { label: 'Features', href: '/features' },
+  { label: 'Industries', href: '/industries' },
   { label: 'Free Tools', href: '/tools' },
   { label: 'Guides', href: '/guides' },
   { label: 'Pricing', href: '/pricing' },
   { label: 'Blog', href: '/blog' },
+];
+
+/** Header dropdown under Industries. Must match src/lib/industries.ts (checked by industries.test.ts). */
+export const INDUSTRY_NAV = [
+  { label: 'FMCG & Foods', href: '/industries/fmcg' },
+  { label: 'Textile & Apparel', href: '/industries/textile-apparel' },
+  { label: 'Pharma & Healthcare', href: '/industries/pharma' },
+  { label: 'Auto Components', href: '/industries/automotive-components' },
+  { label: 'Machinery & Engineering', href: '/industries/machinery-engineering' },
+  { label: 'E-commerce & D2C', href: '/industries/ecommerce-d2c' },
 ];
 
 export const CATEGORIES = [

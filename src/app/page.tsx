@@ -8,6 +8,7 @@ import { AppShowcase, RouteIllustration } from '@/components/AppGraphics';
 import DispatchAnimation from '@/components/DispatchAnimation';
 import ReviewsSection from '@/components/ReviewsSection';
 import PeopleStrip from '@/components/PeopleStrip';
+import MadeInIndia from '@/components/MadeInIndia';
 import RotatingWords from '@/components/RotatingWords';
 import Reveal from '@/components/Reveal';
 import { HelpersSection, HeroMilestones, PartnerStrip, SizesSection, WalletSection } from '@/components/HomeSections';
@@ -109,6 +110,10 @@ export default function Home() {
         </div>
         <TruckArtBand className="absolute inset-x-0 bottom-0" />
       </section>
+
+      <Reveal>
+        <MadeInIndia />
+      </Reveal>
 
       <Reveal>
         <PeopleStrip />
