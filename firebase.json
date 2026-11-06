@@ -1,0 +1,113 @@
+{
+  "hosting": {
+    "public": "out",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "cleanUrls": true,
+    "trailingSlash": false,
+    "redirects": [
+      {
+        "source": "/tools/invoice-generator",
+        "destination": "/sales-invoice-templates/gst-tax-invoice",
+        "type": 301
+      },
+      {
+        "source": "/tools/sales-invoice-generator",
+        "destination": "/sales-invoice-templates",
+        "type": 301
+      },
+      {
+        "source": "/blog/common-eway-bill-errors-and-solutions",
+        "destination": "/eway-bill-common-errors",
+        "type": 301
+      },
+      {
+        "source": "/blog/documents-required-for-eway-bill-generation",
+        "destination": "/documents-required-for-eway-bill",
+        "type": 301
+      },
+      {
+        "source": "/blog/eway-bill-rules-india-practical-guide",
+        "destination": "/eway-bill-rules",
+        "type": 301
+      },
+      {
+        "source": "/blog/eway-bill-validity-explained",
+        "destination": "/eway-bill-validity",
+        "type": 301
+      },
+      {
+        "source": "/blog/how-to-cancel-an-eway-bill",
+        "destination": "/eway-bill-cancellation",
+        "type": 301
+      },
+      {
+        "source": "/blog/how-to-generate-bulk-eway-bills",
+        "destination": "/bulk-eway-bill-generation",
+        "type": 301
+      },
+      {
+        "source": "/blog/how-to-generate-eway-bill-step-by-step",
+        "destination": "/eway-bill-generation",
+        "type": 301
+      },
+      {
+        "source": "/blog/eway-bill-vs-tax-invoice",
+        "destination": "/eway-bill-vs-sales-invoice",
+        "type": 301
+      }
+    ],
+    "headers": [
+      {
+        "source": "**",
+        "headers": [
+          {
+            "key": "X-Content-Type-Options",
+            "value": "nosniff"
+          },
+          {
+            "key": "X-Frame-Options",
+            "value": "DENY"
+          },
+          {
+            "key": "Referrer-Policy",
+            "value": "strict-origin-when-cross-origin"
+          },
+          {
+            "key": "Permissions-Policy",
+            "value": "camera=(), microphone=(), geolocation=()"
+          },
+          {
+            "key": "Strict-Transport-Security",
+            "value": "max-age=63072000; includeSubDomains; preload"
+          },
+          {
+            "key": "Content-Security-Policy",
+            "value": "default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com; connect-src 'self' https://www.google-analytics.com https://*.google-analytics.com https://www.googletagmanager.com; img-src 'self' data: https://www.google-analytics.com https://www.googletagmanager.com; style-src 'self' 'unsafe-inline'; font-src 'self'; frame-ancestors 'none'; base-uri 'self'; form-action 'self' mailto:"
+          }
+        ]
+      },
+      {
+        "source": "/_next/static/**",
+        "headers": [
+          {
+            "key": "Cache-Control",
+            "value": "public, max-age=31536000, immutable"
+          }
+        ]
+      },
+      {
+        "source": "**/*.@(jpg|jpeg|png|webp|svg|ttf|woff2)",
+        "headers": [
+          {
+            "key": "Cache-Control",
+            "value": "public, max-age=604800"
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -6,3 +6,6 @@ out
 *.tsbuildinfo
 .vercel
 *.log
+
+# Firebase deploy cache
+.firebase/
