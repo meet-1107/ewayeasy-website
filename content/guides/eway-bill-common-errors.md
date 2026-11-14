@@ -3,7 +3,7 @@ title: "Common E-Way Bill Errors and How to Fix Them"
 slug: "eway-bill-common-errors"
 description: "The everyday problems businesses face while generating e-way bills, explained in plain words: GSTIN issues, duplicate documents, distance rejections, tax mismatches, login trouble, expired bills and more, with practical fixes."
 publishedAt: "2026-10-16"
-updatedAt: "2026-11-02"
+updatedAt: "2026-11-14"
 verifiedAt: "2026-10-16"
 seoTitle: "Common E-Way Bill Errors and How to Fix Them"
 metaDescription: "Plain-language fixes for common e-way bill problems: invalid GSTIN, duplicate document, distance rejected, tax mismatch, OTP login, Part B missing, expiry."
@@ -44,6 +44,8 @@ faq:
     a: "Generation can be blocked for taxpayers who have not filed returns for the prescribed period under Rule 138E. Filing the pending returns is the usual way to restore access."
 related: ["eway-bill-correction", "eway-bill-cancellation", "eway-bill-distance-rules", "documents-required-for-eway-bill"]
 updateHistory:
+  - date: "2026-11-14"
+    note: "Marked the official error message for code 658 as a verbatim quote."
   - date: "2026-11-02"
     note: "Rebuilt around the questions people ask when something fails, with a direct fix under each. Added official error codes checked against the e-way bill API error list."
   - date: "2026-10-22"
@@ -301,7 +303,7 @@ Apps and software that file through a GSP connect to the same official system th
 
 **The fix:** stop retrying, wait, and then try once. If the message tells you how long to wait, wait that long.
 
-**Official codes:** 118 (Try after 5 minutes), 658 (You are blocked for accesing this API as the allowed number of requests has been exceeded for this duration).
+**Official codes:** 118 (Try after 5 minutes), 658 (official message, verbatim: "You are blocked for accesing [sic] this API as the allowed number of requests has been exceeded for this duration").
 
 ### Why are the details wrong after importing an invoice PDF?
 
@@ -313,7 +315,7 @@ Part A cannot be edited afterwards, so a wrong value that slips through means ca
 
 **The fix:** no. The 24-hour cancellation limit, the 8-hour extension window and the distance and validity rules are the same on every route, so act within them.
 
-In the E-Way Easy app, details are checked before filing, Part-B updates, extensions and cancellations can be done from the phone, and credits are refunded to the wallet if the portal rejects an action.
+In the E-Way Easy app, details are checked before filing, Part B updates, extensions and cancellations can be done from the phone, and credits are refunded to the wallet if the portal rejects an action.
 
 ## When it is not your error
 

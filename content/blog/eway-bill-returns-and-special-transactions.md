@@ -70,7 +70,7 @@ Goods are sent to a trade fair for display and possible sale.
 - **Document:** delivery challan.
 - **Reason:** the portal has an exhibition or fairs option.
 - **Unsold goods coming back:** a fresh movement; check whether an e-way bill is needed.
-- **Interstate exhibitions** can raise questions about registration and tax at the venue; get advice before you go.
+- **Inter-state exhibitions** can raise questions about registration and tax at the venue; get advice before you go.
 
 ## 4. Bill-to-ship-to and bill-from-dispatch-from
 

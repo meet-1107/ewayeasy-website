@@ -209,10 +209,12 @@ export default function AboutPage() {
         <div className="mx-auto mt-16 max-w-3xl prose-content">
           <h2>How we write our guides</h2>
           <p>
-            The guides, blog posts and free tools on this website are written by{' '}
-            <Link href={`/authors/${AUTHOR.slug}`}>{AUTHOR.name}</Link>. Compliance articles are checked against official
-            GST and e-way bill sources and show a &ldquo;last verified&rdquo; date. Where a rule depends on your state,
-            transaction or a specific notification, we say so and point you to the official source rather than guessing.
+            The guides, blog posts and free tools on this website are written and edited by{' '}
+            <Link href={`/authors/${AUTHOR.slug}`}>{AUTHOR.name}</Link>, with drafts prepared using AI assistance. Every
+            draft is edited by a person, and compliance articles are checked against official GST and e-way bill sources
+            and show a &ldquo;last verified&rdquo; date. Where a rule depends on your state, transaction or a specific
+            notification, we say so and point you to the official source rather than guessing. Read the full{' '}
+            <Link href="/how-we-create-content">editorial policy</Link>.
           </p>
           <p>The official sources we refer to most often:</p>
           <ul>

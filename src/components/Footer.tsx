@@ -68,6 +68,7 @@ const COLS = [
     title: 'Company',
     links: [
       { label: 'Our story', href: '/about' },
+      { label: 'How we create content', href: '/how-we-create-content' },
       { label: `Author: ${AUTHOR.name}`, href: `/authors/${AUTHOR.slug}` },
       { label: 'Contact & support', href: '/contact' },
       { label: 'Become a partner', href: '/partners' },

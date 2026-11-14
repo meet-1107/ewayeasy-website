@@ -3,7 +3,7 @@ title: "E-Way Bill Guide: Everything Indian Businesses Need to Know"
 slug: "eway-bill-guide"
 description: "A practical overview of the e-way bill system in India: what it is, when it is required, who generates it, how Part A and Part B work, validity, and links to every detailed guide."
 publishedAt: "2026-10-16"
-updatedAt: "2026-11-02"
+updatedAt: "2026-11-14"
 verifiedAt: "2026-10-16"
 seoTitle: "E-Way Bill Guide for Indian Businesses (2026)"
 metaDescription: "What an e-way bill is, when it is required, who generates it, Part A vs Part B, validity, cancellation and documents. A practical hub for Indian businesses."
@@ -23,7 +23,7 @@ faq:
   - q: "What is an e-way bill in simple words?"
     a: "It is an electronic document generated on the official e-way bill system before goods are moved, recording who is sending what, to whom, of what value and in which vehicle. It is created in Form GST EWB-01 under Rule 138 of the CGST Rules, 2017."
   - q: "Is an e-way bill required for every movement of goods?"
-    a: "No. It is generally required when the consignment value exceeds Rs 50,000, with some exceptions and some situations where it is required irrespective of value. Some states have notified a different threshold for intra-state movement, so check your state's notification."
+    a: "No. It is generally required when the consignment value exceeds ₹50,000, with some exceptions and some situations where it is required irrespective of value. Some states have notified a different threshold for intra-state movement, so check your state's notification."
   - q: "Who should generate the e-way bill: seller, buyer or transporter?"
     a: "The registered supplier (consignor) or the recipient can generate it. If neither has generated it and the value is above the threshold, the transporter must generate it before the goods move."
   - q: "Can I generate an e-way bill from my phone?"
@@ -32,12 +32,14 @@ faq:
     a: "For normal cargo, 1 day for every 200 km or part of it. For over-dimensional cargo, 1 day for every 20 km or part of it. The first day ends at midnight of the day after generation."
 related: ["eway-bill-generation", "eway-bill-rules", "documents-required-for-eway-bill", "eway-bill-faq"]
 updateHistory:
+  - date: "2026-11-14"
+    note: "Clarified that the e-way bill rule covers goods generally, not only taxable goods."
   - date: "2026-10-16"
     note: "First published."
 ---
-> **Quick answer:** An e-way bill is the electronic record generated on the official system before most taxable goods worth more than ₹50,000 are moved in India. The supplier, recipient or transporter generates it in Form GST EWB-01, and it is valid for movement once Part B is filled, except in the 50 km same-state case.
+> **Quick answer:** An e-way bill is the electronic record generated on the official system before most goods worth more than ₹50,000 are moved in India. The supplier, recipient or transporter generates it in Form GST EWB-01, and it is valid for movement once Part B is filled, except in the 50 km same-state case.
 
-An e-way bill (EWB) is the electronic record that has to exist before most taxable goods worth more than ₹50,000 are moved by road, rail, air or ship in India. It tells the tax system what is moving, from where, to where, for whom, of what value, and in which vehicle. If you sell, buy or transport goods under GST, you will deal with it almost every week.
+An e-way bill (EWB) is the electronic record that has to exist before most goods worth more than ₹50,000 are moved by road, rail, air or ship in India. It tells the tax system what is moving, from where, to where, for whom, of what value, and in which vehicle. If you sell, buy or transport goods under GST, you will deal with it almost every week.
 
 This page is the starting point of the E-Way Easy Learning Centre. It covers the essentials in one place, then links to detailed guides on each topic.
 

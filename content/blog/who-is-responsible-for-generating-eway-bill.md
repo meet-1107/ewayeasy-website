@@ -5,7 +5,7 @@ excerpt: "Supplier, recipient or transporter? How responsibility for the e-way b
 category: "eway-bill"
 tags: ["e-way bill", "responsibility", "transporter", "supplier"]
 publishedAt: "2026-10-16"
-updatedAt: "2026-11-02"
+updatedAt: "2026-11-14"
 verifiedAt: "2026-10-16"
 seoTitle: "Who Generates an E-Way Bill? Supplier, Buyer or Transporter"
 metaDescription: "Who must generate the e-way bill: registered supplier, recipient or transporter. Roles, unregistered parties, TRANSIN, scenarios and common mistakes."
@@ -48,7 +48,7 @@ And there is a fallback duty: where neither the supplier nor the recipient has g
 | Registered supplier | Yes | Generates Part A from their invoice; may also fill Part B | Correct invoice-level data |
 | Registered recipient | Yes | Generates when they arrange transport or buy from unregistered suppliers | Accept or reject within 72 hours |
 | Transporter (GSTIN or TRANSIN) | Yes | Fills or updates Part B; generates when parties haven't | Must not move goods above threshold without a valid e-way bill |
-| Unregistered supplier | No (not as registered person) | — | Registered recipient takes responsibility |
+| Unregistered supplier | Yes, after enrolling on the portal as a citizen | Supplies to a registered buyer | Where the recipient is registered and known, the movement is treated as caused by the recipient |
 
 ## Scenario-by-scenario
 
@@ -78,7 +78,7 @@ Whoever is in charge — usually the transporter — updates Part B with the new
 
 ## Example (illustrative)
 
-A Jaipur handicraft wholesaler sells goods to a retailer in Delhi. The invoice is ₹46,000 + 12% GST (₹5,520) = **₹51,520**. The retailer's transporter collects the goods.
+A Jaipur handicraft wholesaler sells goods to a retailer in Delhi. The invoice is ₹48,000 + 5% GST (₹2,400) = **₹50,400**. The retailer's transporter collects the goods.
 
 - **Who is causing the movement?** The supplier is making the supply; the recipient is arranging transport.
 - **Who should generate?** Either the supplier or the recipient. The transporter must generate if neither does.

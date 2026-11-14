@@ -5,7 +5,7 @@ excerpt: "A walkthrough of the E-Way Easy Android app: one-time setup, the 3-ste
 category: "product-updates"
 tags: ["E-Way Easy", "app", "e-way bill workflow", "invoicing"]
 publishedAt: "2026-10-16"
-updatedAt: "2026-11-02"
+updatedAt: "2026-11-14"
 seoTitle: "How E-Way Easy Simplifies Your E-Way Bill Workflow"
 metaDescription: "How the E-Way Easy Android app works: setup, 3-step flow, invoice PDF import, GSTIN autofill, Part B, cancel, extend and ₹5 credits with no subscription."
 imageAlt: "Phone screens showing the E-Way Easy app's Invoice, Review EWB and Generated steps"
@@ -25,7 +25,7 @@ related: ["avoid-errors-in-invoice-and-transport-details", "digital-tools-for-in
 ---
 > **Quick answer:** E-Way Easy is an independent Android app that creates your GST invoice and files the e-way bill on the official NIC system through an authorised GSP, using your own API login. It also updates Part B, extends, cancels and creates consolidated e-way bills, at 5 credits per action with no yearly subscription.
 
-Preparing an e-way bill is rarely hard in itself. What slows people down is everything around it: finding the buyer's GSTIN and PIN code, remembering the HSN code, working out the distance, keeping invoice numbers in order, and making sure the invoice and the e-way bill say the same thing. E-Way Easy is an Android app built to take that repetitive work off your hands, so a dispatch can be prepared from a phone in a few minutes.
+Preparing an e-way bill is rarely hard in itself. What slows people down is everything around it: finding the buyer's GSTIN and PIN code, remembering the HSN code, working out the distance, keeping invoice numbers in order, and making sure the invoice and the e-way bill say the same thing. E-Way Easy is an Android app built to take that repetitive work off your hands, so you are not re-typing details you have entered before.
 
 This article walks through what the app does today, step by step.
 
@@ -61,7 +61,7 @@ Your own (seller) details are saved, so you start straight with the buyer and th
 - **Saved buyers.** Regular buyers are saved in a Buyers list, so you can select them instead of typing.
 - **Saved products with search.** Pick goods from your Products list using search.
 - **HSN from the product.** The HSN code fills from the saved product. You can edit it manually if needed.
-- **Invoice numbering in your own series.** Set an invoice number pre-series and the app numbers invoices automatically, so you avoid duplicates and gaps.
+- **Invoice numbering in your own series.** Set an invoice number pre-series and the app numbers invoices automatically, which helps avoid duplicates and gaps.
 
 ### Step 2: Review EWB
 
@@ -102,11 +102,11 @@ The owner of a small Rajkot hardware manufacturer (GSTIN `24ABCDE1234F1Z5`) is a
 5. On **Review EWB**, the distance has been calculated from the PIN codes. He checks the totals and previews the invoice.
 6. He completes the flow, and the driver leaves with the invoice and e-way bill details.
 
-The whole process takes a few minutes, without re-typing details he has entered before.
+He does not re-type details he has entered before.
 
 ## What to keep in mind
 
-- **The rules are still yours to follow.** The app helps you prepare correct data, but you remain responsible for whether an e-way bill is required, the right reason for transport, and the vehicle details. See [e-way bill rules in India: a practical guide](/eway-bill-rules).
+- **The rules are still yours to follow.** The app helps you prepare correct data, but you remain responsible for whether an e-way bill is required, the right reason for transport, and the vehicle details. See [e-way bill rules (Rule 138) explained](/eway-bill-rules).
 - **Check edits carefully.** HSN and distance can be edited manually. Edit only when you have a genuine reason, such as a route longer than the PIN-to-PIN distance (the portal allows up to 10% more than its own calculation).
 - **Keep your masters clean.** Saved buyers and products save time only if they are accurate. Verify a new buyer's GSTIN once; see [GSTIN verification](/blog/gstin-verification-what-to-check).
 - **One consignment at a time.** The app is designed for preparing invoices and e-way bills individually on a phone. For very high-volume bulk uploads, the official portal's bulk facility is the route; see [how to generate bulk e-way bills](/bulk-eway-bill-generation).
@@ -118,17 +118,17 @@ The whole process takes a few minutes, without re-typing details he has entered 
 - Saving products without checking the HSN code and rate
 - Skipping the review step when in a hurry
 
-## Get started
+## After generation: Part B, consolidation, cancellation and extension
 
-E-Way Easy is available for Android. [Download the app](/download) or see the [full feature list](/features). For background on the process itself, read [how to generate an e-way bill step by step](/eway-bill-generation).
-
-## After generation: Part-B, consolidation, cancellation and extension
-
-The app is not only for creating a new e-way bill. From the same app you can also update Part-B when the vehicle changes, create a consolidated e-way bill for several consignments in one vehicle, cancel an e-way bill within the 24-hour window, and extend validity when goods are delayed. Saved transporters and vehicles make Part B updates quicker. Each of these goes through the official e-way bill system, so the usual rules still apply. See [managing e-way bills in the app](/eway-bill-management-app) and the [consolidated e-way bill guide](/consolidated-eway-bill).
+The app is not only for creating a new e-way bill. From the same app you can also update Part B when the vehicle changes, create a consolidated e-way bill for several consignments in one vehicle, cancel an e-way bill within the 24-hour window, and extend validity when goods are delayed. Saved transporters and vehicles make Part B updates quicker. Each of these goes through the official e-way bill system, so the usual rules still apply. See [managing e-way bills in the app](/eway-bill-management-app) and the [consolidated e-way bill guide](/consolidated-eway-bill).
 
 ## What it costs
 
-E-Way Easy uses pay-as-you-go wallet credits, with **no yearly subscription**. **1 credit = ₹1**, and each e-way bill action — generating, updating Part-B, consolidating, cancelling or extending validity — costs **5 credits (₹5)**. Credits are taken only when the action succeeds; if the government portal rejects it, they go back to your wallet automatically. Packs start at 50 credits for ₹50, and you can add any other amount. Payments go through Razorpay (UPI, cards or net banking). See the [pricing page](/pricing) for details.
+E-Way Easy uses pay-as-you-go wallet credits, with **no yearly subscription**. **1 credit = ₹1**, and each e-way bill action — generating, updating Part B, consolidating, cancelling or extending validity — costs **5 credits (₹5)**. Credits are taken only when the action succeeds; if the government portal rejects it, they go back to your wallet automatically. Packs start at 50 credits for ₹50, and you can add any other amount. Payments go through Razorpay (UPI, cards or net banking). See the [pricing page](/pricing) for details.
+
+## Get started
+
+E-Way Easy is available for Android. [Download the app](/download) or see the [full feature list](/features). For background on the process itself, read [how to generate an e-way bill step by step](/eway-bill-generation).
 
 ## Official sources
 

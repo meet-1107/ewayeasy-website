@@ -23,7 +23,7 @@ export const AUTHOR = {
   slug: 'bhavesh-akabari',
   role: 'Author, E-Way Easy',
   // Only verified information belongs here. Extend once a confirmed bio is supplied.
-  bio: 'Bhavesh Akabari writes the E-Way Easy guides on e-way bills, GST invoicing and day-to-day compliance workflows for Indian manufacturers, wholesalers and traders. Every compliance article is checked against official GST and e-way bill sources and carries a "last verified" date.',
+  bio: 'Bhavesh Akabari writes and edits the E-Way Easy guides on e-way bills, GST invoicing and day-to-day compliance workflows for Indian manufacturers, wholesalers and traders. Drafts are prepared with AI assistance; he edits each one and checks the facts against official GST and e-way bill sources, and every compliance article carries a "last verified" date.',
   topics: ['E-way bill process and rules', 'GST invoicing', 'Sales invoice workflows', 'Bulk e-way bill preparation', 'Compliance updates'],
 };
 

@@ -1,7 +1,7 @@
 ---
 title: "E-Way Bill Rules in India (Rule 138 Explained)"
 slug: "eway-bill-rules"
-description: "Rule 138 of the CGST Rules explained in plain language: legal basis, the Rs 50,000 threshold, consignment value, who generates, Part A and Part B, exemptions, validity, cancellation, acceptance, verification and penalties."
+description: "Rule 138 of the CGST Rules explained in plain language: legal basis, the ₹50,000 threshold, consignment value, who generates, Part A and Part B, exemptions, validity, cancellation, acceptance, verification and penalties."
 publishedAt: "2026-10-16"
 updatedAt: "2026-11-02"
 verifiedAt: "2026-10-16"
@@ -20,7 +20,7 @@ sources:
 faq:
   - q: "Which law makes the e-way bill compulsory?"
     a: "Section 68 of the CGST Act allows the government to require documents for goods in movement, and Rule 138 of the CGST Rules, 2017, read with Rules 138A to 138E, sets out the e-way bill requirement."
-  - q: "Does the Rs 50,000 limit include GST?"
+  - q: "Does the ₹50,000 limit include GST?"
     a: "Yes. Consignment value includes the taxable value and the GST charged, but excludes the value of exempt supplies billed on the same invoice."
   - q: "Do state limits differ?"
     a: "Some states have notified a higher threshold for movement within the state. For inter-state movement, the general threshold applies. Check your state's notification."
@@ -195,7 +195,7 @@ A Surat textile unit sends grey fabric worth ₹38,000 plus GST to a job worker 
 
 ## Limitations
 
-This guide summarises the general rules. Imports, exports, exhibitions, SKD/CKD supplies and e-commerce have their own nuances; see [E-Way Bill Returns and Special Transactions](/blog/eway-bill-returns-and-special-transactions) and [Interstate Movement Requirements](/blog/eway-bill-interstate-movement-requirements). For routine sales, the [E-Way Easy app](/features) keeps invoice and e-way bill details in one flow, which helps with the before-dispatch part; the compliance decisions remain yours.
+This guide summarises the general rules. Imports, exports, exhibitions, SKD/CKD supplies and e-commerce have their own nuances; see [E-Way Bill Returns and Special Transactions](/blog/eway-bill-returns-and-special-transactions) and [Inter-state Movement Requirements](/blog/eway-bill-interstate-movement-requirements). For routine sales, the [E-Way Easy app](/features) keeps invoice and e-way bill details in one flow, which helps with the before-dispatch part; the compliance decisions remain yours.
 
 ## Official sources
 

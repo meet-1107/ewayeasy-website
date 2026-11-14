@@ -55,6 +55,7 @@ E-Way Easy is an Android app for GST-registered traders, manufacturers, wholesal
 - [Download](https://ewayeasy.in/download)
 - [Help centre](https://ewayeasy.in/help)
 - [About and founder story](https://ewayeasy.in/about)
+- [How we create content (editorial policy, AI assistance, fact-checking, dates)](https://ewayeasy.in/how-we-create-content)
 
 ## Solutions
 

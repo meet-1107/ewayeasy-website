@@ -91,7 +91,7 @@ You can do most of these with simple spreadsheet formulas or filters.
 - **Tax heads:** if dispatch and delivery states are the same, IGST should be 0; if they differ, CGST and SGST should be 0. See [CGST, SGST and IGST explained](/blog/cgst-sgst-igst-explained).
 - **Totals add up:** taxable value + tax = total value, within rounding.
 - **Item totals equal header totals** for each document.
-- **Threshold:** flag rows where total value is at or below the threshold, so you do not generate unnecessary e-way bills (unless your case needs one at any value, such as interstate job work).
+- **Threshold:** flag rows where total value is at or below the threshold, so you do not generate unnecessary e-way bills (unless your case needs one at any value, such as inter-state job work).
 - **Document age:** as reported by GSTN, from 1 January 2025 e-way bills cannot be generated for documents dated more than 180 days before generation. Flag old dates.
 - **Distance sanity:** distance should not exceed the 4,000 km maximum, and should be roughly in line with the PIN-to-PIN route.
 

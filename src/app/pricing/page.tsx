@@ -21,7 +21,7 @@ const perActionRupees = perAction * PRICING.rupeesPerCredit;
 const FAQ = [
   {
     q: 'How much does one e-way bill cost?',
-    a: `Generating a new e-way bill costs ${perAction} credits, which is ₹${perActionRupees}, because 1 credit = ₹${PRICING.rupeesPerCredit}. Updating Part-B, a consolidated e-way bill, cancelling and extending validity also cost ${perAction} credits each.`,
+    a: `Generating a new e-way bill costs ${perAction} credits, which is ₹${perActionRupees}, because 1 credit = ₹${PRICING.rupeesPerCredit}. Updating Part B, a consolidated e-way bill, cancelling and extending validity also cost ${perAction} credits each.`,
   },
   {
     q: 'Am I charged if the e-way bill fails?',
@@ -163,7 +163,7 @@ export default function PricingPage() {
             <h2>Example (illustrative)</h2>
             <p>
               A distributor dispatches about 60 consignments a month and changes the vehicle on 5 of them. That is 60 new
-              e-way bills plus 5 Part-B updates = 65 actions × {perAction} credits = {65 * perAction} credits, or ₹
+              e-way bills plus 5 Part B updates = 65 actions × {perAction} credits = {65 * perAction} credits, or ₹
               {65 * perActionRupees}. A 250-credit pack plus a 100-credit pack (₹350) covers it, or add exactly 325 credits using
               &ldquo;Other amount&rdquo;. Credits for any action the portal rejects come back to the wallet.
             </p>
@@ -176,7 +176,7 @@ export default function PricingPage() {
                 banking). There is no yearly subscription.
               </li>
               <li>
-                <strong>Credits are used per e-way bill action.</strong> Generating, updating Part-B, consolidating,
+                <strong>Credits are used per e-way bill action.</strong> Generating, updating Part B, consolidating,
                 cancelling and extending validity each use {perAction} credits.
               </li>
               <li>
@@ -185,7 +185,7 @@ export default function PricingPage() {
               </li>
               <li>
                 <strong>Keep an eye on your balance.</strong> The wallet shows available credits, credits used and counts of
-                e-way bills generated, Part-B updates, consolidated and cancelled. It warns you when the balance is low.
+                e-way bills generated, Part B updates, consolidated and cancelled. It warns you when the balance is low.
               </li>
             </ol>
 

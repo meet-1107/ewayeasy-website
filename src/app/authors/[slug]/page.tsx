@@ -54,6 +54,9 @@ export default async function AuthorPage({ params }: { params: Promise<{ slug: s
                 {AUTHOR.topics.map((t) => <span key={t} className="chip">{t}</span>)}
               </div>
               <p className="mt-5 text-sm text-ink-soft">
+                <Link className="font-medium text-brand-700 underline" href="/how-we-create-content">How we research, write and check our guides</Link>
+              </p>
+              <p className="mt-2 text-sm text-ink-soft">
                 Editorial contact:{' '}
                 {SUPPORT_EMAIL ? <a className="font-medium text-brand-700 underline" href={`mailto:${SUPPORT_EMAIL}`}>{SUPPORT_EMAIL}</a> : <Link className="font-medium text-brand-700 underline" href="/contact">contact page</Link>}
               </p>

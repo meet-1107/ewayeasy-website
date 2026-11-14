@@ -51,6 +51,10 @@ export default function ArticleLayout({
                 Last verified against official sources: {formatDate(doc.verifiedAt)}
               </p>
             )}
+            <p className="mt-3 text-xs text-ink-faint">
+              Drafted with AI assistance, edited and fact-checked by a person.{' '}
+              <Link href="/how-we-create-content" className="underline hover:text-brand-700">How we write and check our guides</Link>
+            </p>
           </div>
           <div className="overflow-hidden rounded-3xl shadow-lift">
             {doc.image ? (
@@ -128,6 +132,7 @@ export default function ArticleLayout({
               <p className="text-xs font-semibold uppercase tracking-wider text-brand-600">Written by</p>
               <Link href={`/authors/${AUTHOR.slug}`} className="font-display text-lg font-bold text-ink hover:underline">{AUTHOR.name}</Link>
               <p className="mt-1 text-sm leading-6 text-ink-soft">{AUTHOR.bio}</p>
+              <Link href="/how-we-create-content" className="mt-2 inline-block text-sm font-semibold text-brand-700 underline">How we create content</Link>
             </div>
           </div>
 

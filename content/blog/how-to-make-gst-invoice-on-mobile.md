@@ -120,7 +120,7 @@ If your invoice was made in accounting software or by a colleague, use **Import 
 |---|---|
 | Creating, saving, downloading and sharing invoices | Free |
 | Generate an e-way bill | 5 credits |
-| Update Part-B (vehicle), cancel, extend validity, consolidated EWB | 5 credits each |
+| Update Part B (vehicle), cancel, extend validity, consolidated EWB | 5 credits each |
 | Portal rejects the request | Credits refunded to wallet automatically |
 
 1 credit = ₹1. Credits are pay-as-you-go with no yearly subscription; buy packs or any amount through Razorpay (UPI, cards, net banking). Full details are on the [pricing page](/pricing).

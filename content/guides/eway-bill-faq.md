@@ -3,7 +3,7 @@ title: "E-Way Bill FAQ: 30 Common Questions Answered"
 slug: "eway-bill-faq"
 description: "Short, practical answers to 30 common e-way bill questions on applicability, generation, Part A and Part B, distance, validity, cancellation, corrections, penalties and recent changes."
 publishedAt: "2026-10-16"
-updatedAt: "2026-11-02"
+updatedAt: "2026-11-14"
 verifiedAt: "2026-10-16"
 seoTitle: "E-Way Bill FAQ: 30 Common Questions Answered"
 metaDescription: "30 e-way bill questions answered briefly: threshold, who generates, Part A/B, 50 km rule, validity, extension, cancellation, corrections, penalties, 2025 changes."
@@ -21,7 +21,7 @@ sources:
     url: "https://tutorial.gst.gov.in/"
 faq:
   - q: "What is the e-way bill limit in India?"
-    a: "Generally Rs 50,000 of consignment value, including GST but excluding exempt supplies on the same invoice. Some states have a different limit for intra-state movement; check your state's notification."
+    a: "Generally ₹50,000 of consignment value, including GST but excluding exempt supplies on the same invoice. Some states have a different limit for intra-state movement; check your state's notification."
   - q: "Who has to generate the e-way bill?"
     a: "The registered supplier or recipient. If neither has done so and the value exceeds the threshold, the transporter must generate it before movement."
   - q: "Is Part B compulsory?"
@@ -38,6 +38,8 @@ faq:
     a: "No. It applies to movement of goods only."
 related: ["eway-bill-guide", "eway-bill-rules", "eway-bill-validity", "eway-bill-common-errors"]
 updateHistory:
+  - date: "2026-11-14"
+    note: "Corrected the Part A / Part B answer: the transport document number belongs in Part B."
   - date: "2026-10-16"
     note: "First published."
 ---
@@ -99,7 +101,7 @@ A tax invoice, bill of supply, delivery challan or bill of entry, plus transport
 
 ### 13. What goes into Part A and Part B?
 
-Part A: GSTINs, delivery PIN, document number and date, value, HSN, reason for transport, transport document number. Part B: vehicle number or transport document details.
+Part A: GSTINs, delivery PIN, document number and date, value, HSN and reason for transport (the Transporter ID and approximate distance are also entered with Part A). Part B: mode of transport, vehicle number, and transport document number and date (LR, RR, airway bill or bill of lading).
 
 ### 14. Is Part B always needed?
 

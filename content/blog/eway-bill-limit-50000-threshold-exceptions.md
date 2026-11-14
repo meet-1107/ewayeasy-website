@@ -5,7 +5,7 @@ excerpt: "How the ₹50,000 e-way bill limit is calculated, what counts in consi
 category: "eway-bill"
 tags: ["e-way bill", "threshold", "consignment value", "exemptions"]
 publishedAt: "2026-10-16"
-updatedAt: "2026-11-02"
+updatedAt: "2026-11-14"
 verifiedAt: "2026-10-16"
 seoTitle: "E-Way Bill Limit ₹50,000: Calculation and Exceptions"
 metaDescription: "How to calculate consignment value for the ₹50,000 e-way bill limit, state intra-state thresholds, value-independent cases and Annexure exemptions."
@@ -54,11 +54,11 @@ So the test is done on the invoice total **with** tax, minus any exempt items.
 
 A Ludhiana hosiery unit invoices knitwear:
 
-- Taxable value: ₹45,000
-- GST @ 12%: ₹5,400
+- Taxable value: ₹48,000
+- GST @ 5%: ₹2,400
 - **Consignment value: ₹50,400** → exceeds ₹50,000 → e-way bill required.
 
-On taxable value alone (₹45,000) it looks like no e-way bill is needed. That is the most common error.
+On taxable value alone (₹48,000) it looks like no e-way bill is needed. That is the most common error.
 
 ### Example (illustrative) 2: exempt items on the same invoice
 
@@ -84,7 +84,7 @@ Try your own figures with the [e-way bill eligibility checker](/tools/eway-bill-
 
 For movement within a state, some states have notified a **different, higher threshold** than ₹50,000, and some have specified it for particular goods or areas. Because these notifications vary and change, we don't list numbers here.
 
-**What to do:** If your goods move only within your state, check your state's commercial tax department notification or the [E-Way Bill System](https://ewaybillgst.gov.in/) for the current intra-state limit. For inter-state movement, the ₹50,000 rule applies. See [Intrastate Movement Considerations](/blog/eway-bill-intrastate-movement-considerations).
+**What to do:** If your goods move only within your state, check your state's commercial tax department notification or the [E-Way Bill System](https://ewaybillgst.gov.in/) for the current intra-state limit. For inter-state movement, the ₹50,000 rule applies. See [Intra-state Movement Considerations](/blog/eway-bill-intrastate-movement-considerations).
 
 ## When value doesn't matter: e-way bill required anyway
 

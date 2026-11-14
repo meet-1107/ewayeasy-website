@@ -5,7 +5,7 @@ excerpt: "What goes into Part A and Part B of Form GST EWB-01, who fills each pa
 category: "eway-bill"
 tags: ["e-way bill", "Part A", "Part B", "EWB-01"]
 publishedAt: "2026-10-16"
-updatedAt: "2026-11-02"
+updatedAt: "2026-11-14"
 verifiedAt: "2026-10-16"
 seoTitle: "E-Way Bill Part A and Part B Explained (EWB-01)"
 metaDescription: "Part A and Part B of the e-way bill explained: fields in each part, who fills them, the 50 km Part B exemption, updating vehicles and fixing errors."
@@ -45,7 +45,6 @@ Part A captures the details that come from your invoice, bill of supply or deliv
 | Value of goods | Taxable value and tax amounts | Consignment value includes GST |
 | HSN code | For each item | Check digit length required for your turnover |
 | Reason for transportation | Supply, job work, own use, sales return, etc. | Must fit the document type |
-| Transport document number | LR / RR / airway bill / bill of lading number | Where available |
 
 ## Part B: the conveyance
 
@@ -53,7 +52,7 @@ Part B captures how the goods are moving.
 
 | Mode | What to enter |
 |---|---|
-| Road | Vehicle number |
+| Road | Vehicle number (and LR number and date, if available) |
 | Rail | Railway receipt (RR) number and date |
 | Air | Airway bill number and date |
 | Ship | Bill of lading number and date |
