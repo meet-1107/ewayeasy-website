@@ -98,7 +98,7 @@ export interface TemplateContent {
 }
 
 // Features every template shares. Kept here so cards, chips and copy stay consistent.
-const CORE_FEATURES = ['Editable fields', 'Live totals', 'Your logo', 'Currency choice', 'PDF download', 'Print', 'A4 · A5 · Letter · Legal'];
+const CORE_FEATURES = ['Editable fields', 'Live totals', 'Your logo', 'Currency choice', 'PDF download', 'Share on WhatsApp', 'Print', 'A4 · A5 · Letter · Legal'];
 
 // ---------------------------------------------------------------------------------------------------------
 // Category landing pages
@@ -379,7 +379,7 @@ export const TEMPLATE_CONTENT: Record<TemplateId, TemplateContent> = {
     intro: 'A tax invoice layout for GST-registered sellers, with GSTIN, HSN, place of supply and tax columns ready to fill.',
     audience: 'GST-registered traders and manufacturers billing B2B or B2C sales of goods.',
     tags: ['GST registered', 'Goods', 'B2B'],
-    features: ['GSTIN and HSN fields', 'CGST/SGST or IGST', ...CORE_FEATURES],
+    features: ['GSTIN and HSN fields', 'CGST/SGST or IGST', 'Thermal print 58/80 mm', ...CORE_FEATURES],
     includes: [
       { label: 'Seller details', detail: 'Business name, address, GSTIN, state and state code, contact details and logo.' },
       { label: 'Invoice details', detail: 'Invoice number, invoice date, place of supply and a reverse charge (yes/no) line.' },
@@ -487,7 +487,7 @@ export const TEMPLATE_CONTENT: Record<TemplateId, TemplateContent> = {
     intro: 'A short, uncluttered bill for small sales: your details, the customer, a few lines and a total.',
     audience: 'Small shops, home businesses and sellers who need a quick bill without GST columns.',
     tags: ['Minimal', 'Goods', 'B2C', 'Non-GST'],
-    features: ['Minimal layout', 'Prints well on A5', ...CORE_FEATURES],
+    features: ['Minimal layout', 'Prints well on A5', 'Thermal print 58/80 mm', ...CORE_FEATURES],
     includes: [
       { label: 'Your details', detail: 'Business or trading name, address, phone and logo.' },
       { label: 'Bill details', detail: 'Bill number and date.' },

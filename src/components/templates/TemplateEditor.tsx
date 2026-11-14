@@ -17,6 +17,8 @@ import { fileBaseName, sectionOn } from '@/lib/templates/render';
 import { Area, Card, Check, Choice, Field, Select, STATE_OPTIONS } from './fields';
 import LineItemsEditor from './LineItemsEditor';
 import { PrintPortal, ScaledPreview } from './PreviewPane';
+import { printThermal, type RollWidth } from './thermal';
+import { downloadAndOpenWhatsApp, sharePdf, waMessage } from './share';
 import {
   KEYS, loadDrafts, loadInitial, loadProducts, loadSeries, saveDraft, saveDrafts, seriesNumber,
   type DraftEntry, type Product, type Series,
@@ -68,6 +70,11 @@ export default function TemplateEditor({ templateId }: { templateId: TemplateId 
   const [printing, setPrinting] = useState(false);
   const [pdfBusy, setPdfBusy] = useState(false);
   const [pdfError, setPdfError] = useState('');
+  const [shareBusy, setShareBusy] = useState(false);
+  /** PDF ready to share when the browser asked for a fresh tap (generation took too long for one gesture). */
+  const [sharePending, setSharePending] = useState<File | null>(null);
+  const [roll, setRoll] = useState<RollWidth>(80);
+  useEffect(() => { if (safeStorage.get<number>('ee-thermal-roll', 80) === 58) setRoll(58); }, []);
   const [mobileView, setMobileView] = useState<'form' | 'preview'>('form');
   const [savedAt, setSavedAt] = useState<string>('');
   // Inline "required" errors appear only after the user tries to save, print or download.
@@ -292,6 +299,45 @@ export default function TemplateEditor({ templateId }: { templateId: TemplateId 
     }
   }
 
+  function thermalPrint() {
+    setShowRequired(true);
+    printThermal(data, totals, roll);
+    announce(`Printing an ${roll} mm receipt. Choose your thermal printer in the print dialog.`);
+  }
+  function chooseRoll(w: RollWidth) {
+    setRoll(w);
+    safeStorage.set('ee-thermal-roll', w);
+  }
+  async function shareWhatsApp() {
+    setShowRequired(true);
+    setPdfError('');
+    const text = waMessage(data, totals);
+    try {
+      let file = sharePending;
+      if (!file) {
+        setShareBusy(true);
+        const { makePdfBlob } = await import('./pdf/generate');
+        const blob = await makePdfBlob(data);
+        file = new File([blob], `${fileBaseName(data)}.pdf`, { type: 'application/pdf' });
+      }
+      const result = await sharePdf(file, text);
+      if (result === 'needs-tap') { setSharePending(file); announce('Invoice ready. Tap “Send on WhatsApp” again to share it.'); return; }
+      setSharePending(null);
+      if (result === 'unsupported') {
+        downloadAndOpenWhatsApp(file, text, data.buyer.phone);
+        announce('PDF downloaded and WhatsApp opened. Attach the PDF in the chat.');
+      } else if (result === 'shared') {
+        announce('Invoice shared.');
+      }
+    } catch (err) {
+      console.error(err);
+      setSharePending(null);
+      setPdfError('The invoice could not be shared. Download the PDF and send it from WhatsApp.');
+    } finally {
+      setShareBusy(false);
+    }
+  }
+
   /* ---------- small render helpers ---------- */
   const sectionToggle = (k: SectionKey) => preset.toggles.includes(k)
     ? <Check id={`sec-${k}-head`} label="Show" checked={on(k)} onChange={(v) => setSection(k, v)} className="!text-xs" />
@@ -332,6 +378,27 @@ export default function TemplateEditor({ templateId }: { templateId: TemplateId 
   const taxModeOptions = preset.taxModes.map((m) => ({ value: m, label: TAX_MODE_LABEL[m] }));
   const supplyText = totals.supply === 'inter' ? 'Inter-state supply: IGST' : 'Intra-state supply: CGST + SGST/UTGST';
 
+  const isSalesInvoice = kind === 'sales-invoice';
+  const shareButton = (
+    <button type="button" className="btn !bg-[#25D366] !px-4 !py-2.5 !text-white hover:!bg-[#1EBE5A]" onClick={shareWhatsApp} disabled={shareBusy} aria-busy={shareBusy}>
+      <svg viewBox="0 0 24 24" className="h-4 w-4" aria-hidden><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.6.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 0 0 1.8-1.2 2.2 2.2 0 0 0 .1-1.2c0-.1-.2-.2-.5-.3Z" /></svg>
+      {shareBusy ? 'Preparing…' : sharePending ? 'Send on WhatsApp' : 'Share on WhatsApp'}
+    </button>
+  );
+  const thermalControls = isSalesInvoice && (
+    <span className="inline-flex items-stretch overflow-hidden rounded-full border border-brand-900/15 bg-white">
+      <button type="button" className="px-4 py-2.5 text-sm font-semibold text-ink hover:text-brand-700" onClick={thermalPrint}>
+        Thermal print
+      </button>
+      <label className="sr-only" htmlFor="thermal-roll">Receipt roll width</label>
+      <select id="thermal-roll" value={roll} onChange={(e) => chooseRoll(Number(e.target.value) as RollWidth)}
+        className="border-l border-brand-900/15 bg-cream px-2 text-sm font-semibold text-ink focus:outline-none">
+        <option value={80}>80 mm</option>
+        <option value={58}>58 mm</option>
+      </select>
+    </span>
+  );
+
   const toolbar = (
     <div className="flex flex-wrap gap-2">
       <button type="button" className="btn-ghost !px-4 !py-2.5" onClick={loadSample}>Load sample</button>
@@ -340,9 +407,11 @@ export default function TemplateEditor({ templateId }: { templateId: TemplateId 
       <button type="button" className="btn-ghost !px-4 !py-2.5" onClick={newDocument}>New</button>
       <button type="button" className="btn-ghost !px-4 !py-2.5" onClick={duplicateDocument}>Duplicate</button>
       <button type="button" className="btn-ghost !px-4 !py-2.5" onClick={print}>Print</button>
+      {thermalControls}
       <button type="button" className="btn-primary !px-4 !py-2.5" onClick={downloadPdf} disabled={pdfBusy} aria-busy={pdfBusy}>
         {pdfBusy ? 'Creating PDF…' : 'Download PDF'}
       </button>
+      {shareButton}
     </div>
   );
 
@@ -707,7 +776,9 @@ export default function TemplateEditor({ templateId }: { templateId: TemplateId 
           </div>
           <div className="no-print flex flex-wrap gap-2">
             <button type="button" className="btn-ghost" onClick={print}>Print</button>
+            {thermalControls}
             <button type="button" className="btn-primary" onClick={downloadPdf} disabled={pdfBusy}>{pdfBusy ? 'Creating PDF…' : 'Download PDF'}</button>
+            {shareButton}
           </div>
           <Notice>
             The PDF shows exact page breaks; long tables continue on the next page with the column headings repeated.

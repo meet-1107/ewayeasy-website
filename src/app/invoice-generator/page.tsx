@@ -34,8 +34,8 @@ const STEPS = [
     text: 'Add your business name and GSTIN, the buyer, then each item with quantity, rate and GST rate. Totals, tax and amount in words update as you type.',
   },
   {
-    title: 'Download the PDF or print',
-    text: 'Choose A4, A5, Letter or Legal, add your logo if you like, then download a PDF to share on WhatsApp or email, or print it.',
+    title: 'Download, print or share on WhatsApp',
+    text: 'Choose A4, A5, Letter or Legal, or a 58/80 mm thermal receipt. Download the PDF, print it, or send it straight to WhatsApp.',
   },
 ];
 
@@ -51,6 +51,14 @@ const FAQ: Faq[] = [
   {
     q: 'Does it calculate CGST, SGST and IGST automatically?',
     a: 'Yes. In With GST mode, enter your state and the place of supply. If both are in the same state the tax is split into CGST and SGST; if they differ, IGST is charged. Totals and the amount in words update automatically.',
+  },
+  {
+    q: 'Can I print the invoice on a thermal printer?',
+    a: 'Yes. Use Thermal print and choose 58 mm or 80 mm to match your roll. A receipt-style invoice with GSTIN, items, GST and total opens in the print dialog; pick your thermal printer there. It works with any thermal printer that has a print driver on your computer or phone.',
+  },
+  {
+    q: 'Can I send the invoice on WhatsApp?',
+    a: 'Yes. Tap Share on WhatsApp. On a phone, the invoice PDF opens in the share sheet so you can send it to any chat. On a computer, the PDF downloads and WhatsApp opens with a ready message (to the buyer, if you entered their phone number), so you only attach the file.',
   },
   {
     q: 'Is my invoice data saved on your server?',
@@ -111,6 +119,8 @@ export default function InvoiceGeneratorPage() {
               'Saved products',
               'Logo, currency and paper size',
               'PDF download and print',
+              'Thermal receipt printing (58 mm and 80 mm)',
+              'Share the invoice PDF on WhatsApp',
             ],
           },
           {
@@ -135,7 +145,7 @@ export default function InvoiceGeneratorPage() {
             you download a PDF. No sign-up, no watermark, nothing uploaded.
           </p>
           <ul className="mt-4 flex flex-wrap gap-2" aria-label="Generator features">
-            {['100% free', 'No sign-up', 'With or without GST', 'CGST/SGST or IGST', 'PDF & print', 'Data stays on your device'].map((f) => (
+            {['100% free', 'No sign-up', 'With or without GST', 'CGST/SGST or IGST', 'PDF & print', 'Thermal 58/80 mm', 'Share on WhatsApp', 'Data stays on your device'].map((f) => (
               <li key={f} className="rounded-full bg-white/10 px-3 py-1 text-xs font-semibold text-white">{f}</li>
             ))}
           </ul>
