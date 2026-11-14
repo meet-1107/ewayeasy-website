@@ -1,8 +1,6 @@
 'use client';
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 import { CLARITY_ID, GA_ID } from '@/lib/site';
-
-const KEY = 'ee-consent';
 
 function loadGa() {
   if (!GA_ID || document.getElementById('ga-script')) return;
@@ -35,31 +33,17 @@ function loadAnalytics() {
   loadClarity();
 }
 
-/** Analytics only after an explicit "Accept". Without a GA or Clarity ID nothing is shown at all. */
+/**
+ * Loads analytics (Microsoft Clarity, and Google Analytics if an ID is set) for every visitor, with no banner.
+ * Inputs in the tools, templates and contact form carry data-clarity-mask, so typed text is never recorded.
+ * Waits until the browser is idle so analytics never slows the first paint.
+ */
 export default function Consent() {
-  const [show, setShow] = useState(false);
   useEffect(() => {
     if (!GA_ID && !CLARITY_ID) return;
-    let v: string | null = null;
-    try { v = localStorage.getItem(KEY); } catch {}
-    if (v === 'yes') loadAnalytics();
-    else if (v !== 'no') setShow(true);
+    const w = window as unknown as { requestIdleCallback?: (cb: () => void) => number };
+    if (w.requestIdleCallback) w.requestIdleCallback(loadAnalytics);
+    else setTimeout(loadAnalytics, 1200);
   }, []);
-  if (!show) return null;
-  const choose = (yes: boolean) => {
-    try { localStorage.setItem(KEY, yes ? 'yes' : 'no'); } catch {}
-    if (yes) loadAnalytics();
-    setShow(false);
-  };
-  return (
-    <div role="dialog" aria-label="Analytics consent" className="no-print fixed inset-x-3 bottom-3 z-[60] mx-auto max-w-xl rounded-2xl border border-brand-900/10 bg-white p-4 shadow-lift">
-      <p className="text-sm text-ink-soft">
-        We use analytics to learn which guides and tools are useful. Invoice data you type into our tools is never sent.
-      </p>
-      <div className="mt-3 flex gap-2">
-        <button className="btn-primary py-2" onClick={() => choose(true)}>Accept analytics</button>
-        <button className="btn-ghost py-2" onClick={() => choose(false)}>Decline</button>
-      </div>
-    </div>
-  );
+  return null;
 }

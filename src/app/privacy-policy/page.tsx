@@ -6,11 +6,11 @@ import { SITE, SUPPORT_EMAIL } from '@/lib/site';
 export const metadata = pageMeta({
   title: 'Privacy Policy',
   description:
-    'How the E-Way Easy website handles your information: free tools run in your browser, invoice drafts stay on your device, and analytics loads only with your consent.',
+    'How the E-Way Easy website handles your data: free tools run in your browser, drafts stay on your device, and Clarity analytics never records typed text.',
   path: '/privacy-policy',
 });
 
-const LAST_UPDATED = '15 October 2026';
+const LAST_UPDATED = '14 November 2026';
 
 function Contact() {
   return SUPPORT_EMAIL ? (
@@ -46,7 +46,7 @@ export default function PrivacyPolicyPage() {
               <li>You can read our guides and use our free tools without creating an account.</li>
               <li>The free tools (calculators, invoice creator and similar) run in your browser. What you type is not sent to our servers.</li>
               <li>Invoice drafts you save on this website are kept in your browser&rsquo;s local storage, on your device only.</li>
-              <li>Analytics (Google Analytics), if we enable it, loads only after you give consent.</li>
+              <li>We use Microsoft Clarity (and Google Analytics, if we enable it) to see how visitors use the site. Text you type into the tools, templates and contact form is masked and not recorded.</li>
               <li>We do not sell your personal data.</li>
             </ul>
 
@@ -60,18 +60,28 @@ export default function PrivacyPolicyPage() {
               access to your device and browser profile may be able to see these drafts, so avoid saving them on a shared
               computer.
             </p>
-            <h3>Analytics (only with consent)</h3>
+            <h3>Google Analytics (if enabled)</h3>
             <p>
               If analytics is configured for this website, we use Google Analytics to understand which pages are useful
-              and how visitors find us. It loads only after you accept analytics in the consent banner. It may collect
+              and how visitors find us. It may collect
               information such as pages visited, approximate location, device and browser type, and referral source,
-              using cookies or similar identifiers. If you decline, the analytics script is not loaded. Google processes
+              using cookies or similar identifiers. Google processes
               this data under its own terms and privacy policy.
             </p>
-            <h3>Your consent choice</h3>
+            <h3>Microsoft Clarity</h3>
             <p>
-              We store your consent choice in your browser so we do not ask on every visit. Clearing your browser&rsquo;s
-              site data resets it.
+              We use Microsoft Clarity to see how visitors use the website, through heatmaps and
+              session replays (a reconstruction of scrolling, clicks and page navigation), so we can fix confusing pages.
+              Text you type into the free tools, invoice templates and the contact form is masked and not captured.
+              Clarity may collect device and browser details, approximate location and the pages you visit, using cookies
+              or similar identifiers.
+              Microsoft processes this data under the{' '}
+              <a href="https://privacy.microsoft.com/privacystatement" target="_blank" rel="noopener noreferrer">Microsoft Privacy Statement</a>.
+            </p>
+            <h3>Opting out of analytics</h3>
+            <p>
+              You can stop analytics by blocking cookies or third-party scripts for this website in your browser
+              settings, or with a tracker-blocking extension. The guides and free tools keep working without them.
             </p>
             <h3>When you contact us</h3>
             <p>
@@ -89,7 +99,7 @@ export default function PrivacyPolicyPage() {
             <h2>3. How we use information</h2>
             <ul>
               <li>To run and improve the website and its free tools.</li>
-              <li>To understand, in aggregate, which content is helpful (only if you consented to analytics).</li>
+              <li>To understand, in aggregate, which content is helpful (using analytics).</li>
               <li>To answer your questions and provide support.</li>
               <li>To meet legal obligations and protect the website against misuse.</li>
             </ul>
@@ -97,13 +107,13 @@ export default function PrivacyPolicyPage() {
             <h2>4. Sharing</h2>
             <p>
               We do not sell or rent personal data. We share information only with service providers that help us run the
-              website (such as hosting and, with your consent, analytics), when required by law or a valid order of a
+              website (such as hosting and analytics), when required by law or a valid order of a
               competent authority, or to protect our rights and users.
             </p>
 
             <h2>5. Retention</h2>
             <p>
-              Data in your browser (drafts and your consent choice) stays until you delete it. Emails you send us are kept
+              Data in your browser (such as saved drafts) stays until you delete it. Emails you send us are kept
               only as long as needed to handle your request and for reasonable record-keeping. Analytics data is retained
               according to the retention settings of the analytics service.
             </p>
@@ -119,8 +129,8 @@ export default function PrivacyPolicyPage() {
             <p>
               Under the Digital Personal Data Protection Act, 2023 and other applicable Indian law, you may have rights
               to access a summary of your personal data, ask for correction or erasure, withdraw consent, nominate another
-              person to exercise your rights, and raise a grievance. You can withdraw analytics consent at any time by
-              clearing your browser&rsquo;s site data for this website and choosing again. To exercise any other right,
+              person to exercise your rights, and raise a grievance. You can opt out of analytics at any time as described in
+              section 2. To exercise any other right,
               contact us at <Contact />. If you are not satisfied with our response, you may approach the Data Protection
               Board of India once it accepts complaints in line with the law.
             </p>
