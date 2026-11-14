@@ -101,11 +101,33 @@ export default function Home() {
             </div>
             <HeroMilestones />
           </div>
-          <div className="relative mx-auto w-full max-w-[560px]">
-            <DispatchAnimation className="mx-auto w-full max-w-[560px] overflow-hidden rounded-[2rem] shadow-lift" />
-            <span className="ee-float absolute -left-2 top-6 rounded-2xl bg-white px-3 py-2 text-xs font-bold text-ink shadow-lift sm:-left-6 sm:text-sm">✅ GSTIN details auto-filled</span>
-            <span className="ee-float ee-float-2 absolute -right-2 top-1/3 rounded-2xl bg-white px-3 py-2 text-xs font-bold text-ink shadow-lift sm:-right-6 sm:text-sm">📲 Share on WhatsApp</span>
-            <span className="ee-float ee-float-3 absolute -bottom-3 left-6 rounded-2xl bg-amber-400 px-3 py-2 text-xs font-extrabold text-brand-950 shadow-lift sm:text-sm">₹5 per e-way bill</span>
+          <div className="mx-auto w-full max-w-[560px]">
+            <div className="relative">
+              <DispatchAnimation className="mx-auto w-full max-w-[560px] overflow-hidden rounded-[2rem] shadow-lift" />
+              <span className="ee-float absolute -left-2 top-6 rounded-2xl bg-white px-3 py-2 text-xs font-bold text-ink shadow-lift sm:-left-6 sm:text-sm">✅ GSTIN details auto-filled</span>
+              <span className="ee-float ee-float-2 absolute -right-2 top-1/3 rounded-2xl bg-white px-3 py-2 text-xs font-bold text-ink shadow-lift sm:-right-6 sm:text-sm">📲 Share on WhatsApp</span>
+              <span className="ee-float ee-float-3 absolute -bottom-3 left-6 rounded-2xl bg-amber-400 px-3 py-2 text-xs font-extrabold text-brand-950 shadow-lift sm:text-sm">₹5 per e-way bill</span>
+            </div>
+            {/* Count from the app's own records (registered businesses), confirmed by the founder on 14 Nov 2026. */}
+            <div className="ee-fill mt-10 flex items-center gap-4 rounded-2xl bg-white/10 px-4 py-3.5 ring-1 ring-white/20 backdrop-blur sm:px-5" style={{ animationDelay: '0.6s' }}>
+              <span aria-hidden className="flex shrink-0 -space-x-2.5">
+                {[
+                  { bg: 'bg-amber-400', d: 'M4 10v10h16V10M3 10l2-5h14l2 5M3 10h18M9 20v-5h6v5' },
+                  { bg: 'bg-emerald-300', d: 'M3 20V10l5 3v-3l5 3V7l8 4v9H3ZM7 17h2M12 17h2M17 17h2' },
+                  { bg: 'bg-sky-300', d: 'M2 7h11v9H2zM13 10h4.5L21 13.5V16h-8M7.5 18.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0ZM18.5 18.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0Z' },
+                ].map((c) => (
+                  <span key={c.bg} className={`grid h-10 w-10 place-items-center rounded-full ${c.bg} text-brand-950 ring-2 ring-brand-900`}>
+                    <svg viewBox="0 0 24 24" className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><path d={c.d} /></svg>
+                  </span>
+                ))}
+              </span>
+              <p className="leading-snug">
+                <span className="block font-display text-lg font-extrabold text-white sm:text-xl">
+                  Trusted by <span className="text-amber-400">100+ businesses</span>
+                </span>
+                <span className="block text-sm text-brand-100/85">creating GST invoices and e-way bills with E-Way Easy</span>
+              </p>
+            </div>
           </div>
         </div>
         <TruckArtBand className="absolute inset-x-0 bottom-0" />
