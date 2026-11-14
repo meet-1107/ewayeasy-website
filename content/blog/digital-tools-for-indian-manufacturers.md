@@ -4,7 +4,7 @@ slug: "digital-tools-for-indian-manufacturers"
 excerpt: "A practical map of the digital tool categories small and mid-sized Indian manufacturers use — accounting, invoicing, compliance, inventory, production and communication."
 category: "business-guides"
 tags: ["manufacturing", "digital tools", "MSME", "compliance"]
-publishedAt: "2026-09-08"
+publishedAt: "2026-10-16"
 updatedAt: "2026-11-02"
 seoTitle: "Digital Tools for Indian Manufacturers: A Practical Map"
 metaDescription: "The categories of digital tools Indian manufacturers use, what each solves, how to choose, and mistakes to avoid when moving from paper to software."

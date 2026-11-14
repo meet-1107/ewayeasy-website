@@ -34,7 +34,7 @@ export const UPDATES: ComplianceUpdate[] = [
       'Example (illustrative): an item earlier billed at 12% may now fall under 5% or 18%. Update the GST rate in your product list before you raise the next invoice, or the tax and consignment value on the e-way bill will be wrong.',
     reference: 'Recommendations of the 56th GST Council meeting and the rate notifications that followed',
     source: { title: 'CBIC GST', url: 'https://cbic-gst.gov.in/' },
-    verifiedAt: '2026-10-14',
+    verifiedAt: '2026-10-16',
     status: 'verified',
     important: true,
   },
@@ -52,7 +52,7 @@ export const UPDATES: ComplianceUpdate[] = [
       'Example (illustrative): a delivery challan dated 1 March cannot be used to generate an e-way bill on 15 September of the same year.',
     reference: 'GSTN advisory on e-way bill system changes',
     source: { title: 'E-Way Bill System', url: 'https://ewaybillgst.gov.in/' },
-    verifiedAt: '2026-10-14',
+    verifiedAt: '2026-10-16',
     status: 'verified',
     important: true,
   },
@@ -69,7 +69,7 @@ export const UPDATES: ComplianceUpdate[] = [
       'Example (illustrative): goods held at a transporter’s godown for months cannot keep moving on the same e-way bill past the 360-day mark; a fresh document and e-way bill will be needed.',
     reference: 'GSTN advisory on e-way bill system changes',
     source: { title: 'E-Way Bill System', url: 'https://ewaybillgst.gov.in/' },
-    verifiedAt: '2026-10-14',
+    verifiedAt: '2026-10-16',
     status: 'verified',
   },
   {
@@ -86,7 +86,7 @@ export const UPDATES: ComplianceUpdate[] = [
       'Example (illustrative): if your accountant generates e-way bills, plan how they will receive the OTP sent to the registered mobile number. Never share portal passwords with apps or websites.',
     reference: 'GSTN advisories on MFA for the e-way bill and e-invoice systems',
     source: { title: 'E-Way Bill System', url: 'https://ewaybillgst.gov.in/' },
-    verifiedAt: '2026-10-14',
+    verifiedAt: '2026-10-16',
     status: 'verified',
   },
   {
@@ -103,7 +103,7 @@ export const UPDATES: ComplianceUpdate[] = [
       'Example (illustrative): an invoice dated 1 June must be reported to the IRP by 1 July. After that, no IRN is issued, so the e-way bill cannot be created from that IRN.',
     reference: 'GSTN advisory on time limit for reporting e-invoices',
     source: { title: 'GST portal', url: 'https://www.gst.gov.in/' },
-    verifiedAt: '2026-10-14',
+    verifiedAt: '2026-10-16',
     status: 'verified',
   },
   {
@@ -119,7 +119,7 @@ export const UPDATES: ComplianceUpdate[] = [
       'Example (illustrative): if the main portal is slow during month-end dispatches, log in to the 2.0 portal with the same credentials and the e-way bill will show on both.',
     reference: 'GSTN/NIC announcement of the E-Way Bill 2.0 portal',
     source: { title: 'E-Way Bill 2.0 portal', url: 'https://ewaybill2.gst.gov.in/' },
-    verifiedAt: '2026-10-14',
+    verifiedAt: '2026-10-16',
     status: 'verified',
   },
 ];

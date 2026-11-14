@@ -2,8 +2,9 @@
 title: "E-Way Bill Distance Rules: PIN-to-PIN, 10% Margin and 50 km Part B Exemption"
 slug: "eway-bill-distance-rules"
 description: "How distance works in an e-way bill: the portal's PIN-to-PIN auto-calculation, the 10% margin, the 4,000 km cap, same-PIN movements, the 50 km Part B exemption, and how distance drives validity."
+publishedAt: "2026-10-16"
 updatedAt: "2026-11-02"
-verifiedAt: "2026-10-11"
+verifiedAt: "2026-10-16"
 seoTitle: "E-Way Bill Distance Rules: PIN-to-PIN and 10% Margin"
 metaDescription: "E-way bill distance rules: PIN-to-PIN auto distance, 10% extra margin, 4,000 km limit, same-PIN 100 km, 50 km Part B exemption and validity impact."
 imageAlt: "Map with two PIN code markers connected by a route line, with a 10 percent tolerance band around it"
@@ -27,9 +28,7 @@ faq:
     a: "If the PIN-to-PIN distance is not available, you enter the approximate actual distance. Check that the PIN code is valid and current first."
 related: ["eway-bill-validity", "eway-bill-generation", "eway-bill-common-errors"]
 updateHistory:
-  - date: "2026-09-24"
-    note: "Clarified that the 50 km Part B relief applies only within the same state or UT."
-  - date: "2026-09-06"
+  - date: "2026-10-16"
     note: "First published."
 ---
 > **Quick answer:** The portal auto-calculates the PIN-to-PIN distance, and you can enter up to 10% more than that figure, to a maximum of 4,000 km (up to 100 km within the same PIN code). Part B is not needed for same-state movement up to 50 km to or from a transporter, but Part A still is.

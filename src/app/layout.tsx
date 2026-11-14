@@ -49,16 +49,6 @@ const orgLd = {
       ...(SUPPORT_EMAIL ? { email: SUPPORT_EMAIL, contactPoint: { '@type': 'ContactPoint', contactType: 'customer support', email: SUPPORT_EMAIL } } : {}),
       ...(PLAY_STORE_URL ? { sameAs: [PLAY_STORE_URL] } : {}),
     },
-    {
-      // Site name shown by Google: name + alternateName on the home page WebSite markup.
-      '@type': 'WebSite',
-      '@id': `${SITE_URL}/#website`,
-      name: SITE.name,
-      alternateName: ['EWay Easy', 'ewayeasy.in'],
-      url: SITE_URL,
-      inLanguage: 'en-IN',
-      publisher: { '@id': `${SITE_URL}/#org` },
-    },
   ],
 };
 

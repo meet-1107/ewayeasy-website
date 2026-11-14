@@ -153,13 +153,18 @@ export function getPost(slug: string) {
 let guidesCache: Guide[] | null = null;
 export function getAllGuides(): Guide[] {
   if (!guidesCache) {
-    guidesCache = readDir('guides', (data, body, file) => ({
-      ...base(data, body, file),
-      updateHistory: ((data.updateHistory as { date: unknown; note: string }[]) ?? []).map((h) => ({
+    guidesCache = readDir('guides', (data, body, file) => {
+      const doc = base(data, body, file);
+      const updateHistory = ((data.updateHistory as { date: unknown; note: string }[]) ?? []).map((h) => ({
         date: toDateString(h.date),
         note: String(h.note),
-      })),
-    }));
+      }));
+      // Guides keep their real first-publication date in the history; without an explicit publishedAt,
+      // use the oldest history entry so the visible date and datePublished are truthful.
+      const firstDate = updateHistory.map((h) => h.date).filter(Boolean).sort()[0];
+      const publishedAt = toDateString(data.publishedAt) || firstDate || doc.publishedAt;
+      return { ...doc, publishedAt, updateHistory };
+    });
   }
   return guidesCache;
 }

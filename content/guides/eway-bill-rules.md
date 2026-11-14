@@ -2,8 +2,9 @@
 title: "E-Way Bill Rules in India (Rule 138 Explained)"
 slug: "eway-bill-rules"
 description: "Rule 138 of the CGST Rules explained in plain language: legal basis, the Rs 50,000 threshold, consignment value, who generates, Part A and Part B, exemptions, validity, cancellation, acceptance, verification and penalties."
+publishedAt: "2026-10-16"
 updatedAt: "2026-11-02"
-verifiedAt: "2026-10-12"
+verifiedAt: "2026-10-16"
 seoTitle: "E-Way Bill Rules in India: Rule 138 Explained"
 metaDescription: "Rule 138 explained simply: threshold, consignment value, who generates, Part A/B, 50 km exemption, validity, cancellation, Annexure exemptions and penalties."
 imageAlt: "Rule book page titled Rule 138 with highlighted sections for threshold, Part A, Part B and validity"
@@ -31,9 +32,7 @@ related: ["eway-bill-guide", "eway-bill-validity", "eway-bill-distance-rules", "
 updateHistory:
   - date: "2026-10-22"
     note: "Merged our separate article on e-way bill rules in practice into this guide"
-  - date: "2026-09-29"
-    note: "Added the January 2025 changes reported by GSTN and the MFA rollout."
-  - date: "2026-09-03"
+  - date: "2026-10-16"
     note: "First published."
 ---
 > **Quick answer:** Rule 138 of the CGST Rules, 2017, read with Section 68 of the CGST Act, generally requires an e-way bill before goods with a consignment value above ₹50,000 are moved. It sets who generates it, Part A and Part B, validity, exemptions and cancellation; Sections 129 and 122 cover penalties.

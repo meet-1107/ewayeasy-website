@@ -2,8 +2,9 @@
 title: "Documents and Data Required for E-Way Bill Generation"
 slug: "documents-required-for-eway-bill"
 description: "Documents and data you need to generate an e-way bill, split into Part A and Part B, plus what the driver must carry and a printable checklist."
+publishedAt: "2026-10-16"
 updatedAt: "2026-11-02"
-verifiedAt: "2026-10-13"
+verifiedAt: "2026-10-16"
 seoTitle: "Documents Required for E-Way Bill: Full Checklist"
 metaDescription: "Documents and data needed for an e-way bill: invoice or challan, GSTINs, HSN, PINs, Transporter ID, vehicle number, plus what the driver must carry."
 imageAlt: "Checklist clipboard beside a tax invoice, a lorry receipt and a vehicle number plate"
@@ -33,9 +34,7 @@ related: ["eway-bill-generation", "eway-bill-common-errors", "eway-bill-vs-sales
 updateHistory:
   - date: "2026-10-22"
     note: "Merged our separate article on documents required for e-way bill generation into this guide"
-  - date: "2026-10-10"
-    note: "Added the 180-day base document limit and a printable checklist table."
-  - date: "2026-09-10"
+  - date: "2026-10-16"
     note: "First published."
 ---
 > **Quick answer:** To generate an e-way bill you need the invoice, bill of supply or delivery challan, both GSTINs, dispatch and delivery PINs, HSN, value, Transporter ID, and the vehicle number or transport document. Nothing is uploaded: you enter the data, and the document travels with the goods.

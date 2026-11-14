@@ -2,8 +2,9 @@
 title: "E-Way Bill FAQ: 30 Common Questions Answered"
 slug: "eway-bill-faq"
 description: "Short, practical answers to 30 common e-way bill questions on applicability, generation, Part A and Part B, distance, validity, cancellation, corrections, penalties and recent changes."
+publishedAt: "2026-10-16"
 updatedAt: "2026-11-02"
-verifiedAt: "2026-10-13"
+verifiedAt: "2026-10-16"
 seoTitle: "E-Way Bill FAQ: 30 Common Questions Answered"
 metaDescription: "30 e-way bill questions answered briefly: threshold, who generates, Part A/B, 50 km rule, validity, extension, cancellation, corrections, penalties, 2025 changes."
 imageAlt: "Grid of question mark cards each labelled with an e-way bill topic"
@@ -37,9 +38,7 @@ faq:
     a: "No. It applies to movement of goods only."
 related: ["eway-bill-guide", "eway-bill-rules", "eway-bill-validity", "eway-bill-common-errors"]
 updateHistory:
-  - date: "2026-10-13"
-    note: "Rechecked all answers, added questions on MFA and the E-Way Bill 2.0 portal."
-  - date: "2026-09-20"
+  - date: "2026-10-16"
     note: "First published."
 ---
 > **Quick answer:** An e-way bill is generally required when goods move and the consignment value exceeds ₹50,000. It lasts 1 day per 200 km for normal cargo, can be cancelled within 24 hours, cannot have Part A edited, and can be extended within 8 hours before or after expiry.

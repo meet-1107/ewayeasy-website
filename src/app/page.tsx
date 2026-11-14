@@ -15,11 +15,11 @@ import { HelpersSection, HeroMilestones, PartnerStrip, SizesSection, WalletSecti
 import { Stamp, TruckArtBand } from '@/components/HighwayKit';
 import { getAllPosts, toSummary } from '@/lib/content';
 import { UPDATES } from '@/lib/updates';
-import { pageMeta, softwareAppLd } from '@/lib/seo';
+import { pageMeta, softwareAppLd, websiteLd } from '@/lib/seo';
 import { FOUNDER } from '@/lib/site';
 
 export const metadata = pageMeta({
-  title: 'E-Way Bill Generator App: Generate E-Way Bills on Mobile',
+  title: 'E-Way Easy: E-Way Bill Generator App for Mobile',
   description:
     'Generate e-way bills from a GST invoice on your Android phone. Import invoice PDFs, update Part B, extend, cancel or consolidate. No subscription, ₹5 per bill.',
   path: '/',
@@ -66,7 +66,7 @@ export default function Home() {
 
   return (
     <>
-      <JsonLd data={softwareAppLd()} />
+      <JsonLd data={[websiteLd(), softwareAppLd()]} />
 
       {/* A. Hero */}
       <section className="relative overflow-hidden bg-brand-900 text-white">

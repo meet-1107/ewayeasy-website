@@ -4,7 +4,7 @@ slug: "prepare-invoice-data-for-bulk-processing"
 excerpt: "Set up a clean invoice spreadsheet, run simple validation checks and remove duplicates before you upload data for bulk e-way bills or returns."
 category: "business-guides"
 tags: ["bulk processing", "spreadsheet", "data validation", "e-way bill"]
-publishedAt: "2026-07-29"
+publishedAt: "2026-10-16"
 updatedAt: "2026-11-02"
 seoTitle: "Prepare Invoice Data for Bulk Processing: Checklist"
 metaDescription: "How to structure invoice data in a spreadsheet, validate GSTINs, PINs and HSN codes, remove duplicates and prepare files for bulk e-way bill upload."

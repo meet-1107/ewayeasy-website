@@ -2,6 +2,7 @@
 title: "GST Invoice Rules: Format, Mandatory Fields and Time Limits"
 slug: "gst-invoice-rules"
 description: "GST invoice rules in plain language: the mandatory fields of a tax invoice under Rule 46, invoice numbering, HSN digits, time limits, copies, bill of supply, invoice-cum-bill of supply, the ₹200 exception, e-invoicing and common mistakes."
+publishedAt: "2026-11-06"
 updatedAt: "2026-11-06"
 verifiedAt: "2026-11-06"
 seoTitle: "GST Invoice Rules: Format, Mandatory Fields & Time Limits"

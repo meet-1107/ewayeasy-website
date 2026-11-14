@@ -2,8 +2,9 @@
 title: "E-Way Bill Guide: Everything Indian Businesses Need to Know"
 slug: "eway-bill-guide"
 description: "A practical overview of the e-way bill system in India: what it is, when it is required, who generates it, how Part A and Part B work, validity, and links to every detailed guide."
+publishedAt: "2026-10-16"
 updatedAt: "2026-11-02"
-verifiedAt: "2026-10-12"
+verifiedAt: "2026-10-16"
 seoTitle: "E-Way Bill Guide for Indian Businesses (2026)"
 metaDescription: "What an e-way bill is, when it is required, who generates it, Part A vs Part B, validity, cancellation and documents. A practical hub for Indian businesses."
 imageAlt: "Illustration of a goods truck with an invoice and an e-way bill document linked by a route line across India"
@@ -31,10 +32,8 @@ faq:
     a: "For normal cargo, 1 day for every 200 km or part of it. For over-dimensional cargo, 1 day for every 20 km or part of it. The first day ends at midnight of the day after generation."
 related: ["eway-bill-generation", "eway-bill-rules", "documents-required-for-eway-bill", "eway-bill-faq"]
 updateHistory:
-  - date: "2026-10-12"
-    note: "Rechecked thresholds, validity and the January 2025 changes (180-day document limit, 360-day extension cap) against the official portal."
-  - date: "2026-09-04"
-    note: "Added links to the new distance, correction and bulk generation guides."
+  - date: "2026-10-16"
+    note: "First published."
 ---
 > **Quick answer:** An e-way bill is the electronic record generated on the official system before most taxable goods worth more than ₹50,000 are moved in India. The supplier, recipient or transporter generates it in Form GST EWB-01, and it is valid for movement once Part B is filled, except in the 50 km same-state case.
 

@@ -8,6 +8,23 @@ export function absoluteUrl(path = '/') {
 
 export const ORG_ID = `${SITE_URL}/#org`;
 
+/** Site name markup: Google reads it from the home page only, so it is emitted there (src/app/page.tsx). */
+export function websiteLd() {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'WebSite',
+    '@id': `${SITE_URL}/#website`,
+    name: SITE.name,
+    alternateName: ['EWay Easy', 'ewayeasy.in'],
+    url: SITE_URL,
+    inLanguage: 'en-IN',
+    publisher: { '@id': ORG_ID },
+  };
+}
+
+/** Must match the title template in src/app/layout.tsx. */
+export const TITLE_SUFFIX = ' | E-Way Easy';
+
 /** Publisher logo for Article markup: a raster image, as Google asks. */
 export const LOGO_LD = { '@type': 'ImageObject', url: absoluteUrl('/icon-512.png'), width: 512, height: 512 };
 
@@ -73,8 +90,11 @@ export function pageMeta(opts: {
 }): Metadata {
   const url = absoluteUrl(opts.path);
   const image = opts.image ?? '/images/og-default.png';
+  // Title links: brand once, and short. Skip the " | E-Way Easy" suffix when the title already names the
+  // brand or the suffix would push it past ~65 characters (Google shows the site name separately).
+  const withSuffix = !opts.title.includes(SITE.name) && opts.title.length + TITLE_SUFFIX.length <= 65;
   return {
-    title: opts.title,
+    title: withSuffix ? opts.title : { absolute: opts.title },
     description: opts.description,
     // Page-level alternates replace the layout's, so the feed link is repeated here.
     alternates: { canonical: url, types: { 'application/rss+xml': [{ url: '/feed.xml', title: 'E-Way Easy guides and articles' }] } },

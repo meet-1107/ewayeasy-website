@@ -4,7 +4,7 @@ slug: "how-manufacturers-can-simplify-invoice-workflows"
 excerpt: "A practical way for small and mid-sized manufacturers to cut invoice errors and delays by fixing masters, numbering, review steps and the hand-off to dispatch."
 category: "business-guides"
 tags: ["manufacturing", "invoicing", "workflow", "e-way bill"]
-publishedAt: "2026-04-08"
+publishedAt: "2026-10-16"
 updatedAt: "2026-11-02"
 seoTitle: "Simplify Invoice Workflows for Manufacturers (Guide)"
 metaDescription: "How Indian manufacturers can simplify invoicing: clean masters, one numbering series, a review step and a smooth hand-off to e-way bill and dispatch."

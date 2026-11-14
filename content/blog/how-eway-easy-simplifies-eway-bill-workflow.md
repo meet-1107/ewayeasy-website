@@ -4,7 +4,7 @@ slug: "how-eway-easy-simplifies-eway-bill-workflow"
 excerpt: "A walkthrough of the E-Way Easy Android app: one-time setup, the 3-step Invoice → Review EWB → Generated flow, invoice PDF import and managing e-way bills."
 category: "product-updates"
 tags: ["E-Way Easy", "app", "e-way bill workflow", "invoicing"]
-publishedAt: "2026-09-29"
+publishedAt: "2026-10-16"
 updatedAt: "2026-11-02"
 seoTitle: "How E-Way Easy Simplifies Your E-Way Bill Workflow"
 metaDescription: "How the E-Way Easy Android app works: setup, 3-step flow, invoice PDF import, GSTIN autofill, Part B, cancel, extend and ₹5 credits with no subscription."

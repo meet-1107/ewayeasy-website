@@ -2,8 +2,9 @@
 title: "E-Way Bill Validity: Calculation, Extension and Expiry"
 slug: "eway-bill-validity"
 description: "How e-way bill validity is calculated for normal and over-dimensional cargo, when the clock starts and ends, how to extend an expiring bill, and what to do if it expires, with timestamped examples."
+publishedAt: "2026-10-16"
 updatedAt: "2026-11-02"
-verifiedAt: "2026-10-12"
+verifiedAt: "2026-10-16"
 seoTitle: "E-Way Bill Validity: Calculation, Extension, Expiry"
 metaDescription: "E-way bill validity explained: 1 day per 200 km, ODC 1 day per 20 km, midnight rule, 8-hour extension window, 360-day cap, with timestamped examples."
 imageAlt: "Calendar and clock beside a distance scale showing 200 km bands mapped to validity days"
@@ -31,9 +32,7 @@ related: ["eway-bill-distance-rules", "eway-bill-rules", "eway-bill-correction"]
 updateHistory:
   - date: "2026-10-22"
     note: "Merged our separate article on e-way bill validity into this guide"
-  - date: "2026-10-06"
-    note: "Added the 360-day extension cap and more timestamped examples."
-  - date: "2026-09-05"
+  - date: "2026-10-16"
     note: "First published."
 ---
 > **Quick answer:** An e-way bill is valid for 1 day per 200 km or part of it for normal cargo, and 1 day per 20 km for over-dimensional cargo. It expires at midnight, not at the hour of generation, and can be extended only within 8 hours before or after expiry, up to 360 days in total.

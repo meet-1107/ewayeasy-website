@@ -71,10 +71,13 @@ export default function HelpPage() {
             <h2 id="getting-started" className="h2">
               Getting started
             </h2>
-            <p className="mt-3 text-ink-soft">
-              From install to your first invoice. The app guides you through three steps:{' '}
-              <strong className="text-ink">Invoice → Review EWB → Generated</strong>.
-            </p>
+            {/* Shown as visible text because it is also in the FAQPage markup. */}
+            {GETTING_STARTED_FAQ.map((f) => (
+              <div key={f.q} className="mt-3">
+                <h3 className="font-display text-lg font-semibold text-ink">{f.q}</h3>
+                <p className="mt-1 text-ink-soft">{f.a}</p>
+              </div>
+            ))}
             <ol className="mt-6 space-y-4">
               {STEPS.map((s, i) => (
                 <li key={s.title} className="card flex gap-4 p-5">

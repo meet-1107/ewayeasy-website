@@ -11,7 +11,7 @@ import { pageMeta, faqLd } from '@/lib/seo';
 import PlayLink from '@/components/PlayLink';
 
 export const metadata = pageMeta({
-  title: 'E-Way Bill App for Manufacturers | Invoice + EWB on Phone',
+  title: 'E-Way Bill App for Manufacturers: Invoice + EWB on Phone',
   description:
     'For factories that dispatch daily: make the sales invoice, review e-way bill details with HSN and PIN-code distance, and keep the truck moving. Free tools included.',
   path: '/solutions/manufacturers',

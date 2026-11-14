@@ -2,8 +2,9 @@
 title: "How to Generate an E-Way Bill: Complete Process"
 slug: "eway-bill-generation"
 description: "Step-by-step process to generate an e-way bill on the official portal: login, Generate New, transaction type, sub-type, document details, Part A, Part B, submit and print. Also covers SMS, app, API and IRN-based generation."
+publishedAt: "2026-10-16"
 updatedAt: "2026-11-02"
-verifiedAt: "2026-10-11"
+verifiedAt: "2026-10-16"
 seoTitle: "How to Generate an E-Way Bill: Step-by-Step (2026)"
 metaDescription: "Generate an e-way bill on the official portal step by step: Part A, Part B, transaction types, sub-types and printing. Plus SMS, app, API and IRN routes."
 imageAlt: "Flow diagram showing login, Part A entry, Part B entry and a generated e-way bill with a 12-digit number"
@@ -35,9 +36,7 @@ updateHistory:
     note: "Updated the E-Way Easy section with invoice PDF import and how the app files through an authorised GSP."
   - date: "2026-10-22"
     note: "Merged our separate article on generating an e-way bill step by step into this guide"
-  - date: "2026-10-08"
-    note: "Added note on multi-factor authentication at login and the 180-day base document limit."
-  - date: "2026-09-02"
+  - date: "2026-10-16"
     note: "First published."
 ---
 > **Quick answer:** Log in to the official e-way bill portal, choose Generate New, enter the transaction, document and goods details in Part A, add the vehicle or transport details in Part B, and submit to get a 12-digit e-way bill number. SMS, the official app, bulk upload, authorised API and IRN are other routes.

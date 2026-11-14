@@ -89,9 +89,9 @@ slug: "what-is-an-eway-bill"
 excerpt: "One or two sentences, max ~160 chars."
 category: "eway-bill"          # one of: eway-bill | gst-compliance | invoicing | business-guides | product-updates
 tags: ["e-way bill", "basics"]
-publishedAt: "2026-05-04"      # between 2026-04-01 and 2026-10-14, spread out
-updatedAt: "2026-09-20"        # >= publishedAt, <= 2026-10-14
-verifiedAt: "2026-10-10"       # for compliance articles; omit for non-compliance pieces
+publishedAt: "2026-11-14"      # the real date the article is added to the site; never backdate
+updatedAt: "2026-11-14"        # >= publishedAt; change only for a real content edit
+verifiedAt: "2026-11-14"       # the day facts were checked against official sources; compliance articles only
 seoTitle: "What Is an E-Way Bill? Rules, Parts & Process (2026 Guide)"   # <= 60 chars ideally
 metaDescription: "<= 155 chars"
 imageAlt: "Describe the cover graphic in words"

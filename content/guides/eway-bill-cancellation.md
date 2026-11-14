@@ -2,8 +2,9 @@
 title: "How to Cancel an E-Way Bill (24-Hour Rule)"
 slug: "eway-bill-cancellation"
 description: "When and how to cancel an e-way bill on the official portal, the 24-hour limit, why cancellation is blocked after verification, what happens to the invoice, and what to do after 24 hours."
+publishedAt: "2026-10-16"
 updatedAt: "2026-11-02"
-verifiedAt: "2026-10-10"
+verifiedAt: "2026-10-16"
 seoTitle: "How to Cancel an E-Way Bill: The 24-Hour Rule"
 metaDescription: "Cancel an e-way bill within 24 hours of generation. Steps on the portal, who can cancel, when it is blocked, and what to do if you miss the window."
 imageAlt: "An e-way bill marked cancelled with a 24-hour clock beside it"
@@ -31,9 +32,7 @@ related: ["eway-bill-correction", "eway-bill-common-errors", "eway-bill-rules"]
 updateHistory:
   - date: "2026-10-22"
     note: "Merged our separate article on cancelling an e-way bill into this guide"
-  - date: "2026-09-18"
-    note: "Added the section on what to do after the 24-hour window."
-  - date: "2026-09-07"
+  - date: "2026-10-16"
     note: "First published."
 ---
 > **Quick answer:** You can cancel an e-way bill within 24 hours of generation if the goods were not transported, or not as per its details, unless it has been verified in transit. After that it cannot be cancelled on the portal; the recipient may reject it within 72 hours or before delivery, if earlier.

@@ -2,8 +2,9 @@
 title: "E-Way Bill vs Sales Invoice: Key Differences"
 slug: "eway-bill-vs-sales-invoice"
 description: "A clear comparison of the e-way bill and the sales (tax) invoice: purpose, legal basis, who issues them, when they are needed, contents, validity, cancellation, and how they work together."
+publishedAt: "2026-10-16"
 updatedAt: "2026-11-02"
-verifiedAt: "2026-10-10"
+verifiedAt: "2026-10-16"
 seoTitle: "E-Way Bill vs Sales Invoice: Key Differences"
 metaDescription: "E-way bill vs sales (tax) invoice: purpose, law, who issues, threshold, validity, cancellation and contents compared, with examples and common mix-ups."
 imageAlt: "Side-by-side comparison of a tax invoice and an e-way bill with matching fields highlighted"
@@ -31,7 +32,7 @@ related: ["documents-required-for-eway-bill", "eway-bill-generation", "eway-bill
 updateHistory:
   - date: "2026-10-22"
     note: "Merged our separate article on e-way bill vs tax invoice into this guide"
-  - date: "2026-09-15"
+  - date: "2026-10-16"
     note: "First published."
 ---
 > **Quick answer:** A sales invoice records a sale and the GST charged on it; an e-way bill records the movement of goods. Every taxable supply by a registered person needs an invoice, while an e-way bill is generally needed only when goods above ₹50,000 move. One does not replace the other.

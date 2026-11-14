@@ -2,8 +2,9 @@
 title: "Common E-Way Bill Errors and How to Fix Them"
 slug: "eway-bill-common-errors"
 description: "The everyday problems businesses face while generating e-way bills, explained in plain words: GSTIN issues, duplicate documents, distance rejections, tax mismatches, login trouble, expired bills and more, with practical fixes."
+publishedAt: "2026-10-16"
 updatedAt: "2026-11-02"
-verifiedAt: "2026-10-13"
+verifiedAt: "2026-10-16"
 seoTitle: "Common E-Way Bill Errors and How to Fix Them"
 metaDescription: "Plain-language fixes for common e-way bill problems: invalid GSTIN, duplicate document, distance rejected, tax mismatch, OTP login, Part B missing, expiry."
 imageAlt: "Warning icons next to e-way bill fields like GSTIN, PIN code, HSN and distance, each with a fix tick"
@@ -47,9 +48,7 @@ updateHistory:
     note: "Rebuilt around the questions people ask when something fails, with a direct fix under each. Added official error codes checked against the e-way bill API error list."
   - date: "2026-10-22"
     note: "Merged our separate article on common e-way bill errors and solutions into this guide"
-  - date: "2026-10-03"
-    note: "Added login and MFA issues and the 180-day document date problem."
-  - date: "2026-09-14"
+  - date: "2026-10-16"
     note: "First published."
 ---
 > **Quick answer:** Most e-way bill errors come from a mistyped or inactive GSTIN, a duplicate document number, totals that do not add up, a distance more than 10% above the portal's PIN-to-PIN figure, or a wrongly typed vehicle number. Match your exact message to the fixes below.
