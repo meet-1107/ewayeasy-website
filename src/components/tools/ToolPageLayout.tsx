@@ -6,7 +6,7 @@ import ComplianceNote from '@/components/ComplianceNote';
 import JsonLd from '@/components/JsonLd';
 import ToolIcon from './ToolIcon';
 import ToolUsageTracker from './ToolUsageTracker';
-import { faqLd } from '@/lib/seo';
+import { ORG_ID, absoluteUrl, faqLd } from '@/lib/seo';
 import { getTool, toolHref } from '@/lib/tools';
 
 export type Faq = { q: string; a: string };
@@ -39,7 +39,26 @@ export default function ToolPageLayout({
   const t = getTool(slug);
   return (
     <>
-      <JsonLd data={faqLd(faq)} />
+      <JsonLd
+        data={[
+          {
+            // Each tool is a free browser app; this markup mirrors what the page shows.
+            '@context': 'https://schema.org',
+            '@type': 'WebApplication',
+            name: t.name,
+            url: absoluteUrl(toolHref(slug)),
+            description,
+            applicationCategory: 'BusinessApplication',
+            operatingSystem: 'Any (web browser)',
+            browserRequirements: 'Requires JavaScript',
+            isAccessibleForFree: true,
+            inLanguage: 'en-IN',
+            offers: { '@type': 'Offer', price: '0', priceCurrency: 'INR' },
+            publisher: { '@id': ORG_ID },
+          },
+          faqLd(faq),
+        ]}
+      />
       <div className="no-print">
         <PageHeader
           eyebrow={eyebrow}

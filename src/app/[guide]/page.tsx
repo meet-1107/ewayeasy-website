@@ -3,7 +3,10 @@ import { notFound } from 'next/navigation';
 import ArticleLayout from '@/components/ArticleLayout';
 import JsonLd from '@/components/JsonLd';
 import { getAllGuides, getGuide } from '@/lib/content';
-import { absoluteUrl, pageMeta } from '@/lib/seo';
+import { absoluteUrl, articleLd, pageMeta } from '@/lib/seo';
+
+// Guides about GST invoices (not e-way bills) get their own breadcrumb and labels.
+const INVOICE_GUIDES = new Set(['gst-invoice-rules']);
 import { AUTHOR, SITE } from '@/lib/site';
 
 // E-way bill learning centre pages live at the site root, e.g. /eway-bill-rules.
@@ -34,36 +37,39 @@ export default async function GuidePage({ params }: { params: Promise<{ guide: s
   if (!g) notFound();
   const all = getAllGuides();
   const related = g.related.map((s) => all.find((x) => x.slug === s)).filter(Boolean);
+  const isInvoice = INVOICE_GUIDES.has(g.slug);
   const crumbs = g.slug === 'eway-bill-guide'
     ? [{ name: 'E-Way Bill Guide', href: '/eway-bill-guide' }]
-    : [{ name: 'E-Way Bill Guide', href: '/eway-bill-guide' }, { name: g.title, href: `/${g.slug}` }];
+    : isInvoice
+      ? [{ name: 'Guides', href: '/guides' }, { name: g.title, href: `/${g.slug}` }]
+      : [{ name: 'E-Way Bill Guide', href: '/eway-bill-guide' }, { name: g.title, href: `/${g.slug}` }];
 
   return (
     <>
       <JsonLd
-        data={{
-          '@context': 'https://schema.org',
-          '@type': 'Article',
+        data={articleLd({
+          type: 'Article',
+          path: `/${g.slug}`,
           headline: g.title,
           description: g.metaDescription ?? g.excerpt,
-          datePublished: g.publishedAt,
-          dateModified: g.updatedAt,
-          author: { '@type': 'Person', name: AUTHOR.name, url: absoluteUrl(`/authors/${AUTHOR.slug}`) },
-          publisher: { '@type': 'Organization', name: SITE.name },
-          mainEntityOfPage: absoluteUrl(`/${g.slug}`),
-          inLanguage: 'en-IN',
-        }}
+          published: g.publishedAt,
+          modified: g.updatedAt,
+          image: g.image,
+          imageAlt: g.imageAlt,
+          section: isInvoice ? 'GST invoices' : 'E-way bills',
+          author: { name: AUTHOR.name, url: absoluteUrl(`/authors/${AUTHOR.slug}`) },
+        })}
       />
       <ArticleLayout
         doc={g}
-        category="eway-bill"
+        category={isInvoice ? 'invoicing' : 'eway-bill'}
         placement={`guide-${g.slug}`}
         crumbs={crumbs}
         updateHistory={g.updateHistory}
-        eyebrow={<span className="chip">E-Way Bill Learning Centre</span>}
+        eyebrow={<span className="chip">{isInvoice ? 'GST Invoice Guide' : 'E-Way Bill Learning Centre'}</span>}
         after={
           <section className="container pb-8">
-            <h2 className="h2">More e-way bill guides</h2>
+            <h2 className="h2">{isInvoice ? 'More guides' : 'More e-way bill guides'}</h2>
             <div className="mt-6 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
               {(related.length ? related : all.filter((x) => x.slug !== g.slug).slice(0, 6)).map((r) => (
                 <Link key={r!.slug} href={`/${r!.slug}`} className="rounded-2xl border border-brand-900/10 bg-white p-5 transition hover:border-brand-500">

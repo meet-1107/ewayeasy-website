@@ -6,6 +6,61 @@ export function absoluteUrl(path = '/') {
   return `${SITE_URL}${path === '/' ? '' : path}`;
 }
 
+export const ORG_ID = `${SITE_URL}/#org`;
+
+/** Publisher logo for Article markup: a raster image, as Google asks. */
+export const LOGO_LD = { '@type': 'ImageObject', url: absoluteUrl('/icon-512.png'), width: 512, height: 512 };
+
+/** Real pixel size of the images we use for previews (covers are 1280×720, the default card is 1200×630). */
+export function imageSize(src: string) {
+  return src.includes('/images/covers/') ? { width: 1280, height: 720 } : { width: 1200, height: 630 };
+}
+
+/** Content dates are stored as YYYY-MM-DD; search engines prefer ISO 8601 with a time zone (IST). */
+export function isoDate(d?: string) {
+  if (!d) return undefined;
+  return d.includes('T') ? d : `${d}T09:00:00+05:30`;
+}
+
+export function imageLd(src?: string, alt?: string) {
+  const path = src ?? '/images/og-default.png';
+  return { '@type': 'ImageObject', url: absoluteUrl(path), ...imageSize(path), ...(alt ? { caption: alt } : {}) };
+}
+
+/** Article / BlogPosting markup shared by guides and blog posts. Must match what the page shows. */
+export function articleLd(o: {
+  type: 'Article' | 'BlogPosting';
+  path: string;
+  headline: string;
+  description: string;
+  published?: string;
+  modified?: string;
+  image?: string;
+  imageAlt?: string;
+  section?: string;
+  keywords?: string[];
+  wordCount?: number;
+  author: { name: string; url: string };
+}) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': o.type,
+    headline: o.headline,
+    description: o.description,
+    datePublished: isoDate(o.published),
+    dateModified: isoDate(o.modified ?? o.published),
+    author: { '@type': 'Person', name: o.author.name, url: o.author.url },
+    publisher: { '@type': 'Organization', '@id': ORG_ID, name: SITE.name, logo: LOGO_LD },
+    mainEntityOfPage: { '@type': 'WebPage', '@id': absoluteUrl(o.path) },
+    image: [imageLd(o.image, o.imageAlt)],
+    ...(o.section ? { articleSection: o.section } : {}),
+    ...(o.keywords?.length ? { keywords: o.keywords.join(', ') } : {}),
+    ...(o.wordCount ? { wordCount: o.wordCount } : {}),
+    inLanguage: 'en-IN',
+    isAccessibleForFree: true,
+  };
+}
+
 export function pageMeta(opts: {
   title: string;
   description: string;
@@ -21,7 +76,8 @@ export function pageMeta(opts: {
   return {
     title: opts.title,
     description: opts.description,
-    alternates: { canonical: url },
+    // Page-level alternates replace the layout's, so the feed link is repeated here.
+    alternates: { canonical: url, types: { 'application/rss+xml': [{ url: '/feed.xml', title: 'E-Way Easy guides and articles' }] } },
     openGraph: {
       title: opts.title,
       description: opts.description,
@@ -29,9 +85,9 @@ export function pageMeta(opts: {
       siteName: SITE.name,
       locale: SITE.locale,
       type: opts.type ?? 'website',
-      images: [{ url: image, width: 1200, height: 630 }],
+      images: [{ url: image, ...imageSize(image) }],
       ...(opts.type === 'article'
-        ? { publishedTime: opts.publishedTime, modifiedTime: opts.modifiedTime, authors: opts.authors }
+        ? { publishedTime: isoDate(opts.publishedTime), modifiedTime: isoDate(opts.modifiedTime ?? opts.publishedTime), authors: opts.authors }
         : {}),
     },
     twitter: { card: 'summary_large_image', title: opts.title, description: opts.description, images: [image] },

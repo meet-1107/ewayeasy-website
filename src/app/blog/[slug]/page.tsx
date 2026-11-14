@@ -4,7 +4,7 @@ import ArticleLayout from '@/components/ArticleLayout';
 import BlogCard from '@/components/BlogCard';
 import JsonLd from '@/components/JsonLd';
 import { getAllPosts, getPost, relatedPosts, toSummary } from '@/lib/content';
-import { absoluteUrl, pageMeta } from '@/lib/seo';
+import { absoluteUrl, pageMeta, articleLd } from '@/lib/seo';
 import { AUTHOR, SITE, categoryName } from '@/lib/site';
 
 export const dynamicParams = false;
@@ -37,22 +37,20 @@ export default async function PostPage({ params }: { params: Promise<{ slug: str
   return (
     <>
       <JsonLd
-        data={{
-          '@context': 'https://schema.org',
-          '@type': 'BlogPosting',
+        data={articleLd({
+          type: 'BlogPosting',
+          path: `/blog/${post.slug}`,
           headline: post.title,
           description: post.metaDescription ?? post.excerpt,
-          datePublished: post.publishedAt,
-          dateModified: post.updatedAt,
-          author: { '@type': 'Person', name: AUTHOR.name, url: absoluteUrl(`/authors/${AUTHOR.slug}`) },
-          publisher: { '@type': 'Organization', name: SITE.name, logo: { '@type': 'ImageObject', url: absoluteUrl('/favicon.svg') } },
-          mainEntityOfPage: absoluteUrl(`/blog/${post.slug}`),
-          image: absoluteUrl(post.image ?? "/images/og-default.png"),
-          articleSection: categoryName(post.category),
-          keywords: post.tags.join(', '),
+          published: post.publishedAt,
+          modified: post.updatedAt,
+          image: post.image,
+          imageAlt: post.imageAlt,
+          section: categoryName(post.category),
+          keywords: post.tags,
           wordCount: post.words,
-          inLanguage: 'en-IN',
-        }}
+          author: { name: AUTHOR.name, url: absoluteUrl(`/authors/${AUTHOR.slug}`) },
+        })}
       />
       <ArticleLayout
         doc={post}
