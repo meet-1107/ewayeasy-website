@@ -27,6 +27,8 @@ faq:
     a: "Numbers already issued are not renumbered, as reported. Your systems and records need to handle both the old 12-digit numbers and the new 14-digit numbers side by side."
   - q: "I generate e-way bills on the portal by hand. Do I need to do anything?"
     a: "Usually very little. Check anything where you type or store the number yourself: spreadsheets, dispatch registers, printed formats and any software that has a fixed 12-character field."
+  - q: "Is the E-Way Easy app ready for 14-digit e-way bill numbers?"
+    a: "Yes. The E-Way Easy app is ready for the 14-digit e-way bill number, so there is nothing to change in the app on your side. Check your own spreadsheets, registers and printed formats."
 related: ["what-is-an-eway-bill", "eway-bill-part-a-and-part-b-explained", "prepare-invoice-data-for-bulk-processing"]
 ---
 > **Quick answer:** According to a GSTN advisory dated 4 November 2026, from 1 January 2027 the e-way bill number grows from 12 digits to 14 digits and the consolidated e-way bill number from 10 digits to 11 digits, because the existing number range is running out. The rules themselves do not change. What you need to check is anywhere the number is stored, typed, validated or printed: ERP and billing software, spreadsheets and transport documents.
@@ -73,6 +75,8 @@ This article is based on the GSTN advisory as reported by several tax publicatio
 A Rajkot pipe manufacturer keeps a dispatch register in Excel and generates e-way bills from its billing software through a GSP. In December 2026 it formats the register's e-way bill column as Text and asks the GSP for confirmation that its integration accepts 14-digit numbers. On 2 January 2027 it generates its first e-way bill of the year, checks that the full 14-digit number appears in the billing software, on the printed invoice and in the register, and only then continues normal dispatch.
 
 ## Where E-Way Easy fits
+
+**The E-Way Easy app is ready for 14-digit e-way bill numbers.** If you generate e-way bills in the app, there is nothing to change in the app on your side. Your own spreadsheets and printed formats still need the checks above.
 
 If you prepare dispatch data in spreadsheets, the free [bulk e-way bill data checker](/tools/bulk-eway-bill-data-checker) helps you clean the file before uploading it on the portal, and our guides on [Part A and Part B](/blog/eway-bill-part-a-and-part-b-explained) and [e-way bill validity](/eway-bill-validity) still apply unchanged.
 
