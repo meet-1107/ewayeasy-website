@@ -5,7 +5,7 @@ excerpt: "Invoice, bill, receipt, cash memo, receipt voucher: what each word mea
 category: "invoicing"
 tags: ["invoice vs bill", "receipt", "receipt voucher", "cash memo", "tax invoice"]
 publishedAt: "2026-11-06"
-updatedAt: "2026-11-06"
+updatedAt: "2026-11-16"
 verifiedAt: "2026-11-06"
 seoTitle: "Invoice vs Bill vs Receipt: Differences Under GST in India"
 metaDescription: "Invoice vs bill vs receipt in India: everyday meaning, GST terms like tax invoice, bill of supply and receipt voucher, and which document allows ITC."
@@ -19,27 +19,32 @@ sources:
     url: "https://www.cbic.gov.in/"
 faq:
   - q: "Is a bill the same as an invoice?"
-    a: "In everyday Indian business, yes, the words are used interchangeably for the seller's document demanding payment. Under GST, the legal names are tax invoice (with GST) and bill of supply (without GST)."
+    a: "In everyday Indian business, yes. Both words mean the seller's document asking for payment. Under GST, the legal names are tax invoice (with GST) and bill of supply (without GST)."
   - q: "What is the difference between an invoice and a receipt?"
     a: "An invoice records a sale and asks for payment. A receipt confirms that payment has been received. One sale can have one invoice and several receipts if the buyer pays in parts."
   - q: "Which document does the buyer need for input tax credit?"
-    a: "A valid tax invoice issued by a registered supplier, showing GST and the buyer's GSTIN. A receipt, cash memo or bill of supply does not support input tax credit."
+    a: "A valid tax invoice from a registered supplier, showing GST and the buyer's correct GSTIN. A receipt, cash memo without tax invoice particulars, proforma or bill of supply does not support input tax credit."
   - q: "What is a receipt voucher under GST?"
-    a: "It is the document a registered supplier issues when it receives an advance before supplying goods or services, as set out in Rule 50 of the CGST Rules, 2017. The final tax invoice is issued later when the supply is made."
+    a: "It is the document a registered supplier issues when it receives an advance before supplying goods or services, under Rule 50 of the CGST Rules, 2017. The tax invoice is issued later, when the supply is made."
   - q: "Is a cash memo valid under GST?"
-    a: "A cash memo is a common retail bill format. For a registered seller making a taxable supply, it must still carry the particulars of a tax invoice; otherwise it is just an informal bill."
-  - q: "Is a bill generator the same as an invoice generator?"
-    a: "Usually, yes. Most people searching for a bill generator want to create a sales invoice with item lines, totals and optionally GST, then save it as PDF."
+    a: "A cash memo is a common retail bill format. For a registered seller making a taxable supply, it must still carry the particulars of a tax invoice. Without them, it is just an informal bill."
+  - q: "Is a proforma invoice a bill?"
+    a: "No. A proforma invoice is an offer or a request for advance payment, issued before the supply. It creates no GST entry for either side; the tax invoice comes at supply."
 related: ["invoice-with-gst-vs-without-gst", "delivery-challan-vs-tax-invoice", "gstin-verification-what-to-check"]
 ---
-> **Quick answer:** In daily business, "bill" and "invoice" mean the same thing: the seller's document listing what was sold and the amount due. A receipt is different; it confirms that money has been paid. Under GST, the legal names are tax invoice (GST charged), bill of supply (no GST), and receipt voucher (advance received), and only a valid tax invoice lets the buyer claim input tax credit.
+> **Quick answer:** In daily business, "bill" and "invoice" mean the same thing: the seller's document listing what was sold and the amount due. A receipt is different, because it confirms money has been paid. Under GST, only a valid tax invoice lets a registered buyer claim input tax credit; receipts and vouchers record money, not the supply.
 
-Ask ten shopkeepers the difference between a bill and an invoice and most will say there is none. They are right in practice. The confusion starts when GST terms enter the picture, because the law uses its own names and gives each document a specific job. This post sorts out the everyday words from the legal ones, so you know which document to issue and which one to ask for.
+Ask ten shopkeepers the difference between a bill and an invoice, and most will say there is none. In practice they are right.
+
+The confusion starts with GST, because the law uses its own names and gives each document one job. This post maps the everyday words to the legal ones and follows a single order from quote to final payment. Whether you should charge GST at all is a separate question, covered in [invoice with GST vs without GST](/blog/invoice-with-gst-vs-without-gst).
 
 ## Everyday words vs GST terms
 
+Everyday business words and GST terms do not line up one to one. "Bill" and "invoice" both mean the seller's demand for payment, while "receipt" means proof of payment. GST adds its own documents, from tax invoice and bill of supply to receipt, refund and payment vouchers, each with a fixed issuer and purpose.
+
 | Everyday word | What people usually mean | Closest GST document | Issued by |
 |---|---|---|---|
+| Quotation / proforma | Price offer before the sale | None; not a tax document | Seller |
 | Invoice | Seller's document for a sale, asking for payment | Tax invoice (Rule 46) or bill of supply (Rule 49) | Seller |
 | Bill | Same as invoice, often for smaller or retail sales | Tax invoice or bill of supply | Seller |
 | Cash memo / retail bill | Bill for a counter sale paid on the spot | Tax invoice (if registered and taxable) | Seller |
@@ -47,57 +52,67 @@ Ask ten shopkeepers the difference between a bill and an invoice and most will s
 | Advance receipt | Acknowledgement of money paid before supply | Receipt voucher (Rule 50) | Supplier |
 | Payment voucher | Record of payment made | Payment voucher under reverse charge (Rule 52) | Recipient |
 
-The rest of this post explains each row.
+A quick rule: if the document records goods or services handed over, it is an invoice or bill. If it records money changing hands, it is a receipt or voucher.
 
 ## Invoice and bill: two words, one job
 
-When a business sells something, it gives the buyer a document showing the items, quantities, rates, any tax and the total. Whether you call it a bill or an invoice makes no legal difference. What matters is the content.
+An invoice or bill is the seller's document for a sale: items, quantities, rates, any tax and the total due. Calling it a bill or an invoice makes no legal difference. Under GST, what decides its legal form is whether tax is charged: a tax invoice if it is, a bill of supply if it is not.
 
-Under GST, that document takes one of two legal forms:
+The fields each form must contain are listed in the [GST invoice rules guide](/gst-invoice-rules).
 
-- **Tax invoice:** issued by a registered person for a taxable supply, with GST shown.
-- **Bill of supply:** issued by a registered person when no GST is charged, such as exempt supplies or sales by a composition dealer.
+The content decides the document, not the heading. If a registered seller charges GST on a paper titled "Bill", it still needs every tax invoice particular, so fix the format rather than the name.
 
-If you are unsure which of the two applies to you, our guide on [invoices with GST vs without GST](/blog/invoice-with-gst-vs-without-gst) walks through the decision. The fields each must contain are listed in the [GST invoice rules guide](/gst-invoice-rules).
+## Proforma invoice and quotation: before the sale
+
+A proforma invoice is a seller's advance statement of what a sale will cost, sent before the goods or services are supplied. It is an offer or a request for advance payment, not a record of a supply. It carries no GST liability for the seller and gives the buyer no input tax credit.
+
+Buyers often ask for a proforma to get internal approval or to release an advance. Once the advance arrives, the registered seller issues a receipt voucher; at supply, it issues the tax invoice.
+
+Keep proformas in a separate series from tax invoices. If both share one series, your invoice numbers will show gaps that you then have to explain.
 
 ## Receipt: proof of payment, not of sale
 
-An invoice says "you owe this". A receipt says "you have paid this". The two often get combined in retail, where the bill is stamped "Paid" at the counter. In B2B trade they are usually separate: the invoice goes with the goods and the receipt is given when the cheque, UPI or bank transfer arrives.
+A receipt is a document that confirms money has been received: it says "you have paid this", while an invoice says "you owe this". In retail, the two are often combined when the bill is stamped "Paid". In B2B trade they are usually separate: the invoice goes with the goods and the receipt follows the payment.
 
-A receipt is useful for your accounts and for the buyer's proof of payment. It is not a GST document. It does not carry tax, and a buyer cannot claim input tax credit on a receipt.
+A receipt helps your accounts and gives the buyer proof of payment. It is not a GST document, does not carry tax, and cannot support input tax credit.
+
+For part payments, issue one receipt per payment and quote the invoice number on each. That makes it easy to see what is still outstanding against each invoice.
 
 ## Receipt voucher: when money comes before the supply
 
-GST has a specific document for advances. When a registered supplier receives an advance payment before supplying goods or services, it issues a **receipt voucher** (Section 31(3)(d), Rule 50). The voucher records the amount received, the rate of tax and the tax amount where applicable, and the place of supply. When the actual supply happens, a tax invoice is issued and the advance is adjusted.
+A receipt voucher is the GST document a registered supplier issues when it receives an advance before supplying goods or services (Section 31(3)(d), Rule 50). It records the amount, the tax rate and amount where applicable, and the place of supply. When the supply happens, a tax invoice is issued and the advance is adjusted.
 
-Whether tax is payable at the time of the advance depends on whether it is for goods or services and on the current notifications, so check the latest position before you treat an advance.
+Whether tax is payable when the advance comes in depends on whether it is for goods or services and on current notifications. Check the latest position before you account for an advance.
 
-If the supply does not happen and the advance is returned, GST law provides a refund voucher (Rule 51).
+If the supply does not happen and you return the advance, GST law provides a refund voucher (Rule 51). Issue it alongside the bank transfer, so your records show why the advance was reversed.
 
 ## Payment voucher: a brief note
 
-A **payment voucher** (Rule 52) is issued by the recipient, not the supplier, when the recipient is liable to pay tax under reverse charge and pays the supplier. Most small sellers will rarely issue one, but it explains why you may see the term in accounting software.
+A payment voucher is issued by the recipient, not the supplier, when the recipient must pay tax under reverse charge and pays the supplier (Rule 52). Most small sellers rarely issue one. It mainly explains why the term appears in accounting software menus next to receipts and invoices.
 
 ## Cash memo and retail bill
 
-A cash memo is the short bill printed at a counter for walk-in customers. For an unregistered shop, it is an informal bill. For a registered shop making taxable sales, it is still a tax invoice in law and needs the required particulars, even if the format is compact. A memo with only item names and a total is not enough for a registered seller.
+A cash memo is the short bill printed at a counter for walk-in customers who pay on the spot. For an unregistered shop, it is an informal bill. For a registered shop making taxable sales, it is a tax invoice in law and needs the required particulars, even in a compact format.
 
-## Example (illustrative): one order, four documents
+A memo with only item names and a total is not enough for a registered seller. If a business customer pays at the counter and wants credit, take their GSTIN and issue a full tax invoice, not the short memo.
 
-A Surat textile trader (sample GSTIN `24ABCDE1234F1Z5`) gets an order from a Pune boutique (sample GSTIN `27PQRSX5678K1Z3`) for sarees worth ₹60,000 before tax.
+## Example (illustrative): one order, five documents
+
+Here is one order traced through every document it produces. A Surat textile trader (sample GSTIN `24ABCDE1234F1Z5`) gets an order from a Pune boutique (sample GSTIN `27PQRSX5678K1Z3`) for sarees worth ₹60,000 before tax. The boutique asks for a quote, pays an advance, receives the goods and pays the balance.
 
 | Stage | What happens | Document | GST shown? |
 |---|---|---|---|
-| 1 | Boutique pays ₹20,000 advance | Receipt voucher from the trader | As applicable to the advance |
-| 2 | Trader dispatches the sarees | Tax invoice with IGST (Gujarat to Maharashtra); e-way bill generated since value crosses the threshold | Yes |
-| 3 | Boutique pays the balance | Receipt or payment acknowledgement | No |
-| 4 | Boutique files its return | Claims credit on the tax invoice | Based on the invoice |
+| 1 | Boutique asks for a price | Proforma invoice from the trader | Indicative only; no tax liability |
+| 2 | Boutique pays ₹20,000 advance | Receipt voucher from the trader | As applicable to the advance |
+| 3 | Trader dispatches the sarees | Tax invoice with IGST (Gujarat to Maharashtra); e-way bill generated since value crosses the threshold | Yes |
+| 4 | Boutique pays the balance | Receipt or payment acknowledgement | No |
+| 5 | Boutique files its return | Claims credit on the tax invoice | Based on the invoice |
 
-Only the tax invoice at stage 2 supports the boutique's input tax credit. The receipt voucher and the receipt are records of money; the invoice is the record of the supply. For how the e-way bill relates to the invoice, see [e-way bill vs sales invoice](/eway-bill-vs-sales-invoice).
+Only the tax invoice at stage 3 supports the boutique's input tax credit. The proforma, voucher and receipt are records of an offer or of money; the invoice is the record of the supply.
 
 ## Which document does the buyer need for input tax credit?
 
-For a registered buyer, the answer is simple: **a valid tax invoice** issued by a registered supplier, with GST shown and the buyer's correct GSTIN. Other conditions apply too, such as the supplier reporting the invoice in its return, so the invoice alone does not guarantee credit, but without it there is nothing to claim.
+A registered buyer needs a valid tax invoice from a registered supplier, showing GST and the buyer's correct GSTIN, to claim input tax credit. Other conditions apply too, such as the supplier reporting the invoice in its return. So the invoice alone does not guarantee credit, but without it there is nothing to claim.
 
 What does not support credit:
 
@@ -107,30 +122,33 @@ What does not support credit:
 - A quotation or proforma invoice
 - A delivery challan (see [delivery challan vs tax invoice](/blog/delivery-challan-vs-tax-invoice))
 
-If you are the buyer, check the supplier's GSTIN before you pay. Our [GSTIN validator](/tools/gstin-validator) confirms the format and check digit, and the official portal shows registration status.
-
-## When to use each
-
-- **Selling goods or services as a registered person, GST applicable:** tax invoice.
-- **Registered but no GST charged (exempt or composition):** bill of supply.
-- **Not registered:** plain bill or cash memo, no GST.
-- **Customer pays before you supply:** receipt voucher (if registered), then tax invoice at supply.
-- **Customer pays after the invoice:** receipt, if they want proof of payment.
-- **Goods move without a sale:** delivery challan, not an invoice.
+If you are the buyer, check the supplier's GSTIN before you pay. If a supplier sends only a receipt, ask for the tax invoice before you book the credit.
 
 ## Why "bill generator" usually means invoice maker
 
-People search for "bill generator", "bill maker" and "invoice generator" interchangeably. In nearly every case they want the same thing: a page where they type the seller's details, the buyer's details and item lines, see the totals and tax worked out, and save a clean PDF to send on WhatsApp or email. A receipt maker is a much narrower tool.
+People search for "bill generator", "bill maker" and "invoice generator" to mean the same tool. In nearly every case they want to enter seller, buyer and item details, see totals and tax worked out, and save a PDF. A receipt maker is a much narrower tool that only acknowledges a payment.
 
-So if you need to [make a bill online](/invoice-generator), use an invoice generator and switch GST on or off depending on whether you are issuing a tax invoice or a bill without GST. Our free generator does this without sign-up. For fixed layouts, browse the [GST tax invoice template](/sales-invoice-templates/gst-tax-invoice) and the [simple sales invoice](/sales-invoice-templates/simple-sales-invoice).
+So if you need to [make a bill online](/invoice-generator), use an invoice generator, with GST on for a tax invoice and off for a bill without tax.
 
 ## Common mistakes
+
+Most mix-ups here come from treating a money document as a sale document, or the other way round. A receipt is handed over where a tax invoice was needed, or an advance goes unrecorded until the goods leave. Each mistake either costs the buyer credit or leaves your books out of step with GST.
 
 - **Giving a receipt instead of an invoice** to a registered buyer. They need the tax invoice to claim credit.
 - **Calling a proforma invoice a tax invoice.** A proforma is an offer; the tax invoice is issued at supply.
 - **Not issuing a receipt voucher for advances** when you are registered.
-- **Assuming a cash memo needs no particulars** because it is short. If you are registered, the tax invoice rules apply.
-- **Printing "Invoice" on a bill of supply.** Use the correct title so the buyer knows no GST was charged.
+- **Assuming a cash memo needs no particulars** because it is short.
+- **Refunding an advance without a refund voucher.** Rule 51 provides the voucher for exactly this case.
+
+## Quick action checklist
+
+1. List every document type your business issues today, from quote to receipt.
+2. Give proformas, tax invoices and receipts their own number series.
+3. Check that every advance received in the last month has a receipt voucher.
+4. Make sure counter sales to registered buyers get a full tax invoice.
+5. Quote the invoice number on every receipt for part payments.
+
+Need a clean layout for the sale document itself? Browse the free [sales invoice templates](/sales-invoice-templates) and pick the one that matches how you bill.
 
 ## Official sources
 

@@ -4,6 +4,8 @@ import DownloadCTA from '@/components/DownloadCTA';
 import ComplianceNote from '@/components/ComplianceNote';
 import JsonLd from '@/components/JsonLd';
 import { Phone } from '@/components/AppGraphics';
+import DataTable from '@/components/DataTable';
+import { CheckList } from '@/components/feature-pages/FeatureBlocks';
 import {
   SectionIntro, ProblemGrid, ToolCards, ReadingList, FaqList, linkClass, type Faq,
 } from '@/components/solutions/SolutionBlocks';
@@ -33,6 +35,37 @@ const FAQ: Faq[] = [
     q: 'Does the app generate e-invoices (IRN)?',
     a: 'No. E-invoice generation is not an app feature. For clients who may be covered by e-invoicing, the free e-invoice applicability checker gives a preliminary view; confirm against the latest notification.',
   },
+  {
+    q: 'When should a client use the portal’s bulk upload instead of the app?',
+    a: 'When they file many e-way bills in one sitting from a register or ERP. The app works one invoice at a time, so the portal’s bulk generation, with a JSON file prepared in the official tool, fits better. Check the rows first with the free Bulk E-Way Bill Data Checker.',
+  },
+  {
+    q: 'How do I check a client’s e-way bills against their invoices?',
+    a: 'Enter both side by side in the free invoice vs e-way bill checker to spot mismatches in GSTIN, value, HSN or PIN. Most gaps trace back to retyping, so fix the client’s source data. If Part A is wrong and less than 24 hours have passed, the e-way bill can be cancelled and generated again.',
+  },
+];
+
+const ROUTES = [
+  {
+    label: 'Covered by e-invoicing',
+    cells: ['Generate the e-way bill from the IRN on the official system or the client’s e-invoice route', 'E-Way Easy does not create IRNs, so it is not the route for these invoices'],
+  },
+  {
+    label: 'Owner dispatches a few times a day or week',
+    cells: ['E-Way Easy on the client’s own Android phone', 'One invoice at a time; invoice and e-way bill from the same details'],
+  },
+  {
+    label: 'Month-end batch from a register or Excel',
+    cells: ['Bulk generation on the portal, using a JSON file from the official tool', 'Run the rows through the Bulk E-Way Bill Data Checker first'],
+  },
+  {
+    label: 'High volume from an ERP',
+    cells: ['API filing through a GSP or ERP integration', 'Needs IT setup; outside what this website or app offers'],
+  },
+  {
+    label: 'Small, local movements',
+    cells: ['Check whether an e-way bill is needed at all', 'Threshold and state rules apply; use the eligibility checker'],
+  },
 ];
 
 export default function AccountantsPage() {
@@ -58,8 +91,9 @@ export default function AccountantsPage() {
         <div className="container">
           <SectionIntro id="problem" eyebrow="The month-end problem" title="Client data rarely arrives clean">
             <p>
-              Sales registers come in different formats, purchase data has to be matched against GSTR-2B, and a
-              dispatching client may send rows for bulk e-way bill upload with missing PINs or old invoice dates.
+              Your month-end problem is rarely the filing itself. It is client data that arrives late, in different
+              formats, and with errors you must catch first. Sales registers need checking, purchase data must match
+              GSTR-2B, and e-way bill rows for bulk upload often carry missing PINs or old invoice dates.
             </p>
           </SectionIntro>
           <ProblemGrid
@@ -88,7 +122,11 @@ export default function AccountantsPage() {
       <section id="free-tools" className="section scroll-mt-20 bg-white" aria-labelledby="tools">
         <div className="container">
           <SectionIntro id="tools" eyebrow="Free on this website" title="Free tools for GST work">
-            <p>All of these run in your browser. Use them for any client, as often as you need.</p>
+            <p>
+              The free tools on this website check data; they do not file anything or connect to the GST portal. Paste a
+              client’s register, read the flags, and fix the source data before you file. All of them run in your browser,
+              for any client, as often as you need.
+            </p>
           </SectionIntro>
 
           <h3 className="mt-10 font-display text-xl font-semibold text-ink">Returns and reconciliation</h3>
@@ -125,13 +163,102 @@ export default function AccountantsPage() {
         </div>
       </section>
 
-      <section className="section" aria-labelledby="clients">
+      <section className="section" aria-labelledby="routes">
+        <div className="container">
+          <SectionIntro id="routes" eyebrow="Decision guide" title="Which e-way bill route fits each client?">
+            <p>
+              Match the route to how the client sells, not to one tool for everyone. E-invoicing clients generate from the
+              IRN, batch filers use the portal’s bulk upload, ERP-heavy clients use API filing, and owners who dispatch on
+              the go can use a phone app. Many practices end up with a mix.
+            </p>
+          </SectionIntro>
+          <div className="mt-8 max-w-4xl">
+            <DataTable
+              caption="Which e-way bill route fits each kind of client"
+              columns={['If the client…', 'Then the usual route is', 'Keep in mind']}
+              rows={ROUTES}
+            />
+          </div>
+          <p className="mt-4 max-w-3xl text-sm text-ink-soft">
+            For the official bulk process, see{' '}
+            <Link href="/bulk-eway-bill-generation" className={linkClass}>bulk e-way bill generation on the portal</Link>.
+          </p>
+        </div>
+      </section>
+
+      <section className="section bg-white" aria-labelledby="mistakes">
+        <div className="container">
+          <SectionIntro id="mistakes" eyebrow="What you will see" title="E-way bill mistakes accountants catch in client data">
+            <p>
+              Client e-way bill errors follow a pattern: old documents, stretched distances, values that do not match the
+              sales register, and the wrong fix after the fact. Catching them in the data is cheaper than explaining a
+              rejection or a detained truck. Check these first when a client hands over rows.
+            </p>
+          </SectionIntro>
+          <ProblemGrid
+            items={[
+              {
+                title: 'Invoices older than 180 days in the batch',
+                text: 'Month-end batches pick up stale documents. An e-way bill cannot be generated for an invoice dated more than 180 days before the generation date.',
+              },
+              {
+                title: 'Distance stretched past the limit',
+                text: 'The portal accepts an actual distance only up to 10% more than its PIN-to-PIN figure. Rows typed from memory often exceed it.',
+              },
+              {
+                title: 'E-way bill values that differ from GSTR-1',
+                text: 'If the e-way bill value does not match the invoice in the sales register, expect questions. Compare both before the return is filed.',
+              },
+              {
+                title: 'The wrong fix after generation',
+                text: 'Clients cancel when only the vehicle changed, or try to cancel after 24 hours. A vehicle change needs a Part B update instead.',
+              },
+            ]}
+          />
+          <p className="mt-6 max-w-3xl text-sm text-ink-soft">
+            Need a reference to send the client? Share{' '}
+            <Link href="/eway-bill-common-errors" className={linkClass}>common e-way bill errors</Link> and the{' '}
+            <Link href="/tools/invoice-vs-eway-bill-checker" className={linkClass}>invoice vs e-way bill checker</Link>.
+          </p>
+        </div>
+      </section>
+
+      <section className="section" aria-labelledby="example">
+        <div className="container">
+          <SectionIntro id="example" eyebrow="Example (illustrative)" title="One practice, three clients, three routes">
+            <p>
+              Example (illustrative): a Coimbatore practitioner looks after three clients who move goods. Each sells in a
+              different way, so each gets a different e-way bill route. The practitioner’s job stays the same for all
+              three: clean data in, matching returns out.
+            </p>
+          </SectionIntro>
+          <ol className="mt-6 max-w-3xl list-decimal space-y-3 pl-6 text-ink-soft">
+            <li>
+              <strong className="text-ink">A pump manufacturer covered by e-invoicing.</strong> Its e-way bills come from the
+              IRN on the official system, so the practitioner checks e-invoice data, not the app.
+            </li>
+            <li>
+              <strong className="text-ink">A hardware distributor whose owner dispatches from the shop.</strong> He uses E-Way
+              Easy on his own phone, with his own API login. Saved buyers and products cut retyping, and the practitioner
+              reviews his sales register at month end with the GSTR-1 checker.
+            </li>
+            <li>
+              <strong className="text-ink">A seasonal agri-inputs trader with a month-end batch.</strong> The rows go through
+              the Bulk E-Way Bill Data Checker first, then into the official bulk tool for upload on the portal.
+            </li>
+          </ol>
+          <p className="mt-4 max-w-3xl text-sm text-ink-soft">The practice and clients are made up for illustration.</p>
+        </div>
+      </section>
+
+      <section className="section bg-white" aria-labelledby="clients">
         <div className="container grid items-start gap-12 lg:grid-cols-[1fr_auto]">
           <div>
             <SectionIntro id="clients" eyebrow="For your clients" title="Recommend E-Way Easy to clients who dispatch goods">
               <p>
-                If a client makes sales invoices and moves goods regularly, the E-Way Easy Android app gives them one flow:
-                Invoice → Review EWB → Generated.
+                E-Way Easy suits clients who make their own sales invoices and move goods regularly, but do not file in
+                batches. The Android app gives them one flow: Invoice → Review EWB → Generated. For you, that means the
+                invoice and e-way bill are built from the same details, so fewer mismatches reach your desk.
               </p>
             </SectionIntro>
             <ul className="mt-6 space-y-3 text-ink-soft">
@@ -178,6 +305,27 @@ export default function AccountantsPage() {
         </div>
       </section>
 
+      <section className="section" aria-labelledby="month-end">
+        <div className="container">
+          <SectionIntro id="month-end" eyebrow="Checklist" title="Month-end checklist for dispatching clients">
+            <p>
+              A short monthly routine catches most e-way bill problems before they reach a return. Run it for every client
+              who moves goods, whatever route they use. It takes the free tools above, the client’s sales register and their
+              list of e-way bills for the month.
+            </p>
+          </SectionIntro>
+          <CheckList
+            items={[
+              { label: 'Sales register clean', text: 'Run it through the GSTR-1 checker for GSTIN, duplicate and tax-maths errors.' },
+              { label: 'E-way bills match invoices', text: 'Spot-check value, GSTIN and HSN against the invoices, especially high-value ones.' },
+              { label: 'No stale documents', text: 'Flag any pending row with an invoice date more than 180 days old.' },
+              { label: 'Cancellations explained', text: 'Ask why each e-way bill was cancelled, and whether a fresh one was generated.' },
+              { label: 'Returns tie up', text: 'Compare GSTR-1 with GSTR-3B, and the purchase register with GSTR-2B.' },
+            ]}
+          />
+        </div>
+      </section>
+
       <section className="section bg-white" aria-labelledby="pro-plan">
         <div className="container">
           <div className="card mx-auto max-w-3xl p-8 md:p-10">
@@ -199,7 +347,13 @@ export default function AccountantsPage() {
 
       <section className="section" aria-labelledby="guides">
         <div className="container">
-          <SectionIntro id="guides" eyebrow="Read next" title="Reference guides to share" />
+          <SectionIntro id="guides" eyebrow="Read next" title="Reference guides to share">
+            <p>
+              Clients ask the same e-way bill questions every month. These guides answer them in plain language, with
+              links to official sources, so you can send a link instead of writing the answer again. Rules change by
+              notification, so confirm the current position on the official portal.
+            </p>
+          </SectionIntro>
           <ReadingList
             items={[
               {

@@ -37,14 +37,37 @@ const SPEC_ROWS = [
   { label: 'Not supported', cells: ['Bulk upload of many PDFs at once'] },
 ];
 
+const PDF_TYPES = [
+  {
+    label: 'Exported as PDF from Tally or other billing software',
+    cells: ['Usually reads best', 'Import it, then review every field'],
+  },
+  {
+    label: 'A scan, or a phone photo saved as PDF',
+    cells: ['More fields may be missed or misread', 'Review closely, or create the invoice in the app'],
+  },
+  {
+    label: 'Several invoices in one PDF file',
+    cells: ['Each e-way bill covers one invoice, so a combined file may not import cleanly', 'Export each invoice as its own PDF'],
+  },
+  {
+    label: 'Password-protected',
+    cells: ['May not open for reading', 'Export a fresh copy without a password'],
+  },
+  {
+    label: 'Handwritten, or a very unusual layout',
+    cells: ['Hard to read reliably', 'Type it in the app instead'],
+  },
+];
+
 const FAQ: Faq[] = [
   {
     q: 'Can I generate an e-way bill directly from an invoice PDF?',
-    a: 'Yes, in the E-Way Easy Android app. Use Import PDF, choose your GST invoice PDF, and the app reads the buyer, GSTIN, items, HSN codes and totals. You review and correct the details, add anything missing, then tap Generate. The e-way bill is filed on the official e-way bill system and the number is shown in the app.',
+    a: 'Yes, in the E-Way Easy Android app. Use Import PDF and the app reads the buyer, GSTIN, items, HSN codes and totals from your GST invoice PDF. You review and correct the details, add anything missing, and tap Generate to file it on the official e-way bill system.',
   },
   {
     q: 'Do I still need to check the details after importing the PDF?',
-    a: 'Always. The imported data is a starting point, not a final answer. Check the buyer GSTIN, HSN codes, invoice value, PIN codes, Bill To / Ship To and Dispatch From before you generate. You are responsible for what is filed, and an e-way bill cannot be edited after generation.',
+    a: 'Always. The imported data is a starting point, so check the buyer GSTIN, HSN codes, invoice value, PIN codes, Bill To / Ship To and Dispatch From before you generate. You are responsible for what is filed, and an e-way bill cannot be edited after generation.',
   },
   {
     q: 'Will it work with invoices made in Tally or other billing software?',
@@ -53,6 +76,10 @@ const FAQ: Faq[] = [
   {
     q: 'What does it cost to generate an e-way bill from a PDF?',
     a: `Generating an e-way bill costs ${CREDITS} credits (1 credit = ₹1) from your wallet. Credits are taken only when the e-way bill is generated successfully; if the portal rejects it, the credits go back to your wallet automatically.`,
+  },
+  {
+    q: 'Can I import a scanned invoice or a photo saved as PDF?',
+    a: 'You can try, but expect more corrections than with a PDF exported from billing software. Scans, phone photos and handwritten bills are harder to read reliably. If many fields need fixing, creating the invoice in the app is often quicker.',
   },
   {
     q: 'Does the app read anything other than the PDF I choose?',
@@ -83,8 +110,9 @@ export default function InvoicePdfToEwayBillPage() {
         <div className="container">
           <SectionIntro id="what-happens" eyebrow="What happens" title="From PDF to e-way bill number in four steps">
             <p>
-              Import PDF sits on the app dashboard. The app reads your invoice, puts the details on the e-way bill review
-              screen and waits for you. Nothing is filed until you tap Generate.
+              Invoice PDF to e-way bill means the app reads a GST invoice you already have and pre-fills the e-way bill
+              from it. Import PDF sits on the app dashboard. The details land on the review screen and wait for you, and
+              nothing is filed until you have checked them and tapped Generate.
             </p>
           </SectionIntro>
           <StepList
@@ -113,11 +141,40 @@ export default function InvoicePdfToEwayBillPage() {
         </div>
       </section>
 
-      <section className="section pt-0" aria-labelledby="pdf-spec">
+      <section className="section bg-white" aria-labelledby="pdf-spec">
         <div className="container">
-          <SectionIntro id="pdf-spec" eyebrow="At a glance" title="How PDF import works" />
+          <SectionIntro id="pdf-spec" eyebrow="At a glance" title="How PDF import works">
+            <p>
+              PDF import takes one invoice PDF, reads the buyer, GSTIN, items, HSN codes and totals, and hands them to you
+              for review. Transport details such as the vehicle number usually are not on the invoice, so you add them. The
+              e-way bill is filed only after your review.
+            </p>
+          </SectionIntro>
           <div className="mt-8 max-w-3xl">
             <DataTable caption="How invoice PDF import works in E-Way Easy" columns={['Item', 'Detail']} rows={SPEC_ROWS} width="fit" />
+          </div>
+        </div>
+      </section>
+
+      <section className="section" aria-labelledby="which-pdfs">
+        <div className="container">
+          <SectionIntro id="which-pdfs" eyebrow="General guidance" title="Which invoice PDFs read best">
+            <p>
+              A text-based PDF, exported straight from your billing software, generally reads best because the words are
+              stored as text. A scanned copy or phone photo is only a picture of text, so expect more fields to fix. This is
+              general guidance, not a guarantee for any format.
+            </p>
+            <p>
+              Quick test: open the PDF and try to select a word or search for the buyer’s name. If you can, it is
+              text-based.
+            </p>
+          </SectionIntro>
+          <div className="mt-8 max-w-4xl">
+            <DataTable
+              caption="Which kinds of invoice PDF usually work best for import"
+              columns={['If your invoice is…', 'What to expect', 'Then do this']}
+              rows={PDF_TYPES}
+            />
           </div>
         </div>
       </section>
@@ -127,7 +184,8 @@ export default function InvoicePdfToEwayBillPage() {
           <div>
             <SectionIntro id="check" eyebrow="During review" title="What to check before you tap Generate">
               <p>
-                An e-way bill cannot be edited once generated. If Part A is wrong, the usual fix is to{' '}
+                Review means comparing what the app read with the invoice itself, field by field. An e-way bill cannot be
+                edited once generated. If Part A is wrong, the usual fix is to{' '}
                 <Link href="/eway-bill-cancellation" className={linkClass}>cancel it within 24 hours</Link> and generate a
                 new one, so a minute of checking here saves real trouble later.
               </p>
@@ -186,7 +244,8 @@ export default function InvoicePdfToEwayBillPage() {
         <div className="container">
           <SectionIntro id="when" eyebrow="When it helps" title="Made the invoice already? Don’t type it twice">
             <p>
-              Import PDF is for businesses whose invoices come from a separate billing system. If you would rather make the
+              Import PDF is for businesses whose invoices come from a separate billing system. It saves retyping, which is
+              where GSTIN and value mismatches between invoice and e-way bill usually creep in. If you would rather make the
               invoice in the app itself, the regular{' '}
               <Link href="/how-it-works" className={linkClass}>Invoice → Review EWB → Generated flow</Link> does that.
             </p>
@@ -214,6 +273,72 @@ export default function InvoicePdfToEwayBillPage() {
         </div>
       </section>
 
+      <section className="section bg-white" aria-labelledby="example">
+        <div className="container">
+          <SectionIntro id="example" eyebrow="Example (illustrative)" title="A Tally invoice PDF, reviewed and filed">
+            <p>
+              Example (illustrative): an Ahmedabad dye-chemicals dealer bills a Ludhiana buyer ₹1,85,000 in Tally and
+              exports the invoice as a PDF. He imports it on his phone at the godown. The app fills the buyer, GSTIN, three
+              items with HSN codes and the totals on the review screen.
+            </p>
+          </SectionIntro>
+          <ol className="mt-6 max-w-3xl list-decimal space-y-3 pl-6 text-ink-soft">
+            <li>
+              <strong className="text-ink">He checks the read fields against the PDF.</strong> GSTIN, HSN codes, taxable value
+              and tax all match the printed invoice.
+            </li>
+            <li>
+              <strong className="text-ink">He fixes what the PDF could not tell the app.</strong> The goods go to the buyer’s
+              warehouse at a different PIN, so he sets Ship To. Dispatch is from his godown, so he sets Dispatch From.
+            </li>
+            <li>
+              <strong className="text-ink">He adds Part B and generates.</strong> He types the truck number, taps Generate and
+              shares the e-way bill PDF with the driver. Cost: {CREDITS} credits.
+            </li>
+          </ol>
+          <p className="mt-4 max-w-3xl text-sm text-ink-soft">
+            The business, values and places are made up. The point: the PDF had the right numbers, but the delivery and
+            dispatch places still needed a human.
+          </p>
+        </div>
+      </section>
+
+      <section className="section" aria-labelledby="pdf-mistakes">
+        <div className="container">
+          <SectionIntro id="pdf-mistakes" eyebrow="Avoid these" title="Mistakes people make with PDF import">
+            <p>
+              The biggest mistake is trusting the import because the numbers look familiar. A PDF can be read correctly and
+              still be the wrong version, or miss the delivery place, and the 180-day limit on invoice dates still applies.
+              Each of these mistakes ends in a cancelled e-way bill if you miss it.
+            </p>
+          </SectionIntro>
+          <ProblemGrid
+            items={[
+              {
+                title: 'Importing a draft or an old version',
+                text: 'If the invoice was revised in your billing software, export the final version again. The app reads only what is in the file you pick.',
+              },
+              {
+                title: 'Assuming the billing address is the delivery address',
+                text: 'Many invoices show only Bill To. If goods go elsewhere, set Ship To, or the distance and validity will be wrong.',
+              },
+            ]}
+          />
+          <ul className="mt-8 max-w-3xl space-y-3 text-ink-soft">
+            <li>
+              <strong className="text-ink">If your business is covered by e-invoicing, then</strong> the e-way bill can be
+              generated using the IRN on the official system. E-Way Easy does not create e-invoices (IRN), so follow your
+              e-invoice route for those invoices.
+            </li>
+            <li>
+              <strong className="text-ink">If you raise dozens of e-way bills from your ERP every day, then</strong> the
+              portal’s bulk facility or an ERP integration will serve you better. See{' '}
+              <Link href="/bulk-eway-bill-generation" className={linkClass}>bulk e-way bill generation</Link>.
+            </li>
+          </ul>
+        </div>
+      </section>
+
       <section className="section bg-white" aria-labelledby="after">
         <div className="container grid items-center gap-12 lg:grid-cols-[auto_1fr]">
           <div className="order-2 mx-auto lg:order-1">
@@ -227,7 +352,8 @@ export default function InvoicePdfToEwayBillPage() {
             <SectionIntro id="after" eyebrow="After generation" title="Your e-way bill, ready to share">
               <p>
                 Once generated, the e-way bill number appears in the app. Download the e-way bill PDF and share it with the
-                driver or buyer on WhatsApp or email, or print it.
+                driver or buyer on WhatsApp or email, or print it. Note the validity shown before the truck leaves, so you
+                know when the e-way bill expires.
               </p>
               <p>
                 If the vehicle changes later, or you need to cancel or extend, those actions are in the app too. See the{' '}
@@ -241,6 +367,11 @@ export default function InvoicePdfToEwayBillPage() {
       <section className="container py-12" aria-labelledby="limits">
         <div className="mx-auto max-w-3xl">
           <h2 id="limits" className="font-display text-xl font-semibold text-ink">Honest limits of PDF import</h2>
+          <p className="mt-3 text-ink-soft">
+            PDF import is a typing shortcut, not a checking service. It reads one invoice at a time, it can miss or misread
+            fields on some layouts, and it cannot know facts the PDF does not show, such as the vehicle or delivery place.
+            You stay responsible for everything that gets filed.
+          </p>
           <div className="mt-4">
             <ComplianceNote title="Review is always required">
               <p>
@@ -248,9 +379,8 @@ export default function InvoicePdfToEwayBillPage() {
                 before generating.
               </p>
               <p>
-                Scanned copies, photos of paper bills, handwritten invoices and unusual layouts may be read partly or
-                need more corrections. The app reads only the PDF you choose. It does not create e-invoices (IRN) and does
-                not generate e-way bills in bulk.
+                The app reads only the PDF you choose. It does not create e-invoices (IRN) and does not generate e-way
+                bills in bulk.
               </p>
               <p>
                 E-Way Easy is independent and not affiliated with GSTN or NIC. For the rules themselves, refer to the{' '}
@@ -263,9 +393,36 @@ export default function InvoicePdfToEwayBillPage() {
         </div>
       </section>
 
-      <section className="section pt-0" aria-labelledby="read-next">
+      <section className="section bg-white" aria-labelledby="before-import">
         <div className="container">
-          <SectionIntro id="read-next" eyebrow="Read next" title="Related guides and tools" />
+          <SectionIntro id="before-import" eyebrow="Checklist" title="Five checks before you tap Import PDF">
+            <p>
+              A clean import starts before you open the app. Make sure the file is the final invoice, holds one invoice
+              only, and can be read as text. Then keep the transport details at hand, because the PDF rarely carries them
+              and the e-way bill needs them.
+            </p>
+          </SectionIntro>
+          <CheckList
+            items={[
+              { label: 'Final version', text: 'Export the invoice again if it was edited after you first saved the PDF.' },
+              { label: 'One invoice per file', text: 'Split a combined PDF so each file holds a single invoice.' },
+              { label: 'Text-based, not scanned', text: 'If you cannot select words in the PDF, expect to correct more fields.' },
+              { label: 'Within 180 days', text: 'The invoice date must not be more than 180 days before the day you generate.' },
+              { label: 'Transport details ready', text: 'Vehicle number, transporter, and the Ship To and Dispatch From places if they differ.' },
+            ]}
+          />
+        </div>
+      </section>
+
+      <section className="section" aria-labelledby="read-next">
+        <div className="container">
+          <SectionIntro id="read-next" eyebrow="Read next" title="Related guides and tools">
+            <p>
+              The guides below cover what must match between your invoice and the e-way bill, and why the portal rejects
+              some requests. The free checker compares the two documents for you. Use them when an import looks right but
+              something about the numbers still feels off.
+            </p>
+          </SectionIntro>
           <ReadingList
             items={[
               {

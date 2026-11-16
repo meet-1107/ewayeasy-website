@@ -5,10 +5,10 @@ excerpt: "What changes when goods cross a state border: the ₹50,000 threshold,
 category: "eway-bill"
 tags: ["e-way bill", "inter-state", "IGST", "transport"]
 publishedAt: "2026-10-16"
-updatedAt: "2026-11-14"
+updatedAt: "2026-11-16"
 verifiedAt: "2026-10-16"
 seoTitle: "E-Way Bill for Inter-state Movement: Requirements (2026)"
-metaDescription: "Inter-state e-way bill rules: threshold, value-independent cases, IGST on the invoice, distance and validity, and what the driver must carry."
+metaDescription: "Inter-state e-way bill rules: threshold, value-independent cases, IGST on the invoice, long-route validity, vehicle changes and what the driver carries."
 imageAlt: "Truck crossing a state border checkpoint with an e-way bill and tax invoice shown as overlay cards"
 sources:
   - title: "E-Way Bill System (official portal)"
@@ -23,66 +23,52 @@ faq:
   - q: "Do state-specific higher thresholds apply to inter-state movement?"
     a: "No. Higher thresholds notified by some states apply only to movement within that state. For inter-state movement, the general threshold under Rule 138 applies."
   - q: "Can an unregistered buyer in another state receive goods under an e-way bill?"
-    a: "Yes. The supplier generates the e-way bill and enters URP (unregistered person) in place of the recipient GSTIN, with the correct state and delivery PIN."
+    a: "Yes. The supplier generates the e-way bill and enters URP (unregistered person) in place of the recipient GSTIN, with the correct state and delivery PIN. The invoice still carries IGST, because the supply crosses a state border."
   - q: "Does the e-way bill need to be regenerated at the state border?"
-    a: "No. One valid e-way bill covers the whole journey. Only Part B needs updating if the vehicle changes."
-related: ["eway-bill-intrastate-movement-considerations", "cgst-sgst-igst-explained"]
+    a: "No. One valid e-way bill covers the whole journey, through every state on the route. Only Part B needs updating if the vehicle changes."
+  - q: "Does sending stock to my own branch in another state need an e-way bill?"
+    a: "Generally yes, if the value crosses the threshold. A branch in another state has its own GSTIN, so the transfer is usually a supply between distinct persons, with a tax invoice and IGST."
+related: ["eway-bill-intrastate-movement-considerations", "cgst-sgst-igst-explained", "what-to-do-when-eway-bill-expires"]
 ---
-> **Quick answer:** Inter-state movement generally needs an e-way bill when consignment value exceeds ₹50,000, and at any value for goods sent to a job worker in another state or specified handicraft goods moved by a person exempt from registration. The invoice must show IGST, and state-specific higher limits do not apply.
+> **Quick answer:** Inter-state movement generally needs an e-way bill when consignment value exceeds ₹50,000. It is needed at any value for goods sent to a job worker in another state and for specified handicraft goods moved by a person exempt from registration. The invoice must show IGST, and state-specific higher limits do not apply.
 
-When goods leave your state, the e-way bill becomes non-negotiable in more situations, and the margin for error shrinks. The truck may pass through several states, officers in any of them can verify the consignment, and state-specific relaxations no longer help you. This article sets out what an inter-state consignment needs, in the order you would actually prepare it.
+When goods leave your state, the e-way bill becomes non-negotiable in more cases. The truck may cross several states, an officer in any of them can stop it, and your home state's relaxations stop helping. This article covers what only cross-border loads need: the tests, the IGST invoice, long-route validity and vehicle changes on the way.
 
-## Quick answers
+## When inter-state movement needs an e-way bill
 
-**When is an e-way bill required for inter-state movement?**
-Generally, when the consignment value exceeds ₹50,000. Consignment value is the invoice value including GST, excluding the value of exempt goods in the same document.
+Inter-state movement needs an e-way bill when the consignment value exceeds ₹50,000. Consignment value is the document value including GST, excluding exempt goods on the same document. Two inter-state cases need one at any value: goods sent by a principal to a job worker, and specified handicraft goods moved by a person exempt from registration.
 
-**When is it required regardless of value?**
-Rule 138 requires an e-way bill irrespective of consignment value in two inter-state cases:
+| If the movement is… | Then an e-way bill is… |
+|---|---|
+| A sale to another state above ₹50,000 | Required |
+| A sale to another state at or below ₹50,000 | Not required under the general rule |
+| Goods to a job worker in another state, any value | Required |
+| Specified handicraft goods by a person exempt from registration | Required at any value |
+| Goods covered by the Annexure to Rule 138(14) | Not required; read the condition first |
 
-1. Goods sent by a principal in one state to a job worker in another state.
-2. Inter-state transport of specified handicraft goods by a person who is exempt from registration.
+Your home state's higher limit is irrelevant once goods cross a border. A business used to a relaxed local limit often carries that habit into its first inter-state orders. That is where unplanned detentions start.
 
-**Which tax applies?**
-Inter-state supplies attract IGST, not CGST + SGST. Your invoice — and therefore Part A of the e-way bill — must show IGST.
+The job work case catches small lots. A ₹15,000 box of parts to a job worker in the next state still needs an e-way bill. See [e-way bill rules for job work](/blog/eway-bill-rules-for-job-work).
 
-**Do state-level relaxations help?**
-No. Higher thresholds or local exemptions some states have notified apply only to movement within that state.
+## Place of supply and IGST: getting Part A right
 
-## Step-by-step: preparing an inter-state consignment
+An inter-state supply is one where your location and the place of supply are in different states. Such a supply carries IGST, not CGST + SGST. Part A copies its data from the invoice, so the tax type, recipient state and delivery PIN must be right on the invoice first.
 
-### 1. Confirm the place of supply
+Prepare the consignment in this order:
 
-Check the buyer's GSTIN state code (the first two digits) and the actual delivery address. If the supplier's location and the place of supply are in different states, it is an inter-state supply. If the goods are billed to a buyer in one state but shipped to another location, work out the place of supply carefully; see [CGST, SGST and IGST explained](/blog/cgst-sgst-igst-explained).
+1. **Confirm the place of supply.** Compare your state code with the buyer's GSTIN and the actual delivery address. For bill-to-ship-to orders, work it out carefully; see [CGST, SGST and IGST explained](/blog/cgst-sgst-igst-explained).
+2. **Raise the invoice with IGST.** Show both GSTINs (or URP), place of supply with state name and code, HSN and IGST rate per line, taxable value and IGST amount.
+3. **Fill Part A.** Supplier and recipient GSTIN, delivery PIN, document number and date, value, HSN, reason for transport and transporter ID if known.
+4. **Fill Part B** with the vehicle number, or the transport document number for rail, air or ship.
+5. **Hand over the documents.** The driver carries the invoice and the e-way bill as a printout, number or RFID mapping.
 
-### 2. Prepare the invoice with IGST
+Bill-to-ship-to is where inter-state Part A goes wrong most. The ship-to PIN drives distance and validity, while the place of supply drives the tax type. They can sit in different states, so check each field against the right address.
 
-Make sure the invoice shows:
+An unregistered buyer in another state is simple once you know the trick. Enter URP for the recipient, but still enter the correct state and delivery PIN. The supply is still inter-state, so IGST applies.
 
-- Your GSTIN and the buyer's GSTIN (or URP for an unregistered buyer)
-- Place of supply (state name and code)
-- HSN code and IGST rate for each line
-- Taxable value and IGST amount
+## Long routes: distance, validity and extensions
 
-### 3. Fill Part A
-
-Part A of Form GST EWB-01 takes the supplier and recipient GSTIN, the PIN code of the place of delivery, document number and date, value of goods, HSN code, reason for transportation and the transport document number if available. Most of this is copied from the invoice, so a clean invoice means a clean Part A. More detail is in [Part A and Part B explained](/blog/eway-bill-part-a-and-part-b-explained).
-
-### 4. Check the distance
-
-The portal auto-calculates the distance between the dispatch PIN and the delivery PIN. You can enter the actual distance up to 10% more than the auto-calculated figure, up to a maximum of 4,000 km. Inter-state routes are longer, so this directly affects validity.
-
-### 5. Fill Part B
-
-Enter the vehicle number (for road) or the transport document number for rail, air or ship. The e-way bill is valid for movement only after Part B is filled. The short-distance Part B exemption (up to 50 km to or from a transporter's place) applies only within the same state, so it rarely helps in inter-state cases except for the first leg to a transporter's godown in your own state.
-
-### 6. Hand over the documents
-
-The driver should carry the invoice (or bill of supply / delivery challan as applicable) and the e-way bill — a printout, the e-way bill number, or an RFID mapping where available.
-
-## Validity on long routes
-
-Validity is one day for every 200 km or part of 200 km for normal cargo, and one day for every 20 km for over-dimensional cargo. The first day ends at midnight of the day following generation.
+E-way bill validity is one day for every 200 km or part of it for normal cargo, and one day per 20 km for over-dimensional cargo. The first day ends at midnight of the day after generation. Inter-state routes are long, so the distance you enter decides how many days the driver gets.
 
 | Distance | Normal cargo validity |
 |---|---|
@@ -92,39 +78,74 @@ Validity is one day for every 200 km or part of 200 km for normal cargo, and one
 | 1,000 km | 5 days |
 | 1,850 km | 10 days |
 
-If goods cannot reach in time due to exceptional circumstances — an accident, a natural calamity, a law-and-order problem, trans-shipment delay — the generator or transporter can extend validity within 8 hours before or after expiry. As reported by GSTN, from 1 January 2025 total extension is capped at 360 days from the original generation date. See [what to do when an e-way bill expires](/blog/what-to-do-when-eway-bill-expires).
+The portal calculates PIN-to-PIN distance. You can enter up to 10% more than that figure, with a 4,000 km ceiling. On a long route, rounding down to "about 1,500" instead of the real 1,620 km can cost a day of validity.
 
-## Example (illustrative)
+Validity is counted from when Part B is first entered. So if goods sit at a transporter's hub for a day before the long haul, filling Part B just before departure keeps the full window for the road.
 
-A Ludhiana hosiery manufacturer (GSTIN `03ABCDE1234F1Z5`) sells knitwear worth ₹2,40,000 plus 5% IGST to a wholesaler in Kolkata (GSTIN `19PQRSX5678K1ZV`). The goods first go by tempo to a transporter's godown in Ludhiana, 12 km away, and then by truck to Kolkata.
+If goods cannot reach in time because of an accident, a natural calamity, a law-and-order problem or a trans-shipment delay, validity can be extended within 8 hours before or after expiry. As reported by GSTN, from 1 January 2025 total extension is capped at 360 days from original generation. See [what to do when an e-way bill expires](/blog/what-to-do-when-eway-bill-expires).
+
+## Vehicle changes, trans-shipment and other modes
+
+One e-way bill covers the whole inter-state journey. You never regenerate it at a border. When the vehicle changes, through a breakdown, trans-shipment at a hub or a switch to rail, you update Part B before the goods move again, while Part A stays the same.
+
+What changes by mode:
+
+| Mode | What goes in Part B |
+|---|---|
+| Road | Vehicle number |
+| Rail | Railway receipt (RR) number and date |
+| Air | Airway bill number and date |
+| Ship | Bill of lading number and date |
+
+Long-haul loads often pass through a hub where one truck picks up several consignments. The transporter can then generate a consolidated e-way bill (EWB-02) for the vehicle. Each consignment still needs its own valid e-way bill underneath.
+
+The common gap is timing. The new vehicle leaves the hub first and Part B is updated "once it is on the highway". If an officer stops it before that, the vehicle on the road does not match the record.
+
+## Transfers to your own branch in another state
+
+A stock transfer to your own branch in another state is not a simple internal movement. The branch has its own GSTIN, so the law treats the two as distinct persons. The transfer is usually a supply, with a tax invoice and IGST, and the normal e-way bill threshold applies.
+
+Businesses used to moving stock between same-state godowns on a challan often reuse that habit across state lines. Within one GSTIN a challan may fit; across a border it generally does not. Confirm the valuation and treatment for your own case with your adviser.
+
+## Example (illustrative): Ludhiana to Kolkata
+
+This example shows a long-haul inter-state sale from start to finish. It covers the IGST invoice, the distance and validity, and a breakdown in a third state. The fix is a Part B update by the transporter, not a new e-way bill, because one e-way bill covers the full route.
+
+A Ludhiana hosiery manufacturer (GSTIN `03ABCDE1234F1Z5`) sells knitwear worth ₹2,40,000 plus 5% IGST to a wholesaler in Kolkata (GSTIN `19PQRSX5678K1ZV`). A transporter's truck collects the goods from the factory.
 
 - **Invoice:** taxable value ₹2,40,000, IGST ₹12,000, total ₹2,52,000; place of supply West Bengal (19).
 - **Part A:** both GSTINs, Kolkata delivery PIN, invoice number and date, ₹2,52,000, HSN for the knitwear, reason "Supply".
-- **First leg:** the tempo trip to the transporter's godown is within Punjab and under 50 km, so the supplier can generate the e-way bill with Part A only for this leg.
-- **Main leg:** the transporter fills Part B with the truck number before it leaves for Kolkata.
-- **Distance:** the portal calculates roughly 1,700 km (illustrative); validity is 9 days.
+- **Part B:** the truck number, entered just before the truck leaves.
+- **Distance:** the portal calculates roughly 1,700 km (illustrative), so validity is 9 days.
 
-Halfway, the truck is replaced after a breakdown. The transporter updates Part B with the new vehicle number before the goods move on. No new e-way bill is needed.
+In Uttar Pradesh, the truck breaks down and the load moves to a replacement vehicle. The transporter updates Part B with the new number before the goods move on. No new e-way bill is needed.
 
 ## Common mistakes in inter-state e-way bills
 
-- **CGST + SGST on an inter-state invoice.** The e-way bill will carry the wrong tax heads and the invoice itself is incorrect.
-- **Wrong state code for the recipient.** This usually comes from typing a GSTIN by hand. Verify GSTINs before use; see [GSTIN verification](/blog/gstin-verification-what-to-check).
+Inter-state mistakes usually come from habits that work at home but fail across a border. These include CGST + SGST on an inter-state invoice, relying on your state's higher limit, and skipping small job work lots. Long routes also punish an underestimated distance and a late Part B update.
+
+- **CGST + SGST on an inter-state invoice.** The invoice is wrong, and so are the e-way bill's tax heads.
+- **Wrong state code for the recipient.** This usually comes from typing a GSTIN by hand. Verify it before use.
 - **Assuming your home state's higher limit applies.** It does not for inter-state movement.
-- **Forgetting job work.** Sending goods to a job worker in another state needs an e-way bill even for low-value lots. See [e-way bill rules for job work](/blog/eway-bill-rules-for-job-work).
+- **Forgetting job work.** Inter-state lots to a job worker need an e-way bill even at low value.
 - **Underestimating distance.** Too short a distance gives too little validity on a long route.
+- **Moving branch stock on a challan across states.** Different GSTINs usually mean a tax invoice.
 - **Generating with an old invoice.** As reported by GSTN, from 1 January 2025 an e-way bill cannot be generated for a document dated more than 180 days before generation.
 
-## Exceptions and limits
+Moving goods without a valid e-way bill can lead to detention and penalty under Section 129 of the CGST Act. On an inter-state load, the goods may be stopped far from your office, which makes the delay worse.
 
-The Annexure to Rule 138(14) lists goods and situations where an e-way bill is not required — for example, goods moved by non-motorised conveyance and certain specified goods. Some exemptions are narrow and conditional. Do not rely on them without reading the current rule text.
+Shipping only within your own state? The rules that differ there, such as state limits and short-leg relief, are covered in [intra-state e-way bill considerations](/blog/eway-bill-intrastate-movement-considerations).
 
-Also note that moving goods without a valid e-way bill can lead to detention and penalty under Section 129 of the CGST Act. For inter-state loads the stakes are higher because the goods may be stopped far from your office.
+## Quick action checklist
 
-## Practical tools
+1. Add a "place of supply" check to every inter-state order before the invoice is raised.
+2. Flag bill-to-ship-to orders and check the ship-to PIN and the tax type separately.
+3. Enter the full calculated distance, not a rounded-down figure.
+4. Ask transporters to update Part B before any replacement vehicle moves.
+5. Review how you move stock to branches in other states with your adviser.
 
-Use the [e-way bill eligibility checker](/tools/eway-bill-eligibility-checker) to confirm whether a consignment needs an e-way bill, and the [distance calculator](/tools/distance-calculator) to estimate validity before dispatch. The E-Way Easy app also calculates distance from PIN codes and fills buyer state from the GSTIN, which helps avoid the most common state-code errors.
+Planning a long route? The free [distance calculator](/tools/distance-calculator) estimates the distance and validity before dispatch, so you know how many days the driver gets.
 
 ## Official sources
 
-Confirm current rules on the [E-Way Bill System](https://ewaybillgst.gov.in/) (or the [E-Way Bill 2.0 portal](https://ewaybill2.gst.gov.in/)), the [GST portal](https://www.gst.gov.in/) and [CBIC GST](https://cbic-gst.gov.in/). Rules and portal features change, so check before relying on any figure here.
+Confirm current rules on the [E-Way Bill System](https://ewaybillgst.gov.in/) or the [E-Way Bill 2.0 portal](https://ewaybill2.gst.gov.in/), the [GST portal](https://www.gst.gov.in/) and [CBIC GST](https://cbic-gst.gov.in/). Rules and portal features change, so check before relying on any figure here.

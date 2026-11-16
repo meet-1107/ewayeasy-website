@@ -1,11 +1,10 @@
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import Breadcrumbs from '@/components/Breadcrumbs';
-import BlogCard from '@/components/BlogCard';
 import JsonLd from '@/components/JsonLd';
-import { getAllGuides, getAllPosts, toSummary } from '@/lib/content';
+import { getAllGuides, getAllPosts } from '@/lib/content';
 import { absoluteUrl, pageMeta } from '@/lib/seo';
-import { AUTHOR, SUPPORT_EMAIL } from '@/lib/site';
+import { AUTHOR, CATEGORIES, SUPPORT_EMAIL } from '@/lib/site';
 
 export const dynamicParams = false;
 export function generateStaticParams() {
@@ -65,8 +64,35 @@ export default async function AuthorPage({ params }: { params: Promise<{ slug: s
         </div>
       </header>
       <div className="container py-12">
-        <section>
+        <section className="max-w-3xl">
+          <h2 className="h2">What Bhavesh writes about</h2>
+          <p className="mt-4 leading-7 text-ink-soft">
+            Bhavesh writes practical guides for the people who raise invoices and e-way bills every day: owners, accounts
+            staff and dispatch desks at manufacturers, wholesalers and traders. Each piece answers one working question,
+            such as whether this consignment needs an e-way bill, who should generate it, or which tax head goes on this invoice.
+          </p>
+          <p className="mt-4 leading-7 text-ink-soft">
+            The articles explain rules in plain words, then show where real dispatches go wrong. They are general
+            information, not tax or legal advice, and every compliance article links the official source it was checked against.
+          </p>
+        </section>
+
+        <section className="mt-12 max-w-3xl">
+          <h2 className="h2">Sources his articles are checked against</h2>
+          <p className="mt-4 leading-7 text-ink-soft">
+            Facts are checked against official sources only, never other blogs. The source list at the end of each article
+            shows which ones were used.
+          </p>
+          <ul className="mt-4 grid gap-2 leading-7 text-ink-soft">
+            <li><strong className="text-ink">E-way bill portal and user documentation</strong>: e-way bill rules, portal steps and advisories.</li>
+            <li><strong className="text-ink">CBIC GST</strong>: the CGST Act, the CGST Rules (including Rule 138) and notifications.</li>
+            <li><strong className="text-ink">GST portal and tutorials</strong>: registration, GSTIN, returns and taxpayer advisories.</li>
+          </ul>
+        </section>
+
+        <section className="mt-16">
           <h2 className="h2">E-way bill guides</h2>
+          <p className="mt-3 max-w-3xl leading-7 text-ink-soft">Reference pages on one rule each, re-checked when the rules change.</p>
           <div className="mt-6 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
             {guides.map((g) => (
               <Link key={g.slug} href={`/${g.slug}`} className="rounded-2xl border border-brand-900/10 bg-white p-5 hover:border-brand-500">
@@ -76,10 +102,29 @@ export default async function AuthorPage({ params }: { params: Promise<{ slug: s
             ))}
           </div>
         </section>
+
         <section className="mt-16">
-          <h2 className="h2">Published articles ({posts.length})</h2>
-          <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {posts.map((p) => <BlogCard key={p.slug} post={toSummary(p)} />)}
+          <h2 className="h2">Published articles ({posts.length}), by topic</h2>
+          <div className="mt-8 grid gap-10 md:grid-cols-2">
+            {CATEGORIES.map((c) => {
+              const inCat = posts.filter((p) => p.category === c.slug);
+              if (!inCat.length) return null;
+              return (
+                <div key={c.slug}>
+                  <h3 className="font-display text-lg font-semibold">
+                    <Link href={`/blog/category/${c.slug}`} className="hover:text-brand-700">{c.name}</Link>
+                  </h3>
+                  <ul className="mt-3 grid gap-2">
+                    {inCat.map((p) => (
+                      <li key={p.slug} className="text-sm leading-6">
+                        <Link href={`/blog/${p.slug}`} className="font-medium text-brand-800 hover:underline">{p.title}</Link>
+                        <span className="text-ink-faint"> · {p.verifiedAt ? `verified ${p.verifiedAt}` : `updated ${p.updatedAt}`}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              );
+            })}
           </div>
         </section>
       </div>

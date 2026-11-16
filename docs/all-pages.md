@@ -1,8 +1,9 @@
-# All ewayeasy.in pages (103)
+# All ewayeasy.in pages (114)
 
 Submit to Bing Webmaster Tools: Sitemaps -> https://ewayeasy.in/sitemap.xml, or URL Submission -> paste docs/all-urls.txt.
+Blog pagination (/page/N) and the Product Updates category are noindex and not listed.
 
-## Pages (24)
+## Pages (34)
 
 - https://ewayeasy.in
 - https://ewayeasy.in/about
@@ -16,6 +17,10 @@ Submit to Bing Webmaster Tools: Sitemaps -> https://ewayeasy.in/sitemap.xml, or 
 - https://ewayeasy.in/guides
 - https://ewayeasy.in/help
 - https://ewayeasy.in/how-it-works
+- https://ewayeasy.in/how-we-create-content
+- https://ewayeasy.in/industries
+- https://ewayeasy.in/invoice-format-excel
+- https://ewayeasy.in/invoice-generator
 - https://ewayeasy.in/invoice-pdf-to-eway-bill
 - https://ewayeasy.in/partners
 - https://ewayeasy.in/pricing
@@ -28,8 +33,31 @@ Submit to Bing Webmaster Tools: Sitemaps -> https://ewayeasy.in/sitemap.xml, or 
 - https://ewayeasy.in/solutions/wholesalers-distributors
 - https://ewayeasy.in/terms-and-conditions
 - https://ewayeasy.in/updates
+- https://ewayeasy.in/industries/fmcg
+- https://ewayeasy.in/industries/textile-apparel
+- https://ewayeasy.in/industries/pharma
+- https://ewayeasy.in/industries/automotive-components
+- https://ewayeasy.in/industries/machinery-engineering
+- https://ewayeasy.in/industries/ecommerce-d2c
 
-## Tools (22)
+## E-way bill guides (14)
+
+- https://ewayeasy.in/bulk-eway-bill-generation
+- https://ewayeasy.in/consolidated-eway-bill
+- https://ewayeasy.in/documents-required-for-eway-bill
+- https://ewayeasy.in/eway-bill-cancellation
+- https://ewayeasy.in/eway-bill-common-errors
+- https://ewayeasy.in/eway-bill-correction
+- https://ewayeasy.in/eway-bill-distance-rules
+- https://ewayeasy.in/eway-bill-faq
+- https://ewayeasy.in/eway-bill-generation
+- https://ewayeasy.in/eway-bill-guide
+- https://ewayeasy.in/eway-bill-rules
+- https://ewayeasy.in/eway-bill-validity
+- https://ewayeasy.in/eway-bill-vs-sales-invoice
+- https://ewayeasy.in/gst-invoice-rules
+
+## Free tools (22)
 
 - https://ewayeasy.in/tools
 - https://ewayeasy.in/tools/gst-calculator
@@ -54,57 +82,6 @@ Submit to Bing Webmaster Tools: Sitemaps -> https://ewayeasy.in/sitemap.xml, or 
 - https://ewayeasy.in/tools/invoice-number-generator
 - https://ewayeasy.in/tools/amount-in-words-converter
 
-## Guides (13)
-
-- https://ewayeasy.in/bulk-eway-bill-generation
-- https://ewayeasy.in/consolidated-eway-bill
-- https://ewayeasy.in/documents-required-for-eway-bill
-- https://ewayeasy.in/eway-bill-cancellation
-- https://ewayeasy.in/eway-bill-common-errors
-- https://ewayeasy.in/eway-bill-correction
-- https://ewayeasy.in/eway-bill-distance-rules
-- https://ewayeasy.in/eway-bill-faq
-- https://ewayeasy.in/eway-bill-generation
-- https://ewayeasy.in/eway-bill-guide
-- https://ewayeasy.in/eway-bill-rules
-- https://ewayeasy.in/eway-bill-validity
-- https://ewayeasy.in/eway-bill-vs-sales-invoice
-
-## Blog (32)
-
-- https://ewayeasy.in/blog
-- https://ewayeasy.in/authors/bhavesh-akabari
-- https://ewayeasy.in/blog/gstin-verification-what-to-check
-- https://ewayeasy.in/blog/how-eway-easy-simplifies-eway-bill-workflow
-- https://ewayeasy.in/blog/eway-bill-part-a-and-part-b-explained
-- https://ewayeasy.in/blog/hsn-codes-practical-guide
-- https://ewayeasy.in/blog/digital-tools-for-indian-manufacturers
-- https://ewayeasy.in/blog/cgst-sgst-igst-explained
-- https://ewayeasy.in/blog/avoid-errors-in-invoice-and-transport-details
-- https://ewayeasy.in/blog/how-to-calculate-gst-on-sales-invoice
-- https://ewayeasy.in/blog/how-distance-affects-eway-bill-validity
-- https://ewayeasy.in/blog/prepare-invoice-data-for-bulk-processing
-- https://ewayeasy.in/blog/delivery-challan-vs-tax-invoice
-- https://ewayeasy.in/blog/eway-bill-returns-and-special-transactions
-- https://ewayeasy.in/blog/eway-bill-limit-50000-threshold-exceptions
-- https://ewayeasy.in/blog/eway-bill-rules-for-job-work
-- https://ewayeasy.in/blog/who-is-responsible-for-generating-eway-bill
-- https://ewayeasy.in/blog/eway-bill-intrastate-movement-considerations
-- https://ewayeasy.in/blog/what-to-do-when-eway-bill-expires
-- https://ewayeasy.in/blog/eway-bill-interstate-movement-requirements
-- https://ewayeasy.in/blog/eway-bills-for-wholesalers-and-distributors
-- https://ewayeasy.in/blog/how-manufacturers-can-simplify-invoice-workflows
-- https://ewayeasy.in/blog/how-to-update-vehicle-details-in-eway-bill
-- https://ewayeasy.in/blog/what-is-an-eway-bill
-- https://ewayeasy.in/blog/category/eway-bill
-- https://ewayeasy.in/blog/category/eway-bill/page/2
-- https://ewayeasy.in/blog/category/gst-compliance
-- https://ewayeasy.in/blog/category/invoicing
-- https://ewayeasy.in/blog/category/business-guides
-- https://ewayeasy.in/blog/category/product-updates
-- https://ewayeasy.in/blog/page/2
-- https://ewayeasy.in/blog/page/3
-
 ## Templates (12)
 
 - https://ewayeasy.in/sales-invoice-templates
@@ -120,3 +97,37 @@ Submit to Bing Webmaster Tools: Sitemaps -> https://ewayeasy.in/sitemap.xml, or 
 - https://ewayeasy.in/commercial-invoice-templates/export-commercial-invoice
 - https://ewayeasy.in/commercial-invoice-templates/courier-commercial-invoice
 
+## Blog (32)
+
+- https://ewayeasy.in/blog
+- https://ewayeasy.in/authors/bhavesh-akabari
+- https://ewayeasy.in/blog/eway-bill-number-14-digits-2027
+- https://ewayeasy.in/blog/how-to-make-gst-invoice-on-mobile
+- https://ewayeasy.in/blog/invoice-vs-bill-vs-receipt
+- https://ewayeasy.in/blog/invoice-with-gst-vs-without-gst
+- https://ewayeasy.in/blog/avoid-errors-in-invoice-and-transport-details
+- https://ewayeasy.in/blog/cgst-sgst-igst-explained
+- https://ewayeasy.in/blog/delivery-challan-vs-tax-invoice
+- https://ewayeasy.in/blog/digital-tools-for-indian-manufacturers
+- https://ewayeasy.in/blog/eway-bill-interstate-movement-requirements
+- https://ewayeasy.in/blog/eway-bill-intrastate-movement-considerations
+- https://ewayeasy.in/blog/eway-bill-limit-50000-threshold-exceptions
+- https://ewayeasy.in/blog/eway-bill-part-a-and-part-b-explained
+- https://ewayeasy.in/blog/eway-bill-returns-and-special-transactions
+- https://ewayeasy.in/blog/eway-bill-rules-for-job-work
+- https://ewayeasy.in/blog/eway-bills-for-wholesalers-and-distributors
+- https://ewayeasy.in/blog/gstin-verification-what-to-check
+- https://ewayeasy.in/blog/how-distance-affects-eway-bill-validity
+- https://ewayeasy.in/blog/how-eway-easy-simplifies-eway-bill-workflow
+- https://ewayeasy.in/blog/how-manufacturers-can-simplify-invoice-workflows
+- https://ewayeasy.in/blog/how-to-calculate-gst-on-sales-invoice
+- https://ewayeasy.in/blog/how-to-update-vehicle-details-in-eway-bill
+- https://ewayeasy.in/blog/hsn-codes-practical-guide
+- https://ewayeasy.in/blog/prepare-invoice-data-for-bulk-processing
+- https://ewayeasy.in/blog/what-is-an-eway-bill
+- https://ewayeasy.in/blog/what-to-do-when-eway-bill-expires
+- https://ewayeasy.in/blog/who-is-responsible-for-generating-eway-bill
+- https://ewayeasy.in/blog/category/eway-bill
+- https://ewayeasy.in/blog/category/gst-compliance
+- https://ewayeasy.in/blog/category/invoicing
+- https://ewayeasy.in/blog/category/business-guides

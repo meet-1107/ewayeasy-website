@@ -1,3 +1,4 @@
+import type { ReactNode } from 'react';
 import Link from 'next/link';
 import BlogCard from './BlogCard';
 import BlogExplorer from './BlogExplorer';
@@ -8,8 +9,14 @@ import { getAllPosts, toSummary } from '@/lib/content';
 export const PAGE_SIZE = 9;
 
 export default function BlogListing({
-  title, description, crumbs, category, page, basePath,
-}: { title: string; description: string; crumbs: Crumb[]; category?: string; page: number; basePath: string }) {
+  title, description, crumbs, category, page, basePath, intro, after,
+}: {
+  title: string; description: string; crumbs: Crumb[]; category?: string; page: number; basePath: string;
+  /** Shown above the post grid. */
+  intro?: ReactNode;
+  /** Shown below the post grid and pagination. */
+  after?: ReactNode;
+}) {
   const all = getAllPosts();
   const pool = category ? all.filter((p) => p.category === category) : all;
   const pages = Math.max(1, Math.ceil(pool.length / PAGE_SIZE));
@@ -20,6 +27,7 @@ export default function BlogListing({
     <>
       <PageHeader eyebrow="E-Way Easy blog" title={title} description={description} crumbs={crumbs} />
       <div className="container py-12">
+        {intro}
         <BlogExplorer all={all.map(toSummary)} activeCategory={category}>
           {items.length ? (
             <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">{items.map((p) => <BlogCard key={p.slug} post={p} />)}</div>
@@ -43,6 +51,7 @@ export default function BlogListing({
             </nav>
           )}
         </BlogExplorer>
+        {after}
       </div>
     </>
   );

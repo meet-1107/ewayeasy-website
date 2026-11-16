@@ -124,7 +124,7 @@ export default function TemplateLanding({ id }: { id: TemplateId }) {
           </div>
 
           <aside className="lg:sticky lg:top-24 lg:self-start">
-            <RelatedResources tools={t.relatedTools} guides={t.relatedGuides} />
+            <RelatedResources tools={t.relatedTools} guides={t.relatedGuides} compact />
           </aside>
         </div>
 
@@ -151,24 +151,15 @@ export default function TemplateLanding({ id }: { id: TemplateId }) {
 
           <section aria-labelledby="other-kinds-h">
             <h2 id="other-kinds-h" className="font-display text-xl font-bold text-ink">More business document templates</h2>
-            <ul className="mt-4 grid gap-4 sm:grid-cols-2">
-              {otherKinds.map((k) => {
-                const o = CATEGORY_CONTENT[k];
-                return (
-                  <li key={k} className="card p-5">
-                    <Link href={categoryHref(k)} className="font-display text-lg font-bold text-ink hover:text-brand-700">{o.name}</Link>
-                    <ul className="mt-2 space-y-1 text-sm">
-                      {templatesOf(k).map((x) => (
-                        <li key={x}>
-                          <Link href={templateHref(x)} className="font-medium text-brand-700 hover:underline">
-                            {templateContent(x).h1}
-                          </Link>
-                        </li>
-                      ))}
-                    </ul>
-                  </li>
-                );
-              })}
+            {/* One link per category: listing every template here repeated the same text on every template page. */}
+            <ul className="mt-4 flex flex-wrap gap-3">
+              {otherKinds.map((k) => (
+                <li key={k}>
+                  <Link href={categoryHref(k)} className="chip font-semibold text-brand-700 hover:text-brand-800">
+                    {CATEGORY_CONTENT[k].name} ({templatesOf(k).length}) →
+                  </Link>
+                </li>
+              ))}
             </ul>
           </section>
 

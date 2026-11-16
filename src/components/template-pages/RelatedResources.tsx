@@ -9,11 +9,14 @@ export default function RelatedResources({
   guides,
   toolsHeading = 'Free tools that help',
   guidesHeading = 'Related guides',
+  compact = false,
 }: {
   tools: RelatedToolSlug[];
   guides: GuideLink[];
   toolsHeading?: string;
   guidesHeading?: string;
+  /** Names only: tool descriptions repeat across every page that shows this list. */
+  compact?: boolean;
 }) {
   return (
     <div className="space-y-8">
@@ -31,7 +34,7 @@ export default function RelatedResources({
                     </span>
                     <span>
                       <span className="block font-semibold text-ink">{t.name}</span>
-                      <span className="mt-0.5 block text-sm text-ink-soft">{t.description}</span>
+                      {!compact && <span className="mt-0.5 block text-sm text-ink-soft">{t.description}</span>}
                     </span>
                   </Link>
                 </li>

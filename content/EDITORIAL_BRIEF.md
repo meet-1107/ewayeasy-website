@@ -13,6 +13,19 @@ Today's date: 15 October 2026. Language: natural, professional Indian English, r
 - Vary article length (900–1800 words) and structure (some step lists, some tables, some Q&A, some checklists). Not every article needs the same headings.
 - Every article: explain the problem, the practical answer, common mistakes, exceptions/limitations, and end with a short note pointing to official sources. Where natural, mention E-Way Easy app or the site's free tools (links below) — once or twice, not salesy.
 
+## Writing standard (added 16 Nov 2026; applies to every page, article, tool and template text)
+Write like a senior copywriter who also knows GST practice: sharp, warm, direct, never like an encyclopedia. This is a voice, not a claim: never say the author or E-Way Easy has "20 years of experience".
+1. **Start with the answer.** No warm-up intros ("In today's world…", "Are you struggling with…"). First sentence answers the query or states a sharp, relatable truth.
+2. **Banned words and phrases:** delve, landscape (except page orientation), game-changer, unlock, elevate, crucial, tapestry, testament, realm, bustling, seamless/seamlessly, leverage, robust, streamline, navigate the complexities, in today's fast-paced, it's important to note, look no further, ultimate guide, revolutionise.
+3. **Plain and punchy:** 7th–8th grade reading level, sentences mostly under 20 words, active voice, strong verbs, "you" language. Paragraphs of 2–3 sentences max.
+4. **Citation block under every main H2:** the first paragraph after each `##` is a self-contained 40–60 word direct answer, using a clear definition where it fits ("A delivery challan is…"). Bullets, tables and examples come after.
+5. **Information gain in every main section:** at least one practical tip, common mistake or real-world nuance the top results usually miss (for example how the portal actually behaves, what dispatch desks get wrong, a spreadsheet trap). It must be true and general; never invent anecdotes, clients or numbers.
+6. **Decision rules and frameworks:** prefer "If X, then Y" rules, short named checklists and comparison tables that an AI answer can quote.
+7. **Radical honesty:** state limits, costs and exceptions. Never invent statistics, case studies, reviews or legal facts. If a number is not in this brief or an official source, leave it out (never publish a placeholder like "[insert stat]").
+8. **Structure for articles:** quick answer box → body H2/H3 → **Quick action checklist** (4–5 steps the reader can do today) → a soft, two-sentence next step to one relevant tool or app page → FAQ (only real questions, 2–3 sentence answers).
+9. **Internal links:** 2–4 contextual links to existing pages (see list below), with descriptive anchor text. Never link to pages that do not exist.
+10. **Final audit before saving:** no banned words; every main H2 opens with a 40–60 word answer; no paragraph over 3 sentences; nothing claimed that this brief does not allow.
+
 ## Verified E-Way Easy app capabilities (only these may be claimed)
 From the actual app screens and the official promo creative:
 - Android app, mobile-first. Dashboard shows business name + GSTIN, total sales for the financial year, invoice and e-way bill counts, recent activity.

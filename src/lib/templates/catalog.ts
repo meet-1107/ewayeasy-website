@@ -230,6 +230,43 @@ export const CATEGORY_CONTENT: Record<DocumentKind, CategoryContent> = {
             'Close the PO once everything ordered has been received and billed.',
           ],
         },
+        {
+          heading: 'Which purchase order template should you use?',
+          paragraphs: [
+            'Pick the PO template by who you buy from and what decides whether you accept the goods. For everyday domestic purchases, use the GST purchase order. For raw materials bought to a specification, use the manufacturing purchase order. For suppliers outside India, use the international purchase order, which adds currency, Incoterms and shipping documents.',
+          ],
+          bullets: [
+            'If you buy from an Indian supplier and want GSTINs, HSN codes and the tax split shown, use the GST PO.',
+            'If grade, drawing revision, test certificates or lot-wise delivery decide whether you accept the goods, use the manufacturing PO.',
+            'If you pay in a foreign currency and need ports, an Incoterm and a document list, use the international PO.',
+            'If you buy services such as maintenance or consultancy, the GST PO works: enter the SAC code in the HSN/SAC column.',
+          ],
+        },
+        {
+          heading: 'Five things every PO should say in writing',
+          paragraphs: [
+            'Every purchase order, whatever the template, should leave the supplier nothing to guess. Write down the rate basis, who pays freight, the delivery address with a contact, the required-by date and the payment terms. These five lines settle the questions that otherwise turn into disputes after the goods arrive.',
+          ],
+          bullets: [
+            'Rate basis: “plus GST” or “inclusive of GST”, never just a number.',
+            'Freight: who books and pays it, and to which point the price applies.',
+            'Delivery: the full address, the receiving contact and their phone number.',
+            'Required-by date: a date, not “urgent” or “ASAP”, so a late delivery can be shown.',
+            'Payment terms: for example “30 days from receipt of goods and invoice”, so both sides count from the same day.',
+          ],
+        },
+        {
+          heading: 'Common purchase order mistakes',
+          paragraphs: [
+            'PO disputes often trace back to something the PO left unsaid or a change nobody wrote down. The fix is cheap: put every agreed term on the PO, send a revised PO for every change, and ask the supplier to quote your PO number everywhere. These slips cause the most trouble.',
+          ],
+          bullets: [
+            'Agreeing a new price or quantity by phone and never issuing a revised PO.',
+            'Sending a revised PO with only the changed line, so nobody has the full current version.',
+            'Accepting a supplier’s invoice without a PO number, then matching it to the wrong order.',
+            'Leaving old POs open after delivery, which lets a duplicate or late invoice slip through.',
+          ],
+        },
       ],
       comparison: [
         { document: 'Purchase requisition', issuedBy: 'Internal department', purpose: 'Asks purchasing to buy something', vs: 'Internal only; the supplier never sees it' },
@@ -264,6 +301,14 @@ export const CATEGORY_CONTENT: Record<DocumentKind, CategoryContent> = {
       {
         q: 'Is there a purchase order format in Excel?',
         a: 'Not here. These purchase order formats are filled in on the page and saved as PDF or printed. Totals and taxes calculate as you type, so there are no spreadsheet formulas to break.',
+      },
+      {
+        q: 'Do I need a purchase order for every purchase?',
+        a: 'GST law does not ask for purchase orders, but a PO makes any purchase easier to approve, track and match to the supplier’s invoice. Many businesses set a value above which a PO is required and handle small cash purchases without one.',
+      },
+      {
+        q: 'Can I cancel a purchase order?',
+        a: 'Usually yes, before the supplier ships, by a written cancellation that quotes the PO number. Whether the supplier can charge for work already done depends on the terms you agreed, so add a cancellation clause to large orders.',
       },
     ],
     relatedTools: ['gst-calculator', 'multi-item-gst-calculator', 'gstin-validator', 'hsn-code-lookup', 'quotation-generator', 'invoice-number-generator', 'amount-in-words-converter'],
@@ -482,24 +527,26 @@ export const TEMPLATE_CONTENT: Record<TemplateId, TemplateContent> = {
     name: 'Simple sales invoice',
     seoTitle: 'Simple Invoice Format: Free Bill Template to Print or PDF',
     metaDescription:
-      'A clean, simple invoice and bill format. Edit the fields, upload your logo, pick a currency, get live totals, then print on A4 or A5 or save a PDF. No sign-up.',
+      'A simple invoice and bill format. Edit the fields, upload your logo, pick a currency, get live totals, then print on A4 or A5 or save a PDF. No sign-up.',
     h1: 'Simple Invoice Format (Bill Format)',
     intro: 'A short, uncluttered bill for small sales: your details, the customer, a few lines and a total.',
     audience: 'Small shops, home businesses and sellers who need a quick bill without GST columns.',
     tags: ['Minimal', 'Goods', 'B2C', 'Non-GST'],
     features: ['Minimal layout', 'Prints well on A5', 'Thermal print 58/80 mm', ...CORE_FEATURES],
     includes: [
-      { label: 'Your details', detail: 'Business or trading name, address, phone and logo.' },
-      { label: 'Bill details', detail: 'Bill number and date.' },
-      { label: 'Customer', detail: 'Customer name, and address or phone if you want to record it.' },
-      { label: 'Items', detail: 'Description, quantity, rate and amount for each line.' },
-      { label: 'Totals', detail: 'Subtotal, optional discount or other charges, and the total payable.' },
-      { label: 'Payment note', detail: 'Payment mode, UPI or bank details, and a thank-you or terms line.' },
+      { label: 'Your details', detail: 'Business or trading name, address, phone and logo. Use the name that appears on your bank account or UPI ID, so customers recognise who they paid.' },
+      { label: 'Bill details', detail: 'Bill number and date. A short running series such as 001, 002 is fine, as long as no number ever repeats.' },
+      { label: 'Customer', detail: 'Customer name, and address or phone if you want to record it. For credit sales always take a phone number; it is your only way to follow up.' },
+      { label: 'Items', detail: 'Description, quantity, rate and amount for each line. Use units customers understand: “2 kg”, “1 dozen”, “3 hours”.' },
+      { label: 'Totals', detail: 'Subtotal, optional discount or other charges, and the total payable. Show delivery charges on their own line rather than hiding them in the rate.' },
+      { label: 'Payment note', detail: 'Payment mode, UPI or bank details, and a thank-you or terms line. Write “Paid” or “Due by” so nobody argues about it later.' },
     ],
     example: {
       title: 'Example (illustrative)',
       body: [
-        'A home baker in Pune who is not registered under GST takes a birthday order: one 2 kg cake and 24 cupcakes. She fills in the customer’s name and phone number, adds the two lines, notes “Paid by UPI” and prints the bill on A5 to hand over with the order.',
+        'A home baker in Pune who is not registered under GST takes a birthday order: one 2 kg cake at ₹1,800 and 24 cupcakes at ₹60 each. The bill shows the two item lines, a delivery charge of ₹100 on its own line, and a total of ₹3,340.',
+        'She enters the customer’s name and phone, writes “Advance ₹1,000 by UPI, balance on delivery”, and prints the bill on A5 to hand over with the order. There is no GSTIN, no HSN and no tax line, because she is not registered and cannot collect GST.',
+        'Later a Surat textile trader (sample GSTIN 24ABCDE1234F1Z5) orders 40 gift hampers for his staff. He is registered, but she cannot issue him a tax invoice while she is unregistered. Her simple bill records the sale correctly, and he understands there is no GST on it to claim as input tax credit.',
       ],
     },
     steps: [
@@ -511,20 +558,51 @@ export const TEMPLATE_CONTENT: Record<TemplateId, TemplateContent> = {
     ],
     guidance: [
       {
-        heading: 'When a simple bill is enough, and when it is not',
+        heading: 'Who the simple bill format is for',
         paragraphs: [
-          'A simple bill works when you are not registered under GST, or for informal records where no tax is charged. It keeps a clean record of what was sold and what the customer paid.',
-          'If you are GST-registered and making a taxable sale, a plain bill is not enough: you need a tax invoice with the particulars the GST rules require, such as your GSTIN, HSN codes and tax amounts. Use the GST tax invoice template instead. Composition-scheme businesses and sellers of exempt goods generally issue a bill of supply, which carries a declaration that no tax is collected; check the current wording with your adviser.',
+          'A simple bill records a sale without any GST columns: who sold, who bought, what, how many and the total. Use it if you are not registered under GST, such as a home business, a tutor or a small stall, or for informal records where no tax is charged.',
+          'If you are GST-registered and the sale is taxable, use the GST tax invoice instead. If you bill clients for services against a PO with payment terms, the service invoice fits better. If you ship cartons to dealers with transport details, use the wholesale invoice.',
         ],
       },
       {
-        heading: 'Keeping simple bills useful',
-        paragraphs: ['Even a short bill becomes valuable when a customer disputes a payment or you need to total up the month’s sales.'],
+        heading: 'When a simple bill is not enough',
+        paragraphs: [
+          'A simple bill stops being enough once you are registered under GST and make a taxable sale. The law then asks for a tax invoice with your GSTIN, HSN codes, tax rates and tax amounts. Registered sellers under the composition scheme, or selling only exempt goods, generally issue a bill of supply instead.',
+          'A bill of supply carries a declaration that no tax is collected. Check the current wording with your adviser before you print it.',
+          'If you are not registered, never add GST to your price or print a tax line. A person who is not registered is not allowed to collect tax, even “just to cover costs”.',
+        ],
+      },
+      {
+        heading: 'Field by field: what to fill in, and what to leave out',
+        paragraphs: [
+          'A simple bill should answer three questions anyone can check later: who sold, what was sold, and how much was paid or is still due. Fill every field that answers those and leave the rest out. Empty HSN or tax columns copied from other formats only confuse customers.',
+        ],
         bullets: [
-          'Never reuse a bill number, and do not skip numbers without noting why.',
-          'Write the amount in words for larger bills to avoid alterations.',
-          'Keep a copy of every PDF you issue, organised by month.',
-          'Do not show any tax on the bill if you are not allowed to collect it.',
+          'Bill number: running and unique. Mark cancelled bills as cancelled instead of deleting them, so the series has no unexplained gaps.',
+          'Date: the date of the sale, not the day you got round to writing the bill.',
+          'Customer: a name is enough for cash sales; add a phone or address when the customer will pay later.',
+          'Items: plain words and real units. “Cotton saree, printed, 1 no.” beats “Item 4”.',
+          'Amount in words: harder to alter on a printed copy than figures alone.',
+          'Payment status: “Paid by UPI”, “Paid cash” or “Due by 10 December”.',
+        ],
+      },
+      {
+        heading: 'Common mistakes, and keeping bills useful',
+        paragraphs: [
+          'Simple bills earn their keep months later, when a customer disputes a payment or you need a month’s sales total for a loan or rent discussion. A numbered, dated bill with a clear payment status settles most arguments in a minute. These slips make bills far less useful.',
+        ],
+        bullets: [
+          'Reusing a bill number, or skipping numbers without noting why.',
+          'Overwriting a wrong bill. Cancel it in your records, issue the next number and keep both copies.',
+          'Not keeping copies. Save every PDF in a folder per month; that folder becomes your sales register.',
+          'Printing someone else’s GSTIN, such as a relative’s firm, on your bill.',
+          'Hiding a discount inside a lower rate, which is hard to explain when the customer checks the bill later.',
+        ],
+      },
+      {
+        heading: 'Paper size and thermal receipts',
+        paragraphs: [
+          'Choose A5 for a bill with a handful of lines, A4 when you have many items or want room for terms, and a 58 mm or 80 mm thermal roll for a counter receipt. Match the size to your printer before printing a batch. A bill cut off at the edges looks careless and may lose the total.',
         ],
       },
     ],
@@ -544,6 +622,18 @@ export const TEMPLATE_CONTENT: Record<TemplateId, TemplateContent> = {
       {
         q: 'Can I switch to the GST format later?',
         a: 'Yes. If you register under GST, open the GST tax invoice template and enter your GSTIN, HSN codes and tax rates there.',
+      },
+      {
+        q: 'Can a GST-registered buyer claim input tax credit on my simple bill?',
+        a: 'No. Input tax credit needs a tax invoice from a registered supplier that shows the GST charged. A simple bill from an unregistered seller has no GST on it, so there is nothing to claim.',
+      },
+      {
+        q: 'What should I do if I made a mistake on a bill I already handed over?',
+        a: 'Do not reuse or overwrite the number. Mark the original as cancelled in your records, issue a fresh bill with the next number, and keep both copies so your series still adds up.',
+      },
+      {
+        q: 'Can I add a delivery charge or a discount?',
+        a: 'Yes. Put each on its own line below the items so the customer sees exactly how you reached the total. A discount shown openly is easier to explain than a quietly reduced rate.',
       },
     ],
     relatedTools: ['amount-in-words-converter', 'invoice-number-generator', 'gst-inclusive-exclusive-calculator', 'quotation-generator'],
@@ -565,18 +655,20 @@ export const TEMPLATE_CONTENT: Record<TemplateId, TemplateContent> = {
     tags: ['Services', 'GST registered', 'B2B'],
     features: ['SAC code field', 'Service period', ...CORE_FEATURES],
     includes: [
-      { label: 'Provider details', detail: 'Business name, address, GSTIN (if registered), contact and logo.' },
-      { label: 'Invoice details', detail: 'Invoice number, date, place of supply and due date.' },
-      { label: 'Client', detail: 'Client name, billing address and GSTIN if registered.' },
-      { label: 'Service period', detail: 'The dates or month the services relate to.' },
-      { label: 'Service lines', detail: 'Description, SAC code, hours or units, rate and amount.' },
-      { label: 'Tax and totals', detail: 'Taxable value, CGST/SGST or IGST, total and amount in words.' },
-      { label: 'Payment', detail: 'Bank account, UPI, payment terms and any reference such as a PO or contract number.' },
+      { label: 'Provider details', detail: 'Business name, address, GSTIN (if registered), contact and logo. If you hold registrations in two states, bill from the one that made the supply.' },
+      { label: 'Invoice details', detail: 'Invoice number, date, place of supply and due date. Write the due date as a date, such as “Due 15 October 2026”, because that is what the client’s payables team works to.' },
+      { label: 'Client', detail: 'Client name, billing address and GSTIN if registered. For many B2B services the client’s registered location decides the place of supply, so copy the address from their GST registration, not an email signature.' },
+      { label: 'Service period', detail: 'The dates or month the services relate to. Write a full range such as “1–30 September 2026”, which avoids confusion when a contract runs across March and April.' },
+      { label: 'Service lines', detail: 'Description, SAC code, hours or units, rate and amount. Describe the work in words the client understands, such as “Monthly server maintenance, 2 sites”, not an internal job code.' },
+      { label: 'Tax and totals', detail: 'Taxable value, CGST/SGST or IGST, total and amount in words. Put recharged costs such as travel on their own line, and ask your adviser whether they form part of the taxable value.' },
+      { label: 'Payment', detail: 'Bank account, UPI, payment terms and any reference such as a PO or contract number. Many companies will not process a service bill until their PO number is on it.' },
     ],
     example: {
       title: 'Example (illustrative)',
       body: [
-        'A Bengaluru IT support firm bills a client in Chennai for September: a fixed monthly maintenance fee plus 6 hours of on-site work at an hourly rate. Each line carries the relevant SAC code, the service period reads “1–30 September 2026”, and because the client is in Tamil Nadu the invoice charges IGST.',
+        'A Bengaluru IT support firm (sample GSTIN 29ABCDE1234F1Z5) bills a Chennai client (sample GSTIN 33PQRST5678K1Z2) for September: a fixed monthly maintenance fee plus 6 hours of on-site work at an hourly rate. Each line carries the relevant SAC code, the service period reads “1–30 September 2026”, and because the client is registered in Tamil Nadu the invoice charges IGST.',
+        'Line 1 is the fixed fee: quantity 1, rate ₹40,000. Line 2 is the on-site work: quantity 6 hours, rate ₹1,500, amount ₹9,000. The taxable value is ₹49,000, and IGST is worked out on it at the rate that applies to each SAC code.',
+        'The client’s annual contract PO number goes in the reference field, and the due date reads 30 days from the invoice date, as the contract says. The client’s payables team can now match the bill to the contract without writing back.',
       ],
     },
     steps: [
@@ -588,22 +680,59 @@ export const TEMPLATE_CONTENT: Record<TemplateId, TemplateContent> = {
     ],
     guidance: [
       {
+        heading: 'Who the service invoice is for',
+        paragraphs: [
+          'A service invoice is the bill you raise for work, time or expertise rather than goods. Use it if you are a consultant, agency, contractor, trainer, repair firm or freelancer billing hours, a retainer or a fixed fee. It swaps goods quantities and HSN codes for SAC codes, a service period and clear work descriptions.',
+          'If you only bill for work, use this template. If you sell goods and also fit them, such as a dealer who supplies and installs an AC, use the GST tax invoice for the goods and ask your adviser how the installation should be billed. If you are not GST-registered and bill small one-off jobs, the simple sales invoice is enough.',
+        ],
+      },
+      {
+        heading: 'Field by field: what your client’s accounts team checks',
+        paragraphs: [
+          'Your client’s accounts team checks four things before it pays a service bill: the GSTIN and place of supply, the service period against the contract, a clear description of the work, and their PO or contract number. Miss one and the invoice can come back unpaid, often weeks later.',
+        ],
+        bullets: [
+          'GSTIN and place of supply: for many B2B services the place of supply is the client’s registered location, which decides CGST + SGST or IGST.',
+          'Service period: start and end dates, so the client books the cost in the right month.',
+          'Description and SAC: one line per type of service, each with its own SAC code if the services differ.',
+          'Hours or units: show quantity and rate, not just a lump sum, when the contract pays by the hour.',
+          'Reference: the client’s PO, work order or contract number, exactly as they issued it.',
+          'Bank details: check the account number and IFSC twice; one wrong digit can delay the payment for weeks.',
+        ],
+      },
+      {
         heading: 'SAC codes on service invoices',
         paragraphs: [
-          'Services are classified under the Services Accounting Code (SAC) scheme, which sits under chapter 99 of the GST classification. A SAC code works for services the way an HSN code works for goods: it identifies the type of service and is linked to the GST rate. Pick the code that matches what you actually supplied, and check the rate against the current notification.',
+          'A SAC code is the Services Accounting Code that classifies a service under GST, the way an HSN code classifies goods. SAC codes sit under chapter 99 of the GST classification and link to the rate you charge. Pick the code that matches what you actually supplied, not the one with the lowest rate.',
+          'If one invoice covers two different services, such as design and printing, give each its own line and code. Check the rate for each code against the current notification on the CBIC GST site.',
         ],
       },
       {
         heading: 'Service period, place of supply and timing',
         paragraphs: [
-          'Clients, especially larger companies, often reject service invoices that do not say what period they cover. Stating the period also helps you when work spans two months or two financial years.',
-          'For services, the place of supply follows different rules from goods. For many B2B services it is the location of the registered recipient, but there are exceptions, for example services related to immovable property or events. Check the place of supply before choosing CGST/SGST or IGST.',
+          'The service period tells the client which month or contract stage the bill covers. State it on every service invoice as a date range. It matters most for retainers, annual contracts and work that runs across two months or two financial years, where a vague period sends the bill back for correction.',
+          'Place of supply for services follows different rules from goods. For many B2B services it is the location of the registered client, but services linked to immovable property, events and some other categories have their own rules. Check before you choose CGST + SGST or IGST.',
+          'GST rules also set time limits for issuing service invoices, and an advance received for services generally needs a receipt voucher. Check the current timing rules with your adviser, especially for long contracts billed in stages.',
+        ],
+      },
+      {
+        heading: 'Common mistakes on service invoices',
+        paragraphs: [
+          'Service invoices are often sent back for small, avoidable details rather than the amount. The usual culprits are a missing PO number, a vague description, a wrong tax split and no service period. Run through this list before you send the PDF, especially to large companies with strict payables teams.',
+        ],
+        bullets: [
+          'Writing “Professional charges” with no detail. Say what you did, and for which project.',
+          'Choosing CGST + SGST from the client’s site address when their registered address, which often decides the place of supply, is in another state.',
+          'Leaving out the SAC code, or copying one from an old invoice without checking it still fits the work.',
+          'Folding travel or materials into the fee, so the client cannot see or approve them.',
+          'Restarting numbers at 001 for each client. Use one consecutive series for the financial year, or a few planned series, so no number repeats.',
+          'Reducing the invoice for TDS. Bill the full amount; the client deducts income-tax TDS where it applies and gives you a certificate.',
         ],
       },
       {
         heading: 'No e-way bill for services',
         paragraphs: [
-          'An e-way bill is needed only for the movement of goods. A pure service invoice does not need one. If you also supply parts or materials that are transported, the goods portion may need its own invoice and e-way bill.',
+          'An e-way bill records the movement of goods, so a pure service invoice never needs one. If your job also involves sending parts, equipment or materials by road, that movement may need its own document and, above the threshold, an e-way bill. Check the goods side separately from the service bill.',
         ],
       },
     ],
@@ -623,6 +752,18 @@ export const TEMPLATE_CONTENT: Record<TemplateId, TemplateContent> = {
       {
         q: 'Can I invoice a client outside India?',
         a: 'Yes, you can choose a foreign currency. Whether the service counts as an export of services, and how GST applies, depends on conditions in the law, so check with your adviser before issuing the invoice.',
+      },
+      {
+        q: 'Should a service invoice show hours worked or a fixed fee?',
+        a: 'Show whatever your contract pays for. If the client pays by the hour, list hours and the hourly rate so they can check them against timesheets. For a fixed fee or retainer, one line with quantity 1 is clearer.',
+      },
+      {
+        q: 'Do I need a separate invoice every month for a retainer?',
+        a: 'Most retainers are billed once per billing period set in the contract, each invoice with its own number and service period. That keeps the client’s monthly books and your GST returns in step. Check the timing rules for continuous services with your adviser.',
+      },
+      {
+        q: 'What if my client deducts TDS from my invoice?',
+        a: 'Bill the full amount as usual. The client deducts income-tax TDS where it applies, pays you the balance and issues a TDS certificate, which you use when you file your income tax return.',
       },
     ],
     relatedTools: ['gst-calculator', 'gst-inclusive-exclusive-calculator', 'gstin-validator', 'gst-state-code-list', 'invoice-number-generator', 'amount-in-words-converter'],
@@ -644,19 +785,21 @@ export const TEMPLATE_CONTENT: Record<TemplateId, TemplateContent> = {
     tags: ['Goods', 'B2B', 'GST registered', 'Transport details'],
     features: ['Transport and e-way bill fields', 'Packing / cases column', ...CORE_FEATURES],
     includes: [
-      { label: 'Seller and buyer', detail: 'Names, addresses, GSTINs, states and state codes, plus a separate ship-to address.' },
-      { label: 'Order references', detail: 'Invoice number and date, buyer’s PO number and date.' },
-      { label: 'Line items', detail: 'Description, HSN, packing (cases, bags, bundles), quantity, unit, rate, trade discount and taxable value.' },
-      { label: 'Tax', detail: 'CGST/SGST or IGST by place of supply, with rate and amount.' },
-      { label: 'Transport', detail: 'Transporter name, vehicle number, LR/GR number and date, and e-way bill number.' },
-      { label: 'Totals', detail: 'Total packages, taxable value, tax, freight or other charges, grand total and amount in words.' },
-      { label: 'Footer', detail: 'Bank details, credit terms, and signature.' },
+      { label: 'Seller and buyer', detail: 'Names, addresses, GSTINs, states and state codes, plus a separate ship-to address. The ship-to state and PIN feed the e-way bill, so take them from the buyer’s order, not from memory.' },
+      { label: 'Order references', detail: 'Invoice number and date, buyer’s PO number and date. Large dealers often hold payment until the PO number on your bill matches their records.' },
+      { label: 'Line items', detail: 'Description, HSN, packing (cases, bags, bundles), quantity, unit, rate, trade discount and taxable value. Where the packing unit and billing unit differ, show both, such as 40 boxes = 57.6 sq m.' },
+      { label: 'Tax', detail: 'CGST/SGST or IGST by place of supply, with rate and amount. In a bill-to-ship-to deal the place of supply can follow the party you bill rather than the delivery address, so check before you split.' },
+      { label: 'Transport', detail: 'Transporter name, vehicle number, LR/GR number and date, and e-way bill number. Fill these after the truck is booked, because vehicles often change at the last minute.' },
+      { label: 'Totals', detail: 'Total packages, taxable value, tax, freight or other charges, grand total and amount in words. Freight you charge the buyer is generally part of the taxable value; confirm with your adviser.' },
+      { label: 'Footer', detail: 'Bank details, credit terms, and signature. Write the credit period plainly, such as “Payment within 30 days of invoice date”.' },
     ],
     example: {
       title: 'Example (illustrative)',
       body: [
-        'A Morbi tiles manufacturer dispatches 1,200 boxes of floor tiles to a distributor in Jaipur on one truck. The invoice lists three designs by HSN with boxes and square metres, notes 40 pallets in total, and carries the transporter’s LR number and vehicle number.',
+        'A Morbi tiles manufacturer (sample GSTIN 24ABCDE1234F1Z5) dispatches 1,200 boxes of floor tiles to a Jaipur distributor (sample GSTIN 08FGHIJ5678K1Z3) on one truck. The invoice lists three designs by HSN with boxes and square metres, notes 40 pallets in total, and carries the transporter’s LR number and vehicle number.',
         'Because the consignment value is well above the e-way bill threshold and the goods move from Gujarat to Rajasthan, an e-way bill is generated on the official portal from these details, and its number is written on the invoice before the truck leaves.',
+        'The following week the distributor asks for a part load to go straight to a builder’s site in Ajmer, still billed to the distributor. The seller keeps “Bill to” as the Jaipur distributor, puts the Ajmer site under “Ship to”, and uses the Ajmer PIN for the e-way bill distance.',
+        'That truck arrives with 2 boxes broken. Because the invoice counts boxes per design, the distributor notes the damage on the LR, and the seller issues a credit note against the invoice number instead of arguing over square metres.',
       ],
     },
     steps: [
@@ -669,10 +812,32 @@ export const TEMPLATE_CONTENT: Record<TemplateId, TemplateContent> = {
     ],
     guidance: [
       {
+        heading: 'Who the wholesale invoice is for',
+        paragraphs: [
+          'A wholesale invoice is a GST tax invoice built for bulk B2B dispatches. Use it if you are a manufacturer, wholesaler or distributor sending cartons, bags or pallets to dealers by truck, and you need packing counts, the buyer’s PO, a ship-to address and transport details on the same page.',
+          'If you sell a few items across the counter or bill without transport, the GST tax invoice is cleaner. If you are not registered and sell small quantities, use the simple sales invoice. If the goods leave India, switch to the export commercial invoice.',
+        ],
+      },
+      {
+        heading: 'Field by field: what the buyer’s godown and accounts check',
+        paragraphs: [
+          'Two teams read your wholesale invoice. The buyer’s godown counts packages against your total and the LR, and their accounts team matches rates, discounts and the PO number before booking input tax credit. Fill every field with both readers in mind, and most errors stop at your desk.',
+        ],
+        bullets: [
+          'Total packages: the first number the godown checks when the truck is unloaded.',
+          'Packing and billing units: boxes for counting, square metres or kg for pricing. Show both where they differ.',
+          'Trade discount: shown on the invoice line, so the taxable value already reflects it.',
+          'PO number and date: copied exactly from the buyer’s order, prefixes included.',
+          'Ship-to address and PIN: the delivery point for the truck and for the e-way bill.',
+          'Vehicle and LR number: these must match Part B of the e-way bill and the transporter’s papers.',
+        ],
+      },
+      {
         heading: 'Transport details and the e-way bill',
         paragraphs: [
-          'Wholesale consignments usually move by road and often cross the e-way bill threshold. The e-way bill is generated on the official portal using the invoice number, date, value, HSN codes and GSTINs, so these must match the invoice exactly. Vehicle details go into Part B of the e-way bill.',
-          'Generally, an e-way bill is needed where the consignment value exceeds ₹50,000, though some states have set different limits for movement within the state. Use the eligibility checker and confirm against current rules.',
+          'An e-way bill is generally needed when a consignment worth more than ₹50,000 moves by road, and wholesale loads usually cross that line. It is generated on the official portal from your invoice number, date, value, HSN codes and GSTINs, so the invoice and the e-way bill must match exactly.',
+          'Vehicle details go into Part B. Some states have set different limits for movement within the state, so confirm current rules with the eligibility checker before dispatch.',
+          'Validity runs from when Part B is first entered: generally 1 day for every 200 km for normal cargo. If the truck changes on the way, update Part B instead of generating a new e-way bill.',
         ],
         links: [
           { title: 'Documents required for an e-way bill', href: '/documents-required-for-eway-bill' },
@@ -681,13 +846,23 @@ export const TEMPLATE_CONTENT: Record<TemplateId, TemplateContent> = {
         ],
       },
       {
-        heading: 'Getting bulk lines right',
-        paragraphs: ['Wholesale invoices carry more lines and larger amounts, so small errors cost more.'],
+        heading: 'Copies, discounts and freight',
+        paragraphs: [
+          'For goods, the GST rules generally ask for an invoice in three copies: the original for the buyer, a duplicate for the transporter and a triplicate for you. Print and mark each copy before the truck is loaded. A driver stopped for checking without the transporter copy loses time for everyone.',
+          'Discounts known at the time of sale and shown on the invoice reduce the taxable value. Discounts given later, such as a quarterly target scheme, are usually handled by credit note, subject to conditions; ask your adviser how your scheme should be shown.',
+        ],
+      },
+      {
+        heading: 'Common mistakes on wholesale invoices',
+        paragraphs: [
+          'Wholesale invoices carry more lines and bigger amounts, so a small slip costs more and travels further: into the e-way bill, the buyer’s books and your returns. Most slips fall into four groups: units, discounts, addresses and transport numbers. Check those before the truck leaves, not after.',
+        ],
         bullets: [
-          'Use the same unit on the invoice as on the packing list (boxes vs square metres, bags vs kg).',
-          'Show trade discounts on the invoice itself so the taxable value is correct.',
-          'Use “bill to” and “ship to” correctly when goods go to the buyer’s customer or godown.',
-          'Write the total number of packages so the receiver can check the delivery at a glance.',
+          'Billing in square metres while the packing list counts boxes, with no conversion shown.',
+          'Putting the buyer’s customer under “Bill to” when your contract is with the distributor.',
+          'Typing the vehicle number from memory; one wrong letter breaks the match with Part B.',
+          'Generating the e-way bill before the invoice is final, then changing the value. An e-way bill cannot be edited, only cancelled within 24 hours and generated again.',
+          'Leaving out the total package count, so a short delivery is hard to prove.',
         ],
       },
     ],
@@ -708,6 +883,18 @@ export const TEMPLATE_CONTENT: Record<TemplateId, TemplateContent> = {
         q: 'How do I check the invoice matches the e-way bill?',
         a: 'Compare invoice number, date, GSTINs, value and HSN codes with the e-way bill details. The Invoice vs E-Way Bill Checker can help you spot differences.',
       },
+      {
+        q: 'Should freight go on the wholesale invoice or be billed separately?',
+        a: 'If you arrange and charge for delivery, freight is usually shown on the invoice and is generally part of the taxable value. If the buyer books and pays the transporter directly, leave it off. Confirm the treatment for your contracts with your adviser.',
+      },
+      {
+        q: 'How many copies of a wholesale invoice should I print?',
+        a: 'For goods, the usual practice under the GST rules is three: the original for the buyer, the duplicate for the transporter and the triplicate for your records. Mark each copy clearly before it leaves.',
+      },
+      {
+        q: 'What if the vehicle changes after I print the invoice?',
+        a: 'Update Part B of the e-way bill with the new vehicle number on the portal, and note the change on your copy of the invoice. Part B can be updated any number of times while the e-way bill is valid.',
+      },
     ],
     relatedTools: ['eway-bill-eligibility-checker', 'invoice-vs-eway-bill-checker', 'distance-calculator', 'quantity-and-tax-calculator', 'multi-item-gst-calculator', 'hsn-code-lookup'],
     relatedGuides: [
@@ -724,27 +911,29 @@ export const TEMPLATE_CONTENT: Record<TemplateId, TemplateContent> = {
     name: 'GST purchase order',
     seoTitle: 'GST Purchase Order Format: HSN, GSTIN & Tax Split (PDF)',
     metaDescription:
-      'GST purchase order format for Indian buyers: both GSTINs, HSN codes, CGST/SGST or IGST, delivery date and approval. Live totals, then print or download a PDF.',
+      'GST purchase order format for Indian buyers: both GSTINs, HSN codes, CGST/SGST or IGST, delivery date and approval. Live totals, then print or save a PDF.',
     h1: 'Purchase Order Format with GST',
     intro: 'A domestic PO that shows both GSTINs, HSN codes and the expected CGST/SGST or IGST, so the supplier’s tax invoice can be checked line by line.',
     audience: 'GST-registered Indian buyers: traders, shops, offices and small manufacturers placing domestic orders.',
     tags: ['Domestic', 'GST registered', 'Approval'],
     features: ['Buyer and supplier GSTIN', 'HSN and GST rate per line', 'Approval block', ...CORE_FEATURES],
     includes: [
-      { label: 'Buyer details', detail: 'Your company name, billing address, GSTIN, state and state code, and logo.' },
-      { label: 'PO details', detail: 'PO number, PO date, supplier quotation reference and required-by date.' },
-      { label: 'Supplier', detail: 'Supplier name, address, GSTIN, state and contact person.' },
-      { label: 'Deliver to', detail: 'Delivery address and state, if different from your billing address.' },
-      { label: 'Items', detail: 'Description, HSN/SAC, quantity, unit, agreed rate, discount and GST rate.' },
-      { label: 'Expected tax', detail: 'CGST and SGST for a supplier in your state, or IGST for a supplier in another state.' },
-      { label: 'Terms', detail: 'Delivery date, freight, payment terms and any warranty or return conditions.' },
+      { label: 'Buyer details', detail: 'Your company name, billing address, GSTIN, state and state code, and logo. If you hold more than one registration, use the GSTIN of the state where the goods will be received.' },
+      { label: 'PO details', detail: 'PO number, PO date, supplier quotation reference and required-by date. The quotation reference shows the approver where the price came from.' },
+      { label: 'Supplier', detail: 'Supplier name, address, GSTIN, state and contact person. The supplier’s state, read with the delivery state, tells you whether to expect CGST + SGST or IGST.' },
+      { label: 'Deliver to', detail: 'Delivery address and state, if different from your billing address. Add a contact name and phone number for the gate.' },
+      { label: 'Items', detail: 'Description, HSN/SAC, quantity, unit, agreed rate, discount and GST rate. Say whether the rate is before GST: “₹250 per ream plus GST” leaves no room for argument.' },
+      { label: 'Expected tax', detail: 'CGST and SGST for a supplier in your state, or IGST for a supplier in another state, so the approver sees the full outgo.' },
+      { label: 'Terms', detail: 'Delivery date, freight, payment terms and any warranty or return conditions. Name who pays freight, for example “Freight: supplier’s account, delivered at our godown”.' },
       { label: 'Approval', detail: 'Prepared by, approved by and the supplier’s acceptance.' },
     ],
     example: {
       title: 'Example (illustrative)',
       body: [
-        'A Nagpur stationery distributor (sample GSTIN 27ABCDE1234F1Z5) orders 200 reams of A4 paper from a supplier in the same state and 50 boxes of files from a supplier in Chhattisgarh. It raises two POs: the first shows CGST and SGST, the second shows IGST, each with the HSN code and rate agreed in the supplier’s quotation.',
+        'A Nagpur stationery distributor (sample GSTIN 27ABCDE1234F1Z5) orders 200 reams of A4 paper from a Pune supplier (sample GSTIN 27KLMNO6789P1Z4) and 50 boxes of files from a Raipur supplier (sample GSTIN 22QRSTU2345V1Z8). It raises two POs: the Pune one shows CGST and SGST, the Raipur one shows IGST, each with the HSN code and rate agreed in the quotation.',
+        'PO/2026-27/0118 for the paper reads: 200 reams at ₹250 per ream plus GST, freight included, delivery by 20 November, payment 30 days from receipt of goods and invoice. The value is above the firm’s own approval limit, so a second person signs the approval block.',
         'When the goods arrive, the accounts team checks each supplier’s tax invoice against the PO. A line billed at a different rate or HSN is queried before payment, not after the return is filed.',
+        'The paper supplier bills 210 reams, but the goods receipt note says 200. Accounts pays for 200 and asks the supplier for a credit note for the extra 10, quoting the PO number.',
       ],
     },
     steps: [
@@ -756,29 +945,64 @@ export const TEMPLATE_CONTENT: Record<TemplateId, TemplateContent> = {
     ],
     guidance: [
       {
+        heading: 'Who the GST purchase order is for',
+        paragraphs: [
+          'A GST purchase order is a domestic PO that shows both GSTINs, HSN codes and the GST you expect to pay. Use it if you are a GST-registered business buying goods or services from Indian suppliers and want to check their tax invoice line by line before you book input tax credit.',
+          'If you buy raw material where grade, tolerances, inspection and lot-wise deliveries matter, use the manufacturing purchase order instead. If the supplier is outside India and you need currency, Incoterms and shipping documents, use the international purchase order.',
+        ],
+      },
+      {
         heading: 'Why put GST details on a purchase order',
         paragraphs: [
-          'A PO is not a tax document, so GST on it is your expectation, not a charge. Showing it is still worth the effort: the approver sees the full outgo including tax, the supplier knows the HSN and rate you expect, and your accounts team can check the supplier’s tax invoice against it before booking input tax credit.',
-          'The supplier’s tax invoice is what decides the GST actually charged, and it is the document you use to claim credit. If the rate or HSN on the invoice differs from the PO, raise it with the supplier before payment.',
+          'A purchase order is not a tax document, so the GST on it is your expectation, not a charge. Showing it still pays off: the approver sees the full outgo, the supplier sees the HSN and rate you expect, and your accounts team can check the supplier’s tax invoice against it.',
+          'The supplier’s tax invoice decides the GST actually charged, and it is the document you claim credit on. If its rate or HSN differs from your PO, raise it with the supplier before payment.',
         ],
         links: [{ title: 'GSTIN verification: what to check', href: '/blog/gstin-verification-what-to-check' }],
       },
       {
+        heading: 'Field by field: what accounts checks against the supplier’s invoice',
+        paragraphs: [
+          'When the supplier’s tax invoice arrives, your accounts team compares it with the PO field by field. GSTIN, HSN, rate, quantity, tax split and total should all agree. Any field you leave vague on the PO is a field they cannot check, so fill each one precisely.',
+        ],
+        bullets: [
+          'Supplier GSTIN: the same registration on the PO, the invoice and the GST portal, and active on the invoice date.',
+          'HSN and GST rate: a different HSN on the invoice can mean a different rate, so ask why before you pay.',
+          'Rate basis: before GST or including GST, stated in words.',
+          'Quantity and unit: compared with the goods receipt note, not just the invoice.',
+          'Deliver-to state: this, with the supplier’s state, drives the CGST + SGST or IGST split.',
+          'PO number: the supplier should quote it on the invoice and the delivery challan.',
+        ],
+      },
+      {
         heading: 'CGST + SGST or IGST on a PO',
         paragraphs: [
-          'The split follows the supplier’s invoice, which depends on the supplier’s location and the place of supply. For a typical purchase of goods delivered to you, a supplier in your own state charges CGST and SGST, and a supplier in another state charges IGST. Bill-to-ship-to deals and deliveries to a third party can change the answer, so check unusual cases with your adviser.',
+          'The tax split on your PO should mirror what the supplier will charge. For a typical purchase of goods delivered to you, a supplier in your own state charges CGST and SGST, and a supplier in another state charges IGST. The split depends on the supplier’s location and the place of supply.',
+          'Bill-to-ship-to deals and deliveries to a third party can change the answer. Check unusual cases with your adviser before you issue the PO.',
         ],
         links: [{ title: 'CGST vs SGST vs IGST explained', href: '/blog/cgst-sgst-igst-explained' }],
       },
       {
         heading: 'PO vs invoice, and a light approval routine',
         paragraphs: [
-          'You, the buyer, issue the purchase order; the supplier issues the tax invoice after supplying. Many businesses pay only when three documents agree: the PO, the goods receipt and the supplier’s invoice.',
+          'You, the buyer, issue the purchase order; the supplier issues the tax invoice after supplying. Many businesses pay only when three documents agree: the PO, the goods receipt note and the supplier’s invoice. A short approval routine before the PO goes out keeps that match easy.',
         ],
         bullets: [
           'Set a value above which a second person must approve the PO.',
           'Quote the supplier’s quotation so the approver can see where the rate came from.',
           'Issue a revised PO, with the same number and a revision mark, if quantity, rate or dates change.',
+        ],
+      },
+      {
+        heading: 'Common mistakes on GST purchase orders',
+        paragraphs: [
+          'PO problems usually surface weeks later, when the supplier’s invoice does not match and payment stalls. The causes are the same few each time: an unclear rate basis, the wrong GSTIN, no freight terms or a supplier GSTIN nobody checked. Fix them on the PO and the month-end match takes minutes.',
+        ],
+        bullets: [
+          'Writing a rate with no basis, so the supplier adds GST on top of a price you thought included it.',
+          'Using your head-office GSTIN when the goods are delivered to a branch registered in another state.',
+          'Leaving freight and unloading terms blank, then disputing a transport charge on the invoice.',
+          'Changing the quantity by phone without a revised PO, so the invoice and PO never match.',
+          'Not checking the supplier’s GSTIN, which can leave you with an invoice you cannot claim credit on.',
         ],
       },
     ],
@@ -799,6 +1023,18 @@ export const TEMPLATE_CONTENT: Record<TemplateId, TemplateContent> = {
         q: 'Who prepares a purchase order, the buyer or the supplier?',
         a: 'The buyer. The supplier usually replies with an acknowledgement, then supplies the goods or services with a tax invoice that quotes your PO number.',
       },
+      {
+        q: 'Should the PO rate include GST or exclude it?',
+        a: 'Either works, as long as you say which. Many B2B buyers write rates before GST, such as “₹250 per ream plus GST at the applicable rate”, and show the expected tax in its own column.',
+      },
+      {
+        q: 'What if the supplier’s invoice shows a different HSN or GST rate from my PO?',
+        a: 'Ask the supplier before you pay or book credit. They may have a valid reason, such as a more accurate classification, but you should understand it. If their invoice is wrong, they can correct it with a credit or debit note.',
+      },
+      {
+        q: 'Which GSTIN goes on the PO if my business is registered in two states?',
+        a: 'Use the GSTIN of the state where the goods will be received and used. The supplier then bills that registration, and the input tax credit lands in the right state.',
+      },
     ],
     relatedTools: ['gstin-validator', 'gst-calculator', 'multi-item-gst-calculator', 'hsn-code-lookup', 'gst-state-code-list', 'amount-in-words-converter'],
     relatedGuides: [
@@ -813,26 +1049,28 @@ export const TEMPLATE_CONTENT: Record<TemplateId, TemplateContent> = {
     name: 'Manufacturing purchase order',
     seoTitle: 'Raw Material Purchase Order Format for Manufacturers',
     metaDescription:
-      'Purchase order format for raw materials and components. Editable item lines, live totals and taxes, logo upload, then print or save a PDF. Works in your browser.',
+      'Raw material PO format: grade, tolerance, drawing revision, lot-wise delivery and inspection terms. Live totals and taxes, then print or save a PDF.',
     h1: 'Raw Material Purchase Order Format',
     intro: 'A PO for raw materials and components where the specification matters as much as the price: grade, tolerances, inspection and staggered deliveries.',
     audience: 'Manufacturers and fabricators buying raw materials, castings, components and consumables.',
     tags: ['Raw material', 'Specifications', 'Inspection'],
     features: ['Specification columns', 'Delivery schedule', 'Inspection terms', ...CORE_FEATURES],
     includes: [
-      { label: 'Buyer and supplier', detail: 'Names, addresses, GSTINs and contact persons on both sides.' },
-      { label: 'PO details', detail: 'PO number, date, revision number and quotation or rate-contract reference.' },
-      { label: 'Material lines', detail: 'Item code, description, grade or standard, size and tolerance, drawing number and revision, HSN, quantity, unit and rate.' },
-      { label: 'Delivery schedule', detail: 'Quantities due by date, for orders delivered in lots.' },
-      { label: 'Quality terms', detail: 'Inspection point, test certificate requirement, rejection and replacement terms.' },
-      { label: 'Commercial terms', detail: 'Freight, packing, payment terms, price basis and GST.' },
+      { label: 'Buyer and supplier', detail: 'Names, addresses, GSTINs and contact persons on both sides. Add your quality contact, so inspection queries reach the right person.' },
+      { label: 'PO details', detail: 'PO number, date, revision number and quotation or rate-contract reference. The revision number tells everyone which version is live.' },
+      { label: 'Material lines', detail: 'Item code, description, grade or standard, size and tolerance, drawing number and revision, HSN, quantity, unit and rate. Quote the drawing revision every time; an old drawing is the fastest route to a rejected lot.' },
+      { label: 'Delivery schedule', detail: 'Quantities due by date, for orders delivered in lots. Ask for each lot to come with its own invoice quoting the PO and lot number.' },
+      { label: 'Quality terms', detail: 'Inspection point, test certificate requirement, rejection and replacement terms. Name the standard or sampling plan you inspect to, if you use one.' },
+      { label: 'Commercial terms', detail: 'Freight, packing, payment terms, price basis and GST. For metals and other commodities, say whether the price is fixed or linked to a published index, and how often it is reset.' },
       { label: 'Approval', detail: 'Prepared, checked and approved signatures, and supplier acceptance.' },
     ],
     example: {
       title: 'Example (illustrative)',
       body: [
-        'A Ludhiana auto-parts maker orders 12 tonnes of bright steel bars from a mill. The PO specifies the steel grade, diameter with tolerance and length, asks for a mill test certificate with every lot, and schedules 4 tonnes in each of the next three months.',
+        'A Ludhiana auto-parts maker (sample GSTIN 03ABCDE1234F1Z5) orders 12 tonnes of bright steel bars from a Mandi Gobindgarh mill (sample GSTIN 03VWXYZ6789L1Z2). The PO specifies the steel grade, diameter with tolerance and length, asks for a mill test certificate with every lot, and schedules 4 tonnes in each of the next three months.',
         'It states that material failing incoming inspection will be returned at the supplier’s cost, and that each lot’s invoice must quote the PO number and lot number.',
+        'Steel is sold by weight, so the PO allows an agreed plus-or-minus quantity tolerance per lot and says the buyer’s weighbridge reading settles any billing dispute. Both parties are in Punjab, so the expected tax is CGST + SGST.',
+        'Before the second lot the mill raises its price. The buyer issues PO revision 1, valid for lots dispatched from the agreed date, and the mill signs it. Lot 1 stays at the old rate, so nobody argues later about which invoice carries which price.',
       ],
     },
     steps: [
@@ -844,22 +1082,70 @@ export const TEMPLATE_CONTENT: Record<TemplateId, TemplateContent> = {
     ],
     guidance: [
       {
+        heading: 'Who the manufacturing purchase order is for',
+        paragraphs: [
+          'A manufacturing purchase order is a PO for raw materials, castings, components and consumables where the specification matters as much as the price. Use it if you buy to a grade, standard or drawing, need test certificates, inspect material on arrival, or want the quantity delivered in dated lots.',
+          'If you buy finished items off the shelf, such as stationery or spares with a catalogue number, the GST purchase order is simpler. If the material comes from a supplier abroad, use the international purchase order and copy your specification lines into it.',
+        ],
+      },
+      {
         heading: 'Specifications that prevent rejections',
         paragraphs: [
-          'Most disputes on raw material orders come from vague descriptions. “MS plate 10 mm” leaves room for argument; a grade or standard, a thickness tolerance, a size and a finish do not. If a drawing governs the part, quote the drawing number and revision so the supplier cannot work from an old version.',
+          'Rejections usually start with a vague description. “MS plate 10 mm” leaves room for argument; a grade or standard, a thickness tolerance, a size and a finish do not. If a drawing governs the part, quote the drawing number and revision so the supplier cannot work from an old copy.',
+          'Use your own item code as well as the supplier’s. When a part has two names, the item code is what stores, quality and accounts all search for.',
+        ],
+      },
+      {
+        heading: 'Field by field: what stores and quality check on arrival',
+        paragraphs: [
+          'When a lot arrives, stores checks quantity and lot number against the PO schedule, and quality checks the material against the specification and the test certificate. Each of those checks needs a field on the PO to compare against. If the PO is silent, nobody can reject the lot with confidence.',
+        ],
+        bullets: [
+          'Item code and description: matched to the supplier’s invoice and the material tag.',
+          'Grade, size and tolerance: checked by quality against the drawing and the test certificate.',
+          'Drawing number and revision: the revision on the PO must match the one quality has on file.',
+          'Lot quantity and due date: stores records early, late and short lots against the schedule.',
+          'Test certificate: the heat or batch number on it should match the material supplied.',
+          'Price basis: fixed, or linked to an index, with the date of the price used for each lot.',
         ],
       },
       {
         heading: 'Inspection and test certificates',
         paragraphs: [
-          'Say where inspection will happen: at the supplier’s works before dispatch, or at your factory on receipt. If you need a mill test certificate or another test report with each lot, say so on the PO; it is much harder to ask afterwards.',
+          'Say on the PO where inspection will happen: at the supplier’s works before dispatch, or at your factory on receipt. If you need a mill test certificate or another test report with each lot, write it on the PO. Asking for certificates after the material lands rarely works.',
           'Also state the rejection terms: whether rejected material is returned or replaced, who pays freight both ways, and how quickly replacements must arrive.',
+        ],
+      },
+      {
+        heading: 'Schedules, tolerances and revisions',
+        paragraphs: [
+          'Large raw material orders rarely arrive in one load, so the PO should say what arrives when. Split the total into dated lots, allow a stated quantity tolerance where material is sold by weight or length, and issue a numbered revision whenever price, quantity or dates change.',
+        ],
+        bullets: [
+          'Write the tolerance as a figure you have agreed with the supplier, per lot.',
+          'Say whose weighbridge or count decides the billed quantity.',
+          'Keep the PO number on revisions and add “Rev 1”, “Rev 2”.',
+          'Close the PO when the last lot is received and billed, so stray invoices are caught.',
+        ],
+      },
+      {
+        heading: 'Common mistakes on raw material POs',
+        paragraphs: [
+          'The costly mistakes on raw material POs are rarely about price. They come from missing specifications, an old drawing revision, no test-certificate clause or a schedule agreed only by phone. Each one turns into a rejected lot, an idle machine or a dispute over who pays the return freight.',
+        ],
+        bullets: [
+          'Copying last year’s PO without updating the drawing revision.',
+          'Writing “as per sample” with no sample reference or approval date.',
+          'Accepting a lot without the test certificate the PO asked for, then rejecting it later.',
+          'Agreeing a rate change by phone and leaving the PO at the old price.',
+          'Raising a material PO when the material is actually your own, sent out for processing.',
         ],
       },
       {
         heading: 'Job work and material sent out',
         paragraphs: [
-          'If you send your own material to a job worker for processing instead of buying finished material, that outward movement is not a purchase and follows separate GST and e-way bill rules for job work. A purchase order for the job work charges can still sit alongside.',
+          'If you send your own material to a job worker for processing, that movement is not a purchase. It goes out on a delivery challan and follows separate GST and e-way bill rules for job work. Inter-state movement of goods to a job worker needs an e-way bill whatever the value.',
+          'A separate PO for the job work charges can still sit alongside the challan.',
         ],
         links: [{ title: 'E-way bill rules for job work', href: '/blog/eway-bill-rules-for-job-work' }],
       },
@@ -881,6 +1167,18 @@ export const TEMPLATE_CONTENT: Record<TemplateId, TemplateContent> = {
         q: 'Does the supplier need an e-way bill for my raw material?',
         a: 'The e-way bill depends on the movement of goods and the consignment value, not on the PO. Where it is required, the supplier or transporter usually generates it using the supplier’s invoice details.',
       },
+      {
+        q: 'Can I use one PO for a year of supplies at a fixed rate?',
+        a: 'Yes. Many manufacturers issue an open or annual PO against a rate contract and call off quantities with dated schedules. Put a validity date on it, and a review clause if the rate is linked to market prices.',
+      },
+      {
+        q: 'What should happen to rejected raw material?',
+        a: 'Whatever your PO says. State whether rejected lots are returned or replaced, who pays freight both ways and how fast a replacement must arrive. Without those terms, every rejection becomes a negotiation.',
+      },
+      {
+        q: 'Should the PO name the test standard or just ask for a certificate?',
+        a: 'Name both. A certificate only helps if it reports results against the grade or standard you specified, with a heat or batch number that matches the material supplied.',
+      },
     ],
     relatedTools: ['quantity-and-tax-calculator', 'multi-item-gst-calculator', 'hsn-code-lookup', 'gstin-validator', 'delivery-challan-generator', 'eway-bill-eligibility-checker'],
     relatedGuides: [
@@ -895,26 +1193,28 @@ export const TEMPLATE_CONTENT: Record<TemplateId, TemplateContent> = {
     name: 'International purchase order',
     seoTitle: 'International Purchase Order Template: Any Currency, PDF',
     metaDescription:
-      'International purchase order template for overseas suppliers. Choose the currency, edit every field, get live totals, print on A4 or Letter, or download a PDF.',
+      'International PO template for overseas suppliers: currency, Incoterms, ports and a document list. Live totals, then print on A4 or Letter or save a PDF.',
     h1: 'International Purchase Order Template',
     intro: 'A PO for buying from overseas suppliers, with currency, Incoterms, ports and the documents you need to clear the goods.',
     audience: 'Indian importers, trading houses and manufacturers buying from suppliers abroad.',
     tags: ['Import', 'Incoterms', 'Foreign currency'],
     features: ['Incoterms field', 'Ports and shipment mode', 'Document checklist', ...CORE_FEATURES],
     includes: [
-      { label: 'Buyer', detail: 'Your company name, address, IEC, GSTIN and logo.' },
-      { label: 'Supplier', detail: 'Supplier name, full address and country, contact and email.' },
-      { label: 'PO details', detail: 'PO number, date, supplier’s offer reference and currency.' },
-      { label: 'Items', detail: 'Description, HS code, quantity, unit, unit price and amount in the order currency.' },
-      { label: 'Shipping terms', detail: 'Incoterm with named place, port of loading, port of discharge, mode of shipment and latest shipment date.' },
-      { label: 'Payment terms', detail: 'Advance, letter of credit, documentary collection or open account, with timing.' },
-      { label: 'Documents required', detail: 'Commercial invoice, packing list, bill of lading or airway bill, certificate of origin and any test or inspection certificates.' },
+      { label: 'Buyer', detail: 'Your company name, address, IEC, GSTIN and logo. Customs and your bank use the IEC to identify you as the importer.' },
+      { label: 'Supplier', detail: 'Supplier name, full address and country, contact and email. Use the legal name that will appear on the supplier’s invoice and bank documents.' },
+      { label: 'PO details', detail: 'PO number, date, supplier’s offer reference and currency. Write the currency code, such as USD or EUR, not just “$”.' },
+      { label: 'Items', detail: 'Description, HS code, quantity, unit, unit price and amount in the order currency. Describe goods the way customs will read them: material, function and model.' },
+      { label: 'Shipping terms', detail: 'Incoterm with named place, port of loading, port of discharge, mode of shipment and latest shipment date. The named place is what turns “FOB” into a term the supplier can actually perform.' },
+      { label: 'Payment terms', detail: 'Advance, letter of credit, documentary collection or open account, with timing. If you pay by letter of credit, keep its terms in line with the PO, or the documents may be refused.' },
+      { label: 'Documents required', detail: 'Commercial invoice, packing list, bill of lading or airway bill, certificate of origin and any test or inspection certificates. Say how many originals and copies you need.' },
     ],
     example: {
       title: 'Example (illustrative)',
       body: [
-        'A Chennai electronics assembler orders 20,000 connectors from a supplier in Shenzhen. The PO is in US dollars, uses FOB Shenzhen, names Chennai port as the port of discharge, sets the latest shipment date, and asks for 30% advance with the balance against a copy of the bill of lading.',
+        'A Chennai electronics assembler (sample GSTIN 33ABCDE1234F1Z5) orders 20,000 connectors from a supplier in Shenzhen. The PO is in US dollars, uses “FOB Shenzhen, Incoterms 2020”, names Chennai port as the port of discharge, sets the latest shipment date, and asks for 30% advance with the balance against a copy of the bill of lading.',
         'It lists the documents the supplier must send: commercial invoice, packing list, bill of lading and a certificate of origin, so the importer’s customs broker can file the bill of entry without chasing paperwork.',
+        'Under FOB the assembler books sea freight and insurance through its own forwarder, and names that forwarder on the PO so the supplier knows who to hand the cargo to. The customs broker adds the freight and insurance to the invoice value when working out the value for duty.',
+        'A second, urgent order of 2,000 connectors goes by air. That PO uses FCA Shenzhen airport instead of FOB, because FOB is a sea-only term, and asks for an airway bill instead of a bill of lading.',
       ],
     },
     steps: [
@@ -926,12 +1226,21 @@ export const TEMPLATE_CONTENT: Record<TemplateId, TemplateContent> = {
     ],
     guidance: [
       {
+        heading: 'Who the international purchase order is for',
+        paragraphs: [
+          'An international purchase order is a PO for buying goods from a supplier outside India. Use it if you are an importer, trading house or manufacturer who must agree currency, Incoterms, ports, payment method and shipping documents before the supplier ships, because those terms decide your costs, risks and clearance.',
+          'If the supplier is in India, even for imported goods they already hold here, use the GST purchase order. If quality specifications and lot-wise deliveries matter more than shipping terms, compare the manufacturing purchase order, which has dedicated fields for them.',
+        ],
+      },
+      {
         heading: 'Incoterms in brief',
         paragraphs: [
-          'Incoterms are standard trade terms published by the International Chamber of Commerce. They set out who arranges and pays for each leg of transport and insurance, and at what point risk passes from seller to buyer. They do not deal with when ownership passes or when payment is due. Always write the term with a named place and the edition, as the current edition is Incoterms 2020.',
+          'Incoterms are standard trade terms published by the International Chamber of Commerce. They decide who arranges and pays for each leg of transport and insurance, and where risk passes from seller to buyer. They do not decide when ownership passes or when payment is due.',
+          'Always write the term with a named place and the edition, such as “FOB Shenzhen, Incoterms 2020”.',
         ],
         bullets: [
           'EXW (Ex Works): you collect from the supplier’s premises and handle almost everything.',
+          'FCA (Free Carrier): the supplier hands the goods to your carrier at a named place; it suits air and container cargo better than FOB.',
           'FOB (Free On Board): the supplier delivers onto the vessel at the named port of loading; sea freight only.',
           'CFR / CIF: the supplier pays sea freight to the named destination port; CIF also includes insurance. Risk still passes at loading.',
           'DAP (Delivered At Place): the supplier delivers to a named place, ready for unloading; you handle import clearance and duties.',
@@ -939,9 +1248,38 @@ export const TEMPLATE_CONTENT: Record<TemplateId, TemplateContent> = {
         ],
       },
       {
+        heading: 'Field by field: what your bank, forwarder and customs broker check',
+        paragraphs: [
+          'Three outsiders read your import PO and the supplier’s documents against it. Your forwarder needs the Incoterm, ports and shipment date; your bank needs the payment terms and document list; your customs broker needs descriptions, HS codes, values and origin. Write each field for the person who will check it.',
+        ],
+        bullets: [
+          'Incoterm and named place: tells the forwarder where their job starts.',
+          'Currency and unit price: must match the supplier’s commercial invoice, or the bank may query the documents.',
+          'HS code and description: your broker uses these to classify the goods and estimate duty.',
+          'Country of origin: affects duty, and any trade agreement benefit needs a valid certificate of origin.',
+          'Latest shipment date: under a letter of credit, late shipment can make the documents non-compliant.',
+          'Documents required: the exact list, with originals and copies, that your bank and broker need.',
+        ],
+      },
+      {
         heading: 'Import formalities to plan for',
         paragraphs: [
-          'Importers in India generally need an Importer-Exporter Code (IEC). Customs duty and IGST on imports are assessed when the bill of entry is filed, using the invoice value, classification and origin. Some goods need licences, certificates or standards approvals before they can be cleared. Check the current requirements for your product with your customs broker before you place the order, not after the goods land.',
+          'Before you place an import order, check that you can clear it. Importers in India generally need an Importer-Exporter Code (IEC), and customs duty and IGST on imports are assessed when the bill of entry is filed, using the invoice value, classification and origin. Some goods also need licences or certificates.',
+          'Customs value in India generally includes freight and insurance up to the port of import, so on an FOB or EXW order your broker adds those costs. Some products, such as certain electronics, need BIS certification or another standards approval before clearance. Check with your customs broker before ordering, not after the goods land.',
+        ],
+      },
+      {
+        heading: 'Common mistakes on import purchase orders',
+        paragraphs: [
+          'Import POs go wrong in the gaps between three parties: your supplier, your bank and Indian customs. A term one of them reads differently, such as an Incoterm with no named place or a currency written as a bare “$”, can delay payment or clearance. Close every gap on the PO.',
+        ],
+        bullets: [
+          'Writing “FOB” with no port, or with your own port instead of the supplier’s port of loading.',
+          'Using FOB or CIF for air freight or courier, where FCA or CPT fits the mode.',
+          'Leaving the HS code to the supplier, then finding a higher duty or a licence requirement at the port.',
+          'Agreeing letter of credit terms that differ from the PO, such as a different shipment date or document list.',
+          'Forgetting to ask for a certificate of origin when you planned to claim a trade agreement benefit.',
+          'Ordering a product that needs BIS or another approval before checking that the supplier holds it.',
         ],
       },
     ],
@@ -961,6 +1299,18 @@ export const TEMPLATE_CONTENT: Record<TemplateId, TemplateContent> = {
       {
         q: 'Do I need HS codes on an import PO?',
         a: 'It is strongly advisable. Agreeing the HS code early helps you estimate duty, check whether any licence is needed and avoid classification surprises at customs.',
+      },
+      {
+        q: 'Is FOB right for air shipments?',
+        a: 'No. FOB and CIF are meant for sea and inland waterway transport. For air freight, courier and most container shipments, FCA, CPT or CIP fit better, because the supplier hands the goods to a carrier rather than loading them on board a ship.',
+      },
+      {
+        q: 'Who pays customs duty on an import PO?',
+        a: 'Under most Incoterms, including EXW, FOB, CIF and DAP, you as the importer pay customs duty and IGST in India. Only DDP puts duties on the supplier, and that is rare for imports into India.',
+      },
+      {
+        q: 'Can I claim input tax credit on IGST paid on imports?',
+        a: 'Generally yes. A registered importer can claim credit of IGST paid on imports, on the basis of the bill of entry rather than a supplier’s tax invoice. Conditions apply, so confirm the details with your adviser.',
       },
     ],
     relatedTools: ['hsn-code-lookup', 'gst-calculator', 'gstin-validator', 'amount-in-words-converter'],
@@ -983,12 +1333,12 @@ export const TEMPLATE_CONTENT: Record<TemplateId, TemplateContent> = {
     tags: ['Export from India', 'LUT / IGST', 'Sea or air'],
     features: ['IEC and GSTIN fields', 'LUT / IGST declaration', 'FOB / CIF values', ...CORE_FEATURES],
     includes: [
-      { label: 'Exporter', detail: 'Name, address, IEC, GSTIN, state and logo.' },
-      { label: 'Invoice details', detail: 'Export invoice number and date, buyer’s order number and date, other references.' },
-      { label: 'Consignee and buyer', detail: 'Consignee name and address, buyer if different, and notify party.' },
+      { label: 'Exporter', detail: 'Name, address, IEC, GSTIN, state and logo. Use the same legal name as on your IEC and GST registration; a mismatch is an easy query for customs and banks.' },
+      { label: 'Invoice details', detail: 'Export invoice number and date, buyer’s order number and date, other references. Never repeat a number already used in your domestic series.' },
+      { label: 'Consignee and buyer', detail: 'Consignee name and address, buyer if different, and notify party. In a letter of credit deal, copy these exactly from the LC.' },
       { label: 'Shipment', detail: 'Pre-carriage, place of receipt, vessel or flight, port of loading, port of discharge, final destination, country of origin and country of final destination.' },
-      { label: 'Terms', detail: 'Terms of delivery (Incoterm) and terms of payment.' },
-      { label: 'Goods', detail: 'Marks and numbers, number and kind of packages, description, HS code, quantity, rate and amount.' },
+      { label: 'Terms', detail: 'Terms of delivery (Incoterm) and terms of payment. The values you show should fit the Incoterm: on CIF show freight and insurance; on FOB, do not add them.' },
+      { label: 'Goods', detail: 'Marks and numbers, number and kind of packages, description, HS code, quantity, rate and amount. Marks and numbers must match what is stencilled on the cartons and printed on the packing list.' },
       { label: 'Values', detail: 'Currency, FOB value, freight and insurance where applicable, total, and amount in words.' },
       { label: 'GST status', detail: 'Supply under LUT without payment of IGST, or with payment of IGST, and the LUT reference where used.' },
       { label: 'Declaration', detail: 'Declaration that the invoice shows the actual price and particulars are true, with signature.' },
@@ -996,8 +1346,10 @@ export const TEMPLATE_CONTENT: Record<TemplateId, TemplateContent> = {
     example: {
       title: 'Example (illustrative)',
       body: [
-        'A Tiruppur garment exporter ships 3,000 cotton T-shirts to a buyer in Hamburg on CIF terms, priced in euros. The invoice shows the IEC and GSTIN, the buyer’s order number, port of loading as Tuticorin and port of discharge as Hamburg, and splits the CIF value into FOB, freight and insurance.',
+        'A Tiruppur garment exporter (sample GSTIN 33ABCDE1234F1Z5) ships 3,000 cotton T-shirts to a buyer in Hamburg on CIF terms, priced in euros. The invoice shows the IEC and GSTIN, the buyer’s order number, port of loading as Tuticorin and port of discharge as Hamburg, and splits the CIF value into FOB, freight and insurance.',
         'The exporter has a valid LUT for the year, so the invoice carries a note that the supply is meant for export under LUT without payment of IGST, along with the LUT reference.',
+        'The buyer is paying under a letter of credit, so the exporter copies the buyer’s name, the consignee and the goods description word for word from the LC. The 60 cartons are marked “HMB/01–60”, and the same marks appear on the invoice and the packing list.',
+        'A later 20-piece sample run for the same buyer goes by air courier. That parcel goes on the courier commercial invoice, with the AWB number and reason for export, after the exporter checks with the courier how it clears commercial samples.',
       ],
     },
     steps: [
@@ -1010,22 +1362,59 @@ export const TEMPLATE_CONTENT: Record<TemplateId, TemplateContent> = {
     ],
     guidance: [
       {
+        heading: 'Who the export invoice format is for',
+        paragraphs: [
+          'An export invoice is the commercial invoice an Indian business issues when it sells goods to a buyer abroad. Use it if you are a manufacturer, merchant exporter or trading house shipping by sea or air cargo, and you need IEC, GSTIN, LUT or IGST status, ports, Incoterms and contract-currency values on one document.',
+          'If you are sending a small parcel, a sample, a gift or a return by international courier, the courier commercial invoice is simpler and asks for what couriers check. If the goods stay in India, use the GST tax invoice or the wholesale invoice instead.',
+        ],
+      },
+      {
         heading: 'IEC, GSTIN and the export invoice',
         paragraphs: [
-          'An Importer-Exporter Code (IEC), issued by the DGFT, is generally needed to export goods from India, and customs uses it to identify you on the shipping bill. Your GSTIN on the same invoice links the export to your GST returns, which matters when you claim refunds.',
+          'An Importer-Exporter Code (IEC), issued by the DGFT, is generally needed to export goods from India, and customs uses it to identify you on the shipping bill. Your GSTIN on the same invoice links the export to your GST returns. That link matters when you claim a refund.',
+        ],
+      },
+      {
+        heading: 'Field by field: what customs, the bank and the buyer check',
+        paragraphs: [
+          'Your export invoice is read by Indian customs, the buyer’s customs, your bank and the buyer. Customs compares descriptions, HS codes, quantities and values with the shipping bill and packing list. The bank compares names, terms and amounts with the letter of credit or contract.',
+        ],
+        bullets: [
+          'HS code: India uses an 8-digit ITC(HS) code on the shipping bill; the first six digits are shared internationally, so the buyer’s customs reads the same base code.',
+          'Marks and numbers: identical on the cartons, the invoice and the packing list.',
+          'Consignee, buyer and notify party: copied exactly from the LC or the buyer’s order.',
+          'Incoterm and values: on CIF or CFR, show FOB value, freight and insurance separately.',
+          'Exchange rate: customs converts values at the rate notified by CBIC for the relevant date, which can differ from your bank’s rate.',
+          'Country of origin: India for goods made here; a certificate of origin may be needed for trade agreement benefits.',
         ],
       },
       {
         heading: 'Exporting under LUT or with IGST payment',
         paragraphs: [
-          'Exports are treated as zero-rated supplies under GST. In general an exporter can either export under a Letter of Undertaking (LUT) without paying IGST and claim a refund of unused input tax credit, or pay IGST on the export and claim a refund of that IGST. The invoice should make clear which route applies: exports under LUT commonly carry an endorsement along the lines of “Supply meant for export under LUT without payment of IGST”, with the LUT reference (ARN). Eligibility, conditions and the exact endorsement wording should be confirmed with your tax adviser or on the GST portal.',
+          'Exports are zero-rated under GST, which gives you two routes. You can export under a Letter of Undertaking (LUT) without paying IGST and claim a refund of unused input tax credit, or pay IGST on the export and claim that IGST back. Your invoice must show which route you chose.',
+          'Exports under LUT commonly carry an endorsement along the lines of “Supply meant for export under LUT without payment of IGST”, with the LUT reference (ARN). An LUT is generally filed for a financial year, so check that yours covers the invoice date.',
+          'Confirm eligibility, conditions and the exact wording with your tax adviser or on the GST portal.',
         ],
       },
       {
         heading: 'FOB, CIF and the shipping bill',
         paragraphs: [
-          'FOB value covers the goods delivered on board at the port of loading; CIF adds freight and insurance to the destination port. If you sell on CIF or CFR terms, showing the FOB value, freight and insurance separately helps, because the export value declared on the shipping bill is generally on an FOB basis.',
-          'Your customs broker (CHA) files the shipping bill using this invoice and the packing list, so the descriptions, HS codes, quantities and values must match across all three. Check the destination country’s customs requirements too, since the buyer will clear the goods there using the same invoice.',
+          'FOB value covers the goods delivered on board at the port of loading; CIF adds freight and insurance to the destination port. If you sell on CIF or CFR terms, show FOB value, freight and insurance separately, because the export value declared on the shipping bill is generally on an FOB basis.',
+          'Your customs broker (CHA) files the shipping bill from this invoice and the packing list, so descriptions, HS codes, quantities and values must match across all three. The buyer clears the goods at destination with the same invoice, so check that country’s customs requirements too.',
+        ],
+      },
+      {
+        heading: 'Common mistakes on export invoices',
+        paragraphs: [
+          'Export invoice errors are expensive because several parties copy from the same document. A value that differs from the shipping bill, a consignee name that differs from the LC, or an Incoterm that does not fit the freight shown can hold the cargo, delay payment or slow a GST refund.',
+        ],
+        bullets: [
+          'Showing CIF terms but no freight and insurance, or adding freight to an FOB sale.',
+          'Leaving out the LUT endorsement and ARN when exporting without payment of IGST.',
+          'An invoice value that differs from the shipping bill, which can hold up an IGST refund.',
+          'Writing “garments” where customs expects “men’s cotton knitted T-shirts”.',
+          'Using your bank’s exchange rate where customs applies the CBIC-notified rate.',
+          'Reusing a number from your domestic invoice series.',
         ],
       },
     ],
@@ -1050,6 +1439,18 @@ export const TEMPLATE_CONTENT: Record<TemplateId, TemplateContent> = {
         q: 'Do I need an e-way bill for goods going to the port?',
         a: 'Goods moving by road from your factory to the port or airport may need an e-way bill depending on the value and the movement. Check the current e-way bill rules for exports before dispatch.',
       },
+      {
+        q: 'Do I need a new LUT for every export invoice?',
+        a: 'No. An LUT is generally filed once for a financial year on the GST portal and covers exports in that year, subject to its conditions. Quote its ARN on each invoice issued under it.',
+      },
+      {
+        q: 'Should the export invoice match the letter of credit word for word?',
+        a: 'Banks check documents strictly against the LC terms, so names, description, quantities and amounts should match it closely. Small differences can be treated as discrepancies and delay payment, so ask your bank to review a draft before shipment.',
+      },
+      {
+        q: 'What is the difference between consignee, buyer and notify party?',
+        a: 'The consignee receives the goods at destination, the buyer pays under the contract, and the notify party is told when the cargo arrives. They can be one company, but in LC and agent deals they often differ, so fill each from the order.',
+      },
     ],
     relatedTools: ['hsn-code-lookup', 'gstin-validator', 'amount-in-words-converter', 'eway-bill-eligibility-checker', 'distance-calculator'],
     relatedGuides: [
@@ -1071,18 +1472,20 @@ export const TEMPLATE_CONTENT: Record<TemplateId, TemplateContent> = {
     tags: ['Courier', 'Samples and small parcels', 'Customs declaration'],
     features: ['AWB / tracking number', 'Reason for export', 'HS code and origin per line', ...CORE_FEATURES],
     includes: [
-      { label: 'Shipper', detail: 'Name, address, phone, email and your tax or registration number where the courier asks for it.' },
-      { label: 'Receiver / importer', detail: 'Name, full address with postcode, phone, email and the importer’s tax ID where the destination asks for it.' },
-      { label: 'Shipment', detail: 'Invoice number and date, courier name, AWB or tracking number, currency and terms of delivery.' },
-      { label: 'Reason for export', detail: 'Sale, commercial sample, gift, return, repair or temporary export.' },
-      { label: 'Goods lines', detail: 'Plain-language description, HS code, country of origin, quantity, unit value and total value.' },
-      { label: 'Packages and weights', detail: 'Number of boxes, net weight and gross weight, matching the courier booking.' },
+      { label: 'Shipper', detail: 'Name, address, phone, email and your tax or registration number where the courier asks for it. For commercial shipments, couriers in India may ask for your IEC and GSTIN; check when you book.' },
+      { label: 'Receiver / importer', detail: 'Name, full address with postcode, phone, email and the importer’s tax ID where the destination asks for it. A missing phone number can leave a parcel waiting at destination customs.' },
+      { label: 'Shipment', detail: 'Invoice number and date, courier name, AWB or tracking number, currency and terms of delivery. The terms say who pays destination duties and taxes: the receiver, or you.' },
+      { label: 'Reason for export', detail: 'Sale, commercial sample, gift, return, repair or temporary export. Pick one; customs treats each differently.' },
+      { label: 'Goods lines', detail: 'Plain-language description, HS code, country of origin, quantity, unit value and total value. “Clothing” is vague; “Women’s cotton kurta, printed” is clear.' },
+      { label: 'Packages and weights', detail: 'Number of boxes, net weight and gross weight, matching the courier booking. The gross weight should agree with what the courier weighed.' },
       { label: 'Declaration', detail: 'A statement that the information is true and correct, with name, signature and date.' },
     ],
     example: {
       title: 'Example (illustrative)',
       body: [
         'A Jaipur handicrafts studio sends two cartons of block-printed cushion covers to a prospective buyer in Toronto by international courier. The invoice gives the AWB number from the booking, sets the reason for export as “Commercial sample”, lists each design with its HS code and “Country of origin: India”, shows a realistic unit value rather than zero, and states net and gross weights that match what the courier weighed.',
+        'The studio (sample GSTIN 08ABCDE1234F1Z5) lists 12 covers in four designs, priced in Canadian dollars, across two boxes marked “1 of 2” and “2 of 2”. The terms of delivery say the receiver pays any import duties and taxes, so the buyer is not surprised at the door.',
+        'Months later the buyer sends three covers back for stitching repairs. That return parcel carries its own invoice with the reason “Return for repair” and the original invoice number, and the studio checks with its courier how returned Indian goods are cleared.',
       ],
     },
     steps: [
@@ -1095,15 +1498,36 @@ export const TEMPLATE_CONTENT: Record<TemplateId, TemplateContent> = {
     ],
     guidance: [
       {
+        heading: 'Who the courier commercial invoice is for',
+        paragraphs: [
+          'A courier commercial invoice is the customs invoice you attach to an international courier parcel. Use it if you are a small exporter, online seller, studio or individual sending samples, small orders, gifts, returns or repairs abroad by courier, where the AWB number, reason for export and declared value matter most.',
+          'If you are shipping a full export consignment by sea or air cargo, with a shipping bill, LUT or IGST status and an Incoterm, use the export commercial invoice instead. If the parcel stays inside India, you need a domestic invoice or a delivery challan, not this.',
+        ],
+      },
+      {
         heading: 'Why couriers ask for a commercial invoice',
         paragraphs: [
-          'When a parcel crosses a border, destination customs needs to know what is inside, what it is worth and where it was made before releasing it. International couriers clear most parcels on the basis of the commercial invoice you attach, so a missing or vague invoice is one of the most common reasons parcels are held.',
+          'Destination customs needs to know what is inside a parcel, what it is worth and where it was made before releasing it. International couriers clear most parcels on the basis of the commercial invoice you attach. A missing or vague invoice is one of the most common reasons parcels are held.',
+        ],
+      },
+      {
+        heading: 'Field by field: what the courier and destination customs check',
+        paragraphs: [
+          'Courier staff check the invoice against the booking at pickup, and destination customs checks it against the parcel. Both look at the same few fields: AWB number, receiver details, description, HS code, origin, value and weight. If any of those disagree with the booking or the box, the parcel can stop.',
+        ],
+        bullets: [
+          'AWB number: taken from the booking, so the invoice and the parcel can be linked.',
+          'Receiver phone and email: customs or the courier may need to reach the receiver to clear the parcel or collect duty.',
+          'Description: what it is, what it is made of and what it is for.',
+          'HS code: the first six digits are shared worldwide; the destination may want its own longer code.',
+          'Unit and total value: realistic, in the currency shown, and adding up across the lines.',
+          'Weights and box count: in line with the courier’s weighed figures.',
         ],
       },
       {
         heading: 'Reason for export and declared value',
         paragraphs: [
-          'Customs treats a sale, a free sample, a gift and a returned item differently, so the reason for export should be stated clearly. Even when nothing is being paid, declare a realistic value: many customs authorities need one to assess the parcel, and an obviously low or zero value invites questions.',
+          'Customs treats a sale, a free sample, a gift and a returned item differently, so state the reason for export clearly. Even when nothing is paid, declare a realistic value. Many customs authorities need one to assess the parcel, and an obviously low or zero value invites questions.',
         ],
         bullets: [
           'Sale: use the price the buyer is paying.',
@@ -1114,10 +1538,25 @@ export const TEMPLATE_CONTENT: Record<TemplateId, TemplateContent> = {
       {
         heading: 'HS codes, country of origin and the declaration',
         paragraphs: [
-          'The HS code identifies goods for customs worldwide. The first six digits are common internationally, and countries add further digits for their own tariffs. Country of origin is where the goods were made, not where they are posted from. The signed declaration confirms the invoice is true; misdescribing goods or under-declaring value can lead to delays, penalties or seizure.',
-          'Requirements differ by destination and by courier. Some countries ask for the importer’s tax number or specific wording, and couriers set their own rules on copies. Always check the destination country’s customs requirements and your courier’s guidance before you ship. For a formal export from India that needs IEC, GSTIN and LUT details, use the export invoice format instead.',
+          'The HS code identifies goods for customs worldwide: the first six digits are common internationally, and countries add digits for their own tariffs. Country of origin is where the goods were made, not where they are posted from. The signed declaration confirms the invoice is true, so check every line before signing.',
+          'Misdescribing goods or under-declaring value can lead to delays, penalties or seizure. Requirements differ by destination and courier: some countries ask for the importer’s tax number or specific wording, and couriers set their own rules on copies.',
+          'Always check the destination country’s customs requirements and your courier’s guidance before you ship.',
         ],
         links: [{ title: 'HSN codes: a practical guide', href: '/blog/hsn-codes-practical-guide' }],
+      },
+      {
+        heading: 'Common mistakes on courier invoices',
+        paragraphs: [
+          'Courier parcels are usually held for simple reasons, not complex ones. The repeat offenders are vague descriptions, zero or token values, weights that differ from the booking, a missing receiver phone number and an unsigned declaration. Fix those five and you remove the most common causes of a hold.',
+        ],
+        bullets: [
+          'Writing “samples”, “parts” or “gift” as the whole description.',
+          'Declaring zero value, or a value plainly below what the goods cost.',
+          'Marking a business shipment as a “gift” to avoid duty, which customs can treat as misdeclaration.',
+          'Giving the courier hub city as country of origin instead of where the goods were made.',
+          'Packing batteries, liquids or other restricted items without checking the courier’s dangerous goods rules.',
+          'Attaching one invoice copy when the courier asked for several.',
+        ],
       },
     ],
     faq: [
@@ -1140,6 +1579,18 @@ export const TEMPLATE_CONTENT: Record<TemplateId, TemplateContent> = {
       {
         q: 'Is this the right template for a formal export from India?',
         a: 'For a commercial export that needs IEC, GSTIN and LUT or IGST details, use the export invoice format. This template focuses on what couriers and destination customs ask for on parcel shipments.',
+      },
+      {
+        q: 'Who pays import duty on a courier parcel?',
+        a: 'It depends on the terms you choose at booking. Usually the receiver pays duties and taxes on delivery; with a duties-paid service, the courier bills them to you instead. Write the terms on the invoice so the receiver knows what to expect.',
+      },
+      {
+        q: 'Can I send a commercial order by courier instead of cargo?',
+        a: 'Often yes, for small and light consignments. Commercial exports by courier from India have their own customs rules and value limits, and your courier may ask for your IEC and GSTIN, so check with them before you book.',
+      },
+      {
+        q: 'Can I mark a business shipment as a gift to save duty?',
+        a: 'No. A gift is something given without payment, and calling a sale or a business sample a gift is a misdeclaration. It can lead to penalties or seizure at destination.',
       },
     ],
     relatedTools: ['hsn-code-lookup', 'amount-in-words-converter', 'gstin-validator'],

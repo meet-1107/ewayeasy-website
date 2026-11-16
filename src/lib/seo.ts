@@ -87,6 +87,8 @@ export function pageMeta(opts: {
   publishedTime?: string;
   modifiedTime?: string;
   authors?: string[];
+  /** Keep the page out of search results but let crawlers follow its links (pagination, near-empty hubs). */
+  noindex?: boolean;
 }): Metadata {
   const url = absoluteUrl(opts.path);
   const image = opts.image ?? '/images/og-default.png';
@@ -96,6 +98,7 @@ export function pageMeta(opts: {
   return {
     title: withSuffix ? opts.title : { absolute: opts.title },
     description: opts.description,
+    ...(opts.noindex ? { robots: { index: false, follow: true } } : {}),
     // Page-level alternates replace the layout's, so the feed link is repeated here.
     alternates: { canonical: url, types: { 'application/rss+xml': [{ url: '/feed.xml', title: 'E-Way Easy guides and articles' }] } },
     openGraph: {

@@ -4,8 +4,8 @@ import DataTable from '@/components/DataTable';
 import DownloadCTA from '@/components/DownloadCTA';
 import JsonLd from '@/components/JsonLd';
 import PageHeader from '@/components/PageHeader';
-import { StepList } from '@/components/feature-pages/FeatureBlocks';
-import { FaqList, ReadingList, SectionIntro, linkClass, type Faq } from '@/components/solutions/SolutionBlocks';
+import { CheckList, StepList } from '@/components/feature-pages/FeatureBlocks';
+import { FaqList, ProblemGrid, ReadingList, SectionIntro, linkClass, type Faq } from '@/components/solutions/SolutionBlocks';
 import { absoluteUrl, faqLd, pageMeta } from '@/lib/seo';
 
 const PATH = '/invoice-format-excel';
@@ -53,6 +53,17 @@ const FORMULA_ROWS = [
   { label: 'Round off', cells: ['Difference to the nearest rupee', '=ROUND(M25,0)-M25'] },
 ];
 
+const EXAMPLE_ROWS = [
+  { label: 'Taxable value (500 × ₹41.75)', cells: ['₹20,875.00', '₹20,875.00'] },
+  { label: 'Supply type (cell B12)', cells: ['Intra-state: CGST + SGST', 'Inter-state: IGST'] },
+  { label: 'CGST at 9%', cells: ['₹1,878.75', '₹0.00'] },
+  { label: 'SGST at 9%', cells: ['₹1,878.75', '₹0.00'] },
+  { label: 'IGST at 18%', cells: ['₹0.00', '₹3,757.50'] },
+  { label: 'Total before round-off', cells: ['₹24,632.50', '₹24,632.50'] },
+  { label: 'Round off', cells: ['+₹0.50', '+₹0.50'] },
+  { label: 'Invoice total', cells: ['₹24,633.00', '₹24,633.00'] },
+];
+
 const FAQ: Faq[] = [
   {
     q: 'Is the invoice format in Excel free?',
@@ -75,12 +86,35 @@ const FAQ: Faq[] = [
     a: 'GST law does not require any particular software. An invoice made in Excel is fine if it carries the particulars in Rule 46 of the CGST Rules and is numbered correctly. Businesses covered by e-invoicing must also report B2B invoices to the Invoice Registration Portal.',
   },
   {
-    q: 'How do I save the Excel invoice as a PDF?',
-    a: 'In Excel choose File, Save As (or Export), and pick PDF. In Google Sheets choose File, Download, PDF. The sheet is set to fit one A4 page width.',
+    q: 'Can I make an e-way bill from this Excel invoice?',
+    a: 'Not from the sheet itself. An e-way bill is filed on the official e-way bill system, either on the portal, through its bulk tools, or through an app that files via an authorised GSP. Copy the invoice details exactly, because they must match.',
+  },
+];
+
+const TRAPS = [
+  {
+    title: 'Changing the buyer’s state but not the place of supply',
+    text: 'The tax type follows the place of supply code (cell L6), not the buyer block. Update L6 for every invoice and glance at cell B12, which says intra-state or inter-state.',
   },
   {
-    q: 'Excel or online generator: which is better?',
-    a: 'Excel suits you if you keep records in spreadsheets. The online generator is quicker on a phone, needs nothing installed, writes the amount in words and saves products and an invoice number series in your browser.',
+    title: 'Typing state codes two different ways',
+    text: 'Type both codes the same way, for example 07 in both cells, not 07 in one and 7 in the other. Otherwise the sheet can treat a Delhi sale as inter-state.',
+  },
+  {
+    title: 'Saving over last month’s invoice',
+    text: 'Copying the last file and forgetting to change the number creates duplicates. Keep a blank master copy and use the next number in your series each time.',
+  },
+  {
+    title: 'Typing over a formula cell',
+    text: 'Once a white cell holds a typed number, it stops calculating. If totals do not change when you change a quantity, a formula has been overwritten.',
+  },
+  {
+    title: 'Pasting numbers as text',
+    text: 'Figures pasted from another file can arrive as text, and Excel then leaves them out of totals. Re-type them, or paste as values into the yellow cells.',
+  },
+  {
+    title: 'Amount in words that no longer matches',
+    text: 'The amount in words is typed by hand, so it does not update. Re-check it whenever you change a quantity, rate or discount.',
   },
 ];
 
@@ -162,14 +196,20 @@ export default function InvoiceFormatExcelPage() {
           <p className="leading-7">
             <strong>Quick answer:</strong> Download the GST invoice format if you are registered under GST, or the bill
             format without GST if you are not. Fill the yellow cells: your details, the buyer, place of supply and items.
-            The sheet calculates taxable value, CGST and SGST or IGST, round-off and the total. Then save it as a PDF.
+            The sheet calculates taxable value, CGST and SGST or IGST, round-off and the total, and you save it as a PDF.
           </p>
         </div>
       </section>
 
       <section className="section" aria-labelledby="downloads">
         <div className="container">
-          <SectionIntro id="downloads" eyebrow="Downloads" title="Choose your Excel invoice format" />
+          <SectionIntro id="downloads" eyebrow="Downloads" title="Choose your Excel invoice format">
+            <p>
+              An invoice format in Excel is a ready spreadsheet with the layout and the tax formulas already in place. Pick
+              the GST format if you are registered and the supply is taxable. Pick the bill format without GST if you are
+              not registered, or as a starting point for a bill of supply.
+            </p>
+          </SectionIntro>
           <div className="mt-8 grid gap-5 md:grid-cols-2">
             {FILES.map((f) => (
               <article key={f.href} className="flex flex-col rounded-[1.5rem] border-2 border-ink bg-white p-6 shadow-[6px_6px_0_#16211C]">
@@ -191,13 +231,19 @@ export default function InvoiceFormatExcelPage() {
 
       <section className="section bg-white" aria-labelledby="how">
         <div className="container">
-          <SectionIntro id="how" eyebrow="How to use" title="Fill the Excel invoice in 4 steps" />
+          <SectionIntro id="how" eyebrow="How to use" title="Fill the Excel invoice in 4 steps">
+            <p>
+              You fill only the yellow cells and the sheet does the maths. Set up your own details once and save that as a
+              blank master copy. For each invoice, enter the next number, the buyer, the place of supply and the items,
+              then type the amount in words and save the sheet as a PDF.
+            </p>
+          </SectionIntro>
           <StepList
             steps={[
               { title: 'Add your details once', text: 'Replace the sample business name, address, GSTIN and state code. Save the file as your own blank template.' },
               { title: 'Enter the invoice number and buyer', text: 'Use the next number in your series, the date, buyer details and the place of supply state code.' },
               { title: 'Fill the items', text: 'Description, HSN, quantity, unit, rate, discount and GST %. Everything in white cells calculates itself.' },
-              { title: 'Type the amount in words and save as PDF', text: 'Add bank details and terms, then File → Save As → PDF, or print on A4.' },
+              { title: 'Type the amount in words and save as PDF', text: 'Add bank details and terms, then File → Save As → PDF, or print on A4. In Google Sheets, use File → Download → PDF.' },
             ]}
           />
         </div>
@@ -207,7 +253,9 @@ export default function InvoiceFormatExcelPage() {
         <div className="container">
           <SectionIntro id="formulas" eyebrow="No hidden magic" title="The formulas inside the GST format">
             <p>
-              Every calculation is a plain Excel formula you can read and change. Want the reasoning behind them? See{' '}
+              Every calculation in the GST format is a plain Excel formula you can read, check and change. The sheet
+              compares your state code with the place of supply to choose CGST and SGST or IGST, then rounds the total to
+              the nearest rupee. For the reasoning, see{' '}
               <Link href="/blog/how-to-calculate-gst-on-sales-invoice" className={linkClass}>how to calculate GST on an invoice</Link>{' '}
               and <Link href="/blog/cgst-sgst-igst-explained" className={linkClass}>CGST vs SGST vs IGST</Link>.
             </p>
@@ -218,13 +266,103 @@ export default function InvoiceFormatExcelPage() {
         </div>
       </section>
 
+      <section className="section bg-white" aria-labelledby="example">
+        <div className="container">
+          <SectionIntro id="example" eyebrow="Example (illustrative)" title="One order, two buyers, two tax results">
+            <p>
+              Example (illustrative): a Nashik corrugated box maker (state code 27) sells 500 boxes at ₹41.75 each, with
+              GST at 18% used only as a sample rate. The taxable value is ₹20,875.00. What changes the tax is one cell: the
+              place of supply.
+            </p>
+          </SectionIntro>
+          <div className="mt-8 max-w-4xl">
+            <DataTable
+              caption="Worked example of the Excel invoice format for an intra-state and an inter-state buyer (illustrative)"
+              columns={['Line', 'Pune buyer (place of supply 27)', 'Indore buyer (place of supply 23)']}
+              rows={EXAMPLE_ROWS}
+            />
+          </div>
+          <p className="mt-4 max-w-3xl text-sm text-ink-soft">
+            The business and figures are made up, and 18% is not a statement of the rate for any product. Confirm your rate
+            with the <Link href="/tools/hsn-code-lookup" className={linkClass}>HSN code lookup</Link> and your adviser.
+          </p>
+        </div>
+      </section>
+
+      <section className="section" aria-labelledby="traps">
+        <div className="container">
+          <SectionIntro id="traps" eyebrow="Spreadsheet traps" title="Six Excel mistakes that break a GST invoice">
+            <p>
+              Excel calculates exactly what you give it, including your mistakes. Most wrong invoices from a spreadsheet
+              come from a stale cell, an overwritten formula or a code typed two ways, not from bad maths. These six traps
+              are worth checking before every invoice leaves your desk.
+            </p>
+          </SectionIntro>
+          <ProblemGrid items={TRAPS} />
+        </div>
+      </section>
+
+      <section className="section bg-white" aria-labelledby="fit">
+        <div className="container">
+          <SectionIntro id="fit" eyebrow="Honest limits" title="When Excel is enough, and when it is not">
+            <p>
+              Excel is enough when you make a few invoices at a desk and keep records in spreadsheets. It is not enough
+              when the invoice must also become an e-way bill or an e-invoice, because a spreadsheet files nothing. Use these
+              rules to decide when to add another tool.
+            </p>
+          </SectionIntro>
+          <ul className="mt-8 max-w-3xl space-y-3 text-ink-soft">
+            <li>
+              <strong className="text-ink">If goods worth more than ₹50,000 will move, then</strong> you generally need an
+              e-way bill too, and some states set a different limit within the state. Check with the{' '}
+              <Link href="/tools/eway-bill-eligibility-checker" className={linkClass}>e-way bill eligibility checker</Link>.
+            </li>
+            <li>
+              <strong className="text-ink">If e-invoicing applies to you, then</strong> B2B invoices must also be reported
+              to the Invoice Registration Portal. An Excel file alone does not do that.
+            </li>
+            <li>
+              <strong className="text-ink">If you need e-way bills for many invoices at once, then</strong> this invoice
+              sheet is not the upload format. The portal has its own bulk tools; see{' '}
+              <Link href="/blog/prepare-invoice-data-for-bulk-processing" className={linkClass}>preparing invoice data for
+              bulk processing</Link>.
+            </li>
+            <li>
+              <strong className="text-ink">If you bill from a phone, then</strong> the free online generator below is
+              quicker than Excel, and it writes the amount in words for you.
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section className="section" aria-labelledby="send-check">
+        <div className="container">
+          <SectionIntro id="send-check" eyebrow="Checklist" title="Five checks before you send the PDF">
+            <p>
+              A sent invoice is hard to take back, and it becomes the record you report in your returns. Spend one minute on
+              these five checks every time. They catch the traps above, and they work whether you use this sheet, another
+              template or the online generator.
+            </p>
+          </SectionIntro>
+          <CheckList
+            items={[
+              { label: 'Number', text: 'Next in your series for this financial year, with no gap or repeat.' },
+              { label: 'Place of supply', text: 'Matches where the supply goes, and cell B12 shows the tax type you expect.' },
+              { label: 'Formulas alive', text: 'Change one quantity and watch the totals move, then change it back.' },
+              { label: 'Amount in words', text: 'Matches the rounded invoice total exactly.' },
+              { label: 'File name', text: 'Save the PDF with the invoice number in the name, so you can find it at return time.' },
+            ]}
+          />
+        </div>
+      </section>
+
       <section className="section bg-white" aria-labelledby="online">
         <div className="container grid items-center gap-10 lg:grid-cols-2">
           <SectionIntro id="online" eyebrow="No Excel on your phone?" title="Make the same invoice online in a minute">
             <p>
-              The <Link href="/invoice-generator" className={linkClass}>free invoice generator</Link> works in any browser,
-              writes the amount in words, keeps an invoice number series and saved products, and downloads a PDF. Choose
-              With GST or Without GST.
+              The <Link href="/invoice-generator" className={linkClass}>free invoice generator</Link> is the same invoice
+              without Excel. It works in any browser, writes the amount in words, keeps an invoice number series and saved
+              products, and downloads a PDF. Choose With GST or Without GST, and nothing needs to be installed.
             </p>
             <p>
               Billing every day and moving goods? In the E-Way Easy Android app the buyer’s details fill from their GSTIN,
@@ -240,7 +378,13 @@ export default function InvoiceFormatExcelPage() {
 
       <section className="section" aria-labelledby="learn">
         <div className="container">
-          <SectionIntro id="learn" eyebrow="Get it right" title="Before you send the invoice" />
+          <SectionIntro id="learn" eyebrow="Get it right" title="Before you send the invoice">
+            <p>
+              A correct-looking sheet can still miss a required field or use the wrong document type. These guides explain
+              what a tax invoice must show and when a bill of supply applies. The two tools check the buyer’s GSTIN and
+              find HSN codes before you fill them in.
+            </p>
+          </SectionIntro>
           <ReadingList
             items={[
               { href: '/gst-invoice-rules', label: 'GST invoice rules', text: 'The fields every tax invoice must show, numbering, copies and time limits.' },

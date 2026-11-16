@@ -5,6 +5,7 @@ import path from 'node:path';
 import { getAllGuides, getAllPosts } from './content';
 import { absoluteUrl } from './seo';
 import { AUTHOR, CATEGORIES } from './site';
+import { categoryIndexable } from './category-guides';
 import { TOOLS, toolHref } from './tools';
 import { CATEGORY_SLUGS, categoryHref, templateHref, templatesOf, type DocumentKind } from './templates/ids';
 import { INDUSTRIES } from './industries';
@@ -93,6 +94,7 @@ export const SITEMAPS: Record<string, () => Entry[]> = {
     ];
     // Category hubs stay; paginated list pages (/page/2…) are left out to reduce crawl waste. They remain linked.
     for (const c of CATEGORIES) {
+      if (!categoryIndexable(c.slug)) continue; // noindex hubs stay out of the sitemap
       const latest = posts.filter((p) => p.category === c.slug).map((p) => p.updatedAt).sort().pop();
       entries.push({ path: `/blog/category/${c.slug}`, lastmod: latest, priority: 0.4 });
     }
