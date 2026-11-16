@@ -162,8 +162,9 @@ export function softwareAppLd(description = SOFTWARE_APP_DESCRIPTION) {
     url: absoluteUrl('/download'),
     ...(PLAY_STORE_URL ? { installUrl: PLAY_STORE_URL, downloadUrl: PLAY_STORE_URL } : {}),
     description,
-    image: absoluteUrl('/images/app-dashboard.jpg'),
-    screenshot: [absoluteUrl('/images/app-dashboard.jpg'), absoluteUrl('/images/app-new-invoice.jpg')],
+    // Promo banner with sample data (the older screenshots showed a real business and GSTIN).
+    image: absoluteUrl('/images/app-banner.webp'),
+    screenshot: [absoluteUrl('/images/app-banner.webp')],
     featureList: SOFTWARE_APP_FEATURES,
     ...(pricesArePublished()
       ? {

@@ -21,6 +21,24 @@ export interface ComplianceUpdate {
 
 export const UPDATES: ComplianceUpdate[] = [
   {
+    id: 'ewb-number-14-digits-2027',
+    headline: 'E-way bill number grows to 14 digits from 1 January 2027',
+    summary:
+      'GSTN has announced that the e-way bill number goes from 12 to 14 digits and the consolidated e-way bill number from 10 to 11 digits, because the current number range is running out. The rules do not change; software, spreadsheets and printed formats that store the number need checking.',
+    announced: '2026-11-04',
+    effective: '2027-01-01',
+    impacted: 'Businesses and transporters whose ERP, billing software, GSP integration, spreadsheets or printed formats store e-way bill numbers',
+    previous: 'E-way bill number 12 digits; consolidated e-way bill number 10 digits',
+    now: 'E-way bill number 14 digits; consolidated e-way bill number 11 digits',
+    example:
+      'Example (illustrative): a dispatch register in Excel shows a 14-digit number as 1.23457E+13. Format the column as Text before 1 January 2027.',
+    reference: 'GSTN advisory dated 4 November 2026 on e-way bill and consolidated e-way bill numbering formats (as reported; confirm on the portal)',
+    source: { title: 'E-Way Bill System (official portal)', url: 'https://ewaybillgst.gov.in/' },
+    verifiedAt: '2026-11-16',
+    status: 'pending-verification',
+    important: true,
+  },
+  {
     id: 'gst-rate-rationalisation-2025',
     headline: 'GST rate slabs rationalised: 5% and 18% are now the main rates',
     summary:

@@ -21,8 +21,8 @@ export default function StickyCTA() {
       <div className="flex items-center gap-3">
         <LogoMark className="h-10 w-10 shrink-0" />
         <div className="min-w-0 flex-1">
-          <p className="truncate text-sm font-semibold">E-Way Easy for Android</p>
-          <p className="truncate text-xs text-ink-faint">Invoice to e-way bill, from your phone</p>
+          <p className="truncate text-sm font-semibold">Generate e-way bills on your phone</p>
+          <p className="truncate text-xs text-ink-faint">E-Way Easy for Android · ₹5 per e-way bill</p>
         </div>
         <PlayLink placement="sticky_bar" className="btn-amber px-4 py-2">Get app</PlayLink>
         <button aria-label="Dismiss" className="p-1 text-ink-faint" onClick={() => setDismissed(true)}>✕</button>

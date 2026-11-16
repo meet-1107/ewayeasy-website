@@ -8,10 +8,10 @@ import { trackEvent } from '@/lib/analytics';
  * With no verified Play Store URL configured it renders a non-clickable "coming soon" state
  * instead of a guessed link.
  */
-export default function PlayBadge({ placement, className = '' }: { placement: string; className?: string }) {
+export default function PlayBadge({ placement, className = '', size = 'md' }: { placement: string; className?: string; size?: 'md' | 'lg' }) {
   const href = playStoreHref(placement);
   const art = (
-    <svg viewBox="0 0 180 54" className="h-[52px] w-auto" role="img" aria-label="Get it on Google Play">
+    <svg viewBox="0 0 180 54" className={size === 'lg' ? 'h-[60px] w-auto sm:h-[66px]' : 'h-[52px] w-auto'} role="img" aria-label="Get it on Google Play">
       <rect x="0.5" y="0.5" width="179" height="53" rx="9" fill="#000" stroke="#A6A6A6" />
       <path d="M16 12.5 37 27 16 41.5c-.7-.3-1.1-1-1.1-1.9V14.4c0-.9.4-1.6 1.1-1.9Z" fill="#00D7FE" />
       <path d="m16 12.5 14.6 14.5L16 41.5" fill="none" />

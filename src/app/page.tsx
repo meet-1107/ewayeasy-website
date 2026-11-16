@@ -19,13 +19,23 @@ import { pageMeta, softwareAppLd, websiteLd } from '@/lib/seo';
 import { FOUNDER } from '@/lib/site';
 
 export const metadata = pageMeta({
-  title: 'E-Way Easy: E-Way Bill Generator App for Mobile',
+  title: 'E-Way Easy: E-Way Bill Generator App for Mobile | Free Invoice',
   description:
-    'Generate e-way bills from a GST invoice on your Android phone. Import invoice PDFs, update Part B, extend, cancel or consolidate. No subscription, ₹5 per bill.',
+    'Generate GST e-way bills on your phone: free invoice, invoice PDF import, Part B update, extend, cancel and consolidate. Pay ₹5 only when it succeeds.',
   path: '/',
 });
 
 
+
+// Homepage feature cards: each links to the page that explains it (internal links between app features and guides).
+const APP_FEATURES = [
+  { tag: 'Generate', title: 'Generate an e-way bill from a GST invoice', text: 'Make the invoice in the app, review Part A and Part B, and tap Generate. The number comes back from the official e-way bill system.', href: '/eway-bill-generation', cta: 'How to generate an e-way bill' },
+  { tag: 'Import PDF', title: 'Invoice PDF to e-way bill', text: 'Made the invoice in Tally or other software? Import the PDF; the app reads buyer, GSTIN, items and HSN, and you review before generating.', href: '/invoice-pdf-to-eway-bill', cta: 'See PDF import' },
+  { tag: 'Part B update', title: 'Update Part B and the vehicle number', text: 'Vehicle changed on the way? Update Part B from your phone before the goods move in the new vehicle.', href: '/blog/how-to-update-vehicle-details-in-eway-bill', cta: 'Part B update guide' },
+  { tag: 'Manage', title: 'Extend, cancel or consolidate', text: 'Extend validity near expiry, cancel within 24 hours, or make one consolidated e-way bill for several consignments in a vehicle.', href: '/eway-bill-management-app', cta: 'E-way bill management' },
+  { tag: 'Free', title: 'Free GST invoice generator', text: 'Make a GST or non-GST invoice online, print it on A4 or a thermal printer, or share the PDF on WhatsApp. No sign-up.', href: '/invoice-generator', cta: 'Open the invoice generator' },
+  { tag: 'Compare', title: 'NIC portal vs E-Way Easy', text: 'When the official portal is the better choice (for example bulk e-way bills), and when a phone app saves time.', href: '/compare', cta: 'See the comparison' },
+];
 
 const PROBLEMS = [
   'Making the sales invoice separately before the e-way bill',
@@ -83,7 +93,7 @@ export default function Home() {
               </p>
             </div>
             <h1 className="mt-5 font-display text-4xl font-extrabold leading-[1.08] md:text-6xl">
-              The E-Way Bill Generator for <span className="text-amber-400">every Indian business</span>
+              E-Way Bill Generator App: <span className="text-amber-400">generate GST e-way bills on your phone</span>
             </h1>
             <RotatingWords
               className="mt-4 font-display text-xl font-bold leading-[1.25em] text-white md:text-2xl"
@@ -92,11 +102,11 @@ export default function Home() {
               after="in one tap ⚡"
             />
             <p className="mt-5 max-w-xl text-lg leading-8 text-brand-100/90">
-              Small shop, growing factory or large enterprise: create the sales invoice and e-way bill in seconds on your phone,
-              and pay only for what you use.
+              Free GST invoice, invoice PDF import, Part B update, extend and cancel, for every Indian business from a small
+              shop to a large factory. Pay only ₹5 when the e-way bill is generated.
             </p>
             <div className="mt-8 flex flex-wrap items-center gap-4">
-              <PlayBadge placement="home-hero" />
+              <PlayBadge placement="home-hero" size="lg" />
               <Link href="/tools" className="btn-ghost-dark">Explore free tools →</Link>
             </div>
             <HeroMilestones />
@@ -187,7 +197,7 @@ export default function Home() {
         <div className="container">
           <div className="mx-auto max-w-2xl text-center">
             <p className="eyebrow">How E-Way Easy works</p>
-            <h2 className="h2 mt-3">From sales invoice to e-way bill in one flow</h2>
+            <h2 className="h2 mt-3">How to generate an e-way bill from your invoice</h2>
             <p className="mt-4 text-ink-soft">The app follows three clear steps: Invoice, Review EWB, Generated.</p>
           </div>
           <ol className="mt-12 grid gap-5 md:grid-cols-4">
@@ -213,6 +223,28 @@ export default function Home() {
       </section>
       </Reveal>
 
+      {/* C2. Everything in the app, linked to the matching guide */}
+      <Reveal>
+      <section className="section" aria-labelledby="in-app-h">
+        <div className="container">
+          <p className="eyebrow">E-way bill app features</p>
+          <h2 id="in-app-h" className="h2 mt-2 max-w-3xl">Generate, update and manage GST e-way bills in one app</h2>
+          <ul className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            {APP_FEATURES.map((x) => (
+              <li key={x.title}>
+                <Link href={x.href} className="group flex h-full flex-col rounded-[1.5rem] border border-brand-900/10 bg-white p-6 shadow-card transition hover:-translate-y-1 hover:shadow-lift">
+                  <span className="text-xs font-extrabold uppercase tracking-[0.14em] text-brand-600">{x.tag}</span>
+                  <h3 className="mt-2 font-display text-lg font-bold text-ink">{x.title}</h3>
+                  <p className="mt-2 flex-1 text-[15px] leading-7 text-ink-soft">{x.text}</p>
+                  <span className="mt-4 text-sm font-semibold text-brand-700">{x.cta} <span aria-hidden className="inline-block transition group-hover:translate-x-0.5">→</span></span>
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </section>
+      </Reveal>
+
       {/* D. Helpers */}
       <Reveal>
         <HelpersSection />
@@ -221,6 +253,30 @@ export default function Home() {
       <Reveal>
         <WalletSection />
       </Reveal>
+
+      {/* G2. Founder */}
+      <Reveal>
+      <section className="section pb-0" aria-labelledby="founder-h">
+        <div className="container">
+          <div className="grid items-center gap-8 overflow-hidden rounded-4xl bg-white p-6 shadow-card md:grid-cols-[220px_1fr] md:p-10">
+            <div className="mx-auto w-40 overflow-hidden rounded-3xl md:w-full">
+              <Image src={FOUNDER.photo} alt={`${FOUNDER.name}, founder of E-Way Easy`} width={720} height={960} sizes="(max-width: 768px) 160px, 220px" className="h-auto w-full" />
+            </div>
+            <div className="text-center md:text-left">
+              <p className="eyebrow">Built by one person, for businesses across India</p>
+              <h2 id="founder-h" className="h2 mt-2">From {FOUNDER.village} to your phone</h2>
+              <p className="mt-4 leading-7 text-ink-soft">
+                {FOUNDER.name} grew up in {FOUNDER.village}, a small village near {FOUNDER.near}. After a year at {FOUNDER.previousWork},
+                he spent {FOUNDER.buildMonths} months building E-Way Easy on one laptop, working after office hours until 2 AM, so that
+                traders, manufacturers, wholesalers and transporters can make their invoice and e-way bill in one tap and avoid costly mistakes.
+              </p>
+              <Link href="/about" className="btn-ghost mt-6">Read Meet&rsquo;s story →</Link>
+            </div>
+          </div>
+        </div>
+      </section>
+      </Reveal>
+
 
       {/* E. Tools */}
       <Reveal>
@@ -302,29 +358,6 @@ export default function Home() {
 
       <Reveal>
         <PartnerStrip />
-      </Reveal>
-
-      {/* G2. Founder */}
-      <Reveal>
-      <section className="section pb-0" aria-labelledby="founder-h">
-        <div className="container">
-          <div className="grid items-center gap-8 overflow-hidden rounded-4xl bg-white p-6 shadow-card md:grid-cols-[220px_1fr] md:p-10">
-            <div className="mx-auto w-40 overflow-hidden rounded-3xl md:w-full">
-              <Image src={FOUNDER.photo} alt={`${FOUNDER.name}, founder of E-Way Easy`} width={720} height={960} sizes="(max-width: 768px) 160px, 220px" className="h-auto w-full" />
-            </div>
-            <div className="text-center md:text-left">
-              <p className="eyebrow">Built by one person, for businesses across India</p>
-              <h2 id="founder-h" className="h2 mt-2">From {FOUNDER.village} to your phone</h2>
-              <p className="mt-4 leading-7 text-ink-soft">
-                {FOUNDER.name} grew up in {FOUNDER.village}, a small village near {FOUNDER.near}. After a year at {FOUNDER.previousWork},
-                he spent {FOUNDER.buildMonths} months building E-Way Easy on one laptop, working after office hours until 2 AM, so that
-                traders, manufacturers, wholesalers and transporters can make their invoice and e-way bill in one tap and avoid costly mistakes.
-              </p>
-              <Link href="/about" className="btn-ghost mt-6">Read Meet&rsquo;s story →</Link>
-            </div>
-          </div>
-        </div>
-      </section>
       </Reveal>
 
       {/* H. Final CTA */}

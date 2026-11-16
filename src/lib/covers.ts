@@ -37,6 +37,7 @@ export const COVERS: Record<string, CoverSpec> = {
   'prepare-invoice-data-for-bulk-processing': { l1: 'BULK DATA', l2: 'READY', tag: 'SPREADSHEET TIPS', variant: 'phone', screen: 'dashboard', ribbon: 'amber' },
   'avoid-errors-in-invoice-and-transport-details': { l1: 'STOP', l2: 'MISTAKES', tag: 'PRE-DISPATCH CHECKLIST', variant: 'person', screen: 'invoice' },
   'digital-tools-for-indian-manufacturers': { l1: 'DIGITAL', l2: 'TOOLS', tag: 'FOR MANUFACTURERS', variant: 'phone', screen: 'dashboard' },
+  'eway-bill-number-14-digits-2027': { l1: '14-DIGIT', l2: 'E-WAY BILL NO.', tag: 'FROM 1 JAN 2027', variant: 'phone', screen: 'generated', ribbon: 'red' },
   'invoice-with-gst-vs-without-gst': { l1: 'WITH GST', l2: 'OR WITHOUT?', tag: 'TAX INVOICE VS BILL', variant: 'phone', screen: 'invoice', ribbon: 'amber' },
   'invoice-vs-bill-vs-receipt': { l1: 'INVOICE', l2: 'BILL · RECEIPT', tag: 'WHAT IS THE DIFFERENCE', variant: 'person', screen: 'invoice', flip: true },
   'how-to-make-gst-invoice-on-mobile': { l1: 'GST INVOICE', l2: 'ON MOBILE', tag: 'FREE · STEP BY STEP', variant: 'phones', ribbon: 'amber' },

@@ -61,6 +61,7 @@ NOT verified — do not claim: bulk e-way bill generation inside the app, e-invo
 - Delivery challan used for job work, supply on approval, line sales, SKD/CKD in lots, transfer of goods without sale etc.
 
 ## Recent updates (state as reported by GSTN advisories; ask readers to verify on official portal)
+- From 1 January 2027 (GSTN advisory 4 Nov 2026, as reported; confirm on the portal): e-way bill number 12 → 14 digits, consolidated e-way bill number 10 → 11 digits. Rules unchanged. Do not claim E-Way Easy readiness until the founder confirms.
 - From 1 January 2025: e-way bill cannot be generated for base documents (invoice/challan) dated more than 180 days before the generation date.
 - From 1 January 2025: an e-way bill can be extended only up to a total of 360 days from its original generation date.
 - Multi-Factor Authentication (MFA/2FA) on the e-way bill portal phased in: taxpayers with AATO above ₹20 crore from 1 January 2025, then extended in phases to all taxpayers from 1 April 2025.

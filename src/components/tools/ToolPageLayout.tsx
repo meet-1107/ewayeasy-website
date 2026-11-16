@@ -8,6 +8,7 @@ import ToolIcon from './ToolIcon';
 import ToolUsageTracker from './ToolUsageTracker';
 import { ORG_ID, absoluteUrl, faqLd } from '@/lib/seo';
 import { getTool, toolHref } from '@/lib/tools';
+import { toolGuides } from '@/lib/tool-guides';
 
 export type Faq = { q: string; a: string };
 
@@ -37,6 +38,7 @@ export default function ToolPageLayout({
   disclaimer?: ReactNode;
 }) {
   const t = getTool(slug);
+  const links = toolGuides(slug);
   return (
     <>
       <JsonLd
@@ -129,6 +131,17 @@ export default function ToolPageLayout({
                 <Link href="/tools" className="text-sm font-semibold text-brand-700 hover:underline">All free tools →</Link>
               </li>
             </ul>
+            <h2 className="eyebrow mt-8">Related guides</h2>
+            <ul className="mt-3 space-y-2 text-[15px]">
+              {links.guides.map((g) => (
+                <li key={g.href}><Link href={g.href} className="font-medium text-brand-700 underline decoration-brand-300 underline-offset-2 hover:decoration-brand-700">{g.label}</Link></li>
+              ))}
+            </ul>
+            {links.app && (
+              <Link href={links.app.href} className="mt-6 flex items-center justify-between gap-3 rounded-2xl bg-brand-900 p-4 text-sm font-semibold text-white hover:bg-brand-800">
+                {links.app.label} <span aria-hidden>→</span>
+              </Link>
+            )}
           </aside>
         </div>
 
