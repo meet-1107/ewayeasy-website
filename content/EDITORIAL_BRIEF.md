@@ -49,6 +49,7 @@ From the actual app screens and the official promo creative:
   - Setup: 1) sign up and add business GSTIN, 2) connect the e-way bill portal API login (one-time, guided in the app), 3) create or import an invoice, 4) tap Generate.
   - Filing route: e-way bills are filed on the official NIC e-way bill system (ewaybillgst.gov.in) through an authorised GST Suvidha Provider (GSP), using the user's own portal API credentials. E-Way Easy is independent and not affiliated with the Government of India, GSTN or NIC.
   - Audience: GST-registered traders, manufacturers, wholesalers, distributors and transporters.
+- Launch (founder, 21 Nov 2026): consolidated e-way bill is now live in the app for transporters. You may call it "new" in November–December 2026; don't describe screens or steps the founder hasn't shown.
 NOT verified — do not claim: bulk e-way bill generation inside the app, e-invoice (IRN) generation, multi-user/team accounts, offline mode, iOS app, ratings, any user number other than the one below, "cheapest" or any speed guarantee beyond the listing wording, that PDF import works for every invoice format without review.
 - User count (confirmed by the founder from app records, 14 Nov 2026): "Trusted by 100+ businesses" creating invoices and e-way bills. Use only this figure and wording; Play Store showed 50+ downloads at that time.
 

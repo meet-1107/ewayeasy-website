@@ -5,7 +5,7 @@ excerpt: "Goods stuck on the road and the e-way bill about to lapse? Learn the 8
 category: "eway-bill"
 tags: ["e-way bill", "validity", "extension", "transporter"]
 publishedAt: "2026-10-16"
-updatedAt: "2026-11-02"
+updatedAt: "2026-11-21"
 verifiedAt: "2026-10-16"
 seoTitle: "E-Way Bill Expired? How to Extend Validity in Time"
 metaDescription: "What to do when an e-way bill is expiring or has expired: the 8-hour extension window, the 360-day cap, a worked example and common mistakes."
@@ -26,6 +26,10 @@ faq:
     a: "The generator, or the transporter to whom the e-way bill is assigned and who is in charge of the goods at that time."
   - q: "Is there a maximum limit on extensions?"
     a: "GSTN reported that from 1 January 2025 an e-way bill can be extended only up to a total of 360 days from its original generation date. Verify the current position on the portal."
+  - q: "What should I do if the e-way bill expired more than 24 hours ago?"
+    a: "It can no longer be extended, because extension works only from 8 hours before to 8 hours after expiry. Stop moving the goods on it, collect evidence of the delay, check your options on the portal and speak to your tax consultant. Moving goods without a valid e-way bill risks detention and a penalty under Section 129."
+  - q: "How do I extend an e-way bill after the expiry date?"
+    a: "Within 8 hours after expiry, use the extend option on the portal or in the E-Way Easy app, and give the reason and the remaining distance. Once those 8 hours pass, extension is no longer possible. Total validity is capped at 360 days from generation."
 related: ["how-distance-affects-eway-bill-validity", "how-to-update-vehicle-details-in-eway-bill"]
 ---
 > **Quick answer:** Extend it within 8 hours before or 8 hours after expiry, if exceptional circumstances stopped the goods reaching in time. The generator or the assigned transporter can do this, up to 360 days in total from generation. Goods moving on an expired bill risk detention, seizure and penalty under Section 129.

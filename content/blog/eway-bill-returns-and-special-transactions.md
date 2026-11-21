@@ -5,7 +5,7 @@ excerpt: "How to approach e-way bills for sales returns, supply on approval, exh
 category: "eway-bill"
 tags: ["e-way bill", "sales return", "bill to ship to", "delivery challan", "special cases"]
 publishedAt: "2026-10-16"
-updatedAt: "2026-11-16"
+updatedAt: "2026-11-21"
 verifiedAt: "2026-10-16"
 seoTitle: "E-Way Bill for Returns, Bill-to-Ship-to & Special Cases"
 metaDescription: "General guidance on e-way bills for sales returns, supply on approval, exhibitions, bill-to-ship-to, line sales and SKD/CKD lots, with mistakes to avoid."
@@ -28,6 +28,8 @@ faq:
     a: "The actual place of delivery, the ship-to address and PIN, determines the route and distance. The portal offers transaction types for bill-to-ship-to cases; check the user documentation for how to fill them."
   - q: "Do goods sent for an exhibition need an e-way bill even though nothing is sold yet?"
     a: "If the value crosses the applicable threshold, generally yes. Movement for reasons other than supply is still covered by the e-way bill rules, and the unsold goods coming back are a separate movement."
+  - q: "How do I generate an e-way bill for an exhibition in another state?"
+    a: "Issue a delivery challan, then generate the e-way bill with the exhibition or fairs reason and the venue address and PIN as the place of delivery. Generate a separate e-way bill for unsold goods coming back. Inter-state exhibitions can raise registration and tax questions at the venue, so check with your adviser before you go."
 related: ["delivery-challan-vs-tax-invoice", "who-is-responsible-for-generating-eway-bill", "cgst-sgst-igst-explained"]
 ---
 > **Quick answer:** Rule 138 covers movement of goods, not only sales, so returns, approval supplies, exhibition goods and similar cases can need an e-way bill once the threshold is crossed. Each physical movement needs its own e-way bill. Where no sale takes place, the document is usually a delivery challan.

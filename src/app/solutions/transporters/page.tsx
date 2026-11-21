@@ -56,6 +56,10 @@ export default function TransportersPage() {
           { name: 'Transporters', href: '/solutions/transporters' },
         ]}
       >
+        <p className="mb-5 inline-flex items-center gap-2 rounded-full bg-amber-400/15 px-4 py-1.5 text-sm font-semibold text-amber-200">
+          <span className="rounded-full bg-amber-400 px-2 py-0.5 text-xs font-bold uppercase text-ink">New</span>
+          Consolidated e-way bills are now live in the app: one e-way bill for every consignment in your truck.
+        </p>
         <div className="flex flex-wrap gap-3">
           <PlayLink placement="solutions_transporters" className="btn-amber">Get the Android app</PlayLink>
           <a href="#how-the-app-helps" className="btn-ghost-dark">See how it helps on the road</a>

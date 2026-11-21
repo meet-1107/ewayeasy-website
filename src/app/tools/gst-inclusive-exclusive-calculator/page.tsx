@@ -26,6 +26,10 @@ const faq: Faq[] = [
     q: 'Does the calculator know my product’s rate?',
     a: 'No. Select the rate yourself after confirming it for your HSN or SAC code on CBIC.',
   },
+  {
+    q: 'How do I calculate the taxable value from the invoice value?',
+    a: 'Multiply the invoice value by 100 and divide by (100 + GST rate). For an ₹11,800 invoice at 18%, the taxable value is ₹11,800 × 100 ÷ 118 = ₹10,000 and the GST is ₹1,800. If the invoice has items at different rates, or cess, work it out line by line instead of on the total.',
+  },
 ];
 
 export default function Page() {

@@ -3,7 +3,7 @@ title: "Consolidated E-Way Bill (Form EWB-02): When and How to Use It"
 slug: "consolidated-eway-bill"
 description: "What a consolidated e-way bill (Form GST EWB-02) is, when transporters use it for several consignments in one vehicle, what each consignment still needs, how it works with Part B updates and trans-shipment, and common mistakes."
 publishedAt: "2026-10-29"
-updatedAt: "2026-11-02"
+updatedAt: "2026-11-21"
 verifiedAt: "2026-10-29"
 seoTitle: "Consolidated E-Way Bill (EWB-02): Rules and Steps"
 metaDescription: "Consolidated e-way bill (Form EWB-02) explained: one document for many consignments in one vehicle, prerequisites, validity, Part B and common mistakes."
@@ -29,9 +29,13 @@ faq:
   - q: "What happens when the goods move to another vehicle?"
     a: "The vehicle details must be updated before the goods move in the new vehicle. The portal provides options to change the vehicle for a consolidated e-way bill or regenerate it; check the current menu and the user documentation."
   - q: "Can the E-Way Easy app create a consolidated e-way bill?"
-    a: "Yes. The app can create a consolidated e-way bill for multiple consignments in one vehicle through the official e-way bill system. It costs 5 credits, charged only when the action succeeds."
+    a: "Yes. Consolidated e-way bills are now live in the E-Way Easy app for transporters. You can create one for multiple consignments in one vehicle through the official e-way bill system; it costs 5 credits, charged only when the action succeeds."
+  - q: "What should a transporter check first for a consolidated e-way bill?"
+    a: "Check that every consignment in the truck has its own valid e-way bill and that each one is assigned to your Transporter ID. Note the earliest expiry among them, because each bill keeps its own validity. Then confirm the vehicle number before you file, since one wrong character affects every consignment on the trip."
 related: ["eway-bill-validity", "eway-bill-correction", "documents-required-for-eway-bill"]
 updateHistory:
+  - date: "2026-11-21"
+    note: "Consolidated e-way bills launched in the E-Way Easy app; added what transporters should check first."
   - date: "2026-10-29"
     note: "First published."
 ---
@@ -140,7 +144,7 @@ At a checkpoint, the officer can see the vehicle's consolidated bill, the three 
 
 ## Creating a consolidated e-way bill in the E-Way Easy app
 
-The E-Way Easy Android app can create a consolidated e-way bill for multiple consignments in one vehicle, along with Part B updates, extensions, cancellations and PDF sharing. Each of these actions costs 5 credits (₹5), charged only when the action succeeds; if the portal rejects it, the credits return to your wallet. The app files through the official NIC e-way bill system via an authorised GSP using your own API login; it is not a government portal. See [managing e-way bills in the app](/eway-bill-management-app).
+**New for transporters:** consolidated e-way bills are now live in the E-Way Easy Android app. You can create one for multiple consignments in one vehicle, along with Part B updates, extensions, cancellations and PDF sharing. Each of these actions costs 5 credits (₹5), charged only when the action succeeds; if the portal rejects it, the credits return to your wallet. The app files through the official NIC e-way bill system via an authorised GSP using your own API login; it is not a government portal. See [managing e-way bills in the app](/eway-bill-management-app).
 
 ## Official sources
 
