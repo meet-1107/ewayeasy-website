@@ -1,0 +1,233 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>E-Way Easy Website: Setup, Commit and Deploy Guide</title>
+<style>
+  @page { size: A4; margin: 16mm 15mm 18mm; }
+  body { font-family: "Segoe UI", Roboto, Arial, sans-serif; color: #16211C; font-size: 10.5pt; line-height: 1.5; }
+  h1 { font-size: 22pt; margin: 0 0 4px; color: #123F2E; }
+  .sub { color: #4A5A52; margin: 0 0 18px; }
+  h2 { font-size: 14pt; color: #174F39; border-bottom: 2px solid #D6EADF; padding-bottom: 3px; margin: 22px 0 8px; page-break-after: avoid; }
+  h3 { font-size: 11.5pt; margin: 14px 0 4px; page-break-after: avoid; }
+  p, li { margin: 4px 0; }
+  ul, ol { padding-left: 20px; margin: 4px 0; }
+  pre { background: #0C2D21; color: #EEF6F1; padding: 8px 10px; border-radius: 6px; font-size: 9.5pt; white-space: pre-wrap; word-break: break-all; page-break-inside: avoid; margin: 6px 0; }
+  code { font-family: Consolas, "Courier New", monospace; font-size: 9.5pt; background: #EEF6F1; padding: 0 3px; border-radius: 3px; }
+  pre code { background: none; padding: 0; color: inherit; }
+  table { border-collapse: collapse; width: 100%; margin: 6px 0; font-size: 9.5pt; page-break-inside: avoid; }
+  th, td { border: 1px solid #D6EADF; padding: 5px 7px; text-align: left; vertical-align: top; }
+  th { background: #EEF6F1; }
+  .box { border-left: 4px solid #2C7A57; background: #F6F5F0; padding: 8px 12px; margin: 10px 0; page-break-inside: avoid; }
+  .warn { border-left-color: #C9852A; }
+  .toc li { margin: 1px 0; }
+  .small { font-size: 9pt; color: #4A5A52; }
+</style>
+</head>
+<body>
+
+<h1>E-Way Easy Website: Setup, Commit and Deploy Guide</h1>
+<p class="sub">For ewayeasy.in · Repository: github.com/meet-1107/ewayeasy-website · Firebase project: ewayeasy-website · Updated 25 November 2026</p>
+
+<div class="box">
+  <strong>The short version (on a computer that is already set up):</strong>
+  <pre><code>cd "C:\Users\web apps\eway-easy-website"
+git pull
+npm install
+npm run deploy:firebase</code></pre>
+  Then commit and push any change (section 7).
+</div>
+
+<h2>Contents</h2>
+<ol class="toc">
+  <li>Environment files: do you need any?</li>
+  <li>What a GitHub ZIP contains, and what it does not</li>
+  <li>Install the tools (one time per computer)</li>
+  <li>Get the code: clone (recommended) or ZIP</li>
+  <li>Run the website on your computer</li>
+  <li>Check before you publish</li>
+  <li>Commit and push to GitHub</li>
+  <li>Deploy to ewayeasy.in (Firebase)</li>
+  <li>After deploying: search engines</li>
+  <li>Where to change common things</li>
+  <li>Troubleshooting</li>
+  <li>Command cheat sheet</li>
+</ol>
+
+<h2>1. Environment files: do you need any?</h2>
+<p><strong>No extra env file is needed.</strong> Everything the live site needs is already in the repository, in <code>.env.production</code>. That file is committed on purpose because every value in it is public (it already appears in the website's pages).</p>
+<table>
+  <tr><th>Variable (in .env.production)</th><th>What it does</th><th>Secret?</th></tr>
+  <tr><td><code>NEXT_PUBLIC_SITE_URL</code></td><td>https://ewayeasy.in, used for canonical links, sitemaps and IndexNow</td><td>No</td></tr>
+  <tr><td><code>NEXT_PUBLIC_PLAY_STORE_URL</code></td><td>Google Play link for the app buttons</td><td>No</td></tr>
+  <tr><td><code>NEXT_PUBLIC_SUPPORT_EMAIL</code></td><td>Email shown on the contact page</td><td>No</td></tr>
+  <tr><td><code>NEXT_PUBLIC_WEB3FORMS_KEY</code></td><td>Lets the contact form email you through Web3Forms</td><td>No: public by design; it can only send to your own address</td></tr>
+  <tr><td><code>NEXT_PUBLIC_CLARITY_ID</code></td><td>Microsoft Clarity analytics</td><td>No</td></tr>
+  <tr><td><code>NEXT_PUBLIC_GA_ID</code>, <code>NEXT_PUBLIC_GSC_VERIFICATION</code></td><td>Optional, currently empty</td><td>No</td></tr>
+</table>
+<ul>
+  <li><code>.env.example</code> is only a template that lists the variables. It is not used by the build.</li>
+  <li>If you ever need a <em>private</em> value on one computer only, put it in <code>.env.local</code>. That file is ignored by Git and never uploaded.</li>
+  <li>Never put passwords, Firebase login tokens or bank details in any env file that is committed.</li>
+  <li>To change the contact-form key: create a new key at web3forms.com, replace it in <code>.env.production</code>, commit and deploy.</li>
+</ul>
+<p><strong>Other files that make deploy work (all in the repository):</strong></p>
+<table>
+  <tr><th>File</th><th>Purpose</th></tr>
+  <tr><td><code>.firebaserc</code></td><td>Points to the Firebase project <code>ewayeasy-website</code></td></tr>
+  <tr><td><code>firebase.json</code></td><td>Hosting settings and redirects</td></tr>
+  <tr><td><code>public/2f36bf4493a7d9b2e030dd97300cb7b3.txt</code></td><td>IndexNow key (proves to Bing that you own the site). Do not delete.</td></tr>
+  <tr><td><code>.indexnow-state.json</code></td><td>Remembers which pages were already sent to IndexNow, so only changed pages are sent next time. Commit it after each deploy.</td></tr>
+</table>
+
+<h2>2. What a GitHub ZIP contains, and what it does not</h2>
+<table>
+  <tr><th>Included in the ZIP</th><th>Not included</th></tr>
+  <tr>
+    <td>All source code, content, images, <code>.env.production</code>, <code>.firebaserc</code>, <code>firebase.json</code>, the IndexNow key file, scripts and docs</td>
+    <td>
+      <strong>Git history</strong>: you cannot commit or push from a plain ZIP folder (fix in section 4B).<br>
+      <code>node_modules</code>: recreated with <code>npm install</code>.<br>
+      <code>.next</code> and <code>out</code>: recreated by the build.<br>
+      Your <strong>Firebase login</strong> and <strong>GitHub login</strong>: you sign in once per computer.
+    </td>
+  </tr>
+</table>
+<div class="box warn"><strong>Recommendation:</strong> use <code>git clone</code> instead of the ZIP. A clone has the history, so commit, push and pull work at once.</div>
+
+<h2>3. Install the tools (one time per computer)</h2>
+<ol>
+  <li><strong>Node.js 22 LTS or newer</strong> from nodejs.org (this project is built with Node 24; Node 20 or newer works). Check: <code>node -v</code></li>
+  <li><strong>Git</strong> from git-scm.com. Check: <code>git --version</code></li>
+  <li><strong>Firebase CLI:</strong> nothing to install. The project runs it with <code>npx firebase-tools</code>.</li>
+  <li>An internet connection during builds: the build downloads the Google Fonts it uses.</li>
+  <li>Optional: Google Chrome, only for the script that captures blog cover images.</li>
+</ol>
+<p>Set your name for commits (once):</p>
+<pre><code>git config --global user.name "meet-1107"
+git config --global user.email "your-github-email@example.com"</code></pre>
+
+<h2>4. Get the code</h2>
+<h3>A. Clone (recommended)</h3>
+<pre><code>cd "C:\Users\web apps"
+git clone https://github.com/meet-1107/ewayeasy-website.git eway-easy-website
+cd eway-easy-website
+npm install</code></pre>
+<h3>B. You already downloaded the ZIP</h3>
+<p>Unzip it (GitHub names the folder <code>ewayeasy-website-main</code>; you can rename it). Then connect it to GitHub so commit and push work:</p>
+<pre><code>cd "C:\path\to\ewayeasy-website-main"
+git init
+git remote add origin https://github.com/meet-1107/ewayeasy-website.git
+git fetch origin
+git checkout -f -B main origin/main
+npm install</code></pre>
+<p class="small"><code>git checkout -f</code> makes the folder match GitHub exactly. If you edited files in the ZIP folder before this step, copy them somewhere safe first and put them back afterwards.</p>
+
+<h2>5. Run the website on your computer</h2>
+<table>
+  <tr><th>Goal</th><th>Command</th><th>Open</th></tr>
+  <tr><td>Live editing (updates as you save)</td><td><code>npm run dev</code></td><td>http://localhost:3000</td></tr>
+  <tr><td>Build the real site into <code>out/</code></td><td><code>npm run build</code></td><td>-</td></tr>
+  <tr><td>Preview the built site exactly as it will go live</td><td><code>npm start</code></td><td>http://localhost:4321</td></tr>
+</table>
+<p class="small">Stop a running server with Ctrl + C. Do not run <code>npm run dev</code> and <code>npm run build</code> at the same time: they share the <code>.next</code> folder.</p>
+
+<h2>6. Check before you publish</h2>
+<pre><code>npm run build
+npm test
+npm run check:links
+npm run check:seo</code></pre>
+<ul>
+  <li><code>npm test</code>: about 227 automated tests (calculators, templates, PIN distances, content rules).</li>
+  <li><code>check:links</code>: finds broken internal links.</li>
+  <li><code>check:seo</code>: every page has one H1, a canonical link, and a unique title and description.</li>
+</ul>
+<p>Run the two check scripts after <code>npm run build</code>, because they read the built <code>out/</code> folder.</p>
+
+<h2>7. Commit and push to GitHub</h2>
+<pre><code>git pull
+git status
+git add -A
+git commit -m "Describe what you changed"
+git push origin main</code></pre>
+<ul>
+  <li>Always <code>git pull</code> first, so you build on the latest version.</li>
+  <li>The first push on a new computer opens a GitHub sign-in window (Git Credential Manager). Sign in as <strong>meet-1107</strong>.</li>
+  <li>If a sign-in window does not appear, create a Personal Access Token on GitHub (Settings → Developer settings → Tokens) and paste it when Git asks for a password.</li>
+  <li>Check <code>git status</code> before <code>git add -A</code>: never commit <code>.env.local</code> or personal files.</li>
+</ul>
+
+<h2>8. Deploy to ewayeasy.in (Firebase)</h2>
+<h3>First time on a computer</h3>
+<pre><code>npx firebase-tools login</code></pre>
+<p>Sign in with the Google account that owns the Firebase project <strong>ewayeasy-website</strong>. Check access with:</p>
+<pre><code>npx firebase-tools projects:list</code></pre>
+<h3>Every deploy</h3>
+<pre><code>cd "C:\Users\web apps\eway-easy-website"
+npm run deploy:firebase</code></pre>
+<p>This single command:</p>
+<ol>
+  <li>builds the site into <code>out/</code>;</li>
+  <li>uploads <code>out/</code> to Firebase Hosting (live in about a minute);</li>
+  <li>sends the new or changed page addresses to search engines through IndexNow and updates <code>.indexnow-state.json</code>.</li>
+</ol>
+<p>Then commit the updated IndexNow state:</p>
+<pre><code>git add .indexnow-state.json
+git commit -m "IndexNow state after deploy"
+git push origin main</code></pre>
+<p><strong>Check it is live:</strong> open https://ewayeasy.in in a private window and look for your change. To roll back, open Firebase console → Hosting → Release history and restore the previous version.</p>
+<div class="box"><strong>Low-memory computer?</strong> Build with one worker:<br>
+PowerShell: <code>$env:BUILD_CPUS='1'; npm run deploy:firebase</code><br>
+Command Prompt: <code>set BUILD_CPUS=1 &amp;&amp; npm run deploy:firebase</code></div>
+
+<h2>9. After deploying: search engines</h2>
+<ul>
+  <li><strong>Bing and other IndexNow engines</strong> are told automatically by the deploy command.</li>
+  <li><strong>Google Search Console:</strong> the sitemap <code>https://ewayeasy.in/sitemap.xml</code> is already submitted. For an important new or changed page, use URL Inspection → Request indexing.</li>
+  <li><strong>Bing Webmaster Tools:</strong> optional manual submission with <code>docs/all-urls.txt</code> (list of all pages).</li>
+</ul>
+
+<h2>10. Where to change common things</h2>
+<table>
+  <tr><th>To change</th><th>Edit</th></tr>
+  <tr><td>Blog articles</td><td><code>content/blog/&lt;slug&gt;.md</code> (follow <code>content/EDITORIAL_BRIEF.md</code>)</td></tr>
+  <tr><td>E-way bill guides</td><td><code>content/guides/&lt;slug&gt;.md</code></td></tr>
+  <tr><td>Page titles and descriptions</td><td><code>seoTitle</code> / <code>metaDescription</code> in each .md file; see <code>docs/metadata-register.md</code></td></tr>
+  <tr><td>Contact email, Play Store link, analytics</td><td><code>.env.production</code></td></tr>
+  <tr><td>Founder, author and app facts</td><td><code>src/lib/site.ts</code></td></tr>
+  <tr><td>Prices and credits</td><td><code>src/lib/pricing.ts</code></td></tr>
+  <tr><td>Invoice and PO templates text</td><td><code>src/lib/templates/catalog.ts</code></td></tr>
+  <tr><td>Redirects for moved pages</td><td><code>firebase.json</code> (and <code>public/_redirects</code>)</td></tr>
+</table>
+
+<h2>11. Troubleshooting</h2>
+<table>
+  <tr><th>Problem</th><th>Fix</th></tr>
+  <tr><td><code>Failed to fetch font</code> / network error during build</td><td>The build downloads Google Fonts. Check the internet connection and run the command again.</td></tr>
+  <tr><td><code>ENOENT ... rename ... 500.html</code></td><td>A dev server was running during the build. Stop it, delete the <code>.next</code> folder, build again.</td></tr>
+  <tr><td>Build runs out of memory or freezes</td><td>Use <code>BUILD_CPUS=1</code> (section 8).</td></tr>
+  <tr><td><code>firebase: command not found</code></td><td>Use <code>npx firebase-tools ...</code> as written in this guide.</td></tr>
+  <tr><td>Firebase "permission denied" or "not authorized"</td><td>Run <code>npx firebase-tools login</code> with the account that owns <code>ewayeasy-website</code>.</td></tr>
+  <tr><td><code>indexnow: missing NEXT_PUBLIC_SITE_URL or public/&lt;key&gt;.txt</code></td><td><code>.env.production</code> or the key file is missing. Restore them from GitHub.</td></tr>
+  <tr><td>Push rejected ("fetch first")</td><td>Run <code>git pull</code>, then <code>git push origin main</code> again.</td></tr>
+  <tr><td>"Port already in use"</td><td>Close the other server, or run <code>npx next dev -p 3001</code>.</td></tr>
+  <tr><td>Tests or checks fail</td><td>Read the first failing line; it names the file and the problem. Fix it before deploying.</td></tr>
+</table>
+
+<h2>12. Command cheat sheet</h2>
+<table>
+  <tr><th>Task</th><th>Command</th></tr>
+  <tr><td>Get latest code</td><td><code>git pull</code></td></tr>
+  <tr><td>Install packages</td><td><code>npm install</code></td></tr>
+  <tr><td>Edit with live preview</td><td><code>npm run dev</code></td></tr>
+  <tr><td>Build</td><td><code>npm run build</code></td></tr>
+  <tr><td>Preview built site</td><td><code>npm start</code></td></tr>
+  <tr><td>Tests and checks</td><td><code>npm test</code> · <code>npm run check:links</code> · <code>npm run check:seo</code></td></tr>
+  <tr><td>Save to GitHub</td><td><code>git add -A</code> · <code>git commit -m "..."</code> · <code>git push origin main</code></td></tr>
+  <tr><td>Firebase sign-in (once)</td><td><code>npx firebase-tools login</code></td></tr>
+  <tr><td>Deploy live</td><td><code>npm run deploy:firebase</code></td></tr>
+</table>
+
+<p class="small">The Decaya (Spain) project is a separate folder, <code>C:\Users\web apps\decaya-website</code>, not on GitHub yet, with its own steps in its README.md.</p>
+</body>
+</html>
