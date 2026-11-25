@@ -30,7 +30,6 @@ export const CATEGORY_GUIDES: Record<string, CategoryGuide> = {
       { slug: 'eway-bill-limit-50000-threshold-exceptions', why: 'The ₹50,000 value test, how to calculate it and the cases that need no e-way bill.' },
       { slug: 'who-is-responsible-for-generating-eway-bill', why: 'Supplier, recipient or transporter: who must generate, and who is at risk if nobody does.' },
       { slug: 'eway-bill-part-a-and-part-b-explained', why: 'What goes in each part, and why Part A alone does not let the truck move.' },
-      { slug: 'how-distance-affects-eway-bill-validity', why: 'How the 200 km per day rule sets the validity, and the 10% distance margin.' },
       { slug: 'how-to-update-vehicle-details-in-eway-bill', why: 'Changing the vehicle or transporter on the way without a new e-way bill.' },
       { slug: 'what-to-do-when-eway-bill-expires', why: 'The 8-hour extension window and what to do if you miss it.' },
     ],

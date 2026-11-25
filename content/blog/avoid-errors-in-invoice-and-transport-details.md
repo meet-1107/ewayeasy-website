@@ -28,7 +28,7 @@ faq:
     a: "The portal will no longer let you cancel the e-way bill. Correct the invoice position through the proper GST mechanism, such as a credit or debit note where it applies, and take advice on the movement already made."
   - q: "Does the portal catch a wrong GSTIN for me?"
     a: "Only partly. The portal rejects a GSTIN with an invalid format or check digit. It cannot tell that a valid GSTIN belongs to the wrong business, so you still need to match the legal name."
-related: ["how-to-update-vehicle-details-in-eway-bill", "gstin-verification-what-to-check", "how-distance-affects-eway-bill-validity"]
+related: ["how-to-update-vehicle-details-in-eway-bill", "gstin-verification-what-to-check", "eway-bill-part-a-and-part-b-explained"]
 ---
 > **Quick answer:** Check the GSTIN, delivery PIN, document number and date, value, HSN and vehicle number before you generate. Part A cannot be edited, so a Part A error means cancelling within 24 hours and generating again. Vehicle and transporter details can be updated later without cancelling.
 
@@ -99,7 +99,7 @@ Eight errors cause most e-way bill rework: wrong GSTIN, wrong delivery PIN, wron
 
 **What happens:** a short distance gives too little validity. A long one is refused, because you can enter at most 10% more than the portal's PIN-to-PIN figure, with a 4,000 km ceiling.
 
-**Prevention:** let the portal or your app calculate PIN-to-PIN distance. Adjust only for a genuine route difference. See [how distance affects e-way bill validity](/blog/how-distance-affects-eway-bill-validity).
+**Prevention:** let the portal or your app calculate PIN-to-PIN distance. Adjust only for a genuine route difference. See [e-way bill distance rules](/eway-bill-distance-rules).
 
 ### 8. Old document date
 

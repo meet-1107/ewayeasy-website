@@ -19,7 +19,6 @@ export const COVERS: Record<string, CoverSpec> = {
   'what-is-an-eway-bill': { l1: 'E-WAY BILL', l2: 'EXPLAINED', tag: 'BEGINNER GUIDE', variant: 'phone', screen: 'review' },
   'who-is-responsible-for-generating-eway-bill': { l1: 'WHO MUST', l2: 'GENERATE?', tag: 'SELLER OR TRANSPORTER', variant: 'person', screen: 'review', flip: true },
   'eway-bill-limit-50000-threshold-exceptions': { l1: '₹50,000', l2: 'LIMIT', tag: '+ EXCEPTIONS', variant: 'phone', screen: 'invoice', ribbon: 'amber' },
-  'how-distance-affects-eway-bill-validity': { l1: 'DISTANCE', l2: '= VALIDITY', tag: 'KM TO DAYS', variant: 'truck', ribbon: 'amber' },
   'eway-bill-part-a-and-part-b-explained': { l1: 'PART A', l2: 'VS PART B', tag: 'EXPLAINED', variant: 'phone', screen: 'review' },
   'how-to-update-vehicle-details-in-eway-bill': { l1: 'VEHICLE', l2: 'CHANGED?', tag: 'UPDATE PART B', variant: 'truck', ribbon: 'amber' },
   'what-to-do-when-eway-bill-expires': { l1: 'EXPIRED', l2: 'E-WAY BILL?', tag: 'DO THIS NOW', variant: 'person', screen: 'generated', flip: true },

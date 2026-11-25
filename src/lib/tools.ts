@@ -60,11 +60,11 @@ export const TOOLS: Tool[] = [
   },
   {
     slug: 'distance-calculator',
-    name: 'E-Way Bill Validity & Distance Calculator',
-    description: 'Work out e-way bill validity days, expiry time and extension window from distance, plus the 10% distance allowance.',
+    name: 'PIN to PIN Distance & Validity Calculator',
+    description: 'Enter two PIN codes for an estimated road distance, then see validity days, expiry time, extension window and the 10% allowance.',
     icon: 'route',
     category: 'eway-bill',
-    keywords: ['validity', 'distance', 'expiry', 'odc', 'pin code', 'extension', 'km'],
+    keywords: ['pin to pin distance', 'pincode distance', 'validity', 'distance', 'expiry', 'odc', 'pin code', 'extension', 'km'],
   },
   {
     slug: 'hsn-code-lookup',

@@ -1,4 +1,4 @@
-# All ewayeasy.in pages (114)
+# All ewayeasy.in pages (113)
 
 Submit to Bing Webmaster Tools: Sitemaps -> https://ewayeasy.in/sitemap.xml, or URL Submission -> paste docs/all-urls.txt.
 Blog pagination (/page/N) and the Product Updates category are noindex and not listed.
@@ -97,7 +97,7 @@ Blog pagination (/page/N) and the Product Updates category are noindex and not l
 - https://ewayeasy.in/commercial-invoice-templates/export-commercial-invoice
 - https://ewayeasy.in/commercial-invoice-templates/courier-commercial-invoice
 
-## Blog (32)
+## Blog (31)
 
 - https://ewayeasy.in/blog
 - https://ewayeasy.in/authors/bhavesh-akabari
@@ -117,7 +117,6 @@ Blog pagination (/page/N) and the Product Updates category are noindex and not l
 - https://ewayeasy.in/blog/eway-bill-rules-for-job-work
 - https://ewayeasy.in/blog/eway-bills-for-wholesalers-and-distributors
 - https://ewayeasy.in/blog/gstin-verification-what-to-check
-- https://ewayeasy.in/blog/how-distance-affects-eway-bill-validity
 - https://ewayeasy.in/blog/how-eway-easy-simplifies-eway-bill-workflow
 - https://ewayeasy.in/blog/how-manufacturers-can-simplify-invoice-workflows
 - https://ewayeasy.in/blog/how-to-calculate-gst-on-sales-invoice

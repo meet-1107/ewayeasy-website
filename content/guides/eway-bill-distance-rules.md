@@ -3,7 +3,7 @@ title: "E-Way Bill Distance Rules: PIN-to-PIN, 10% Margin and 50 km Part B Exemp
 slug: "eway-bill-distance-rules"
 description: "How distance works in an e-way bill: the portal's PIN-to-PIN auto-calculation, the 10% margin, the 4,000 km cap, same-PIN movements, the 50 km Part B exemption, and how distance drives validity."
 publishedAt: "2026-10-16"
-updatedAt: "2026-11-02"
+updatedAt: "2026-11-25"
 verifiedAt: "2026-10-16"
 seoTitle: "E-Way Bill Distance Rules: PIN-to-PIN and 10% Margin"
 metaDescription: "E-way bill distance rules: PIN-to-PIN auto distance, 10% extra margin, 4,000 km limit, same-PIN 100 km, 50 km Part B exemption and validity impact."
@@ -28,6 +28,8 @@ faq:
     a: "If the PIN-to-PIN distance is not available, you enter the approximate actual distance. Check that the PIN code is valid and current first."
 related: ["eway-bill-validity", "eway-bill-generation", "eway-bill-common-errors"]
 updateHistory:
+  - date: "2026-11-25"
+    note: "Merged the distance-and-validity article into this guide: wrong-PIN example, what to do if the distance is wrong, multimodal row, and the new PIN to PIN distance estimate."
   - date: "2026-10-16"
     note: "First published."
 ---
@@ -122,6 +124,7 @@ A dealer in Vapi (Gujarat) sending goods to Daman or to Silvassa may move only a
 | Bill from–dispatch from | The actual dispatch place (for example, your supplier's warehouse) to the delivery PIN |
 | Goods to a transporter's godown first | Overall movement to the final destination; use Part A only for the short first leg if the 50 km rule applies |
 | Goods to job worker and back | Each direction is a separate movement with its own distance |
+| Rail, air or ship with road legs | The overall movement distance; the road legs before and after still count |
 
 Using the wrong pair of PIN codes is the most common reason for a distance that looks wrong.
 
@@ -129,10 +132,29 @@ Using the wrong pair of PIN codes is the most common reason for a distance that 
 
 A Surat fabric trader bills a Mumbai wholesaler but ships directly to the wholesaler's customer in Nashik. The e-way bill distance is Surat PIN to Nashik PIN — the route the goods actually travel — not Surat to Mumbai. The transaction type is set to bill to–ship to so the portal accepts different billing and delivery parties.
 
+## Example (illustrative): wrong PIN, short validity
+
+A Ludhiana bicycle parts supplier ships to a buyer whose registered office is in one city, but the goods are delivered to the buyer’s warehouse in an industrial area further away.
+
+| PIN used | Distance | Validity |
+|---|---|---|
+| Buyer’s office PIN | 390 km | 2 days |
+| Actual warehouse PIN | 425 km | 3 days |
+
+Using the office PIN gives the truck 2 days for a trip that needs 3, and it also misstates the place of delivery in Part A. **The ship-to PIN must be where the goods are actually delivered.** The same applies at your end: if goods leave from a factory or godown, use that PIN, and make sure the place is on your GST registration.
+
+## If the distance turns out to be wrong
+
+A distance cannot be edited on a generated e-way bill. What you can do depends on timing.
+
+- **Before the goods move, within 24 hours:** cancel and generate a fresh e-way bill with the right PIN codes and distance. See [how to cancel an e-way bill](/eway-bill-cancellation).
+- **In transit and running late:** if an accident, calamity, law-and-order issue or trans-shipment delay applies, extend validity within 8 hours before or after expiry. The portal asks for the current place and remaining distance.
+- **Expired and outside the window:** see [what to do when an e-way bill expires](/blog/what-to-do-when-eway-bill-expires).
+
 ## Where to get a reliable distance
 
 - The official portal's PIN-to-PIN figure is the reference.
-- The free [distance calculator](/tools/distance-calculator) on this site gives a quick estimate.
+- The free [PIN to PIN distance calculator](/tools/distance-calculator) shows both places and an estimated road distance from India Post PIN code locations, then the validity days. Use it to check PIN codes and plan; the portal figure is final.
 - In the E-Way Easy app, distance is calculated automatically from the PIN codes and can be edited manually — useful, but still check that your entry stays within the official 10% margin.
 
 ## Common mistakes

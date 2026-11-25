@@ -58,6 +58,11 @@
         "source": "/blog/eway-bill-vs-tax-invoice",
         "destination": "/eway-bill-vs-sales-invoice",
         "type": 301
+      },
+      {
+        "source": "/blog/how-distance-affects-eway-bill-validity",
+        "destination": "/eway-bill-distance-rules",
+        "type": 301
       }
     ],
     "headers": [

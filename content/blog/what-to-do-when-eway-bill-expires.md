@@ -30,7 +30,7 @@ faq:
     a: "It can no longer be extended, because extension works only from 8 hours before to 8 hours after expiry. Stop moving the goods on it, collect evidence of the delay, check your options on the portal and speak to your tax consultant. Moving goods without a valid e-way bill risks detention and a penalty under Section 129."
   - q: "How do I extend an e-way bill after the expiry date?"
     a: "Within 8 hours after expiry, use the extend option on the portal or in the E-Way Easy app, and give the reason and the remaining distance. Once those 8 hours pass, extension is no longer possible. Total validity is capped at 360 days from generation."
-related: ["how-distance-affects-eway-bill-validity", "how-to-update-vehicle-details-in-eway-bill"]
+related: ["how-to-update-vehicle-details-in-eway-bill", "eway-bill-part-a-and-part-b-explained"]
 ---
 > **Quick answer:** Extend it within 8 hours before or 8 hours after expiry, if exceptional circumstances stopped the goods reaching in time. The generator or the assigned transporter can do this, up to 360 days in total from generation. Goods moving on an expired bill risk detention, seizure and penalty under Section 129.
 

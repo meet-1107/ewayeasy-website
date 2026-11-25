@@ -5,6 +5,7 @@ import {
   parseLocalDateTime, toDateTimeLocalValue, validateDistance, type Cargo,
 } from '@/lib/validity';
 import { CopyButton, ResultRow, Segmented, TextField } from './ui';
+import PinDistanceFinder from './PinDistanceFinder';
 
 export default function ValidityCalculator() {
   const [distance, setDistance] = useState('350');
@@ -32,6 +33,12 @@ export default function ValidityCalculator() {
 
   return (
     <div className="space-y-6">
+      <PinDistanceFinder
+        onUse={(km) => {
+          setDistance(String(km));
+          document.getElementById('v-distance')?.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }}
+      />
       <div className="grid gap-6 lg:grid-cols-[minmax(0,1fr)_minmax(0,440px)]">
         <form className="card space-y-6 p-5 md:p-7" onSubmit={(e) => e.preventDefault()} noValidate>
           <TextField
@@ -120,7 +127,7 @@ export default function ValidityCalculator() {
           </div>
         </div>
         <ul className="mt-4 list-disc space-y-1.5 pl-5 text-sm leading-6 text-ink-soft">
-          <li>This website does not calculate road distance between PIN codes — there is no map service behind it. Enter the distance yourself, or check the portal&apos;s auto-calculated figure.</li>
+          <li>The PIN to PIN tool above gives an estimate from India Post PIN code locations. The portal's auto-calculated figure is final, and the 10% allowance is counted from it.</li>
           <li>Where the source and destination PIN code are the same, a distance of up to {SAME_PIN_MAX_KM} km can be entered.</li>
           <li>The E-Way Easy app calculates distance automatically from the PIN codes, and you can edit it.</li>
         </ul>

@@ -51,7 +51,7 @@ This is the everyday distributor scenario. The practical approach:
 
 ### Validity on multi-drop routes
 
-Validity depends on distance: one day for every 200 km or part of it for normal cargo, with the first day ending at midnight of the day after generation. Each e-way bill has its own distance, based on its own PIN-to-PIN route. On a long multi-drop route, the last drop's e-way bill will need the longest validity, so enter its actual distance correctly. See [how distance affects e-way bill validity](/blog/how-distance-affects-eway-bill-validity).
+Validity depends on distance: one day for every 200 km or part of it for normal cargo, with the first day ending at midnight of the day after generation. Each e-way bill has its own distance, based on its own PIN-to-PIN route. On a long multi-drop route, the last drop's e-way bill will need the longest validity, so enter its actual distance correctly. See [e-way bill distance rules](/eway-bill-distance-rules).
 
 ## Situation 2: Godown-to-godown and godown-to-shop transfers
 

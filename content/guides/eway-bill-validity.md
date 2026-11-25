@@ -195,7 +195,7 @@ If the window is missed, the extension option closes. Check the portal for the e
 - Assuming validity starts at Part A generation when Part B was filled later (it starts later, which is in your favour).
 - Generating the bill the night before when the truck leaves the next evening — it eats into validity.
 - Missing the 8-hour extension window over a weekend; set a reminder for long trips.
-- Entering a much shorter distance — a lower distance means fewer days, and the portal will flag distances that do not match PIN codes. Enter the realistic route distance (up to 10% above the PIN-to-PIN figure). More in [How Distance Affects E-Way Bill Validity](/blog/how-distance-affects-eway-bill-validity).
+- Entering a much shorter distance — a lower distance means fewer days, and the portal will flag distances that do not match PIN codes. Enter the realistic route distance (up to 10% above the PIN-to-PIN figure). More in [e-way bill distance rules](/eway-bill-distance-rules).
 - Not selecting ODC when it applies, or selecting it when it does not. ODC has a specific definition.
 
 ## Tips

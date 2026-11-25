@@ -151,7 +151,7 @@ As reported in GSTN advisories (verify current position on the official portal):
 
 - **Calculating value without GST.** The threshold is tested on consignment value including tax, not on taxable value alone.
 - **Assuming no sale means no e-way bill.** Branch transfers, job work and returns are movements too.
-- **Wrong PIN code or distance.** This shortens or lengthens validity. Read [How Distance Affects E-Way Bill Validity](/blog/how-distance-affects-eway-bill-validity).
+- **Wrong PIN code or distance.** This shortens or lengthens validity. Read [e-way bill distance rules](/eway-bill-distance-rules).
 - **Forgetting Part B.** A bill with only Part A is not valid for movement beyond the 50 km exception.
 - **Trying to fix errors by editing.** Part A cannot be edited; cancel within 24 hours and regenerate.
 - **Letting it expire in transit.** Track long trips and extend in time if needed.
