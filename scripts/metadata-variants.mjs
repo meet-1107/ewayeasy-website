@@ -20,7 +20,7 @@ export const PAGES = [
       ['E-Way Bill on Your Phone in 3 Steps, ₹5 per Bill', 'Make the GST invoice, review Part A and B, tap Generate. E-Way Easy files on the official system via an authorised GSP. Free invoices, no subscription.', 80],
       ['Easy E-Way Bill: The App, Not Another Portal Login', 'Skip the desktop portal routine. E-Way Easy turns your GST invoice into an e-way bill from Android, ₹5 each. For the government login, use ewaybillgst.gov.in.', 82],
       ['E-Way Bill App for Traders: Pay ₹5 Only on Success', 'Generate, update Part B, extend, cancel and consolidate e-way bills from Android. Credits from ₹50, no yearly plan, refunded if the portal rejects.', 78],
-      ['Easy E-Way Bill App for Android', 'Generate GST e-way bills from your phone: free invoice, PDF import, Part B, extend, cancel. ₹5 only on success. Not the govt portal: that is ewaybillgst.gov.in.', 88],
+      ['Easy E-Way Bill App for Android | E-Way Easy', 'Generate GST e-way bills from your phone: free invoice, PDF import, Part B, extend, cancel. ₹5 only on success. Not the govt portal: that is ewaybillgst.gov.in.', 88],
     ],
     pick: 4,
     why: 'Puts the exact phrase people type ("easy e-way bill") first, keeps the brand via the suffix, and the description is honest with portal-seekers, so the clicks we get are people who want the app.',

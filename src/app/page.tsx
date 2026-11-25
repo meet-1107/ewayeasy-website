@@ -19,7 +19,7 @@ import { pageMeta, softwareAppLd, websiteLd } from '@/lib/seo';
 import { FOUNDER } from '@/lib/site';
 
 export const metadata = pageMeta({
-  title: 'Easy E-Way Bill App for Android',
+  title: 'Easy E-Way Bill App for Android | E-Way Easy',
   description:
     'Generate GST e-way bills from your phone: free invoice, PDF import, Part B, extend, cancel. ₹5 only on success. Not the govt portal: that is ewaybillgst.gov.in.',
   path: '/',
