@@ -47,6 +47,8 @@ export default function GuidesHub() {
       guides: [
         { href: '/invoice-generator', title: 'Free invoice generator (GST and non-GST)', meta: 'Free tool' },
         { href: '/invoice-format-excel', title: 'Invoice format in Excel', meta: 'Free download' },
+        { href: '/sales-invoice-templates', title: 'Sales invoice format and templates', meta: 'Free templates' },
+        { href: '/commercial-invoice-templates', title: 'Commercial invoice format for export and courier', meta: 'Free templates' },
         ...guides.filter((g) => INVOICE_GUIDES.has(g.slug)).map((g) => ({ href: `/${g.slug}`, title: g.title, meta: `Guide · verified ${formatDate(g.verifiedAt ?? g.updatedAt)}` })),
         ...posts.filter(inB).map((p) => ({ href: `/blog/${p.slug}`, title: p.title, meta: `Article · ${formatDate(p.publishedAt)}` })),
       ],

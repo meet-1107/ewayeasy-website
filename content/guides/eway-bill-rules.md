@@ -3,7 +3,7 @@ title: "E-Way Bill Rules in India (Rule 138 Explained)"
 slug: "eway-bill-rules"
 description: "Rule 138 of the CGST Rules explained in plain language: legal basis, the ₹50,000 threshold, consignment value, who generates, Part A and Part B, exemptions, validity, cancellation, acceptance, verification and penalties."
 publishedAt: "2026-10-16"
-updatedAt: "2026-11-02"
+updatedAt: "2026-11-25"
 verifiedAt: "2026-10-16"
 seoTitle: "Rule 138 of CGST Rules 2017: E-Way Bill Rules"
 metaDescription: "Rule 138 in plain words: the ₹50,000 consignment value, who generates, Part A and B, validity, cancellation, Annexure exemptions and penalties, with sources."
@@ -22,6 +22,8 @@ faq:
     a: "Section 68 of the CGST Act allows the government to require documents for goods in movement, and Rule 138 of the CGST Rules, 2017, read with Rules 138A to 138E, sets out the e-way bill requirement."
   - q: "Does the ₹50,000 limit include GST?"
     a: "Yes. Consignment value includes the taxable value and the GST charged, but excludes the value of exempt supplies billed on the same invoice."
+  - q: "What does Rule 138(12) say?"
+    a: "Rule 138(12) lets the recipient accept or reject an e-way bill generated against them within 72 hours of the details being made available, or before delivery if earlier. If they do neither, it is treated as accepted."
   - q: "Do state limits differ?"
     a: "Some states have notified a higher threshold for movement within the state. For inter-state movement, the general threshold applies. Check your state's notification."
   - q: "Is an e-way bill needed when goods are not sold?"
@@ -30,6 +32,8 @@ faq:
     a: "Goods and the vehicle can be detained or seized and a penalty imposed under Section 129 of the CGST Act. General penalty provisions under Section 122 can also apply."
 related: ["eway-bill-guide", "eway-bill-validity", "eway-bill-distance-rules", "eway-bill-cancellation"]
 updateHistory:
+  - date: "2026-11-25"
+    note: "Added a Rule 138(12) answer and a short summary in Hindi."
   - date: "2026-10-22"
     note: "Merged our separate article on e-way bill rules in practice into this guide"
   - date: "2026-10-16"
@@ -196,6 +200,18 @@ A Surat textile unit sends grey fabric worth ₹38,000 plus GST to a job worker 
 ## Limitations
 
 This guide summarises the general rules. Imports, exports, exhibitions, SKD/CKD supplies and e-commerce have their own nuances; see [E-Way Bill Returns and Special Transactions](/blog/eway-bill-returns-and-special-transactions) and [Inter-state Movement Requirements](/blog/eway-bill-interstate-movement-requirements). For routine sales, the [E-Way Easy app](/features) keeps invoice and e-way bill details in one flow, which helps with the before-dispatch part; the compliance decisions remain yours.
+
+## नियम 138 सरल हिंदी में (Rule 138 in Hindi)
+
+नियम 138 के अनुसार, ₹50,000 से अधिक मूल्य (जीएसटी सहित) के माल की आवाजाही से पहले ई-वे बिल बनाना होता है, कुछ छूटों को छोड़कर।
+
+- **कौन बनाता है:** पंजीकृत सप्लायर, खरीदार या ट्रांसपोर्टर।
+- **भाग A और भाग B:** भाग A में बिल, GSTIN, HSN और पिन कोड; भाग B में वाहन या परिवहन दस्तावेज़ का नंबर।
+- **वैधता:** सामान्य माल के लिए हर 200 किमी पर 1 दिन।
+- **रद्द करना:** बनाने के 24 घंटे के भीतर, अगर रास्ते में जाँच न हुई हो।
+- **स्वीकृति (नियम 138(12)):** प्राप्तकर्ता 72 घंटे में स्वीकार या अस्वीकार कर सकता है; कुछ न करने पर स्वीकृत माना जाता है।
+
+यह सामान्य जानकारी है; ताज़ा नियम आधिकारिक पोर्टल पर देखें।
 
 ## Official sources
 

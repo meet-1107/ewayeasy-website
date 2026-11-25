@@ -3,7 +3,7 @@ title: "E-Way Bill Validity: Calculation, Extension and Expiry"
 slug: "eway-bill-validity"
 description: "How e-way bill validity is calculated for normal and over-dimensional cargo, when the clock starts and ends, how to extend an expiring bill, and what to do if it expires, with timestamped examples."
 publishedAt: "2026-10-16"
-updatedAt: "2026-11-14"
+updatedAt: "2026-11-25"
 verifiedAt: "2026-10-16"
 seoTitle: "E-Way Bill Validity: 1 Day per 200 km, With Examples"
 metaDescription: "Validity is 1 day per 200 km (1 day per 20 km for ODC), ending at midnight. Timestamped examples, the 8-hour extension window and the 360-day cap."
@@ -18,6 +18,10 @@ sources:
 faq:
   - q: "Is an e-way bill valid for exactly 24 hours per 200 km?"
     a: "No. Each day ends at midnight. The first day runs until midnight of the day following the start date, so the actual hours available depend on when the bill becomes valid for movement."
+  - q: "How many days is an e-way bill valid for 1,000 km?"
+    a: "5 days for normal cargo, because 1,000 km falls in the 801–1,000 km band (1 day per 200 km or part of it). Over-dimensional cargo gets 50 days for the same distance, at 1 day per 20 km."
+  - q: "How many days is an e-way bill valid for 500 km?"
+    a: "3 days for normal cargo: 500 ÷ 200 = 2.5, rounded up to 3. The first day ends at midnight of the day after Part B is entered."
   - q: "How many days is an e-way bill valid for 300 km?"
     a: "2 days for normal cargo, because 300 km falls in the 201 to 400 km band."
   - q: "When does day one end?"
@@ -30,6 +34,8 @@ faq:
     a: "Validity is counted from when the e-way bill becomes valid for movement, which is when Part B is first entered. If Part B is filled at generation, both are the same time."
 related: ["eway-bill-distance-rules", "eway-bill-rules", "eway-bill-correction"]
 updateHistory:
+  - date: "2026-11-25"
+    note: "Added direct answers for 1,000 km and 500 km, and a link to the PIN to PIN distance estimate."
   - date: "2026-11-14"
     note: "Completed the over-dimensional cargo validity table."
   - date: "2026-10-22"
@@ -68,7 +74,7 @@ Over-dimensional cargo is cargo carried as a single unit that exceeds the dimens
 | 1,801–2,000 km | 10 days |
 | Every additional 200 km | +1 day |
 
-The maximum distance accepted in an e-way bill is 4,000 km, which gives 20 days.
+For example, **1,000 km of normal cargo gets 5 days** and 500 km gets 3 days. The maximum distance accepted in an e-way bill is 4,000 km, which gives 20 days. Do not know the distance yet? Estimate it from the two PIN codes with the [PIN to PIN distance calculator](/tools/distance-calculator).
 
 ## Validity table for ODC
 

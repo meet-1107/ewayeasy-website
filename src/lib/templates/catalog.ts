@@ -153,6 +153,10 @@ export const CATEGORY_CONTENT: Record<DocumentKind, CategoryContent> = {
     },
     faq: [
       {
+        q: 'What is a sales bill format?',
+        a: 'A sales bill is the everyday name for a sales invoice. If you are GST-registered and the sale is taxable, the format must be a tax invoice with the details Rule 46 requires; composition dealers and exempt supplies use a bill of supply instead. Use the GST tax invoice template for the first case and the simple sales invoice for the second.',
+      },
+      {
         q: 'Which sales invoice template should I use?',
         a: 'If you are GST-registered and charge GST, start with the GST tax invoice. For a short bill to walk-in or small customers, use the simple sales invoice. Use the service invoice when you bill for work or time rather than goods, and the wholesale invoice when you ship bulk quantities with transport details.',
       },
@@ -373,6 +377,10 @@ export const CATEGORY_CONTENT: Record<DocumentKind, CategoryContent> = {
       ],
     },
     faq: [
+      {
+        q: 'What is a commercial invoice?',
+        a: 'A commercial invoice is the seller’s invoice for goods shipped to a buyer in another country. Customs, couriers and banks use it to see what is shipped, its value, origin and HS code, and the delivery terms. It is not a domestic GST tax invoice, though exporters often issue both.',
+      },
       {
         q: 'Which commercial invoice template should I use?',
         a: 'Use the export commercial invoice if you are an Indian business shipping goods abroad and need IEC, GST and LUT details on the invoice. Use the courier commercial invoice for parcels sent by courier, such as samples, small orders, gifts and returns, where the AWB number, reason for export, HS codes and a customs declaration matter most.',
