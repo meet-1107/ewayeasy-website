@@ -5,8 +5,8 @@ description: "How e-way bill validity is calculated for normal and over-dimensio
 publishedAt: "2026-10-16"
 updatedAt: "2026-11-14"
 verifiedAt: "2026-10-16"
-seoTitle: "E-Way Bill Validity: Calculation, Extension, Expiry"
-metaDescription: "E-way bill validity explained: 1 day per 200 km, ODC 1 day per 20 km, midnight rule, 8-hour extension window, 360-day cap, with timestamped examples."
+seoTitle: "E-Way Bill Validity: 1 Day per 200 km, With Examples"
+metaDescription: "Validity is 1 day per 200 km (1 day per 20 km for ODC), ending at midnight. Timestamped examples, the 8-hour extension window and the 360-day cap."
 imageAlt: "Calendar and clock beside a distance scale showing 200 km bands mapped to validity days"
 sources:
   - title: "E-Way Bill System (official portal)"

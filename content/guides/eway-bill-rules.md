@@ -5,8 +5,8 @@ description: "Rule 138 of the CGST Rules explained in plain language: legal basi
 publishedAt: "2026-10-16"
 updatedAt: "2026-11-02"
 verifiedAt: "2026-10-16"
-seoTitle: "E-Way Bill Rules in India: Rule 138 Explained"
-metaDescription: "Rule 138 explained simply: threshold, consignment value, who generates, Part A/B, 50 km exemption, validity, cancellation, Annexure exemptions and penalties."
+seoTitle: "Rule 138 of CGST Rules 2017: E-Way Bill Rules"
+metaDescription: "Rule 138 in plain words: the ₹50,000 consignment value, who generates, Part A and B, validity, cancellation, Annexure exemptions and penalties, with sources."
 imageAlt: "Rule book page titled Rule 138 with highlighted sections for threshold, Part A, Part B and validity"
 sources:
   - title: "CBIC GST (CGST Act and CGST Rules)"

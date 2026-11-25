@@ -5,8 +5,8 @@ description: "The everyday problems businesses face while generating e-way bills
 publishedAt: "2026-10-16"
 updatedAt: "2026-11-14"
 verifiedAt: "2026-10-16"
-seoTitle: "Common E-Way Bill Errors and How to Fix Them"
-metaDescription: "Plain-language fixes for common e-way bill problems: invalid GSTIN, duplicate document, distance rejected, tax mismatch, OTP login, Part B missing, expiry."
+seoTitle: "E-Way Bill Error Codes: 702, 604, GSTIN and Fixes"
+metaDescription: "Plain fixes for e-way bill errors: distance code 702, duplicate code 604, invalid GSTIN, tax mismatch and Part B missing, checked on the official code list."
 imageAlt: "Warning icons next to e-way bill fields like GSTIN, PIN code, HSN and distance, each with a fix tick"
 sources:
   - title: "E-Way Bill System (official portal)"

@@ -5,8 +5,8 @@ description: "When and how to cancel an e-way bill on the official portal, the 2
 publishedAt: "2026-10-16"
 updatedAt: "2026-11-21"
 verifiedAt: "2026-10-16"
-seoTitle: "How to Cancel an E-Way Bill: The 24-Hour Rule"
-metaDescription: "Cancel an e-way bill within 24 hours of generation. Steps on the portal, who can cancel, when it is blocked, and what to do if you miss the window."
+seoTitle: "How to Cancel an E-Way Bill: 24-Hour Rule and After"
+metaDescription: "Cancel within 24 hours of generation if goods have not moved and it is not verified. After that, only the recipient can reject it. Steps and options inside."
 imageAlt: "An e-way bill marked cancelled with a 24-hour clock beside it"
 sources:
   - title: "E-Way Bill System (official portal)"

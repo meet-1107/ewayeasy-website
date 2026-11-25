@@ -7,8 +7,8 @@ tags: ["invoice vs bill", "receipt", "receipt voucher", "cash memo", "tax invoic
 publishedAt: "2026-11-06"
 updatedAt: "2026-11-16"
 verifiedAt: "2026-11-06"
-seoTitle: "Invoice vs Bill vs Receipt: Differences Under GST in India"
-metaDescription: "Invoice vs bill vs receipt in India: everyday meaning, GST terms like tax invoice, bill of supply and receipt voucher, and which document allows ITC."
+seoTitle: "Tax Invoice vs Bill vs Receipt: What Each Proves"
+metaDescription: "An invoice asks for payment, a receipt confirms it. Learn what each document proves under GST, when a receipt voucher is needed, and which allows ITC."
 imageAlt: "Three documents labelled invoice, bill and receipt arranged in order from sale to payment"
 sources:
   - title: "CBIC GST (Acts and Rules)"

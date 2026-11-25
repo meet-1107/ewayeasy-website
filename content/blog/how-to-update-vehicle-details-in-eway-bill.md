@@ -8,7 +8,7 @@ publishedAt: "2026-10-16"
 updatedAt: "2026-11-02"
 verifiedAt: "2026-10-16"
 seoTitle: "How to Update Vehicle Number in an E-Way Bill (Part B)"
-metaDescription: "Step-by-step guide to updating vehicle details in Part B of an e-way bill: when it is needed, who can update it, common mistakes and validity rules."
+metaDescription: "Changed trucks? Update Part B instead of a new e-way bill, as often as needed during validity. Portal steps, who can update it and transhipment cases."
 imageAlt: "Illustration of a truck being swapped for another truck with an e-way bill form showing the Part B vehicle number field"
 sources:
   - title: "E-Way Bill System (official portal)"

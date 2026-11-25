@@ -5,8 +5,8 @@ description: "An e-way bill cannot be edited, but some details can be updated. T
 publishedAt: "2026-10-16"
 updatedAt: "2026-11-21"
 verifiedAt: "2026-10-16"
-seoTitle: "E-Way Bill Correction: What You Can and Cannot Change"
-metaDescription: "E-way bills cannot be edited. Update Part B, change transporter or extend validity; for Part A errors, cancel within 24 hours and regenerate. Full fix table."
+seoTitle: "How to Edit an E-Way Bill: Part A and Part B Fixes"
+metaDescription: "Part A cannot be edited: cancel within 24 hours and generate again. Vehicle, transporter and validity can be updated. A fix for every common mistake."
 imageAlt: "Two columns labelled can update and cannot edit, listing e-way bill fields"
 sources:
   - title: "E-Way Bill System (official portal)"

@@ -7,8 +7,8 @@ tags: ["delivery challan", "tax invoice", "job work", "stock transfer"]
 publishedAt: "2026-10-16"
 updatedAt: "2026-11-16"
 verifiedAt: "2026-10-16"
-seoTitle: "Delivery Challan vs Tax Invoice Under GST: When to Use"
-metaDescription: "When to issue a delivery challan vs a tax invoice under GST: job work, approval sales, line sales, stock transfers, contents and e-way bill links."
+seoTitle: "Delivery Challan vs Tax Invoice: Difference, When to Use"
+metaDescription: "Not the same: a tax invoice records a sale, a delivery challan moves goods without one. Which to issue for job work, approval, stock transfer and line sales."
 imageAlt: "Two documents labelled delivery challan and tax invoice with a truck between them"
 sources:
   - title: "CBIC GST (Acts and Rules)"

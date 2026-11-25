@@ -324,9 +324,9 @@ export const CATEGORY_CONTENT: Record<DocumentKind, CategoryContent> = {
     kind: 'commercial-invoice',
     name: 'Commercial invoice templates',
     documentName: 'commercial invoice',
-    seoTitle: 'Commercial Invoice Template & Format: Free, Printable PDF',
+    seoTitle: 'Commercial Invoice Format & Template: Free, Editable',
     metaDescription:
-      'Free commercial invoice template for shipping goods. Edit fields, add your logo, choose currency, see live totals, then print on A4 or Letter or download a PDF.',
+      'Free commercial invoice format for export and courier shipments. Edit every field, add your logo, choose currency, see live totals, then print or save PDF.',
     h1: 'Commercial Invoice Template',
     eyebrow: 'Free templates',
     intro:

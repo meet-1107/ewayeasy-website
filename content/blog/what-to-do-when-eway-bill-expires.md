@@ -7,8 +7,8 @@ tags: ["e-way bill", "validity", "extension", "transporter"]
 publishedAt: "2026-10-16"
 updatedAt: "2026-11-21"
 verifiedAt: "2026-10-16"
-seoTitle: "E-Way Bill Expired? How to Extend Validity in Time"
-metaDescription: "What to do when an e-way bill is expiring or has expired: the 8-hour extension window, the 360-day cap, a worked example and common mistakes."
+seoTitle: "E-Way Bill Expired: You May Still Have 8 Hours"
+metaDescription: "Extension is allowed up to 8 hours after expiry. How to extend, the reason and distance to enter, who can do it, and your options if the window has closed."
 imageAlt: "Truck stopped on a highway with a countdown timer over an e-way bill"
 sources:
   - title: "E-Way Bill System (official portal)"

@@ -19,9 +19,9 @@ import { pageMeta, softwareAppLd, websiteLd } from '@/lib/seo';
 import { FOUNDER } from '@/lib/site';
 
 export const metadata = pageMeta({
-  title: 'E-Way Easy: E-Way Bill Generator App for Mobile | Free Invoice',
+  title: 'Easy E-Way Bill App for Android',
   description:
-    'Generate GST e-way bills on your phone: free invoice, invoice PDF import, Part B update, extend, cancel and consolidate. Pay ₹5 only when it succeeds.',
+    'Generate GST e-way bills from your phone: free invoice, PDF import, Part B, extend, cancel. ₹5 only on success. Not the govt portal: that is ewaybillgst.gov.in.',
   path: '/',
 });
 
@@ -109,6 +109,12 @@ export default function Home() {
               <PlayBadge placement="home-hero" size="lg" />
               <Link href="/tools" className="btn-ghost-dark">Explore free tools →</Link>
             </div>
+            {/* Many visitors search "easy way bill login" looking for the government portal: point them there honestly. */}
+            <p className="mt-4 text-sm text-brand-100/80">
+              Looking for the official e-way bill login? That is the government portal,{' '}
+              <a href="https://ewaybillgst.gov.in/" target="_blank" rel="noopener" className="font-semibold text-white underline">ewaybillgst.gov.in</a>.
+              E-Way Easy is an independent app that files there for you.
+            </p>
             <HeroMilestones />
           </div>
           <div className="mx-auto w-full max-w-[560px]">

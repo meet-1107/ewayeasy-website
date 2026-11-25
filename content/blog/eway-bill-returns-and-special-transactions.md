@@ -7,8 +7,8 @@ tags: ["e-way bill", "sales return", "bill to ship to", "delivery challan", "spe
 publishedAt: "2026-10-16"
 updatedAt: "2026-11-21"
 verifiedAt: "2026-10-16"
-seoTitle: "E-Way Bill for Returns, Bill-to-Ship-to & Special Cases"
-metaDescription: "General guidance on e-way bills for sales returns, supply on approval, exhibitions, bill-to-ship-to, line sales and SKD/CKD lots, with mistakes to avoid."
+seoTitle: "E-Way Bill for Returns, SKD/CKD Lots and Line Sales"
+metaDescription: "Which document and reason to use for sales returns, SKD/CKD lots, line sales, supply on approval and exhibitions, with a summary table and common mistakes."
 imageAlt: "Six cards showing special e-way bill cases: returns, approval, exhibition, bill-to-ship-to, line sales and lots"
 sources:
   - title: "E-Way Bill System (official portal)"

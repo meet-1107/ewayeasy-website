@@ -7,8 +7,8 @@ tags: ["bill of supply", "tax invoice", "invoice without gst", "composition sche
 publishedAt: "2026-11-06"
 updatedAt: "2026-11-16"
 verifiedAt: "2026-11-06"
-seoTitle: "Invoice With or Without GST? Tax Invoice vs Bill of Supply"
-metaDescription: "Can you make an invoice without GST? Learn when to issue a tax invoice, a bill of supply or a plain bill, what each must show and the mistakes to avoid."
+seoTitle: "Invoice Without GST: When a Bill of Supply Is Allowed"
+metaDescription: "Registered and selling taxable goods? You must charge GST. Composition, exempt or unregistered? Learn when a bill of supply replaces a tax invoice."
 imageAlt: "Two invoice layouts side by side, one with CGST, SGST and IGST columns and one marked bill of supply with no tax columns"
 sources:
   - title: "CBIC GST (Acts and Rules)"

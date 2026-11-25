@@ -5,8 +5,8 @@ description: "A clear comparison of the e-way bill and the sales (tax) invoice: 
 publishedAt: "2026-10-16"
 updatedAt: "2026-11-02"
 verifiedAt: "2026-10-16"
-seoTitle: "E-Way Bill vs Sales Invoice: Key Differences"
-metaDescription: "E-way bill vs sales (tax) invoice: purpose, law, who issues, threshold, validity, cancellation and contents compared, with examples and common mix-ups."
+seoTitle: "E-Way Bill vs Tax Invoice: Differences, When You Need Both"
+metaDescription: "A tax invoice records the sale, an e-way bill the movement. When each is needed, who issues it, validity and cancellation compared, and how they must match."
 imageAlt: "Side-by-side comparison of a tax invoice and an e-way bill with matching fields highlighted"
 sources:
   - title: "CBIC GST (CGST Act and Rules)"

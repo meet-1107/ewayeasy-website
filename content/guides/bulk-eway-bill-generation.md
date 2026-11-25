@@ -5,8 +5,8 @@ description: "How bulk e-way bill generation works through the official Excel-ba
 publishedAt: "2026-10-16"
 updatedAt: "2026-11-21"
 verifiedAt: "2026-10-16"
-seoTitle: "Bulk E-Way Bill Generation: Complete Guide (2026)"
-metaDescription: "Bulk e-way bill generation explained: official Excel tool and JSON upload, data preparation, GSTIN/HSN checks, duplicate detection, errors and safe retries."
+seoTitle: "Bulk E-Way Bill Generation Tool: Excel to JSON Guide"
+metaDescription: "Download the official bulk generation tool, fill the Excel format, convert to JSON and upload on the portal. Data checks and rejected-row fixes."
 imageAlt: "Spreadsheet of invoice rows flowing into a JSON file and then to a list of generated and failed e-way bills"
 sources:
   - title: "E-Way Bill System (official portal)"

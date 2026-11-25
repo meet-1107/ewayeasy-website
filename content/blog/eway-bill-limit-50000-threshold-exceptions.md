@@ -7,8 +7,8 @@ tags: ["e-way bill", "threshold", "consignment value", "exemptions"]
 publishedAt: "2026-10-16"
 updatedAt: "2026-11-16"
 verifiedAt: "2026-10-16"
-seoTitle: "E-Way Bill Limit ₹50,000: Calculation and Exceptions"
-metaDescription: "How to calculate consignment value for the ₹50,000 e-way bill limit, state intra-state thresholds, value-independent cases and Annexure exemptions."
+seoTitle: "E-Way Bill Limit ₹50,000: GST Included? Exceptions"
+metaDescription: "Yes, the ₹50,000 test uses value including GST. How to calculate consignment value, state limits for intra-state moves and cases needing a bill at any value."
 imageAlt: "Calculator showing taxable value plus GST equals consignment value, with a ₹50,000 line marked on a scale"
 sources:
   - title: "CBIC GST (CGST Rules, Rule 138)"

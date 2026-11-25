@@ -8,7 +8,7 @@ publishedAt: "2026-10-16"
 updatedAt: "2026-11-16"
 verifiedAt: "2026-10-16"
 seoTitle: "Who Generates an E-Way Bill? Supplier, Buyer or Transporter"
-metaDescription: "Who must generate the e-way bill: registered supplier, recipient or transporter. Roles, unregistered parties, TRANSIN, scenarios and common mistakes."
+metaDescription: "Supplier, recipient or transporter: who must generate the e-way bill, when the transporter steps in, unregistered parties, and who can reject it in 72 hours."
 imageAlt: "Three figures labelled supplier, recipient and transporter around a single e-way bill document"
 sources:
   - title: "E-Way Bill System (official portal)"

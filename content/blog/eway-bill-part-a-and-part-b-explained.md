@@ -7,8 +7,8 @@ tags: ["e-way bill", "Part A", "Part B", "EWB-01"]
 publishedAt: "2026-10-16"
 updatedAt: "2026-11-14"
 verifiedAt: "2026-10-16"
-seoTitle: "E-Way Bill Part A and Part B Explained (EWB-01)"
-metaDescription: "Part A and Part B of the e-way bill explained: fields in each part, who fills them, the 50 km Part B exemption, updating vehicles and fixing errors."
+seoTitle: "Part A and Part B of E-Way Bill: Fields and Rules"
+metaDescription: "Part A carries invoice, GSTIN, HSN and PIN details; Part B the vehicle or transport document. Who fills each, when Part B is needed, and the 50 km relief."
 imageAlt: "E-way bill form split into two halves, Part A with consignment details and Part B with a truck and vehicle number"
 sources:
   - title: "E-Way Bill System (official portal)"

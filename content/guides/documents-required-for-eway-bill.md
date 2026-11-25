@@ -6,7 +6,7 @@ publishedAt: "2026-10-16"
 updatedAt: "2026-11-02"
 verifiedAt: "2026-10-16"
 seoTitle: "Documents Required for E-Way Bill: Full Checklist"
-metaDescription: "Documents and data needed for an e-way bill: invoice or challan, GSTINs, HSN, PINs, Transporter ID, vehicle number, plus what the driver must carry."
+metaDescription: "Invoice or challan, GSTINs, HSN, PIN codes, Transporter ID and vehicle number, plus what the driver must carry: the full e-way bill checklist in one place."
 imageAlt: "Checklist clipboard beside a tax invoice, a lorry receipt and a vehicle number plate"
 sources:
   - title: "E-Way Bill System (official portal)"

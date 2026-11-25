@@ -7,8 +7,8 @@ tags: ["e-way bill", "intra-state", "state rules", "threshold"]
 publishedAt: "2026-10-16"
 updatedAt: "2026-11-16"
 verifiedAt: "2026-10-16"
-seoTitle: "Intra-state E-Way Bill Rules: What to Check in Your State"
-metaDescription: "Intra-state e-way bills: why state limits may differ, the 50 km Part B relief, one-day validity timing, same-GSTIN transfers and local delivery mistakes."
+seoTitle: "Intra-State E-Way Bill: State Limits, 50 km Rule"
+metaDescription: "Moving goods within a state? Why state limits can differ from ₹50,000, the 50 km Part B relief, one-day validity timing and same-GSTIN transfers explained."
 imageAlt: "Map of a single state with short delivery routes between a factory, transporter godown and local buyers"
 sources:
   - title: "E-Way Bill System (official portal)"
